@@ -13,7 +13,9 @@
 # testing
 /coverage
 
-/assets
+public/assets/
+
+
 
 # next.js
 /.next/
