@@ -48,6 +48,7 @@ border-radius: 16px;
   background-position: center right;
 }
 
+
 .adrenaline_section .slider .singleSlide .image img,
 .experience_section .slider .singleSlide .image img,
 .playtopia_section .singleSlide .image img,
@@ -57,6 +58,8 @@ width: 100%;
 height: auto;
 float: left;
 }
+
+
 
 .retail_section .singleSlide .image img,
 .corporate_section .singleSlide .image img{
@@ -104,6 +107,13 @@ float: left;
 .retail_section .retailCard .singleSlide,
 .corporate_section .corporateCard .singleSlide{
   width: calc(33.33% - 20px);
+  transition: 0.3s all;
+}
+
+.playtopia_section .playtopiaCard .singleSlide:hover,
+.retail_section .retailCard .singleSlide:hover,
+.corporate_section .corporateCard .singleSlide:hover{
+  transform: translateY(-10px);
 }
 
 .experience_section .slider .singleSlide .content{
@@ -315,7 +325,14 @@ background-color: var(--darkOrange);
   padding: 32px;
  width: calc(33.333% - 20px);
   height: auto;
-  background-size: cover;
+  background-size: 100% 100%;
+  transition: 0.3s all;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.memories_section .memories_grid .card:not(.videoTabContainer):hover{
+  background-size: 105% 105%;
 }
 
 .memories_section .memories_grid .card{
@@ -460,6 +477,15 @@ max-height: 500px;
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
+}
+
+.stories_container .row>div{
+  transition: 0.3s all;
+  display: flex;
+}
+
+.stories_container .row>div:hover{
+ scale: 0.975; 
 }
 
 
@@ -640,6 +666,11 @@ border-radius: 8px;
 display: flex;
 align-items: flex-start;
 gap: 16px;
+transition: 0.3s all;
+}
+
+.comfort_section .container .stay_slider .singleSlide:hover{
+  transform: scale(0.975);
 }
 
 .comfort_section .container .stay_slider .singleSlide .image{
