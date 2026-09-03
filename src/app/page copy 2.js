@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import lcpStyle from "./lcp.module.css"
 import style from './page.module.css'
 import Button from './components/ui/Button'
@@ -456,143 +456,110 @@ const landscapeImages = StoriesData.images.filter(
   (item) => item.type === "landscape"
 );
 
+let squareImageIndex = 0;
+let landscapeImageIndex = 0;
+let contentIndex = 0;
 
-const getRandomItem = (array) => {
-  if (!array.length) {
+
+const renderSquareImage = () => {
+  const image = squareImages[squareImageIndex];
+
+  squareImageIndex++;
+
+  if (!image) {
     return null;
   }
 
-  return array[Math.floor(Math.random() * array.length)];
+  return (
+    <div className={style.squareImg}>
+      <Image
+        className={style.imageData}
+        src={image.url}
+        width={262}
+        height={262}
+        alt="story"
+      />
+
+      <Image
+        className={style.frame}
+        src="/assets/images/square-frame.svg"
+        width={309}
+        height={300}
+        alt=""
+      />
+    </div>
+  );
 };
 
-const getRandomItems = (array, count) => {
-  const shuffled = [...array];
 
-  for (let i = shuffled.length - 1; i > 0; i--) {
-    const randomIndex = Math.floor(Math.random() * (i + 1));
+const renderLandscapeImage = () => {
+  const image = landscapeImages[landscapeImageIndex];
 
-    [shuffled[i], shuffled[randomIndex]] = [
-      shuffled[randomIndex],
-      shuffled[i],
-    ];
+  landscapeImageIndex++;
+
+  if (!image) {
+    return null;
   }
 
-  return shuffled.slice(0, count);
+  return (
+    <div className={style.landscapeImg}>
+      <Image
+        className={style.imageData}
+        src={image.url}
+        width={413}
+        height={235}
+        alt="story"
+      />
+
+      <Image
+        className={style.frame}
+        src="/assets/images/rect-frame.svg"
+        width={516}
+        height={291}
+        alt=""
+      />
+    </div>
+  );
 };
 
 
-// comforts data 
+const renderContent = (
+  className,
+  frame,
+  frameWidth,
+  frameHeight
+) => {
+  const content = StoriesData.content[contentIndex];
 
-const ComfortsData = [
-  {
-    image:"/assets/images/ac-rooms.png",
-    title:"Air-conditioned Rooms",
-    content:"Stay cool and comfortable with climate-controlled rooms designed for restful nights."
-  },
-   {
-    image:"/assets/images/ac-rooms.png",
-    title:"Air-conditioned Rooms",
-    content:"Stay cool and comfortable with climate-controlled rooms designed for restful nights."
-  },
-   {
-    image:"/assets/images/ac-rooms.png",
-    title:"Air-conditioned Rooms",
-    content:"Stay cool and comfortable with climate-controlled rooms designed for restful nights."
-  },
-   {
-    image:"/assets/images/ac-rooms.png",
-    title:"Air-conditioned Rooms",
-    content:"Stay cool and comfortable with climate-controlled rooms designed for restful nights."
-  },
-   {
-    image:"/assets/images/ac-rooms.png",
-    title:"Air-conditioned Rooms",
-    content:"Stay cool and comfortable with climate-controlled rooms designed for restful nights."
-  },
-   {
-    image:"/assets/images/ac-rooms.png",
-    title:"Air-conditioned Rooms",
-    content:"Stay cool and comfortable with climate-controlled rooms designed for restful nights."
-  },
-   {
-    image:"/assets/images/ac-rooms.png",
-    title:"Air-conditioned Rooms",
-    content:"Stay cool and comfortable with climate-controlled rooms designed for restful nights."
-  },
-   {
-    image:"/assets/images/ac-rooms.png",
-    title:"Air-conditioned Rooms",
-    content:"Stay cool and comfortable with climate-controlled rooms designed for restful nights."
-  },
+  contentIndex++;
 
-]
-
-
-// playtopia data 
-
-const PlaytopiaData = [
-  {
-    image:"/assets/images/jollylicious.png",
-    title:"Jollylicious",
-    link:""
-  },
-   {
-    image:"/assets/images/jollylicious.png",
-    title:"Jollylicious",
-    link:""
-  },
-   {
-    image:"/assets/images/jollylicious.png",
-    title:"Jollylicious",
-    link:""
+  if (!content) {
+    return null;
   }
 
-]
+  return (
+    <Link
+      href={content.link}
+      className={className}
+    >
+      <p>
+        {content.text}
+      </p>
 
+      <h3 className={style.name}>
+        {content.name}
+      </h3>
 
-
-// retail data 
-
-const RetailData = [
-  {
-    image:"/assets/images/aqua.png",
-    title:"Aqua",
-    link:""
-  },
-    {
-    image:"/assets/images/aqua.png",
-    title:"Aqua",
-    link:""
-  },
-   {
-    image:"/assets/images/aqua.png",
-    title:"Aqua",
-    link:""
-  },
-
-]
-
-
-// corporate data
-const CorporateData = [
-  {
-    image:"/assets/images/bm.png",
-    title:"Business Meeting",
-    link:""
-  },
-    {
-    image:"/assets/images/bm.png",
-    title:"Business Meeting",
-    link:""
-  },
-   {
-    image:"/assets/images/bm.png",
-    title:"Business Meeting",
-    link:""
-  },
-
-] 
-
+      <Image
+        className={style.frame}
+        src={frame}
+        width={frameWidth}
+        height={frameHeight}
+        alt=""
+      />
+    </Link>
+  );
+};
 
 
 export default function page() {
@@ -604,42 +571,6 @@ export default function page() {
   const [experienceWorlds,setExperienceWorlds] = useState(0);
 
   const [foodSouk,setFoodSouk] = useState(0);
-
-
-  const [randomStories, setRandomStories] = useState({
-  squareImages: [],
-  landscapeImages: [],
-  content: [],
-});
-
-
-  
-useEffect(() => {
-
-  const updateStories = () => {
-    setRandomStories({
-  
-      squareImages: getRandomItems(squareImages, 2),
-      landscapeImages: getRandomItems(landscapeImages, 1),
-      content: getRandomItems(StoriesData.content, 5),
-    });
-  };
-
-
-  updateStories();
-
-  const interval = setInterval(() => {
-    updateStories();
-  }, 5000);
-
-
-  return () => {
-    clearInterval(interval);
-  };
-
-}, []);
-
-
 
   return (
     <>
@@ -669,8 +600,8 @@ useEffect(() => {
       <h1 className="common_heading white">Cinematic Family <br className='desktop_break'/>Universe</h1>
 
 <div className={lcpStyle.actions}>
-  <Button href="#" text="Book Tickets" className="common_btn orange_bg white_text right_tilt big"></Button>
-  <Button href="#" text="Group Booking" className="common_btn white_bg black_text left_tilt big"></Button>
+  <Button href="#" text="Book Tickets" className="common_btn orange_bg white_text right_tilt"></Button>
+  <Button href="#" text="Group Booking" className="common_btn white_bg black_text left_tilt"></Button>
 
 </div>
 
@@ -728,7 +659,7 @@ useEffect(() => {
                 <h3 className={`${style.title} white`}>
                   {slide.title}
                 </h3>
-                <Button href={slide.link} text="" className="link large"></Button>
+                <Button href={slide.link} text="" className="link"></Button>
               </div>
             </div>
           </SwiperSlide>
@@ -1032,224 +963,76 @@ They Loved It.</h2>
       </div>
     </div>
 
-<div className={style.stories_container}>
+   <div className={style.stories_container}>
+
+  {/* ================================
+      UPPER ROW
+  ================================= */}
 
   <div className={`${style.row} ${style.upperRow}`}>
 
+    {/* Square Image 1 */}
+    {renderSquareImage()}
 
-    {randomStories.squareImages[0] && (
-      <div className={style.squareImg}>
 
-        <Image
-          className={style.imageData}
-          src={randomStories.squareImages[0].url}
-          width={262}
-          height={262}
-          alt="story"
-        />
-
-        <Image
-          className={style.frame}
-          src="/assets/images/square-frame.svg"
-          width={309}
-          height={300}
-          alt=""
-        />
-
-      </div>
+    {/* Orange Content */}
+    {renderContent(
+      `${style.content} ${style.square} ${style.curved}`,
+      "/assets/images/frame-orange.svg",
+      246,
+      271
     )}
 
 
-    {/* ================================
-        ORANGE CONTENT
-    ================================= */}
-
-    {randomStories.content[0] && (
-      <Link
-        href={randomStories.content[0].link}
-        className={`${style.content} ${style.square} ${style.curved}`}
-      >
-
-        <p>
-          {randomStories.content[0].text}
-        </p>
-
-        <h3 className={style.name}>
-          {randomStories.content[0].name}
-        </h3>
-
-        <Image
-          className={style.frame}
-          src="/assets/images/frame-orange.svg"
-          width={246}
-          height={271}
-          alt=""
-        />
-
-      </Link>
+    {/* Pink / Portrait Content */}
+    {renderContent(
+      `${style.content} ${style.potrait}`,
+      "/assets/images/pink-frame.svg",
+      291,
+      339
     )}
 
 
-    {/* ================================
-        PINK CONTENT
-    ================================= */}
-
-    {randomStories.content[1] && (
-      <Link
-        href={randomStories.content[1].link}
-        className={`${style.content} ${style.potrait}`}
-      >
-
-        <p>
-          {randomStories.content[1].text}
-        </p>
-
-        <h3 className={style.name}>
-          {randomStories.content[1].name}
-        </h3>
-
-        <Image
-          className={style.frame}
-          src="/assets/images/pink-frame.svg"
-          width={291}
-          height={339}
-          alt=""
-        />
-
-      </Link>
-    )}
-
-
-    {/* ================================
-        SQUARE IMAGE 2
-    ================================= */}
-
-    {randomStories.squareImages[1] && (
-      <div className={style.squareImg}>
-
-        <Image
-          className={style.imageData}
-          src={randomStories.squareImages[1].url}
-          width={262}
-          height={262}
-          alt="story"
-        />
-
-        <Image
-          className={style.frame}
-          src="/assets/images/square-frame.svg"
-          width={309}
-          height={300}
-          alt=""
-        />
-
-      </div>
-    )}
+    {/* Square Image 2 */}
+    {renderSquareImage()}
 
   </div>
 
+
+  {/* ================================
+      LOWER ROW
+  ================================= */}
 
   <div className={`${style.row} ${style.lowerRow}`}>
 
-    {randomStories.content[2] && (
-      <Link
-        href={randomStories.content[2].link}
-        className={`${style.content} ${style.square} ${style.straight}`}
-      >
-
-        <p>
-          {randomStories.content[2].text}
-        </p>
-
-        <h3 className={style.name}>
-          {randomStories.content[2].name}
-        </h3>
-
-        <Image
-          className={style.frame}
-          src="/assets/images/frame-yellow.svg"
-          width={311}
-          height={313}
-          alt=""
-        />
-
-      </Link>
+    {/* Yellow Content */}
+    {renderContent(
+      `${style.content} ${style.square} ${style.straight}`,
+      "/assets/images/frame-yellow.svg",
+      311,
+      313
     )}
 
 
-    {randomStories.landscapeImages[0] && (
-      <div className={style.landscapeImg}>
+    {/* Landscape Image */}
+    {renderLandscapeImage()}
 
-        <Image
-          className={style.imageData}
-          src={randomStories.landscapeImages[0].url}
-          width={413}
-          height={235}
-          alt="story"
-        />
 
-        <Image
-          className={style.frame}
-          src="/assets/images/rect-frame.svg"
-          width={516}
-          height={291}
-          alt=""
-        />
-
-      </div>
+    {/* Blue Content */}
+    {renderContent(
+      `${style.content} ${style.square} ${style.straight}`,
+      "/assets/images/frame-blue.svg",
+      311,
+      313
     )}
 
 
-    {randomStories.content[3] && (
-      <Link
-        href={randomStories.content[3].link}
-        className={`${style.content} ${style.square} ${style.straight}`}
-      >
-
-        <p>
-          {randomStories.content[3].text}
-        </p>
-
-        <h3 className={style.name}>
-          {randomStories.content[3].name}
-        </h3>
-
-        <Image
-          className={style.frame}
-          src="/assets/images/frame-blue.svg"
-          width={311}
-          height={313}
-          alt=""
-        />
-
-      </Link>
-    )}
-
-
-
-    {randomStories.content[4] && (
-      <Link
-        href={randomStories.content[4].link}
-        className={`${style.content} ${style.square} ${style.curved}`}
-      >
-
-        <p>
-          {randomStories.content[4].text}
-        </p>
-
-        <h3 className={style.name}>
-          {randomStories.content[4].name}
-        </h3>
-
-        <Image
-          className={style.frame}
-          src="/assets/images/frame-green.svg"
-          width={246}
-          height={271}
-          alt=""
-        />
-
-      </Link>
+    {/* Green Content */}
+    {renderContent(
+      `${style.content} ${style.square} ${style.curved}`,
+      "/assets/images/frame-green.svg",
+      246,
+      271
     )}
 
   </div>
@@ -1260,240 +1043,6 @@ They Loved It.</h2>
 </div>
 
 </section>
-
-
-{/* Comfort & Style section  */}
-
-<section className={`common_section yellow_section ${style.comfort_section}`}>
-
-<div className={`container ${style.container}`}>
-
-   <div className={`top_heading left_align ${style.top_heading}`}>
-      <div className={`left ${style.left}`}>
-        <h2 className='common_heading purple'>Stay Close to the Action in Comfort & Style</h2>
-        <p className=''>Make your Vels Jollywood experience even more memorable with a stay at our on-site resort. Whether you're winding down after a fun-filled day or planning a weekend getaway, our cozy rooms, family-friendly amenities, and scenic surroundings offer the perfect retreat.</p>
-         <Button href="#" text="Book a Stay" className="common_btn white_bg black_text left_tilt stay"></Button>
-      </div>
-   
-      <div className={`right ${style.right}`}>
-<Image src="/assets/images/comfort_stay.png" width={870} height={565} alt=''/>
-      </div>
-    </div>
-
-</div>
-
-<div className={`container full_container ${style.container} ${style.stay_slider_container}`}>
-<div className={style.stay_slider}>
-
-   <Swiper
-  modules={[Navigation, Pagination, Autoplay]}
-  spaceBetween={20}
-  slidesPerView={4}
-  pagination={{ clickable: true }}
-  autoplay={{ delay: 3000, disableOnInteraction: false }}
-  centeredSlides={false}
-  loop={true}
-  className='purple_dots'
-  breakpoints={{
-    0: {
-      slidesPerView: 1,
-    },
-    600: {
-      slidesPerView: 1.5,
-    },
-    992: {
-      slidesPerView: 1.8,
-    },
-    1200:{
-      slidesPerView: 2,
-    },
-     1300: {
-      slidesPerView:2.5,
-      spaceBetween: 30,
-    },
-     1400: {
-      slidesPerView:2.9,
-      spaceBetween: 30,
-    },
-    1600: {
-      slidesPerView:3.1,
-      spaceBetween: 30,
-    },
-     1750: {
-      slidesPerView:3.8,
-      spaceBetween: 30,
-    },
-     1900: {
-      slidesPerView: 4.15,
-      spaceBetween: 30,
-    },
-  }}
->
-        {ComfortsData.map((slide,index) => (
-          <SwiperSlide key={index}>
-            <div className={`${style.singleSlide}`} onMouseEnter={()=>setExperienceVideo(index)} onMouseLeave={()=>setExperienceVideo(null)}>
-              <div className={style.image}>
-                <Image src={slide.image} alt={slide.title} width={120} height={120} />
-              </div>
-              <div className={style.content}>
-                <h3 className={`${style.title} white`}>{slide.title}</h3>
-                <p className='white'>{slide.content}</p>
-              </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
- 
-
-
-</div>
-</div>
-
-
-
-
-</section>
-
-
-{/* playtopia section  */}
-<section className={`common_section ${style.playtopia_section}`}>
-  <div className={`container section_container ${style.container}`}>
-
-    <div className={`top_heading left_align ${style.top_heading}`}>
-
-      <div className={`left ${style.left}`}>
-        <p className='white'>Playtopia</p>
-        <h2 className='common_heading white'>Make Your Birthday a Blockbuster</h2>
-      </div>
-
-    </div>
-
-
-
-       <div className={style.playtopiaCard}>
-    
-        {PlaytopiaData.map((slide,index) => (
-       
-            <div className={`${style.singleSlide}`} key={index}>
-              <div className={style.image}>
-                <Image src={slide.image} width={570} height={450} alt={slide.title}/>
-              
-              </div>
-              <div className={style.content}>
-                <h3 className={`${style.title} white`}>{slide.title}</h3>
-                <Button href={slide.link} text="" className="link white large"></Button>
-              </div>
-            </div>
-      
-        ))}
-      
-    </div>
-
- 
-
-    
-</div>
-  
-</section>
-
-
-{/* retail section  */}
-<section className={`common_section yellow_section ${style.retail_section}`}>
-
-<div className={`container section_container ${style.container}`}>
-
-   <div className={`top_heading center_align ${style.top_heading}`}>
-      <div className={`left ${style.left}`}>
-        <p className='purple'>Retail Outlet - Souvenirs & Gifts</p>
-        <h2 className='common_heading purple'>Take the magic of Jollywood home.</h2>
-      </div>
-  
-    </div>
-
-    <div className={style.retailCard}>
-    
-        {RetailData.map((slide,index) => (
-       
-            <div className={`${style.singleSlide}`} key={index}>
-              <div className={style.image}>
-                <Image src={slide.image} width={570} height={639} alt={slide.title}/>
-              
-              </div>
-              <div className={style.content}>
-                <h3 className={`${style.title}`}>{slide.title}</h3>
-                <Button href={slide.link} text="" className="link white large"></Button>
-              </div>
-            </div>
-      
-        ))}
-      
-    </div>
-
-</div>
-
-
-
-
-</section>
-
-
-
-{/* corporate section  */}
-<section className={`common_section ${style.corporate_section}`}>
-  <div className={`container section_container ${style.container}`}>
-
-    <div className={`top_heading left_align ${style.top_heading}`}>
-
-      <div className={`left ${style.left}`}>
-        <p className='white'>Corporate</p>
-        <h2 className='common_heading white'>Studios for MICE</h2>
-      </div>
-
-    </div>
-
-<div className={style.splitSection}>
-
-  <div className={style.singleTexts}>
-<h3>Meeting</h3>
-<h3>Incentive</h3>
-<h3>Conference</h3>
-<h3>Events</h3>
-<div>
-  <Button href="#" text="KNow More" className="common_btn orange_bg black_text black_shadow left_tilt arrow"></Button>
-  </div>
-
-  </div>
-
-   <div className={style.corporateCard}>
-    
-        {CorporateData.map((slide,index) => (
-       
-            <div className={`${style.singleSlide}`} key={index}>
-              <div className={style.image}>
-                <Image src={slide.image} width={420} height={500} alt={slide.title}/>
-              
-              </div>
-              <div className={style.content}>
-                <h3 className={`${style.title} white`}>{slide.title}</h3>
-                <Button href={slide.link} text="" className="link white  large"></Button>
-              </div>
-            </div>
-      
-        ))}
-      
-    </div>
-
-</div>
-
-      
-
- 
-
-    
-</div>
-  
-</section>
-
 
 
 

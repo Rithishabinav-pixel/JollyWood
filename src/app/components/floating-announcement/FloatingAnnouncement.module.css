@@ -1,0 +1,60 @@
+.floating_announcement {
+  width: 100%;
+  overflow: hidden;
+  padding: 7px;
+  background-color: var(--yellow);
+  position: relative;
+  z-index: 9;
+}
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee_track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 50s linear infinite;
+}
+
+.marquee:hover .marquee_track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.announcementSlide {
+  width: auto !important;
+  flex-shrink: 0;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-right: 30px;
+}
+
+/* responsive */
+
+/* mobile  */
+
+@media screen and (max-width:767px) {
+  .announcementSlide,
+  .announcementSlide a {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .floating_announcement{
+    padding: 4px
+  }
+
+  
+}

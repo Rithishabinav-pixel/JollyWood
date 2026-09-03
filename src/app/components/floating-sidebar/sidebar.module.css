@@ -1,0 +1,232 @@
+#sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    background-color: var(--accent);
+    width: 75px;
+    display: flex;
+    height: 100vh;
+    padding-top: 60px;
+    transition: 0.5s ease-in-out;
+}
+
+#sidebar.active{
+    width: 50%;
+}
+
+#sidebar a{
+    display: flex;
+    position: relative;
+
+}
+
+.menuLists {
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translate(-150%, -50%);
+    transition: 0.3s all;
+    opacity: 0;
+}
+
+#sidebar.active .menuLists {
+    transform: translate(0, -50%);
+    opacity: 1;
+    transition-delay: 0.2s;
+}
+
+.menuLists ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.menuLists ul li a{
+    font-size: 32px;
+    line-height: 40px;
+    color: white;
+    text-decoration: none;
+}
+
+#sidebar nav.fixedMenu{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+#sidebar nav.fixedMenu,
+#sidebar .socialIcons{
+    margin-left: auto;
+}
+
+#sidebar nav.fixedMenu ul,
+#sidebar .socialIcons{
+     display: flex;
+    flex-direction: column;
+list-style: none;
+padding-right: 17.5px;
+}
+
+#sidebar nav.fixedMenu ul.fixedMenu_lists{
+gap: 28px;
+align-items: center;
+}
+
+#sidebar .socialIcons{
+    gap: 16px;
+}
+
+
+#sidebar nav.fixedMenu ul li.nav.fixedMenuItems a img{
+    width: 40px;
+    height: auto;
+}
+
+#sidebar nav.fixedMenu ul li.quickMenu a{
+    width: 48px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    display: grid;
+    place-items: center;
+    border: solid white 1px;
+    border-radius: 50px;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+}
+
+#sidebar nav.fixedMenu ul li a span{
+    position: absolute;
+    top: 50%;
+    transform: translate(20px,-50%);
+    left: 115%;
+    background-color: white;
+    font-size: 10px;
+    line-height: 16px;
+    padding: 0px 12px;
+    display: flex;
+    border-radius: 50px;
+    opacity: 0;
+    transition: 0.3s all;
+}
+
+#sidebar nav.fixedMenu ul li a:hover span{
+   transform: translate(0px,-50%);
+opacity: 1;
+}
+
+#sidebar nav.fixedMenu ul li a span::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -5px;
+    transform: translate(0px,-50%) rotate(-90deg);
+    width: 0px;
+    height: 0px;
+     border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid white; 
+}
+
+
+#sidebar nav.fixedMenu ul li.quickMenu a img{
+    width: 32px;
+    height: auto;
+    border-radius: 50px;
+    transition: 0.3s ease-in-out;
+}
+
+#sidebar nav.fixedMenu ul li.quickMenu.active{
+    transform: translateX(calc(50% + 17.5px));
+}
+
+#sidebar nav.fixedMenu ul li.quickMenu.active a{
+    background-color: var(--orange);
+}
+
+#sidebar .socialIcons a:hover{
+transform: scale(0.9);
+}
+
+#sidebar .socialIcons img{
+    width: 48px;
+    height: auto;
+}
+
+/* responsive  */
+
+/* max height 890  */
+@media screen and (max-height:890px) {
+
+     #sidebar{
+        padding-top: 7vh;
+     }
+
+    #sidebar nav.fixedMenu{
+        gap: 6vh;
+    }
+
+    #sidebar nav.fixedMenu ul.fixedMenu_lists{
+gap: 3vh;
+}
+
+
+#sidebar nav.fixedMenu ul.socialIcons{
+gap: 16px;
+}
+
+#sidebar nav.fixedMenu .fixedMenu_lists a img{
+    width: 40px;
+}
+
+#sidebar nav.fixedMenu ul li.quickMenu a{
+    width: 40px;
+}
+
+#sidebar nav.fixedMenu ul li.quickMenu a img{
+    width: 26px;
+}
+
+#sidebar .socialIcons img{
+    width: 44px;
+
+}
+    
+}
+
+
+/* max height 770  */
+@media screen and (max-height:770px) {
+
+
+#sidebar nav.fixedMenu ul.fixedMenu_lists{
+gap: 2vh;
+}
+
+#sidebar nav.fixedMenu ul.socialIcons{
+gap: 1.6vh;
+}
+
+#sidebar nav.fixedMenu ul.fixedMenu_lists li a img,
+#sidebar nav.fixedMenu ul li.quickMenu a{
+    width: 5vh;
+}
+
+
+#sidebar nav.fixedMenu ul li.quickMenu a img{
+    width: 3.7vh;
+}
+
+#sidebar .socialIcons{
+    gap: 2vh;
+}
+
+#sidebar .socialIcons img{
+    width:5vh;
+    
+}
+
+
+    
+}

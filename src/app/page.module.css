@@ -1,150 +1,1381 @@
-.page {
-  --background: #fafafa;
-  --foreground: #fff;
-
-  --text-primary: #000;
-  --text-secondary: #666;
-
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-  --button-secondary-border: #ebebeb;
-
+.adrenaline_section .slider .singleSlide,
+.experience_section .slider .singleSlide,
+.playtopia_section .playtopiaCard .singleSlide,
+.retail_section .retailCard .singleSlide,
+.corporate_section .corporateCard .singleSlide{
   display: flex;
-  flex: 1;
+  flex-direction: column;
+}
+
+.adrenaline_section .slider .singleSlide,
+.experience_section .slider .singleSlide{
+  gap: 32px;
+}
+
+.playtopia_section .playtopiaCard .singleSlide,
+.retail_section .retailCard .singleSlide,
+.corporate_section .corporateCard .singleSlide{
+  gap: 26px;
+}
+
+.experience_section .slider .singleSlide .image{
+   -webkit-mask-image: url('/assets/images/bg-brush.svg');
+  mask-image: url('/assets/images/bg-brush.svg');
+  mask-size: 100%;
+}
+
+.adrenaline_section .slider .singleSlide .image,
+.experience_section .slider .singleSlide .image{
+  position: relative;
+  overflow: hidden;
+border-radius: 16px;
+}
+
+.playtopia_section{
+  position: relative;
+}
+
+.playtopia_section::before{
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("/assets/images/playtopia_bg.png");
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+
+.adrenaline_section .slider .singleSlide .image img,
+.experience_section .slider .singleSlide .image img,
+.playtopia_section .singleSlide .image img,
+.retail_section .singleSlide .image img,
+.corporate_section .singleSlide .image img{
+width: 100%;
+height: auto;
+float: left;
+}
+
+.retail_section .singleSlide .image img,
+.corporate_section .singleSlide .image img{
+  border-radius: 24px;
+}
+
+.adrenaline_section .slider .singleSlide .image video,
+.experience_section .slider .singleSlide .image video{
+  position: absolute;
+  width: 100%;
+  height: auto;
+  z-index: 9;
+  top: 0;
+  left: 0;
+}
+
+.adrenaline_section .slider .singleSlide .content,
+.playtopia_section .playtopiaCard .singleSlide .content,
+.retail_section .retailCard .singleSlide .content,
+.corporate_section .corporateCard .singleSlide .content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.experience_section .slider .singleSlide .content,
+.playtopia_section .playtopiaCard,
+.playtopia_section .playtopiaCard .singleSlide .content,
+.retail_section .retailCard .singleSlide .content,
+.retail_section .retailCard,
+.corporate_section .corporateCard .singleSlide .content,
+.corporate_section .corporateCard{
+  display: flex;
+}
+
+
+.playtopia_section .playtopiaCard,
+.retail_section .retailCard,
+.corporate_section .corporateCard{
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.playtopia_section .playtopiaCard .singleSlide,
+.retail_section .retailCard .singleSlide,
+.corporate_section .corporateCard .singleSlide{
+  width: calc(33.33% - 20px);
+}
+
+.experience_section .slider .singleSlide .content{
+ flex-direction: column;
+  gap: 16px;
+}
+
+.adrenaline_section .slider .singleSlide .content .title,
+.experience_section .slider .singleSlide .content .title,
+.playtopia_section .playtopiaCard .content .title,
+.retail_section .retailCard .content .title,
+.corporate_section .corporateCard .content .title{
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 600;
+}
+
+
+
+/* .adrenaline_section .slider :global(.swiper ),
+.experience_section .slider :global(.swiper ){
+padding-bottom: 48px;
+}
+
+.adrenaline_section .slider :global(.swiper ) :global(.swiper-pagination),
+.experience_section .slider :global(.swiper ) :global(.swiper-pagination){
+bottom: 0;
+display: flex;
+gap: 16px;
+margin: auto;
+justify-content: center;
+}
+
+.adrenaline_section .slider :global(.swiper ) :global(.swiper-pagination) :global(.swiper-pagination-bullet),
+.experience_section .slider :global(.swiper ) :global(.swiper-pagination) :global(.swiper-pagination-bullet){
+  margin: 0;
+  border-radius: 6px;
+background: linear-gradient(104deg, #FBC615 1.2%, #FFE590 72.57%);
+transition: 0.3s all;
+opacity: 1;
+}
+
+.adrenaline_section .slider :global(.swiper ) :global(.swiper-pagination) :global(.swiper-pagination-bullet-active),
+.experience_section .slider :global(.swiper ) :global(.swiper-pagination) :global(.swiper-pagination-bullet-active){
+  width: 80px;
+} */
+
+.experience_section,
+.offers_section,
+.facilities_section,
+.comfort_section{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.experience_section .exp_tabs .tab_btn{
+  padding: 12px 16px;
+  border: solid white 1px;
+  border-radius: 50px;
+  background: none;
+  min-width: fit-content;
+  color: white;
+}
+
+.experience_section .exp_tabs .tab_btn.active{
+  background-color: var(--darkOrange);
+  border-color: var(--darkOrange);
+}
+
+.experience_section .exp_tabs .tab_btn:not(.active):hover{
+  background: rgba(255, 255, 255, 0.377);
+}
+
+.experience_section .exp_tabs{
+  display: flex;
+  gap: 16px;
+}
+
+.experience_section .top_heading .left{
+  width: 45%;
+  max-width: 45%;
+}
+
+.experience_section .top_heading .right{
+  width: 55%;
+  max-width: 55%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.experience_section .top_heading .left p{
+  width: 100%;
+  max-width: 450px;
+}
+
+.offers_section :global(.swiper){
+  padding: 3.4vw 0 5.5vw 0;
+  transform-origin: center center;
+}
+
+.offers_section :global(.swiper) :global(.swiper-slide){
+  transition: 0.3s all;
+}
+
+.offers_section{
+  position: relative;
+}
+
+.offers_section :global(.swiper) .image img{
+width: 100%;
+height: auto;
+border-radius: 8px;
+float: left;
+}
+
+.offers_section .sliderMock{
+   width: 22.5vw;
+  height: auto;
+  aspect-ratio: 430 / 687;
+  position: absolute;
+    bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.offers_section :global(.center_nav){
+  display: flex;
+  gap: 390px;
+  bottom: 45px;
+}
+
+.cinematic_section{
+  background-image: url('/assets/images/cinematic.png');
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  min-height: 100vh;
+}
+
+.cinematic_section::before,
+.cinematic_section::after{
+  position: absolute;
+  content: '';
+  height: 100%;
+  top: 0;
+}
+
+.cinematic_section::before{
+    width: 65%;
+  opacity: 0.8;
+  left: 0;
+background: linear-gradient(124deg, #000 16.2%, rgba(0, 0, 0, 0.85) 47.88%, rgba(0, 0, 0, 0.00) 82.09%);
+}
+
+.cinematic_section::after{
+  right: 0;
+  opacity: 0.6;
+    width: 35%;
+background: linear-gradient(230deg, #000 42.7%, rgba(0, 0, 0, 0.00) 70.6%);
+}
+
+.cinematic_section .container{
+  z-index: 2;
+}
+
+.cinematic_section .top_heading .left{
+  width: 50%;
+}
+
+.cinematic_section .top_heading .right{
+  width: fit-content;
+}
+
+.cinematic_section .top_heading .right{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.cinematic_section .top_heading .right .mixed{
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.cinematic_section .top_heading .right .mixed span{
+color: var(--darkOrange);
+}
+
+.cinematic_section .top_heading .right .timing{
+padding: 12px 16px;
+border-radius: 30px;
+background-color: var(--darkOrange);
+}
+
+
+.memories_section .memories_grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 30px;
+}
+
+
+.memories_section .memories_grid .card:not(.videoTabContainer){
+  aspect-ratio: 1 / 1;
+  padding: 32px;
+ width: calc(33.333% - 20px);
+  height: auto;
+  background-size: cover;
+}
+
+.memories_section .memories_grid .card{
+  border-radius: 24px;
+  overflow: hidden;
+
+}
+
+.memories_section .memories_grid .card:nth-last-child(-n + 2){
+width: calc(50% - 15px);
+max-height: 500px;
+}
+
+.memories_section .memories_grid .card h3{
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.memories_section .memories_grid .videoTabContainer {
+  width: calc(66.999% - 20px);
+  position: relative;
+}
+
+.memories_section .memories_grid .videoTabContainer::before{
+  position: absolute;
+  content: '';
+  inset: 0;
+  background: linear-gradient(to bottom,rgba(0, 0, 0, 0.75),transparent,rgba(0, 0, 0, 0.75));
+}
+
+.memories_section .memories_grid .videoTabContainer video{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  float: left;
+}
+
+.memories_section .memories_grid .videoTabContainer .tabs,
+.memories_section .memories_grid .videoTabContainer .content{
+  position: absolute;
+  left: 32px;
+  z-index: 2;
+}
+
+.memories_section .memories_grid .card .content{
+  top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 420px;
+}
+
+.memories_section .memories_grid .videoTabContainer .tabs{
+  bottom: 32px;
+  display: flex;
+  gap: 20px;
+}
+
+.memories_section .memories_grid .videoTabContainer .tabs button{
+  background: none;
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.memories_section .memories_grid .videoTabContainer .tabs button:hover{
+  transform: scale(0.975);
+}
+
+.memories_section .memories_grid .videoTabContainer .tabs button img{
+  width: 100%;
+  height: auto;
+  float: left;
+}
+
+.facilities_rows{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.facilities_rows .facilities_single_row{
+  display: flex;
+  gap: 30px;
+  min-width: max-content;
+  animation: facilities_single_row 10s infinite linear;
+}
+
+.facilities_rows .facilities_single_row.reverse{
+  animation-direction: reverse;
+}
+
+.facilities_rows:hover .facilities_single_row {
+  animation-play-state: paused;
+}
+
+@keyframes facilities_single_row {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.facilities_rows .facilities_single_row .single{
+  min-width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 16px;
+  background-color: white;
+  border-radius: 50px;
+  transition: 0.3s all;
+}
+
+.facilities_rows .facilities_single_row .single:hover{
+  background-color: rgb(240, 240, 240);
+  transform: scale(0.95);
+}
+
+.facilities_rows .facilities_single_row .single img{
+  width: 64px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  float: left;
+}
+
+.facilities_rows .facilities_single_row .single p{
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.stories_container{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.stories_container .row{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+
+.stories_container .squareImg,
+.stories_container .content,
+.stories_container .landscapeImg{
+  position: relative;
+  width: fit-content;
+  z-index: 2;
+  display: flex;
+
+}
+
+.stories_container .squareImg .imageData,
+.stories_container .squareImg .frame,
+.stories_container .content .frame,
+.stories_container .landscapeImg .frame{
+  float: left;
+  width: 100%;
+  height: auto;
+}
+
+.stories_container .squareImg {
+  width: 309px;
+  height: auto;
+}
+
+.stories_container .squareImg .frame,
+.stories_container .landscapeImg .frame{
+  position: relative;
+  z-index: 1;
+}
+
+.stories_container .squareImg .imageData,
+.stories_container .landscapeImg .imageData{
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.995);
+  transform-origin: bottom center;
+  width: 85%;
+  object-fit: contain;
+}
+
+.stories_container .content{
+  padding:35px 10px 20px 10px;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-family: var(--font-geist-sans);
-  background-color: var(--background);
+  gap: 8px;
+  background-color: white;
+  text-decoration: none;
+  color: black;
 }
 
-.main {
-  display: flex;
-  flex: 1;
+.stories_container .content p{
+  display: -webkit-box;
+  
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-align: center;
+}
+
+.stories_container .content.square p{
+-webkit-line-clamp:6;
+  line-clamp: 6;
+}
+
+
+.stories_container .content.content.potrait p{
+-webkit-line-clamp:10;
+  line-clamp: 10;
+}
+
+.stories_container .content .name{
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  margin-top: auto;
+}
+
+
+
+.stories_container .content.potrait{
+width: 291px;
+aspect-ratio: 291 / 339;
+  height: auto;
+  transform: rotate(2.71deg);
+
+}
+
+.stories_container .content.square{
+width: 240px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+}
+
+.stories_container .landscapeImg{
+  width: 527px;
+  height: auto;
+}
+
+.stories_container .landscapeImg .imageData{
+  width: 80%;
+  height: auto;
+}
+
+.stories_container .content.curved{
+  transform: rotate(7.7deg);
+  transform-origin: top left;
+}
+
+.stories_container .content .frame{
+  position: absolute;
+
+}
+
+.stories_container .content.square .frame{
+  bottom: -2px;
+  right: -2px;
+  transform: scale(1.09);
+  transform-origin: center center;
+}
+
+.stories_container .content.square.straight .frame{
+  transform-origin: bottom right;
+  transform: scale(1.2);
+}
+
+.stories_container .content.square.straight{
+  padding: 20px;
+}
+
+.stories_container .content.potrait .frame{
+  bottom: 0;
+  left: 0;
+  transform: scale(1.135);
+  transform-origin: bottom left;
+}
+
+.stories_container .upperRow .content.potrait{
+  margin-right: 7%;
+}
+
+.stories_container .lowerRow .landscapeImg{
+   margin-right: 10%;
+}
+
+.comfort_section .container .top_heading{
+  align-items: flex-start;
+}
+
+.comfort_section .container .top_heading .left,
+.comfort_section .container .top_heading .right{
+
+max-width: unset;
+}
+
+.comfort_section .container .top_heading .right{
+  width: 50%;
+}
+
+.comfort_section .container .top_heading .left{
+  width: 38%;
+}
+
+.comfort_section .container .top_heading .right img{
   width: 100%;
-  max-width: 800px;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  background-color: var(--foreground);
-  padding: 120px 60px;
+  height: auto;
+  float: left;
+  border-radius: 16px;
 }
 
-.intro {
+.comfort_section .container .stay_slider .singleSlide{
+padding: 8px;
+background-color: var(--accent);
+border-radius: 8px;
+display: flex;
+align-items: flex-start;
+gap: 16px;
+}
+
+.comfort_section .container .stay_slider .singleSlide .image{
+  width: 120px;
+  height: auto;
+  min-width: 120px;
+
+}
+
+.comfort_section .container .stay_slider .singleSlide .image img{
+  width: 100%;
+  height: auto;
+  float: left;
+border-radius: 8px;
+}
+
+.comfort_section .container .stay_slider .singleSlide .content{
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
+  gap: 0px;
+}
+
+.comfort_section .container .stay_slider .singleSlide .content p{
+  opacity: 0.9;
+}
+
+.comfort_section .container .stay_slider .singleSlide .content h3{
+  font-weight: 600;
+}
+
+.playtopia_section .container .top_heading .left{
+  width:47%;
+  max-width: 47%;
+}
+
+.retail_section .singleSlide .content a img{
+filter: invert(1) brightness(100);
+}
+
+.corporate_section .container .top_heading .left{
+  width:100%;
+  max-width: 100%;
+}
+
+.corporate_section .splitSection{
+  display: flex;
+  align-items: flex-end;
+  gap: 50px;
+  justify-content: space-between;
+}
+
+
+.corporate_section .splitSection .singleTexts{
+ min-width: fit-content;
+ display: flex;
+ flex-direction: column;
+}
+
+.corporate_section .splitSection .singleTexts div{
+  margin-top: 30px;
+}
+
+.corporate_section .splitSection .singleTexts h3{
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 57px;
+  line-height: 73px;
+  text-transform: capitalize;
+}
+
+.corporate_section .splitSection .singleTexts h3::first-letter{
+  color: white;
+}
+
+.corporate_section .corporateCard{
+  width: 100%;
+}
+
+/* additional responsive  */
+
+@media screen and (max-width:1900px) {
+  .offers_section :global(.swiper){
+  padding: 3vw 0 4.8vw;
+}
+}
+
+@media screen and (max-width:1800px) {
+  .offers_section :global(.swiper){
+  padding: 4vw 0 4.4vw;
+}
+}
+
+@media screen and (max-width:1700px) {
+  .offers_section :global(.swiper){
+  padding: 3vw 0 6.4vw;
+}
+}
+
+@media screen and (max-width:1500px) {
+  .offers_section :global(.swiper){
+          padding: 3vw 0 6.3vw;
+}
+}
+
+@media screen and (max-width:1450px) {
+  .offers_section :global(.swiper){
+     padding: 3vw 0 6vw;
+}
+}
+
+@media screen and (max-width:1390px) {
+  .offers_section :global(.swiper){
+    padding: 3vw 0 5.7vw;
+}
+}
+
+/* responsive  */
+
+/* Laptop */
+
+@media screen and (max-width:1600px) {
+
+  .corporate_section .splitSection .singleTexts h3{
+  font-size: 48px;
+  line-height: 56px;
+}
+
+  .retail_section .singleSlide .image img,
+  .corporate_section .singleSlide .image img{
+  border-radius: 20px;
+}
+
+  .playtopia_section .container .top_heading .left{
+  width:42%;
+  max-width: 42%;
+}
+
+  .stories_container .lowerRow .landscapeImg{
+   margin-right: 4%;
+}
+
+  .stories_container .landscapeImg{
+  width: 500px;
+}
+
+  .stories_container .content.potrait{
+    width: 270px;
+  }
+
+  .stories_container .content.square p{
+-webkit-line-clamp:5;
+  line-clamp: 5;
+}
+
+.stories_container .content.content.potrait p{
+-webkit-line-clamp:9;
+  line-clamp: 9;
+}
+
+  .stories_container .content.square{
+    width: 220px;
+  }
+
+  .stories_container .squareImg {
+  width:280px;
+}
+
+  .facilities_rows .facilities_single_row .single img{
+  width: 50px;
+}
+
+ .facilities_rows .facilities_single_row .single p{
+  font-size: 20px;
+  line-height: 28px;
+ }
+
+  .memories_section .memories_grid .card:not(.videoTabContainer){
+  padding: 24px;
+}
+
+.memories_section .memories_grid .videoTabContainer .tabs,
+.memories_section .memories_grid .videoTabContainer .content{
+  left: 24px;
+}
+
+.memories_section .memories_grid .card{
+  border-radius: 16px;
+}
+
+  .memories_section .memories_grid .card h3{
+  font-size: 26px;
+  line-height:34px;
+}
+
+    .offers_section{
+      padding: 40px 0 70px 0;
+    }
+
+  .offers_section .sliderMock{
+  width: 21.6vw;
+}
+
+
+  .adrenaline_section .slider .singleSlide .content .title,
+    .experience_section .slider .singleSlide .content .title,
+     .playtopia_section .playtopiaCard .singleSlide .content .title,
+     .retail_section .retailCard .singleSlide .content .title,
+     .corporate_section .corporateCard .singleSlide .content .title{
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.adrenaline_section .slider .singleSlide,
+.experience_section .slider .singleSlide{
   gap: 24px;
 }
 
-.intro h1 {
-  max-width: 320px;
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 48px;
-  letter-spacing: -2.4px;
-  text-wrap: balance;
-  color: var(--text-primary);
+.playtopia_section .playtopiaCard .singleSlide,
+.retail_section .retailCard .singleSlide,
+.corporate_section .corporateCard .singleSlide{
+  gap: 18px;
 }
 
-.intro p {
-  max-width: 440px;
-  font-size: 18px;
-  line-height: 32px;
-  text-wrap: balance;
-  color: var(--text-secondary);
 }
 
-.intro a {
-  font-weight: 500;
-  color: var(--text-primary);
+@media screen and (max-width:1400px){
+
+  .stories_container .content.content.potrait p{
+-webkit-line-clamp:7;
+  line-clamp: 7;
 }
 
-.ctas {
-  display: flex;
-  flex-direction: row;
+    .stories_container .content.square{
+    width: 200px;
+  }
+
+  .stories_container .squareImg {
+  width:210px;
+}
+
+
+    .stories_container .lowerRow .landscapeImg{
+   margin-right: 0%;
+}
+
+  .stories_container .landscapeImg{
+  width: 375px;
+}
+
+  .stories_container .content.potrait{
+    width: 240px;
+  }
+
+  .stories_container .content.square p{
+-webkit-line-clamp:4;
+  line-clamp: 4;
+}
+}
+
+/* tablet  */
+
+@media screen and (max-width:1200px){
+
+
+  .corporate_section .splitSection .singleTexts{
+ flex-direction: row;
+ flex-wrap: wrap;
+ gap: 12px;
+ justify-content: center;
+}
+
+.corporate_section .splitSection .singleTexts div{
+  margin-top: 16px;
   width: 100%;
-  max-width: 440px;
-  gap: 16px;
-  font-size: 14px;
-}
-
-.ctas a {
   display: flex;
   justify-content: center;
+}
+
+.corporate_section .splitSection .singleTexts h3{
+  font-size: 30px;
+  line-height: 38px;
+}
+
+
+.corporate_section .corporateCard,
+.corporate_section .splitSection .singleTexts{
+  width: 100%;
+  min-width: 100%;
+}
+
+.corporate_section .splitSection{
+  flex-direction: column;
+}
+
+  .retail_section .singleSlide .image img,
+    .corporate_section .singleSlide .image img{
+  border-radius: 16px;
+}
+
+
+  .playtopia_section .container .top_heading .left{
+  width:100%;
+  max-width: 100%;
+}
+
+  .playtopia_section .playtopiaCard,
+  .retail_section .retailCard,
+  .corporate_section .corporateCard{
+  gap: 20px;
+}
+
+.playtopia_section .playtopiaCard .singleSlide,
+.retail_section .retailCard .singleSlide,
+.corporate_section .corporateCard .singleSlide{
+  width: calc(33.33% - 13.333px);
+}
+
+  .stories_section{
+    padding-bottom: 100px;
+  }
+
+
+.comfort_section .container .top_heading .right,
+.comfort_section .container .top_heading .left{
+  width: 100%;
+}
+
+.comfort_section .container .top_heading .right{
+  margin-top: 20px;
+}
+
+  .stories_container .content.content.potrait p{
+-webkit-line-clamp:7;
+  line-clamp: 7;
+}
+
+    .stories_container .content.square{
+    width: 35%;
+    padding: 5vw 20px;
+    justify-content: center;
+  }
+
+  .stories_container .content.square .name,
+   .stories_container .content.potrait .name{
+    margin-top: 24px;
+  }
+
+  .stories_container .squareImg {
+  width:35%;
+}
+
+  .stories_container .content.square .frame{
+    transform: scale(1.1);
+  }
+
+
+    .stories_container .lowerRow .landscapeImg{
+   margin-right: 0%;
+  width: 50%;
+
+}
+
+
+  .stories_container .content.potrait{
+    width: 35%;
+    padding: 20px;
+  }
+
+  .stories_container .content.square p{
+-webkit-line-clamp:5;
+  line-clamp: 5;
+}
+
+  .stories_container .row{
+  flex-wrap: wrap;
+  gap: 50px 0;
+}
+
+
+   .facilities_rows .facilities_single_row .single img{
+  width: 40px;
+}
+
+ .facilities_rows,
+ .facilities_rows .facilities_single_row{
+  gap: 20px;
+ }
+
+ .facilities_rows .facilities_single_row .single p{
+  font-size: 18px;
+  line-height: 26px;
+ }
+
+   .memories_section .memories_grid .card:not(.videoTabContainer){
+  padding: 20px;
+}
+
+.memories_section .memories_grid{
+  gap: 20px;
+}
+
+   .memories_section .memories_grid .card:not(.videoTabContainer){
+    width: calc(50% - 10px);
+   }
+
+
+
+.memories_section .memories_grid .videoTabContainer .tabs,
+.memories_section .memories_grid .videoTabContainer .content{
+  left: 20px;
+  width: calc(100% - 40px);
+}
+
+.memories_section .memories_grid .videoTabContainer .tabs{
+  gap: 10px;
+}
+
+.memories_section .memories_grid .videoTabContainer .tabs button{
+  border-radius: 4px;
+}
+
+ .memories_section .memories_grid .videoTabContainer{
+  width: 100%;
+ }
+
+  .memories_section .memories_grid .card h3{
+  font-size: 20px;
+  line-height:28px;
+}
+
+  .cinematic_section .top_heading .left,
+  .cinematic_section .top_heading .right{
+  width: 100%;
+}
+
+.cinematic_section .top_heading .right{
   align-items: center;
-  height: 40px;
-  padding: 0 16px;
-  border-radius: 128px;
-  border: 1px solid transparent;
-  transition: 0.2s;
-  cursor: pointer;
-  width: fit-content;
-  font-weight: 500;
 }
 
-a.primary {
-  background: var(--text-primary);
-  color: var(--background);
-  gap: 8px;
+.cinematic_section .top_heading .right .mixed{
+  font-size: 20px;
+  line-height: 28px;
 }
 
-a.secondary {
-  border-color: var(--button-secondary-border);
+  .cinematic_section::before{
+    width: 100%;
+background: linear-gradient(180deg, #000 10%, rgba(0, 0, 0, 0.85) 47.88%, rgba(0, 0, 0, 0.5) 100%);
 }
 
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
-  }
+ .cinematic_section::after{
+  display: none;
+ }
 
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
+  .offers_section :global(.center_nav){
+  gap: 200px;
+  bottom: 30px;
 }
 
-@media (max-width: 600px) {
-  .main {
-    padding: 48px 24px;
-  }
 
-  .intro {
-    gap: 16px;
-  }
-
-  .intro h1 {
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: -1.92px;
-  }
+  .offers_section :global(.swiper){
+  padding: 9vw 0 19vw;
 }
 
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
 
-  .page {
-    --background: #000;
-    --foreground: #000;
-
-    --text-primary: #ededed;
-    --text-secondary: #999;
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-    --button-secondary-border: #1a1a1a;
-  }
+  .offers_section .sliderMock{
+   width: 45vw;
 }
 
-.code {
-  font-family: var(--font-geist-mono);
-  font-size: 0.9em;
-  background: color-mix(in srgb, currentColor 8%, transparent);
-  padding: 0.1em 0.4em;
-  border-radius: 6px;
+  .adrenaline_section .slider .singleSlide,
+.experience_section .slider .singleSlide{
+  gap: 20px;
 }
+
+  .experience_section,
+  .offers_section,
+  .facilities_section,
+  .comfort_section{
+  gap: 30px;
+}
+
+  .experience_section .top_heading .left,
+  .experience_section .top_heading .right{
+  width: 100%;
+  max-width: 100%;
+}
+
+.experience_section .top_heading .right{
+  justify-content: center;
+  margin-top: 8px;
+}
+
+  .adrenaline_section .slider .singleSlide .image,
+    .experience_section .slider .singleSlide .image{
+border-radius: 8px;
+}
+
+.adrenaline_section .slider .singleSlide .content .title,
+.experience_section .slider .singleSlide .content .title,
+.playtopia_section .playtopiaCard .singleSlide .content .title,
+.retail_section .retailCard .singleSlide .content .title,
+.corporate_section .corporateCard .singleSlide .content .title{
+  font-size: 20px;
+  line-height: 28px;
+}
+
+
+
+}
+
+@media screen and (max-width:1180px){
+    .offers_section :global(.swiper){
+          padding: 9vw 0 18.5vw;
+}
+}
+
+@media screen and (max-width:1100px){
+    .offers_section :global(.swiper){
+            padding: 8vw 0 17.5vw;
+}
+}
+
+@media screen and (max-width:870px){
+    .offers_section :global(.swiper){
+             padding: 8vw 0 17vw;
+}
+}
+
+@media screen and (max-width:830px){
+    .offers_section :global(.swiper){
+              padding: 7vw 0 16vw;
+
+}
+  .offers_section .sliderMock{
+   width: 44vw;
+}
+}
+
+/* mobile  */
+
+@media screen and (max-width:767px) {
+
+  .playtopia_section::before{
+  background-size: 60% auto;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+  .corporate_section .splitSection .singleTexts{
+ flex-direction: column;
+ gap: 0px;
+ justify-content: flex-start;
+}
+
+.corporate_section .splitSection .singleTexts div{
+  margin-top: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.corporate_section .splitSection .singleTexts h3{
+  font-size: 12vw;
+  line-height: 14vw;
+}
+
+
+.corporate_section .corporateCard,
+.corporate_section .splitSection .singleTexts{
+  width: 100%;
+  min-width: 100%;
+}
+
+
+
+    .playtopia_section .playtopiaCard,
+    .retail_section .retailCard,
+    .corporate_section .corporateCard{
+  gap: 20px;
+}
+
+.playtopia_section .playtopiaCard .singleSlide,
+.retail_section .retailCard .singleSlide,
+.corporate_section .corporateCard .singleSlide{
+  width: 100%;
+}
+
+.comfort_section .container .stay_slider .singleSlide .image{
+  width: 100px;
+  height: auto;
+  min-width: 100px;
+}
+
+.comfort_section .container .stay_slider .singleSlide{
+  padding: 16px;
+}
+
+   .stories_container .content.content.potrait p{
+-webkit-line-clamp:7;
+  line-clamp: 7;
+}
+
+    .stories_container .content.square{
+    width: 70%;
+    padding:20px;
+    justify-content: center;
+  }
+
+  .stories_container .content.square .name,
+   .stories_container .content.potrait .name{
+    margin-top: 24px;
+  }
+
+  .stories_container .squareImg {
+  width:100%;
+}
+
+
+    .stories_container .lowerRow .landscapeImg{
+  width: 100%;
+
+}
+
+
+  .stories_container .content.potrait{
+    width:70%;
+    padding: 20px;
+  margin-right: 0%;
+margin-top: 50px;
+  }
+
+  .stories_container .content.square p{
+-webkit-line-clamp:5;
+  line-clamp: 5;
+}
+
+  .stories_container .row{
+  gap: 50px 0;
+}
+
+  
+   .facilities_rows .facilities_single_row .single img{
+  width: 32px;
+}
+
+
+ .facilities_rows .facilities_single_row .single p{
+  font-size: 16px;
+  line-height: 24px;
+ }
+
+     .memories_section .memories_grid .videoTabContainer{
+    aspect-ratio: 1 / 1;
+   }
+
+   .memories_section .memories_grid .videoTabContainer video{
+    width: auto;
+    height: 100%;
+   }
+
+   .memories_section .memories_grid .card:not(.videoTabContainer){
+    width: 100%;
+   }
+
+  .offers_section :global(.strict_full){
+  padding: 0;
+}
+
+    .offers_section .sliderMock{
+   width: 43vw;
+}
+
+      .offers_section :global(.swiper){
+     padding: 7vw 0 13.5vw;
+}
+  
+  .experience_section .exp_tabs{
+    overflow-x: auto;
+    justify-self: flex-start;
+  }
+
+}
+
+@media screen and (max-width:750px){
+     .offers_section .sliderMock{
+   width: 42vw;
+}
+   .offers_section :global(.swiper){
+    padding: 6vw 0 13vw;
+}
+}
+
+@media screen and (max-width:700px){
+   .offers_section :global(.swiper){
+            padding: 7vw 0 12vw;
+}
+}
+
+@media screen and (max-width:600px){
+   .offers_section :global(.swiper){
+           padding: 6vw 0 10.5vw;
+}
+}
+
+@media screen and (max-width:550px){
+   .offers_section :global(.swiper){
+           padding: 6vw 0 9.5vw;
+}
+}
+
+@media screen and (max-width:500px){
+
+    .offers_section :global(.center_nav){
+  gap:120px;
+  bottom: 10px;
+}
+
+      .offers_section .sliderMock{
+   width: 70vw;
+}
+
+   .offers_section :global(.swiper){
+           padding: 8.5vw 0 17vw;
+}
+}
+
+@media screen and (max-width:450px){
+
+   .offers_section :global(.swiper){
+           padding: 4.5vw 0 15vw;
+}
+}
+
+@media screen and (max-width:400px){
+   .offers_section :global(.swiper){
+              padding: 7.5vw 0 14vw
+}
+}
+
+
+

@@ -1,0 +1,168 @@
+.heroSection{
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+}
+
+.heroSection::after{
+  position: absolute;
+  content: '';
+  inset: 0;
+  background: linear-gradient(0deg, #341437 0%, rgba(52, 20, 55, 0.00) 50%);
+}
+
+.heroSection::before{
+  position: absolute;
+  content: '';
+  width: calc(100% - 75px);
+  height: auto;
+  bottom: 0;
+  right: 0;
+  background-image: url('/assets/images/banner_layer.svg');
+  background-size: cover;
+  aspect-ratio: 1920 / 1028;
+  z-index: 2;
+}
+
+.heroSection video{
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1920 / 960;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.floating_tickets{
+  position: absolute;
+  height: 41.5vw;
+  aspect-ratio: 75 / 790;
+  width: auto;
+  top: 0;
+  right: 0;
+  z-index: 5;
+}
+
+.heroSection .container{
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 55px;
+}
+
+.heroSection .container .actions{
+display: flex;
+align-items: center;
+gap: 32px;
+}
+
+.character{
+  position: absolute;
+  bottom: 0;
+  transform: translateY(0%);
+}
+
+.character_1{
+  left: 0;
+  width: 400px;
+  height: auto;
+}
+
+.character_2{
+  right: 5%;
+  width: 250px;
+  height: auto;
+}
+
+
+/* responsive  */
+
+/* laptop  */
+
+@media screen and (max-width:1600px) {
+  
+.heroSection .container{
+  gap: 32px;
+}
+
+.character_1{
+  width: 300px;
+}
+
+.character_2{
+  right: 5%;
+  width: 180px;
+}
+
+}
+
+
+/* tablet  */
+
+@media screen and (max-width:1200px) {
+
+
+  .heroSection .container{
+  gap: 20px;
+}
+
+  .heroSection .container .actions{
+gap: 20px;
+}
+
+  .heroSection::before{
+    width: 100%;
+  }
+
+  .floating_tickets{
+    display: none;
+  }
+
+  .character_1{
+  width: 150px;
+  left: 20px;
+}
+
+.character_2{
+  width: 80px;
+  right: 20px;
+}
+
+}
+
+
+/* mobile  */
+
+@media screen and (max-width:767px) {
+
+   .heroSection .container{
+  gap: 50px;
+}
+
+
+    .heroSection .container .actions{
+gap: 16px;
+}
+  
+  .heroSection video{
+  height: 500px;
+}
+
+  .character_1{
+  width: 150px;
+  left: -50px;
+}
+
+.character_2{
+  width: 80px;
+  right: -30px;
+}
+
+}
