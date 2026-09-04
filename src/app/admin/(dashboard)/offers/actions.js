@@ -29,6 +29,11 @@ async function resolveImage(formData) {
   return { publicPath };
 }
 
+function readExpiryDate(formData) {
+  const raw = formData.get("expiryDate")?.toString().trim();
+  return raw ? new Date(raw) : null;
+}
+
 export async function createOffer(prevState, formData) {
   const link = formData.get("link")?.toString().trim();
 
@@ -46,7 +51,7 @@ export async function createOffer(prevState, formData) {
 
   try {
     await prisma.offer.create({
-      data: { image: image.publicPath, link },
+      data: { image: image.publicPath, link, expiryDate: readExpiryDate(formData) },
     });
   } catch {
     await deleteUploadedImage(image.publicPath);
@@ -78,7 +83,7 @@ export async function updateOffer(id, prevState, formData) {
   try {
     await prisma.offer.update({
       where: { id },
-      data: { link, ...(image.publicPath ? { image: image.publicPath } : {}) },
+      data: { link, expiryDate: readExpiryDate(formData), ...(image.publicPath ? { image: image.publicPath } : {}) },
     });
   } catch {
     return { error: "Could not update the offer. Please try again." };

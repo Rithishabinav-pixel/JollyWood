@@ -111,6 +111,49 @@
   max-width: 560px;
 }
 
+.tabs {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 20px;
+}
+
+.tabBtn {
+  padding: 10px 18px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-size: 14px;
+  font-weight: 600;
+  color: #6b7280;
+  cursor: pointer;
+}
+
+.tabBtn:hover {
+  color: #111827;
+}
+
+.tabBtnActive {
+  color: #4f46e5;
+  border-bottom-color: #4f46e5;
+}
+
+.tabPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sectionCard {
+  margin-bottom: 24px;
+}
+
+.sectionCard h2 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #111827;
+}
+
 .field {
   display: flex;
   flex-direction: column;

@@ -27,16 +27,22 @@ export default async function AdminAnnouncementsPage() {
               <tr>
                 <th>Text</th>
                 <th>Order</th>
+                <th>Expiry Date</th>
                 <th>Status</th>
                 <th></th>
               </tr>
             </thead>
             <tbody>
-              {announcements.map((announcement) => (
+              {announcements.map((announcement) => {
+                const isExpired = announcement.expiryDate && new Date(announcement.expiryDate) < new Date();
+                const isCurrentlyActive = announcement.isActive && !isExpired;
+
+                return (
                 <tr key={announcement.id}>
                   <td>{announcement.text}</td>
                   <td>{announcement.order}</td>
-                  <td>{announcement.isActive ? "Active" : "Disabled"}</td>
+                  <td>{announcement.expiryDate ? new Date(announcement.expiryDate).toISOString().slice(0, 10) : "—"}</td>
+                  <td>{isCurrentlyActive ? "Active" : "Inactive"}</td>
                   <td>
                     <div className={style.rowActions}>
                       <form action={toggleAnnouncement.bind(null, announcement.id, !announcement.isActive)}>
@@ -53,7 +59,8 @@ export default async function AdminAnnouncementsPage() {
                     </div>
                   </td>
                 </tr>
-              ))}
+                );
+              })}
             </tbody>
           </table>
         )}

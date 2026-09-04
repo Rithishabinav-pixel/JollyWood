@@ -27,16 +27,23 @@ export default async function AdminOffersPage() {
               <tr>
                 <th>Image</th>
                 <th>Link</th>
+                <th>Expiry Date</th>
+                <th>Status</th>
                 <th></th>
               </tr>
             </thead>
             <tbody>
-              {offers.map((offer) => (
+              {offers.map((offer) => {
+                const isExpired = offer.expiryDate && new Date(offer.expiryDate) < new Date();
+
+                return (
                 <tr key={offer.id}>
                   <td>
                     <img className={style.thumb} src={offer.image} alt="Offer" />
                   </td>
                   <td>{offer.link}</td>
+                  <td>{offer.expiryDate ? new Date(offer.expiryDate).toISOString().slice(0, 10) : "—"}</td>
+                  <td>{isExpired ? "Inactive" : "Active"}</td>
                   <td>
                     <div className={style.rowActions}>
                       <Link href={`/admin/offers/${offer.id}/edit`} className={`${style.btn} ${style.btnSecondary} ${style.smallBtn}`}>
@@ -48,7 +55,8 @@ export default async function AdminOffersPage() {
                     </div>
                   </td>
                 </tr>
-              ))}
+                );
+              })}
             </tbody>
           </table>
         )}

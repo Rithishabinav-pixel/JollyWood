@@ -8,12 +8,13 @@ datasource db {
 }
 
 model Offer {
-  id        String   @id @default(cuid())
-  image     String
-  link      String
-  order     Int      @default(0)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id         String    @id @default(cuid())
+  image      String
+  link       String
+  order      Int       @default(0)
+  expiryDate DateTime?
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
 
   @@index([order])
 }
@@ -38,13 +39,14 @@ model VisitorStory {
 }
 
 model Announcement {
-  id        String   @id @default(cuid())
-  text      String
-  link      String
-  isActive  Boolean  @default(true)
-  order     Int      @default(0)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id         String    @id @default(cuid())
+  text       String
+  link       String
+  isActive   Boolean   @default(true)
+  order      Int       @default(0)
+  expiryDate DateTime?
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
 
   @@index([isActive, order])
 }

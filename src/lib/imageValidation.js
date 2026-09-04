@@ -3,7 +3,7 @@ import { imageSize } from "image-size";
 export const IMAGE_REQUIREMENTS = {
   OFFER: { width: 310, height: 388, label: "310 × 388 px" },
   SQUARE: { width: 262, height: 262, label: "262 × 262 px" },
-  LANDSCAPE: { width: 413, height: 235, label: "413 × 2358 px" },
+  LANDSCAPE: { width: 413, height: 235, label: "413 × 235 px" },
 };
 
 export function validateImageDimensions(buffer, requirement) {

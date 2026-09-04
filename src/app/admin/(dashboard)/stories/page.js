@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 import DeleteButton from "../../DeleteButton";
+import BulkUploadForm from "./BulkUploadForm";
 import { deleteStory } from "./actions";
 import style from "../../admin.module.css";
 
@@ -16,6 +17,11 @@ export default async function AdminStoriesPage() {
         <Link href="/admin/stories/new" className={style.btn}>
           Add Story
         </Link>
+      </div>
+
+      <div className={`${style.card} ${style.sectionCard}`}>
+        <h2>Bulk Image Upload</h2>
+        <BulkUploadForm />
       </div>
 
       <div className={style.card}>

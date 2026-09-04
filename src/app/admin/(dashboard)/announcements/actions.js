@@ -10,18 +10,20 @@ function readFields(formData) {
   const isActive = formData.get("isActive") === "on";
   const orderRaw = formData.get("order");
   const order = orderRaw ? parseInt(orderRaw, 10) : 0;
-  return { text, link, isActive, order: Number.isNaN(order) ? 0 : order };
+  const expiryRaw = formData.get("expiryDate")?.toString().trim();
+  const expiryDate = expiryRaw ? new Date(expiryRaw) : null;
+  return { text, link, isActive, order: Number.isNaN(order) ? 0 : order, expiryDate };
 }
 
 export async function createAnnouncement(prevState, formData) {
-  const { text, link, isActive, order } = readFields(formData);
+  const { text, link, isActive, order, expiryDate } = readFields(formData);
 
   if (!text) {
     return { error: "Announcement text is required." };
   }
 
   try {
-    await prisma.announcement.create({ data: { text, link, isActive, order } });
+    await prisma.announcement.create({ data: { text, link, isActive, order, expiryDate } });
   } catch {
     return { error: "Could not save the announcement. Please try again." };
   }
@@ -32,14 +34,14 @@ export async function createAnnouncement(prevState, formData) {
 }
 
 export async function updateAnnouncement(id, prevState, formData) {
-  const { text, link, isActive, order } = readFields(formData);
+  const { text, link, isActive, order, expiryDate } = readFields(formData);
 
   if (!text) {
     return { error: "Announcement text is required." };
   }
 
   try {
-    await prisma.announcement.update({ where: { id }, data: { text, link, isActive, order } });
+    await prisma.announcement.update({ where: { id }, data: { text, link, isActive, order, expiryDate } });
   } catch {
     return { error: "Could not update the announcement. Please try again." };
   }

@@ -6,7 +6,10 @@ import { prisma } from '@/lib/prisma';
 export default async function FloatingAnnouncement() {
 
   const announcementsData = await prisma.announcement.findMany({
-    where: { isActive: true },
+    where: {
+      isActive: true,
+      OR: [{ expiryDate: null }, { expiryDate: { gt: new Date() } }],
+    },
     orderBy: [{ order: 'asc' }, { createdAt: 'desc' }],
   });
 

@@ -112,6 +112,63 @@ export async function updateStory(id, prevState, formData) {
   redirect("/admin/stories");
 }
 
+export async function bulkCreateStories(prevState, formData) {
+  const imageType = formData.get("imageType")?.toString().toUpperCase();
+
+  if (imageType !== "SQUARE" && imageType !== "LANDSCAPE") {
+    return { error: "Please choose an image type." };
+  }
+
+  const files = formData.getAll("images").filter((file) => file && file.size > 0);
+
+  if (files.length === 0) {
+    return { error: "Please choose at least one image." };
+  }
+
+  const requirement = IMAGE_REQUIREMENTS[imageType];
+  const results = [];
+
+  for (const file of files) {
+    let buffer, extension;
+
+    try {
+      ({ buffer, extension } = await readUploadedImage(file));
+    } catch (err) {
+      results.push({ name: file.name, success: false, error: err.message });
+      continue;
+    }
+
+    const check = validateImageDimensions(buffer, requirement);
+    if (!check.valid) {
+      results.push({ name: file.name, success: false, error: check.error });
+      continue;
+    }
+
+    const publicPath = await persistImageBuffer(buffer, extension);
+
+    try {
+      await prisma.visitorStory.create({
+        data: {
+          imageType,
+          image: publicPath,
+          name: "Untitled Story",
+          testimonial: "",
+          link: "#",
+        },
+      });
+      results.push({ name: file.name, success: true });
+    } catch {
+      await deleteUploadedImage(publicPath);
+      results.push({ name: file.name, success: false, error: "Could not save this story." });
+    }
+  }
+
+  revalidatePath("/");
+  revalidatePath("/admin/stories");
+
+  return { results, createdCount: results.filter((r) => r.success).length };
+}
+
 export async function deleteStory(id) {
   const existing = await prisma.visitorStory.findUnique({ where: { id } });
   if (!existing) return;

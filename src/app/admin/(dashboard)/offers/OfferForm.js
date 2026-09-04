@@ -4,6 +4,11 @@ import { useActionState } from "react";
 import Link from "next/link";
 import style from "../../admin.module.css";
 
+function toDateInputValue(date) {
+  if (!date) return "";
+  return new Date(date).toISOString().slice(0, 10);
+}
+
 export default function OfferForm({ action, offer }) {
   const [state, formAction, pending] = useActionState(action, undefined);
 
@@ -21,6 +26,12 @@ export default function OfferForm({ action, offer }) {
           defaultValue={offer?.link || ""}
           required
         />
+      </div>
+
+      <div className={style.field}>
+        <label htmlFor="expiryDate">Expiry Date</label>
+        <input id="expiryDate" name="expiryDate" type="date" defaultValue={toDateInputValue(offer?.expiryDate)} />
+        <span className={style.hint}>Leave empty for an offer that never expires.</span>
       </div>
 
       <div className={style.field}>
