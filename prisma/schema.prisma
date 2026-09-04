@@ -1,0 +1,50 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Offer {
+  id        String   @id @default(cuid())
+  image     String
+  link      String
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([order])
+}
+
+enum StoryImageType {
+  SQUARE
+  LANDSCAPE
+}
+
+model VisitorStory {
+  id          String         @id @default(cuid())
+  imageType   StoryImageType
+  image       String
+  name        String
+  testimonial String
+  link        String
+  order       Int            @default(0)
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+
+  @@index([order])
+}
+
+model Announcement {
+  id        String   @id @default(cuid())
+  text      String
+  link      String
+  isActive  Boolean  @default(true)
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([isActive, order])
+}

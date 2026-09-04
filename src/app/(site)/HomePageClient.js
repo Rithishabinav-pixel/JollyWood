@@ -10,7 +10,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import Link from 'next/link'
 
-// High Adrenaline data 
+import { useRouter } from "next/navigation";
+
+
+
+// High Adrenaline data
 const HighAdrenalineData = [
   {
     image:"/assets/images/romancia-street.png",
@@ -51,7 +55,7 @@ const HighAdrenalineData = [
 ]
 
 
-// Experience Worlds data 
+// Experience Worlds data
 const ExperienceWorldsData = [
   {
     tab:"attractions",
@@ -92,7 +96,7 @@ const ExperienceWorldsData = [
        image:"/assets/images/movie-wall.png",
        video:"/assets/videos/hover_sample.mp4"
       },
-      
+
     ]
   },
   {
@@ -134,7 +138,7 @@ const ExperienceWorldsData = [
        image:"/assets/images/movie-wall.png",
        video:"/assets/videos/hover_sample.mp4"
       },
-      
+
     ]
   },
    {
@@ -176,7 +180,7 @@ const ExperienceWorldsData = [
        image:"/assets/images/movie-wall.png",
        video:"/assets/videos/hover_sample.mp4"
       },
-      
+
     ]
   },
    {
@@ -218,7 +222,7 @@ const ExperienceWorldsData = [
        image:"/assets/images/movie-wall.png",
        video:"/assets/videos/hover_sample.mp4"
       },
-      
+
     ]
   },
    {
@@ -260,30 +264,14 @@ const ExperienceWorldsData = [
        image:"/assets/images/movie-wall.png",
        video:"/assets/videos/hover_sample.mp4"
       },
-      
+
     ]
   },
-  
-]
-
-
-
-// offer data 
-const OfferData = [
-  "/assets/images/offer_img.png",
-  "/assets/images/offer_img.png",
-  "/assets/images/offer_img.png",
-  "/assets/images/offer_img.png",
-  "/assets/images/offer_img.png",
-  "/assets/images/offer_img.png",
-  "/assets/images/offer_img.png",
-  "/assets/images/offer_img.png",
-  "/assets/images/offer_img.png",
 
 ]
 
 
-// Food Souk tab data 
+// Food Souk tab data
 const FoodSoukTabData = [
   {
     image:"/assets/images/rest-1.png",
@@ -307,7 +295,7 @@ const FoodSoukTabData = [
   },
 ]
 
-// Food Souk data 
+// Food Souk data
 const FoodSoukData = [
   {
     title:"Royal Kitchen",
@@ -378,85 +366,6 @@ const FacilitiesData = [
 ]
 
 
-// stories data 
-
-const StoriesData = {
-  images: [
-    {
-      url: "/assets/images/story1.png",
-      type: "square",
-    },
-    {
-      url: "/assets/images/story2.png",
-      type: "square",
-    },
-    {
-      url: "/assets/images/story3.png",
-      type: "landscape",
-    },
-    {
-      url: "/assets/images/story1.png",
-      type: "square",
-    },
-    {
-      url: "/assets/images/story2.png",
-      type: "square",
-    },
-    {
-      url: "/assets/images/story3.png",
-      type: "landscape",
-    },
-  ],
-
-  content: [
-    {
-      text: "Vels Jollywood completely transformed our event! The energy, the music, the performances — everything was pure magic. Our guests are still talking about it weeks later.",
-      link: "#",
-      name: "Pravin",
-    },
-    {
-      text: "Vels Jollywood completely transformed our event! The energy, the music, the performances — everything was pure magic. Our guests are still talking about it weeks later.",
-      link: "#",
-      name: "Pravin",
-    },
-    {
-      text: "Vels Jollywood completely transformed our event! The energy, the music, the performances — everything was pure magic. Our guests are still talking about it weeks later.",
-      link: "#",
-      name: "Pravin",
-    },
-    {
-      text: "Vels Jollywood completely transformed our event! The energy, the music, the performances — everything was pure magic. Our guests are still talking about it weeks later.",
-      link: "#",
-      name: "Pravin",
-    },
-    {
-      text: "Vels Jollywood completely transformed our event! The energy, the music, the performances — everything was pure magic. Our guests are still talking about it weeks later.",
-      link: "#",
-      name: "Pravin",
-    },
-    {
-      text: "Vels Jollywood completely transformed our event! The energy, the music, the performances — everything was pure magic. Our guests are still talking about it weeks later.",
-      link: "#",
-      name: "Pravin",
-    },
-    {
-      text: "Vels Jollywood completely transformed our event! The energy, the music, the performances — everything was pure magic. Our guests are still talking about it weeks later.",
-      link: "#",
-      name: "Pravin",
-    },
-  ],
-};
-
-
-const squareImages = StoriesData.images.filter(
-  (item) => item.type === "square"
-);
-
-const landscapeImages = StoriesData.images.filter(
-  (item) => item.type === "landscape"
-);
-
-
 const getRandomItem = (array) => {
   if (!array.length) {
     return null;
@@ -481,7 +390,7 @@ const getRandomItems = (array, count) => {
 };
 
 
-// comforts data 
+// comforts data
 
 const ComfortsData = [
   {
@@ -528,7 +437,7 @@ const ComfortsData = [
 ]
 
 
-// playtopia data 
+// playtopia data
 
 const PlaytopiaData = [
   {
@@ -551,7 +460,7 @@ const PlaytopiaData = [
 
 
 
-// retail data 
+// retail data
 
 const RetailData = [
   {
@@ -591,11 +500,15 @@ const CorporateData = [
     link:""
   },
 
-] 
+]
 
 
 
-export default function page() {
+export default function HomePageClient({ offers, stories }) {
+
+
+  const router = useRouter();
+
 
   const [adrenalineVideo,setAdrenalineVideo] = useState(null);
   const [experienceVideo,setExperienceVideo] = useState(null);
@@ -605,6 +518,8 @@ export default function page() {
 
   const [foodSouk,setFoodSouk] = useState(0);
 
+  const [activeOffer,setActiveOffer] = useState(null)
+
 
   const [randomStories, setRandomStories] = useState({
   squareImages: [],
@@ -613,15 +528,29 @@ export default function page() {
 });
 
 
-  
+
 useEffect(() => {
+
+  const squareImages = stories
+    .filter((story) => story.imageType === "SQUARE")
+    .map((story) => ({ url: story.image, type: "square" }));
+
+  const landscapeImages = stories
+    .filter((story) => story.imageType === "LANDSCAPE")
+    .map((story) => ({ url: story.image, type: "landscape" }));
+
+  const storyContent = stories.map((story) => ({
+    text: story.testimonial,
+    link: story.link,
+    name: story.name,
+  }));
 
   const updateStories = () => {
     setRandomStories({
-  
+
       squareImages: getRandomItems(squareImages, 2),
       landscapeImages: getRandomItems(landscapeImages, 1),
-      content: getRandomItems(StoriesData.content, 5),
+      content: getRandomItems(storyContent, 5),
     });
   };
 
@@ -637,23 +566,23 @@ useEffect(() => {
     clearInterval(interval);
   };
 
-}, []);
+}, [stories]);
 
 
 
   return (
     <>
-    
+
     {/* hero section  */}
-    
+
     <section className={lcpStyle.heroSection}>
-     
+
        <video width="1920" height="1080" autoPlay loop muted preload="none">
       <source src="/assets/videos/home_hero.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
 
- 
+
 
 
 
@@ -676,7 +605,7 @@ useEffect(() => {
 
       </div>
     </section>
-    
+
 {/* High Adrenaline section  */}
 
 <section className={`common_section ${style.adrenaline_section}`}>
@@ -717,7 +646,7 @@ useEffect(() => {
               <div className={style.image} >
                 <Image src={slide.image} width={420} height={526} alt={slide.title}/>
                 {
-                adrenalineVideo===index && 
+                adrenalineVideo===index &&
                <video className={adrenalineVideo===index?style.active:""} width="720" height="1280"  autoPlay loop muted preload="none">
       <source src={slide.video} type="video/mp4" />
       Your browser does not support the video tag.
@@ -736,7 +665,7 @@ useEffect(() => {
       </Swiper>
     </div>
 
-    
+
 
   </div>
 </section>
@@ -761,9 +690,9 @@ useEffect(() => {
           {ExperienceWorldsData.map((item,index)=>(
  <button className={`${style.tab_btn} ${index===experienceWorlds?style.active:""}`} key={index} onClick={()=>setExperienceWorlds(index)} >{item.label} </button>
           ))}
-         
+
         </div>
-       
+
        </div>
 
     </div>
@@ -801,7 +730,7 @@ useEffect(() => {
               <div className={style.image}>
                 <Image src={slide.image} width={420} height={526} alt={slide.title}/>
                 {
-                experienceVideo===index && 
+                experienceVideo===index &&
                <video className={experienceVideo===index?style.active:""} width="720" height="1280"  autoPlay loop muted preload="none">
       <source src={slide.video} type="video/mp4" />
       Your browser does not support the video tag.
@@ -819,11 +748,11 @@ useEffect(() => {
       </Swiper>
     </div>
   </div>
- 
 
-    
 
-  
+
+
+
 </section>
 
 
@@ -840,6 +769,7 @@ useEffect(() => {
     </div>
     </div>
 
+    {offers.length > 0 && (
     <div className={`container full_container strict_full  ${style.container}`}>
        <div className={style.slider}>
       <Swiper
@@ -873,25 +803,35 @@ useEffect(() => {
     },
   }}
 >
-        {[...OfferData,...OfferData].map((slide,index) => (
-          <SwiperSlide key={index}>
-            <div className={`${style.singleSlide}`} onMouseEnter={()=>setExperienceVideo(index)} onMouseLeave={()=>setExperienceVideo(null)}>
-              <div className={style.image}>
-                <Image src={slide} width={310} height={388} alt="Offer"/>
-                
-              </div>
+       {[...offers, ...offers].map((slide, index) => {
+  const activeIndex = index % offers.length;
 
-            </div>
-          </SwiperSlide>
-        ))}
-
-
+  return (
+    <SwiperSlide key={index}>
+      <Link
+        href={slide.link}
+        className={style.singleSlide}
+        onMouseEnter={() => setActiveOffer(activeIndex)}
+      >
+        <div className={style.image}>
+          <Image
+            src={slide.image}
+            width={310}
+            height={388}
+            alt="Offer"
+          />
+        </div>
+      </Link>
+    </SwiperSlide>
+  );
+})}
 
       </Swiper>
     </div>
   </div>
+    )}
 
-  <Image className={style.sliderMock} src="/assets/images/slider-mockup.svg" width={430} height={687} alt=''/>
+  <Image  onClick={()=>{ if (activeOffer !== null) { router.push(offers[activeOffer].link);}}} className={style.sliderMock} src="/assets/images/slider-mockup.svg" width={430} height={687} alt=''/>
 
   <div className='center_nav slider_arrow'>
   <button className='offer_prev'> <Image src="/assets/images/slider-arrow-left.svg" width={60} height={60} alt='' /> </button>
@@ -911,10 +851,10 @@ useEffect(() => {
         <h2 className='common_heading white'>Live Cinematic Spectacle</h2>
         <p className='white'>A multi-million rupee production featuring aerial acrobatics, gravity-defying stunts, and the most iconic tracks of Indian cinema.</p>
       </div>
-   
+
       <div className={`right ${style.right}`}>
         <p className={`white ${style.mixed}`}>Today’s <span>Show Timing</span></p>
-        <p className={`white ${style.timing}`}>06:00 PM</p> 
+        <p className={`white ${style.timing}`}>06:00 PM</p>
   <Button href="#" text="Book Tickets" className="common_btn orange_bg black_text right_tilt ticket"></Button>
 
       </div>
@@ -1274,7 +1214,7 @@ They Loved It.</h2>
         <p className=''>Make your Vels Jollywood experience even more memorable with a stay at our on-site resort. Whether you're winding down after a fun-filled day or planning a weekend getaway, our cozy rooms, family-friendly amenities, and scenic surroundings offer the perfect retreat.</p>
          <Button href="#" text="Book a Stay" className="common_btn white_bg black_text left_tilt stay"></Button>
       </div>
-   
+
       <div className={`right ${style.right}`}>
 <Image src="/assets/images/comfort_stay.png" width={870} height={565} alt=''/>
       </div>
@@ -1343,7 +1283,8 @@ They Loved It.</h2>
           </SwiperSlide>
         ))}
       </Swiper>
- 
+
+
 
 
 </div>
@@ -1371,29 +1312,29 @@ They Loved It.</h2>
 
 
        <div className={style.playtopiaCard}>
-    
+
         {PlaytopiaData.map((slide,index) => (
-       
+
             <div className={`${style.singleSlide}`} key={index}>
               <div className={style.image}>
                 <Image src={slide.image} width={570} height={450} alt={slide.title}/>
-              
+
               </div>
               <div className={style.content}>
                 <h3 className={`${style.title} white`}>{slide.title}</h3>
                 <Button href={slide.link} text="" className="link white large"></Button>
               </div>
             </div>
-      
+
         ))}
-      
+
     </div>
 
- 
 
-    
+
+
 </div>
-  
+
 </section>
 
 
@@ -1407,26 +1348,26 @@ They Loved It.</h2>
         <p className='purple'>Retail Outlet - Souvenirs & Gifts</p>
         <h2 className='common_heading purple'>Take the magic of Jollywood home.</h2>
       </div>
-  
+
     </div>
 
     <div className={style.retailCard}>
-    
+
         {RetailData.map((slide,index) => (
-       
+
             <div className={`${style.singleSlide}`} key={index}>
               <div className={style.image}>
                 <Image src={slide.image} width={570} height={639} alt={slide.title}/>
-              
+
               </div>
               <div className={style.content}>
                 <h3 className={`${style.title}`}>{slide.title}</h3>
                 <Button href={slide.link} text="" className="link white large"></Button>
               </div>
             </div>
-      
+
         ))}
-      
+
     </div>
 
 </div>
@@ -1465,33 +1406,33 @@ They Loved It.</h2>
   </div>
 
    <div className={style.corporateCard}>
-    
+
         {CorporateData.map((slide,index) => (
-       
+
             <div className={`${style.singleSlide}`} key={index}>
               <div className={style.image}>
                 <Image src={slide.image} width={420} height={500} alt={slide.title}/>
-              
+
               </div>
               <div className={style.content}>
                 <h3 className={`${style.title} white`}>{slide.title}</h3>
                 <Button href={slide.link} text="" className="link white  large"></Button>
               </div>
             </div>
-      
+
         ))}
-      
+
     </div>
 
 </div>
 
-      
 
- 
 
-    
+
+
+
 </div>
-  
+
 </section>
 
 

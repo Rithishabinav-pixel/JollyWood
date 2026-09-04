@@ -1,0 +1,497 @@
+.hero_section{
+    background-image: url('/assets/images/dining-banner.png');
+    background-size: cover;
+}
+
+.hero_section .character{
+    position: absolute;
+    bottom: -7vw;
+    height: auto;
+    float: left;
+}
+
+.hero_section .character.character_1{
+    width: 20.855vw;
+    left: 1%;
+}
+
+.hero_section .character.character_2{
+    width: 26.1vw;
+    right: 1%;
+}
+
+.food_section .top_heading .right{
+    min-width: fit-content;
+}
+
+.food_section .tabs{
+    display: flex;
+    gap: 20px;
+}
+
+.food_section .tabs button{
+    border: none;
+    background: none;
+}
+
+.food_section .tabs button:hover{
+  transform: scale(0.975);
+}
+
+.food_section .tabs button img{
+    width: 110px;
+    height: auto;
+    border-radius: 8px;
+    float: left;
+}
+
+.food_section  .tabContainer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.food_section  .tabContainer video{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1770 / 786;
+    object-fit: cover;
+    float: left;
+    border-radius: 24px;
+
+}
+
+.food_section  .tabContainer .content{
+    position: absolute;
+    width: 40%;
+    height: calc(100% - 48px);
+    top: 24px;
+    left: 24px;
+    background-color: white;
+width: 31.25%;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 30px;
+border-radius: 16px;
+overflow: hidden;
+}
+
+.food_section  .tabContainer .content img{
+    width: 100%;
+    height: auto;
+    float: left;
+    border-radius: 16px;
+}
+
+.food_section  .tabContainer .content p{
+    padding: 0 24px;
+    font-style: italic;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+}
+
+.waveContainer,
+.planetContainer,
+.kitchenContainer{
+    display: flex;
+    gap: 30px;
+    position: relative;
+}
+
+.planetContainer{
+    min-width: fit-content;
+    justify-content: center;
+}
+
+.planetContainer .image{
+    width: 34%;
+    min-width: 34%;
+}
+
+
+.waveContainer .image,
+.kitchenContainer .image{
+    width: 50%;
+}
+
+.waveContainer .image img,
+.planetContainer .image img,
+.kitchenContainer .image img,
+.romancia_section .mobileImg,
+.mazeContainer img{
+    width: 100%;
+    float: left;
+    height: auto;
+}
+
+.waveContainer .content{
+    position: absolute;
+    width: 30%;
+    min-width: 500px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    text-align: center;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    padding: 24px;
+}
+
+.waveContainer .image img,
+.waveContainer .content,
+.planetContainer .image img,
+.kitchenContainer .image{
+    border-radius: 24px;
+}
+
+.kitchenContainer .image{
+    overflow: hidden;
+    position: relative;
+}
+
+.kitchenContainer .image::before{
+    position: absolute;
+    content: '';
+    inset: 0;
+background: linear-gradient(0deg, black 0%, rgba(255, 0, 0, 0) 50% );
+}
+
+.kitchenContainer .image div{
+    position: absolute;
+    z-index: 2;
+    left: 32px;
+    bottom: 32px;
+    width: calc(100% - 64px);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.waveContainer .content img{
+    width: 188px;
+    height: auto;
+    float: left;
+}
+
+.royal_section,
+.romancia_section{
+    position: relative;
+}
+
+
+.romancia_section::before{
+position: absolute;
+content: '';
+inset: 0;
+background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 10%, transparent 70%);
+}
+
+.romancia_section{
+    background-image: url("/assets/images/romancia_bg.png");
+     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+.royal_section::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 55%;
+    background-image: url("/assets/images/royal_bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+.royal_section .container,
+.romancia_section .container{
+    z-index: 2;
+}
+
+.royal_section .container .top_heading .left{
+    gap: 24px;
+}
+
+.royal_section .panda{
+    position: absolute;
+    width: 23%;
+    height: auto;
+    bottom: -50px;
+    z-index: 3;
+    left: 35.5%;
+}
+
+.planet_section{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.maze_section{
+    background: linear-gradient(to bottom, var(--yellow) 65%, transparent 0% );
+}
+
+.mazeContainer{
+    width: fit-content;
+    margin: auto;
+}
+
+
+
+/* responsive  */
+
+/* laptop  */
+
+@media screen and (max-width:1750px) {
+
+    .royal_section .panda{
+    width: 15%;
+    left: 38%;
+}
+
+}
+
+@media screen and (max-width:1600px) {
+
+    .kitchenContainer .image div{
+    left: 24px;
+    bottom: 24px;
+    width: calc(100% - 48px);
+}
+
+    
+.royal_section::before{
+    width: 50%;
+}
+
+   .royal_section .panda{
+    left: 42%;
+}
+
+
+    .waveContainer .content img{
+    width: 95px;
+}
+
+    .food_section  .tabContainer .content p{
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.food_section  .tabContainer .content img{
+    width: 80%;
+}
+
+}
+
+@media screen and (max-width:1400px) {
+
+    .royal_section::before{
+    width: 53%;
+}
+
+   .royal_section .panda{
+    left: 40%;
+}
+
+
+      .waveContainer .content{
+        min-width: 580px;
+      }
+
+        .waveContainer .content p{
+    font-size: 14px;
+    line-height: 22px;
+}
+
+    .food_section  .tabContainer .content img{
+    width: 50%;
+}
+
+}
+
+
+/* tablet  */
+@media screen and (max-width:1200px) {
+
+    .kitchenContainer .image::before{
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(255, 0, 0, 0) 70% );
+}
+
+ .romancia_section .container{
+    flex-direction: column-reverse;
+ }
+
+     .romancia_section{
+        background: none;
+        padding-top: 0;
+     }
+      .romancia_section::before{
+        display: none;
+      }
+
+        .kitchenContainer .image div{
+    left: 20px;
+    bottom: 20px;
+    width: calc(100% - 40px);
+}
+
+    .planet_section{
+    gap: 30px;
+}
+
+    .royal_section{
+        padding-bottom: 120px;
+    }
+
+        .royal_section::before{
+   display: none;
+}
+
+.royal_section .container .top_heading .left{
+    width: 100%;
+    gap: 16px;
+}
+
+   .royal_section .panda{
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    height: 150px;
+    bottom: -40px;
+}
+
+    .waveContainer,
+    .kitchenContainer {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .waveContainer .image,
+    .kitchenContainer .image{
+        width: 100%;
+    }
+
+      .waveContainer .content{
+        min-width: 100%;
+        position: static;
+        transform: none;
+        padding: 20px;
+        gap: 20px;
+      }
+
+        .planetContainer{
+            gap: 20px;
+        }
+        .planetContainer .image{
+            width: calc(33.33% - 13.33px);
+            min-width: calc(33.33% - 13.33px);
+        }
+
+        .waveContainer .content ,
+          .waveContainer .image img
+          {
+            border-radius: 16px;
+
+          }
+
+           .planetContainer .image img,
+           .kitchenContainer .image,
+           .romancia_section .mobileImg{
+            border-radius: 8px;
+           }
+
+           .waveContainer .content p{
+            font-size: 16px;
+            line-height: 24px;
+           }
+
+.food_section .tabs{
+    justify-content: center;
+    overflow-x: auto;
+}
+
+.food_section  .tabContainer .content{
+    position: static;
+    padding: 20px;
+    width: 100%;
+}
+
+.food_section  .tabContainer .content img{
+    width: 150px;
+}
+
+.food_section  .tabContainer .content p{
+    padding: 0;
+}
+
+}
+
+/* mobile  */
+@media screen and (max-width:767px) {
+
+        .kitchenContainer .image div{
+    left: 0px;
+    bottom: 0px;
+    position: static;
+    width: 100%;
+}
+
+ .kitchenContainer,
+ .kitchenContainer .image{
+    display: flex;
+    flex-direction: column;
+ }
+
+  .kitchenContainer{
+    gap: 30px;
+  }
+
+  .kitchenContainer .image{
+    gap: 16px;
+  }
+
+ .kitchenContainer .image::before{
+    display: none;
+ }
+
+    .planetContainer{
+        flex-direction: column;
+    }
+
+      .planetContainer .image{
+         width: 100%;
+         min-width: 100%;
+           }
+
+    .food_section .top_heading .right{
+    margin-top: 24px;
+}
+
+    .food_section .tabs{
+    justify-content: flex-start;
+    overflow-x: auto;
+    max-width: 100vw;
+    padding:0 20px;
+}
+
+.food_section  .tabContainer video,
+.food_section  .tabContainer .content{
+    border-radius: 8px;
+}
+
+.food_section  .tabContainer .content{
+    gap: 20px;
+}
+
+}

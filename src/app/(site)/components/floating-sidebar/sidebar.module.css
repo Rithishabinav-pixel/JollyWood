@@ -94,6 +94,7 @@ align-items: center;
     border-radius: 50px;
     overflow: hidden;
     transition: 0.3s ease-in-out;
+    color: black;
 }
 
 #sidebar nav.fixedMenu ul li a span{
@@ -103,12 +104,14 @@ align-items: center;
     left: 115%;
     background-color: white;
     font-size: 10px;
-    line-height: 16px;
-    padding: 0px 12px;
+    line-height: 10px;
+    padding: 3px 12px;
     display: flex;
     border-radius: 50px;
     opacity: 0;
     transition: 0.3s all;
+    color: black;
+
 }
 
 #sidebar nav.fixedMenu ul li a:hover span{

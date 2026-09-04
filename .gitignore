@@ -15,6 +15,10 @@
 
 public/assets/
 
+# admin-uploaded media
+public/uploads/*
+!public/uploads/.gitkeep
+
 
 
 # next.js

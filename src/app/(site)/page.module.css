@@ -239,6 +239,7 @@ float: left;
   left: 50%;
   transform: translateX(-50%);
   z-index: 3;
+  cursor: pointer;
 }
 
 .offers_section :global(.center_nav){

@@ -1,3 +1,4 @@
+"use client"
 import React, { useEffect, useState } from 'react'
 import style from './Header.module.css'
 import Link from 'next/link'
