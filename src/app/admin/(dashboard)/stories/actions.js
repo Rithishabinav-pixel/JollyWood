@@ -1,118 +1,62 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { redirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { readUploadedImage, persistImageBuffer, deleteUploadedImage } from "@/lib/upload";
 import { validateImageDimensions, IMAGE_REQUIREMENTS } from "@/lib/imageValidation";
 
-function readFields(formData) {
-  const imageType = formData.get("imageType")?.toString().toUpperCase();
+export async function createStoryContent(prevState, formData) {
   const name = formData.get("name")?.toString().trim();
   const testimonial = formData.get("testimonial")?.toString().trim();
   const link = formData.get("link")?.toString().trim();
-  return { imageType, name, testimonial, link };
-}
 
-function validateFields({ imageType, name, testimonial, link }) {
-  if (imageType !== "SQUARE" && imageType !== "LANDSCAPE") {
-    return "Please choose an image type.";
-  }
-  if (!name) return "Name is required.";
-  if (!testimonial) return "Testimonial text is required.";
-  if (!link) return "Link is required.";
-  return null;
-}
-
-async function resolveImage(formData, imageType) {
-  const file = formData.get("image");
-
-  if (!file || file.size === 0) {
-    return { publicPath: null };
-  }
-
-  let buffer, extension;
-  try {
-    ({ buffer, extension } = await readUploadedImage(file));
-  } catch (err) {
-    return { error: err.message };
-  }
-
-  const requirement = IMAGE_REQUIREMENTS[imageType];
-  const check = validateImageDimensions(buffer, requirement);
-  if (!check.valid) {
-    return { error: check.error };
-  }
-
-  const publicPath = await persistImageBuffer(buffer, extension);
-  return { publicPath };
-}
-
-export async function createStory(prevState, formData) {
-  const fields = readFields(formData);
-  const fieldError = validateFields(fields);
-  if (fieldError) return { error: fieldError };
-
-  const image = await resolveImage(formData, fields.imageType);
-  if (image.error) return { error: image.error };
-  if (!image.publicPath) return { error: "Story image is required." };
+  if (!name) return { error: "Name is required." };
+  if (!testimonial) return { error: "Testimonial text is required." };
+  if (!link) return { error: "Link is required." };
 
   try {
-    await prisma.visitorStory.create({
-      data: {
-        imageType: fields.imageType,
-        name: fields.name,
-        testimonial: fields.testimonial,
-        link: fields.link,
-        image: image.publicPath,
-      },
-    });
+    await prisma.visitorStoryContent.create({ data: { name, testimonial, link } });
   } catch {
-    await deleteUploadedImage(image.publicPath);
-    return { error: "Could not save the story. Please try again." };
+    return { error: "Could not save the content. Please try again." };
   }
 
   revalidatePath("/");
   revalidatePath("/admin/stories");
-  redirect("/admin/stories");
+
+  return { success: true };
 }
 
-export async function updateStory(id, prevState, formData) {
-  const fields = readFields(formData);
-  const fieldError = validateFields(fields);
-  if (fieldError) return { error: fieldError };
+export async function updateStoryContent(prevState, formData) {
+  const id = formData.get("id")?.toString().trim();
+  const name = formData.get("name")?.toString().trim();
+  const testimonial = formData.get("testimonial")?.toString().trim();
+  const link = formData.get("link")?.toString().trim();
 
-  const existing = await prisma.visitorStory.findUnique({ where: { id } });
-  if (!existing) return { error: "Story not found." };
-
-  const image = await resolveImage(formData, fields.imageType);
-  if (image.error) return { error: image.error };
+  if (!name) return { error: "Name is required." };
+  if (!testimonial) return { error: "Testimonial text is required." };
+  if (!link) return { error: "Link is required." };
 
   try {
-    await prisma.visitorStory.update({
-      where: { id },
-      data: {
-        imageType: fields.imageType,
-        name: fields.name,
-        testimonial: fields.testimonial,
-        link: fields.link,
-        ...(image.publicPath ? { image: image.publicPath } : {}),
-      },
-    });
+    await prisma.visitorStoryContent.update({ where: { id }, data: { name, testimonial, link } });
   } catch {
-    return { error: "Could not update the story. Please try again." };
-  }
-
-  if (image.publicPath) {
-    await deleteUploadedImage(existing.image);
+    return { error: "Could not update the content. Please try again." };
   }
 
   revalidatePath("/");
   revalidatePath("/admin/stories");
-  redirect("/admin/stories");
+  revalidatePath(`/admin/stories/${id}/edit`);
+
+  return { success: true };
 }
 
-export async function bulkCreateStories(prevState, formData) {
+export async function deleteStoryContent(id) {
+  await prisma.visitorStoryContent.delete({ where: { id } }).catch(() => {});
+
+  revalidatePath("/");
+  revalidatePath("/admin/stories");
+}
+
+export async function bulkCreateStoryImages(prevState, formData) {
   const imageType = formData.get("imageType")?.toString().toUpperCase();
 
   if (imageType !== "SQUARE" && imageType !== "LANDSCAPE") {
@@ -147,33 +91,27 @@ export async function bulkCreateStories(prevState, formData) {
     const publicPath = await persistImageBuffer(buffer, extension);
 
     try {
-      await prisma.visitorStory.create({
-        data: {
-          imageType,
-          image: publicPath,
-          name: "Untitled Story",
-          testimonial: "",
-          link: "#",
-        },
+      const created = await prisma.visitorStoryImage.create({
+        data: { image: publicPath, imageType },
       });
-      results.push({ name: file.name, success: true });
+      results.push({ name: file.name, success: true, id: created.id, image: publicPath, imageType });
     } catch {
       await deleteUploadedImage(publicPath);
-      results.push({ name: file.name, success: false, error: "Could not save this story." });
+      results.push({ name: file.name, success: false, error: "Could not save this image." });
     }
   }
 
   revalidatePath("/");
   revalidatePath("/admin/stories");
 
-  return { results, createdCount: results.filter((r) => r.success).length };
+  return { results, createdCount: results.filter((result) => result.success).length };
 }
 
-export async function deleteStory(id) {
-  const existing = await prisma.visitorStory.findUnique({ where: { id } });
+export async function deleteStoryImage(imageId) {
+  const existing = await prisma.visitorStoryImage.findUnique({ where: { id: imageId } });
   if (!existing) return;
 
-  await prisma.visitorStory.delete({ where: { id } });
+  await prisma.visitorStoryImage.delete({ where: { id: imageId } });
   await deleteUploadedImage(existing.image);
 
   revalidatePath("/");

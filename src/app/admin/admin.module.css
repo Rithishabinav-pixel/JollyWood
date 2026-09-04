@@ -144,14 +144,8 @@
   gap: 20px;
 }
 
-.sectionCard {
-  margin-bottom: 24px;
-}
-
-.sectionCard h2 {
-  margin-top: 0;
-  font-size: 18px;
-  color: #111827;
+.tabPanel[hidden] {
+  display: none;
 }
 
 .field {
@@ -201,6 +195,54 @@
 .hint {
   font-size: 13px;
   color: #6b7280;
+}
+
+.previewGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.previewItem {
+  position: relative;
+  width: 140px;
+}
+
+.previewImg {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  display: block;
+}
+
+.previewCaption {
+  margin-top: 4px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.previewRemove {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: none;
+  background: #dc2626;
+  color: white;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.previewRemove:hover {
+  background: #b91c1c;
 }
 
 .checkboxField {

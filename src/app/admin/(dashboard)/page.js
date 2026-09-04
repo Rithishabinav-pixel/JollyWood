@@ -7,7 +7,7 @@ export const dynamic = "force-dynamic";
 export default async function AdminDashboardPage() {
   const [offerCount, storyCount, announcementCount] = await Promise.all([
     prisma.offer.count(),
-    prisma.visitorStory.count(),
+    prisma.visitorStoryContent.count(),
     prisma.announcement.count(),
   ]);
 

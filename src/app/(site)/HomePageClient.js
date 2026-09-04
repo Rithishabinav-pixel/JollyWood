@@ -504,7 +504,7 @@ const CorporateData = [
 
 
 
-export default function HomePageClient({ offers, stories }) {
+export default function HomePageClient({ offers, storyContents, storyImages }) {
 
 
   const router = useRouter();
@@ -531,18 +531,18 @@ export default function HomePageClient({ offers, stories }) {
 
 useEffect(() => {
 
-  const squareImages = stories
-    .filter((story) => story.imageType === "SQUARE")
-    .map((story) => ({ url: story.image, type: "square" }));
+  const squareImages = storyImages
+    .filter((image) => image.imageType === "SQUARE")
+    .map((image) => ({ url: image.image, type: "square" }));
 
-  const landscapeImages = stories
-    .filter((story) => story.imageType === "LANDSCAPE")
-    .map((story) => ({ url: story.image, type: "landscape" }));
+  const landscapeImages = storyImages
+    .filter((image) => image.imageType === "LANDSCAPE")
+    .map((image) => ({ url: image.image, type: "landscape" }));
 
-  const storyContent = stories.map((story) => ({
-    text: story.testimonial,
-    link: story.link,
-    name: story.name,
+  const storyContent = storyContents.map((content) => ({
+    text: content.testimonial,
+    link: content.link,
+    name: content.name,
   }));
 
   const updateStories = () => {
@@ -566,7 +566,7 @@ useEffect(() => {
     clearInterval(interval);
   };
 
-}, [stories]);
+}, [storyContents, storyImages]);
 
 
 

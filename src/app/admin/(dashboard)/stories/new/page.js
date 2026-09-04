@@ -1,5 +1,4 @@
-import StoryForm from "../StoryForm";
-import { createStory } from "../actions";
+import NewStoryForm from "../NewStoryForm";
 import style from "../../../admin.module.css";
 
 export default function NewStoryPage() {
@@ -9,7 +8,7 @@ export default function NewStoryPage() {
         <h1>Add Visitor Story</h1>
       </div>
       <div className={style.card}>
-        <StoryForm action={createStory} />
+        <NewStoryForm />
       </div>
     </>
   );
