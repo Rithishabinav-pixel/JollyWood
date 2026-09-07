@@ -1,11 +1,11 @@
 import React from 'react'
-import DiningClient from './DiningClient'
+import CareersClient from './CareersClient';
 
 
 export default function page() {
   return (
     <>
-    <DiningClient/>
+    <CareersClient/>
     </>
   )
 }

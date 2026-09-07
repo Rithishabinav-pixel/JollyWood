@@ -1,0 +1,373 @@
+.hero_section{
+    background-image: url('/assets/images/memories-banner.png');
+    background-size: cover;
+}
+
+.gardern_section .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.gardern_section .container .content,
+.gardern_section .container .image{
+    width: 40%;
+}
+
+.graphica_section .container .content{
+    width: 32%;
+}
+
+.graphica_section{
+       background-image: url("/assets/images/graphica-bg.png");
+    background-size: auto 100%;
+    background-position: top right;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.gardern_section .container .content,
+.romancia_section .container .content,
+.graphica_section .container .content{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.romancia_section{
+    background-image: url("/assets/images/romancia-brush-img.png");
+    background-size: auto 100%;
+    background-position: top left;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.romancia_section .rabbit{
+position: absolute;
+width: 395px;
+height: auto;
+aspect-ratio: 395 / 613;
+left: 37%;
+bottom: -5vh;
+}
+
+.romancia_section .container .content{
+    margin-left: auto;
+    margin-right: 5%;
+    width: 33.5%;
+}
+
+.gardern_section .container .image{
+    position: relative;
+}
+
+.gardern_section .container .image .mainImg{
+    width: 100%;
+    height: auto;
+    float: left;
+}
+
+.gardern_section .container .image .dinozaur,
+.graphica_section  .dinozaur{
+    width: auto;
+    position: absolute;
+}
+
+.gardern_section .container .image .dinozaur{
+    top: 0;
+    left: 0;
+    transform: translateX(-75%);
+ height: 100%;
+}
+
+.graphica_section  .dinozaur{
+ height: 95%;
+right: 37%;
+bottom: -16px;
+}
+
+.playtopia_section .playtopiaCard .singleSlide{
+  gap: 26px;
+    display: flex;
+  flex-direction: column;
+}
+
+.playtopia_section{
+  position: relative;
+}
+
+.playtopia_section::before{
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("/assets/images/playtopia_bg.png");
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+
+
+.playtopia_section .singleSlide .image img{
+width: 100%;
+height: auto;
+float: left;
+}
+
+.playtopia_section .playtopiaCard .singleSlide .content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.playtopia_section .playtopiaCard,
+.playtopia_section .playtopiaCard .singleSlide .content{
+  display: flex;
+}
+
+.playtopia_section .playtopiaCard{
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.playtopia_section .playtopiaCard .singleSlide{
+  width: calc(33.33% - 20px);
+  transition: 0.3s all;
+}
+
+.playtopia_section .playtopiaCard .singleSlide:hover{
+  transform: translateY(-10px);
+}
+
+.playtopia_section .playtopiaCard .content .title{
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 600;
+}
+
+
+.playtopia_section .container .top_heading .left{
+  width:47%;
+  max-width: 47%;
+}
+
+.graphica_section{
+    background-color: white;
+}
+
+.hut_section .hutImage{
+    width: 100%;
+    max-width: 1170px;
+    display: flex;
+    margin: auto;
+}
+
+.hut_section .top_heading{
+    max-width: 763px;
+}
+
+.hut_section .hutImage img{
+    width: 100%;
+    height: auto;
+    float: left;
+}
+
+/* responsive  */
+
+/* laptop  */
+
+@media screen and (max-width:1750px) {
+
+
+
+}
+
+@media screen and (max-width:1600px) {
+
+     .playtopia_section .container .top_heading .left{
+  width:42%;
+  max-width: 42%;
+}
+
+
+     .playtopia_section .playtopiaCard .singleSlide .content .title{
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.playtopia_section .playtopiaCard .singleSlide{
+  gap: 18px;
+}
+
+.gardern_section .container{
+   align-items: center;
+}
+
+
+.romancia_section .container .content{
+    margin-right: 0%;
+}
+   
+}
+
+@media screen and (max-width:1550px) {
+
+    .graphica_section  .dinozaur{
+ height: 65%;
+right: 45%;
+}
+
+.romancia_section{
+    background-size: auto 100%;
+    background-position-x: -15%;
+}
+
+.romancia_section .rabbit{
+    left: 32%;
+}
+
+.romancia_section .container .content{
+    width: 40%;
+}
+   
+}
+
+@media screen and (max-width:1400px) {
+
+    
+        .graphica_section  .dinozaur{
+ height: 55%;
+right: 43%;
+}
+
+    .graphica_section{
+background-position-x: 100%;
+}
+
+ .graphica_section .container .content{
+    width: 40%;
+ }
+
+ .gardern_section .container .content{
+   width: 57%;
+}
+
+ .gardern_section .container .image{
+   width: 30%;
+}
+
+
+
+}
+
+
+/* tablet  */
+@media screen and (max-width:1200px) {
+
+        .graphica_section{
+            background-image: none;
+        }
+
+              .graphica_section  .dinozaur{
+ height: auto;
+right: unset;
+left: 0;
+width: 30vw;
+z-index: 2;
+}
+
+        .graphica_section .container .content,
+         .graphica_section .container .image{
+            width: 100%;
+        }
+
+        .graphica_section .container .image img{
+            width: 100%;
+            height: auto;
+            float: left;
+        }
+
+      .playtopia_section .container .top_heading .left{
+  width:100%;
+  max-width: 100%;
+}
+
+  .playtopia_section .playtopiaCard{
+  gap: 20px;
+}
+
+.playtopia_section .playtopiaCard .singleSlide{
+  width: calc(33.33% - 13.333px);
+}
+
+.playtopia_section .playtopiaCard .singleSlide .content .title{
+  font-size: 20px;
+  line-height: 28px;
+}
+
+     .romancia_section{
+        display: flex;
+        flex-direction: column-reverse; 
+        background-image: none;
+     }
+
+     .romancia_section .container{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+     }
+
+    .romancia_section .container .content{
+    width: 100%;
+}
+
+.romancia_section .container .image img{
+    width: 100%;
+    height: auto;
+    float: left;
+}
+
+.romancia_section .rabbit{
+  width: 20%;
+  z-index: 2;
+  left: 0;
+}
+
+ .gardern_section .container .content,
+  .gardern_section .container .image{
+   width: 100%;
+}
+
+ .gardern_section .container{
+   flex-direction: column;
+   gap: 30px;
+}
+
+.gardern_section .container .dinozaur{
+    display: none;
+}
+
+  
+}
+
+/* mobile  */
+@media screen and (max-width:767px) {
+
+      
+  .playtopia_section::before{
+  background-size: 60% auto;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+  .playtopia_section .playtopiaCard{
+  gap: 20px;
+}
+
+.playtopia_section .playtopiaCard .singleSlide{
+  width: 100%;
+}
+
+}

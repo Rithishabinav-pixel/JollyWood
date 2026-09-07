@@ -18,6 +18,9 @@ public/assets/
 # admin-uploaded media
 public/uploads/*
 !public/uploads/.gitkeep
+!public/uploads/gallery/
+public/uploads/gallery/*
+!public/uploads/gallery/.gitkeep
 
 
 

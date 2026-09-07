@@ -5,15 +5,17 @@ import style from "./components/adminDashboard.module.css";
 export const dynamic = "force-dynamic";
 
 export default async function AdminDashboardPage() {
-  const [offerCount, storyCount, announcementCount] = await Promise.all([
+  const [offerCount, storyCount, galleryCount, announcementCount] = await Promise.all([
     prisma.offer.count(),
     prisma.visitorStoryContent.count(),
+    prisma.galleryImage.count(),
     prisma.announcement.count(),
   ]);
 
   const stats = [
     { label: "Offers", value: offerCount, href: "/admin/offers" },
     { label: "Visitor Stories", value: storyCount, href: "/admin/stories" },
+    { label: "Gallery Images", value: galleryCount, href: "/admin/gallery" },
     { label: "Announcements", value: announcementCount, href: "/admin/announcements" },
   ];
 

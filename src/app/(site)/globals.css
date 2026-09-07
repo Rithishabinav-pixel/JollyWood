@@ -388,6 +388,10 @@ main .center_slider .swiper-slide.swiper-slide-active{
 
 @media screen and (max-width:1200px) {
 
+  .desktop_break{
+    display: none;
+  }
+
     .common_btn img.right_arrow{
   width: 24px;
 }

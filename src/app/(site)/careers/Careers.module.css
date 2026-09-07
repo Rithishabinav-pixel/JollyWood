@@ -1,0 +1,124 @@
+.hero_section{
+    background-image: url('/assets/images/careers-banner.png');
+    background-size: cover;
+}
+
+.careers_section .container,
+.form_section .container{
+    display: flex;
+}
+
+.form_section .container{
+    justify-content: space-around;
+}
+
+.careers_section .container .content,
+.form_section .container .content{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.careers_section .container .content{
+    width: 45%;
+}
+
+.form_section .container .content{
+    width: 33%;
+}
+
+.form_section .container .form_area{
+    width: 42%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.form_section .container .form_area h2{
+    font-size: 40px;
+    line-height: 48px;
+}
+
+
+.careers_section .container .image{
+    width: 100%;
+    max-width: 605px;
+    margin-right: 5%;
+}
+
+.careers_section .container .image img{
+    width: 100%;
+    height: auto;
+    float: left;
+}
+
+
+/* responsive  */
+
+/* laptop  */
+
+@media screen and (max-width:1750px) {
+
+}
+
+@media screen and (max-width:1600px) { 
+   
+    
+.form_section .container .content{
+    width: 40%;
+}
+
+}
+
+@media screen and (max-width:1550px) {
+ 
+}
+
+@media screen and (max-width:1400px) {
+
+    .careers_section .container .image{
+    margin-right: 0%;
+}
+
+}
+
+
+/* tablet  */
+@media screen and (max-width:1200px) {
+
+     .form_section .container{
+        flex-direction: column;
+        gap: 30px;
+     }
+
+    .form_section .container .content,
+    .form_section .container .form_area{
+    width: 100%;
+}
+
+.form_section .container .form_area{
+    gap: 20px;
+}
+
+ .form_section .container .form_area h2{
+    font-size: 20px;
+    line-height: 28px
+ }
+  
+      .careers_section .container{
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+      }
+
+       .careers_section .container .image,
+        .careers_section .container .content{
+            width: 100%;
+        }
+
+}
+
+/* mobile  */
+@media screen and (max-width:767px) {
+
+}

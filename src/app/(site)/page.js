@@ -3,6 +3,7 @@ import HomePageClient from "./HomePageClient";
 
 export const dynamic = "force-dynamic";
 
+
 export default async function Page() {
   const [offers, storyContents, storyImages] = await Promise.all([
     prisma.offer.findMany({

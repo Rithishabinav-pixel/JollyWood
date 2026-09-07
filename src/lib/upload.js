@@ -22,10 +22,11 @@ export async function readUploadedImage(file) {
   return { buffer, extension };
 }
 
-export async function persistImageBuffer(buffer, extension) {
+export async function persistImageBuffer(buffer, extension, subdir = "") {
   const filename = `${crypto.randomUUID()}.${extension}`;
-  await writeFile(path.join(UPLOAD_DIR, filename), buffer);
-  return `/uploads/${filename}`;
+  const dir = subdir ? path.join(UPLOAD_DIR, subdir) : UPLOAD_DIR;
+  await writeFile(path.join(dir, filename), buffer);
+  return subdir ? `/uploads/${subdir}/${filename}` : `/uploads/${filename}`;
 }
 
 export async function deleteUploadedImage(publicPath) {

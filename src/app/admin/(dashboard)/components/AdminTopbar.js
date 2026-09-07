@@ -9,6 +9,7 @@ const TITLES = {
   "/admin": "Dashboard",
   "/admin/offers": "Offers",
   "/admin/stories": "Visitor Stories",
+  "/admin/gallery": "Gallery",
   "/admin/announcements": "Announcements",
 };
 

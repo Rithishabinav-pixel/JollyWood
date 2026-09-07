@@ -1,0 +1,52 @@
+.hero_section{
+    background-image: url('/assets/images/story-banner.png');
+    background-size: cover;
+}
+
+.hut_section .hutImage{
+    width: 100%;
+    max-width: 1420px;
+    display: flex;
+    margin: auto;
+}
+
+.hut_section .top_heading{
+    max-width: 1200px;
+}
+
+.hut_section .hutImage img{
+    width: 100%;
+    height: auto;
+    float: left;
+}
+
+/* responsive  */
+
+/* laptop  */
+
+@media screen and (max-width:1750px) {
+
+}
+
+@media screen and (max-width:1600px) { 
+   
+}
+
+@media screen and (max-width:1550px) {
+ 
+}
+
+@media screen and (max-width:1400px) {
+
+}
+
+
+/* tablet  */
+@media screen and (max-width:1200px) {
+  
+}
+
+/* mobile  */
+@media screen and (max-width:767px) {
+
+}

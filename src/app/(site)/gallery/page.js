@@ -1,0 +1,28 @@
+import { prisma } from "@/lib/prisma";
+import GalleryClient from './GalleryClient';
+
+export const dynamic = "force-dynamic";
+
+export default async function Page() {
+  const [galleryImages, galleryCategories] = await Promise.all([
+    prisma.galleryImage.findMany({
+      include: { categories: { include: { galleryCategory: true } } },
+      orderBy: { createdAt: "desc" },
+    }),
+    prisma.galleryCategory.findMany({ orderBy: { name: "asc" } }),
+  ]);
+
+  const images = galleryImages.map((item) => ({
+    id: item.id,
+    image: item.image,
+    categories: item.categories.map((c) => c.galleryCategory.name),
+  }));
+
+  const categories = galleryCategories.map((category) => category.name);
+
+  return (
+    <>
+    <GalleryClient images={images} categories={categories} />
+    </>
+  )
+}

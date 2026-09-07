@@ -2,13 +2,14 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { DashboardIcon, OffersIcon, StoriesIcon, AnnouncementsIcon } from "./AdminIcons";
+import { DashboardIcon, OffersIcon, StoriesIcon, AnnouncementsIcon, GalleryIcon } from "./AdminIcons";
 import style from "./adminDashboard.module.css";
 
 const NAV_ITEMS = [
   { href: "/admin", label: "Dashboard", icon: DashboardIcon, exact: true },
   { href: "/admin/offers", label: "Offers", icon: OffersIcon },
   { href: "/admin/stories", label: "Visitor Stories", icon: StoriesIcon },
+  { href: "/admin/gallery", label: "Gallery", icon: GalleryIcon },
   { href: "/admin/announcements", label: "Announcements", icon: AnnouncementsIcon },
 ];
 

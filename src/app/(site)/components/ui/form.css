@@ -1,0 +1,81 @@
+button[type=submit] img{
+    width: 40px;
+    height: auto;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+form input,
+form textarea,
+.file_upload{
+ padding: 16px;
+    border: solid black 1px;
+    background: none !important;
+    color: black;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+form input,
+.file_upload{
+    min-height: 56px;
+    border-radius: 50px;
+}
+
+.file_upload,
+.file_upload label{
+    cursor: pointer;
+}
+
+form textarea{
+    border-radius: 24px;
+    min-height: 135px;
+    resize: none;
+}
+
+::placeholder{
+    color: black;
+    opacity: 1;
+     font-size: 16px;
+    line-height: 24px
+}
+
+form .full_cont{
+    width: 100%;
+}
+
+
+form .half_cont{
+    width: calc(50% - 15px);
+}
+
+/* responsive  */
+
+/* laptop  */
+
+@media screen and (max-width:1400px) {
+    
+    form{
+    gap: 20px;
+}
+
+form .half_cont{
+    width: calc(50% - 10px);
+}
+
+}
+
+/* mobile  */
+
+@media screen and (max-width:767px) {
+
+
+form .half_cont{
+    width: 100%;
+}
+
+}

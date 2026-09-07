@@ -65,3 +65,14 @@
   width:100%;
 }
 }
+
+/* mobile  */
+
+@media screen and (max-width:767px) {
+  
+  .hero_section .container{
+    margin-bottom: 8vh;
+}
+
+
+}
