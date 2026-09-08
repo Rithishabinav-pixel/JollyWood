@@ -253,7 +253,7 @@ export default function DryRidesClient() {
       </div>
 
       <div className={style.detail}>
-        <span>{rule.label}</span>
+        <span>{rule.label==="ageAllowed"?"Age Allowed":rule.label}</span>
         <p>{rule.value}</p>
       </div>
     </div>

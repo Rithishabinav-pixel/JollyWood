@@ -7,6 +7,15 @@ const nextConfig = {
       bodySizeLimit: "50mb",
     },
   },
+   images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "www.jollywood.co.in",
+        pathname: "/blog/wp-content/uploads/**",
+      },
+    ],
+  },
 };
 
 export default nextConfig;

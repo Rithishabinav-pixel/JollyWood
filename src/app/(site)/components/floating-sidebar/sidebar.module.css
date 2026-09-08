@@ -2,7 +2,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 4;
+    z-index: 999;
     background-color: var(--accent);
     width: 75px;
     display: flex;

@@ -4,12 +4,75 @@
     width: 100%;
     z-index: 3;
     padding: 12px 0;   
+    background-size: calc(100% - 24px) auto;
+    background-position: center 99%;
+}
+
+#header::before{
+    position: absolute;
+    content: '';
+    width: 270px;
+    height: 24px;
+    background-image: url("/assets/images/header_vector.svg");
+    background-size: 100% auto;
+    background-position: bottom center;
+    bottom: 1px;
+    left: 50%;
+    transform: translate(-50%,100%);
+    opacity: 0;
+}
+
+#header.active{
+background: var(--accent);
+z-index: 99;
+position: fixed;
+top: 0;
+padding: 8px 0;
+transform: translateY(-130%);
+animation: show_header 1s forwards;
+}
+
+@keyframes show_header {
+    to{
+        transform: translateY(0);
+    }
+}
+
+#header.active::before{
+    opacity: 1;
 }
 
 #header .container{
+    gap: 20px;
+}
+
+#header .container,
+#header .container .menus{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#header .container .menus{
+    gap: 20px;
+    list-style: none;
+}
+
+#header .container .menus li{
+    min-width: 140px;
+    display: flex;
+    justify-content: center;
+}
+
+#header .container .logo{
+    min-width: 175px;
+    display: flex;
+    justify-content: center;
+}
+
+#header .container .menus li a{
+    color: white;
+    text-decoration: none;
 }
 
 .mobile_menu_btn{
@@ -33,10 +96,19 @@
     height: auto;
 }
 
-.logo img{
+.logoLink{
+    display: flex;
+}
+
+.logoLink img{
     width: 151px;
     aspect-ratio: 151 / 99;
     height: auto;
+    transition: 0.3s all;
+}
+
+#header.active .logoLink img{
+    width: 120px;
 }
  
 
@@ -47,7 +119,7 @@
 
 @media screen and (max-width:767px) {
 
-    .logo img{
+    .logoLink img{
         width: 100px;
     }
 

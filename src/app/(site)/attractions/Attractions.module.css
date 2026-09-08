@@ -1,0 +1,118 @@
+.hero_section{
+    background-image: url('/assets/images/story-banner.png');
+    background-size: cover;
+}
+
+.attraction_section .cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.attraction_section .cards .card{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+width: calc(25% - 22.5px);
+}
+
+.attraction_section .cards .card .image{
+   -webkit-mask-image: url('/assets/images/bg-brush.svg');
+  mask-image: url('/assets/images/bg-brush.svg');
+  mask-size: 100%;
+  position: relative;
+  overflow: hidden;
+border-radius: 16px;
+}
+
+.attraction_section .cards .card .image img{
+width: 100%;
+height: auto;
+float: left;
+}
+
+.attraction_section .cards .card .image video{
+  position: absolute;
+  width: 100%;
+  height: auto;
+  z-index: 9;
+  top: 0;
+  left: 0;
+}
+
+.attraction_section .cards .card .content{
+  display: flex;
+   flex-direction: column;
+  gap: 16px;
+}
+
+.attraction_section .cards .card .content .title{
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 600;
+}
+
+
+
+
+/* responsive  */
+
+/* laptop  */
+
+@media screen and (max-width:1750px) {
+
+}
+
+@media screen and (max-width:1600px) { 
+
+    .attraction_section .cards .card{
+width: calc(33.33% - 20px);
+}
+
+
+    .attraction_section .cards .card .content .title{
+  font-size: 24px;
+  line-height: 32px;
+}
+
+
+   
+}
+
+@media screen and (max-width:1550px) {
+ 
+}
+
+@media screen and (max-width:1400px) {
+
+}
+
+
+/* tablet  */
+@media screen and (max-width:1200px) {
+  
+        .attraction_section .cards .card{
+width: calc(50% - 15px);
+}
+
+
+    .attraction_section .cards .card .image{
+border-radius: 8px;
+}
+
+.attraction_section .cards .card .content .title{
+  font-size: 20px;
+  line-height: 28px;
+}
+
+}
+
+/* mobile  */
+@media screen and (max-width:767px) {
+
+.attraction_section .cards .card{
+width: 100%;
+}
+
+
+}

@@ -1,0 +1,186 @@
+.hero_section{
+    background-image: url('/assets/images/story-banner.png');
+    background-size: cover;
+}
+
+
+.rides_section .ride_cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.rides_section .ride_cards .card{
+    width: calc(33.33% - 20px);
+    background-color: white;
+    overflow: hidden;
+    border-radius: 24px;
+}
+
+.rides_section .ride_cards .card,
+.rides_section .ride_cards .card .content{
+ display: flex;
+flex-direction: column;
+}
+
+.rides_section .ride_cards .card .image{
+    width: 100%;
+    position: relative;
+}
+
+.rides_section .ride_cards .card .image::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    background: linear-gradient(to top, white,rgba(255, 0, 0, 0));
+    bottom: 0;
+    left: 0;
+}
+
+.rides_section .ride_cards .card .image img{
+    width: 100%;
+    height: auto;
+    float: left;
+}
+
+.rides_section .ride_cards .card .image img.water{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(50%);
+}
+
+.rides_section .ride_cards .card .content{
+padding: 24px;
+    gap: 16px;
+    position: relative;
+    z-index: 2;
+}
+
+.rides_section .ride_cards .card .content h2{
+    font-size: 32px;
+    line-height: 40px;
+}
+
+.rides_section .ride_cards .card .content .rules,
+.rides_section .ride_cards .card .content .rule{
+    display: flex;
+}
+
+.rides_section .ride_cards .card .content .rules{
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap:16px 0;
+}
+
+.rides_section .ride_cards .card .content .rule{
+    align-items: center;
+    gap: 16px;
+    width: 33.33%;
+}
+
+.rides_section .ride_cards .card .content .rule .icon img{
+    width: 32px;
+    height: auto;
+    float: left;
+    aspect-ratio: 1 / 1;
+}
+
+.rides_section .ride_cards .card .content .rule .detail{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.rides_section .ride_cards .card .content .rules .rule .detail p{
+font-size: 20px;
+line-height: 28px;
+font-weight: 700;
+}
+
+
+/* responsive  */
+
+/* laptop  */
+
+@media screen and (max-width:1750px) {
+
+}
+
+@media screen and (max-width:1600px) { 
+
+    .rides_section .ride_cards .card .content .rule{
+    width: 50%;
+}
+
+    .rides_section .ride_cards .card .content .rule .icon img{
+   width: 36px;
+}
+   
+.rides_section .ride_cards .card .content .rules .rule .detail p{
+font-size: 20px;
+line-height: 28px;
+}
+
+}
+
+@media screen and (max-width:1550px) {
+ 
+}
+
+@media screen and (max-width:1400px) {
+
+    .rides_section .ride_cards .card{
+    width: calc(50% - 15px);
+}
+
+    .rides_section .ride_cards .card .content .rule{
+    width: 33.33%;
+}
+
+}
+
+
+/* tablet  */
+@media screen and (max-width:1200px) {
+
+    .rides_section .ride_cards .card{
+        border-radius: 16px;
+    }
+
+  .rides_section .ride_cards .card .content h2{
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.rides_section .ride_cards .card .content{
+    padding: 20px;
+}
+
+    .rides_section .ride_cards .card .content .rule{
+width: 50%;
+    gap: 10px;
+    min-width: 170px;
+}
+
+ .rides_section .ride_cards .card{
+    width:calc(50% - 15px);
+}
+
+}
+
+/* mobile  */
+@media screen and (max-width:767px) {
+
+      .rides_section .ride_cards .card .content h2{
+    font-size: 20px;
+    line-height: 28px;
+}
+
+        .rides_section .ride_cards .card{
+    width: 100%;
+}
+
+}

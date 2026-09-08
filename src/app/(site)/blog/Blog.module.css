@@ -1,0 +1,138 @@
+.hero_section{
+padding-top: 20vh;
+text-align: center;
+}
+
+
+.blogs_section .cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.blogs_section .cards .card{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+width: calc(33.33% - 20px);
+}
+
+.blogs_section .cards .card .image{
+  position: relative;
+  overflow: hidden;
+border-radius: 16px;
+}
+
+.blogs_section .cards .card .image img{
+width: 100%;
+height: auto;
+float: left;
+aspect-ratio:  4/ 2.5;
+object-fit: cover;
+object-position: center center;
+}
+
+.blogs_section .cards .card .image video{
+  position: absolute;
+  width: 100%;
+  height: auto;
+  z-index: 9;
+  top: 0;
+  left: 0;
+}
+
+.blogs_section .cards .card .content{
+  display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+  gap: 16px;
+}
+
+.blogs_section .cards .card .content .title{
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+.blogs_section .cards .card .content p{
+    display: -webkit-box;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp:3;
+  overflow: hidden;
+}
+
+
+
+/* responsive  */
+
+/* laptop  */
+
+@media screen and (max-width:1750px) {
+
+}
+
+@media screen and (max-width:1600px) { 
+
+        .blogs_section .cards .card{
+width: calc(33.33% - 20px);
+}
+
+
+    .blogs_section .cards .card .content .title{
+  font-size: 24px;
+  line-height: 32px;
+}
+   
+}
+
+@media screen and (max-width:1550px) {
+ 
+}
+
+@media screen and (max-width:1400px) {
+
+}
+
+
+/* tablet  */
+@media screen and (max-width:1200px) {
+
+    .blogs_section .cards .card .content .title{
+  font-size: 20px;
+  line-height: 28px;
+}
+
+    .hero_section{
+padding-top: 170px;
+}
+  
+      .blogs_section .cards .card{
+width: calc(50% - 15px);
+}
+
+
+    .blogs_section .cards .card .image{
+border-radius: 8px;
+}
+
+.blogs_section .cards .card .content .title{
+  font-size: 20px;
+  line-height: 28px;
+}
+
+}
+
+/* mobile  */
+@media screen and (max-width:767px) {
+
+        .hero_section{
+padding-top: 100px;
+}
+
+    .blogs_section .cards .card{
+width: 100%;
+}
+
+}
