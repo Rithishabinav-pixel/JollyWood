@@ -68,9 +68,10 @@ export default function BlogClient({ blogs = [] }) {
                       </p>
 
                       <Button
-                        href={blog.link}
+                        href={`/blog/${blog.slug}`}
                         text="Read More"
                         className="link white"
+                        ariaLabel={`Read more about ${title}`}
                       />
                     </div>
                   </div>

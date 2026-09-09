@@ -88,6 +88,7 @@ export default function BlogDetailClient({ post, recentBlogs = [] }) {
                     className="link white"
                     text="Read more"
                     href={`/blog/${blog.slug}`}
+                    ariaLabel={`Read more about ${blog?.title?.rendered || ""}`}
                   />
 
                 </div>

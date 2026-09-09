@@ -3,6 +3,11 @@ import GalleryClient from './GalleryClient';
 
 export const dynamic = "force-dynamic";
 
+export const metadata = {
+  title: "Gallery",
+  description: "Browse photos from Vels Jollywood's rides, attractions and events.",
+};
+
 export default async function Page() {
   const [galleryImages, galleryCategories] = await Promise.all([
     prisma.galleryImage.findMany({

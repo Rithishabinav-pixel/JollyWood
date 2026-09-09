@@ -33,6 +33,7 @@
     width: 100%;
     height: auto;
     float: left;
+    border-radius: 20px;
 }
 
 .blogContent :global(.e-con-inner) :global(.elementor-element){
@@ -112,6 +113,7 @@ float: left;
 aspect-ratio:  4/ 2.5;
 object-fit: cover;
 object-position: center center;
+border-radius: 20px;
 }
 
 /* responsive  */
@@ -138,6 +140,12 @@ object-position: center center;
 
 
 @media screen and (max-width:1400px) {
+
+    .featureImg,
+    #sidebar .recentBlog .featureImage{
+        border-radius: 16px;
+    }
+
     .blogContent h1{
     font-size: 32px;
     line-height:40px;

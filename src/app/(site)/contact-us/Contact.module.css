@@ -1,0 +1,210 @@
+.contact_section {
+    padding: 180px 0  120px 0;
+}
+
+.contact_section .container{
+    max-width: 1470px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.contact_section .container .content{
+    width: 50%;
+}
+
+.contact_section .container .form_area{
+    width: 40%;
+}
+
+.contact_section .container .content,
+ .contactDetail ul,
+  .contactDetail ul li a .detail,
+  .timings_section .week .timing,
+  .timings_section,
+   .form_area{
+    display: flex;
+    flex-direction: column;
+ }
+
+.contact_section .container .content,
+ .contactDetail ul li a .detail{
+    gap: 16px;
+}
+
+ .contactDetail ul{
+gap: 32px;
+list-style: none;
+}
+
+ .contactDetail ul li a{
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    color: white;
+    text-decoration: none;
+ }
+
+  .contactDetail ul li a:hover{
+    color: var(--yellow)
+  }
+
+  .contactDetail ul li a .icon{
+    width: 32px;
+ }
+
+   .contactDetail ul li a .icon img{
+    width: 100%;
+    height: auto;
+   }
+
+    .contactDetail ul li a .detail span{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+      .contactDetail ul li a .detail span img{
+        width: 24px;
+        height: auto;
+        aspect-ratio: 1/1;
+      }
+
+      .timings_section{
+        margin-top: 24px;
+        padding: 24px;
+        border-radius: 24px;
+        border: solid var(--yellow) 1px;
+        gap: 24px;
+        position: relative;
+      }
+
+.timings_section .week{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 20px;
+    justify-content: space-between;
+}
+
+.timings_section h3{
+    width: 100%;
+}
+
+.timings_section .week .timing{
+    width: calc(33.33% - 13.33px);
+    min-width: fit-content;
+    gap: 16px;
+}
+
+.timings_section .week .timing h4{
+    font-size: 18px;
+    line-height:26px;
+    color: var(--yellow);
+}
+
+.timings_section .character_1{
+    position: absolute;
+  right: 0;
+  width: 400px;
+  height: auto;
+  top: 0;
+  transform: translate(25%,-95%);
+}
+
+ .form_area{
+    gap: 30px;
+ }
+
+ .form_area h2{
+    font-size: 40px;
+    line-height: 48px;
+}
+
+
+/* responsive  */
+
+/* laptop  */
+
+@media screen and (max-width:1750px) {
+
+}
+
+@media screen and (max-width:1600px) { 
+
+    .contact_section {
+    padding: 180px 0  80px 0;
+}
+
+   
+.timings_section .character_1{
+  width: 350px;
+}
+
+}
+
+@media screen and (max-width:1470px) {
+ .contact_section .container{
+    max-width: calc(100% - 150px);
+}
+}
+
+@media screen and (max-width:1400px) {
+
+   .timings_section .character_1{
+  width: 320px;
+}
+
+}
+
+
+/* tablet  */
+@media screen and (max-width:1200px) {
+
+     .contactDetail ul{
+gap: 24px;
+}
+
+     .contact_section {
+    padding: 180px 0  50px 0;
+}
+    
+.form_area h2{
+    font-size: 20px;
+    line-height: 28px
+ }
+  
+    .timings_section .character_1{
+  width: 150px;
+}
+
+  .contact_section .container{
+  max-width: 100%;
+}
+
+}
+
+/* mobile  */
+@media screen and (max-width:767px) {
+
+       .contact_section {
+    padding: 120px 0  50px 0;
+}
+
+    .contact_section .container .content,
+    .contact_section .container .form_area{
+    width: 100%;
+}
+
+    .contact_section .container{
+  flex-direction: column;
+  gap: 50px;
+}
+
+   .timings_section .character_1{
+  width: 120px;
+  top: unset;
+  bottom: 0;
+  transform: none;
+}
+
+}

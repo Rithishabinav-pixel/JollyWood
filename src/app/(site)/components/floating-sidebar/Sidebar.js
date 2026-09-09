@@ -19,32 +19,33 @@ export default function Sidebar() {
 <div className={style.menuLists}>
     <div className={style.menuColumn}>
         <ul>
-            <li> <Link href="#">About Us</Link> </li>
+            <li> <Link href="/our-story">Our Story</Link> </li>
             <li> <Link href="#">Corporate Event</Link> </li>
-            <li> <Link href="#">Gallery</Link> </li>
-            <li> <Link href="#">Careers</Link> </li>
-            <li> <Link href="#">Reach Us</Link> </li>
-            <li> <Link href="#">360° Virtual Tour</Link> </li>
-            <li> <Link href="#">Park Map</Link> </li>
-            <li> <Link href="#">Park / Visitor Information</Link> </li>
-            <li> <Link href="#">Blog</Link> </li>
+            <li> <Link href="/gallery">Gallery</Link> </li>
+            <li> <Link href="/careers">Careers</Link> </li>
+            <li> <Link href="/contact-us">Reach Us</Link> </li>
+            <li> <Link href="/park-map">Park Map</Link> </li>
+            <li> <Link href="#"> Visitor Information</Link> </li>
+            <li> <Link href="/guest-safety">Guest Safety</Link> </li>
+            <li> <Link href="/rules-regulations">Rules & Regulations</Link> </li>
+
         </ul>
     </div>
 </div>
         
         <nav className={style.fixedMenu}>
             <ul className={style.fixedMenu_lists}>
-                <li className={style.navItems}> <Link href="#"> <Image src="/assets/images/home-f.svg" width={40} height={40} alt=''/> <span>Home</span> </Link> </li>
-                <li className={style.navItems}> <Link href="#"> <Image src="/assets/images/exp-f.svg" width={40} height={40} alt=''/> <span>Experience</span> </Link> </li>
-                <li className={style.navItems}> <Link href="#"> <Image src="/assets/images/memory-f.svg" width={40} height={40} alt=''/><span>Memories</span> </Link> </li>
-                <li className={style.navItems}> <Link href="#"> <Image src="/assets/images/dining-f.svg" width={40} height={40} alt=''/><span>Dining</span> </Link> </li>
-                <li className={style.navItems}> <Link href="#"> <Image src="/assets/images/studio-f.svg" width={40} height={40} alt=''/><span>Studios</span> </Link> </li>
-                <li className={style.navItems}> <Link href="#"> <Image src="/assets/images/resort-f.svg" width={40} height={40} alt=''/> <span>Resort</span></Link> </li>
-                <li className={`${style.quickMenu} ${sidebarActive?style.active:""}`}> <Link href="#">
+                <li className={style.navItems}> <Link href="/"> <Image src="/assets/images/home-f.svg" width={40} height={40} alt=''/> <span>Home</span> </Link> </li>
+                <li className={style.navItems}> <Link href="/experience"> <Image src="/assets/images/exp-f.svg" width={40} height={40} alt=''/> <span>Experience</span> </Link> </li>
+                <li className={style.navItems}> <Link href="/memories"> <Image src="/assets/images/memory-f.svg" width={40} height={40} alt=''/><span>Memories</span> </Link> </li>
+                <li className={style.navItems}> <Link href="/dining"> <Image src="/assets/images/dining-f.svg" width={40} height={40} alt=''/><span>Dining</span> </Link> </li>
+                <li className={style.navItems}> <Link href="/gallery"> <Image src="/assets/images/studio-f.svg" width={40} height={40} alt=''/><span>Gallery</span> </Link> </li>
+                <li className={style.navItems}> <Link href="/park-map"> <Image src="/assets/images/resort-f.svg" width={40} height={40} alt=''/> <span>Park Map</span></Link> </li>
+                <li className={`${style.quickMenu} ${sidebarActive?style.active:""}`}> <Link href="#" onClick={(e)=>{e.preventDefault(); toggleMenu();}} aria-label={sidebarActive ? "Close menu" : "Open menu"} aria-expanded={sidebarActive}>
                 {sidebarActive?
-                <Image src="/assets/images/menu_close.svg" onClick={toggleMenu} width={32} height={32} alt=''/>
+                <Image src="/assets/images/menu_close.svg" width={32} height={32} alt=''/>
                 :
-                <Image src="/assets/images/hamburger.svg" onClick={toggleMenu} width={32} height={32} alt=''/>
+                <Image src="/assets/images/hamburger.svg" width={32} height={32} alt=''/>
                 }
                 </Link> </li>
             </ul>

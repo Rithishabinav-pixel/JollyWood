@@ -70,6 +70,10 @@
 
 @media screen and (max-width:767px) {
   
+  .hero_section{
+    background-position: center center;
+  }
+
   .hero_section .container{
     margin-bottom: 8vh;
 }

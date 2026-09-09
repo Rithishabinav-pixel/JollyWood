@@ -27,7 +27,7 @@
 }
 
 .ride_cards .card .image{
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     transition: 0.3s ease-in-out;
@@ -63,6 +63,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    margin-top: auto;
 }
 
 .ride_cards .card .content .rules .rule{

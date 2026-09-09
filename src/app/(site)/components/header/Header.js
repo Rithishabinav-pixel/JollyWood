@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import style from './Header.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 
 const ExperienceMenu = [
   {
@@ -23,7 +24,9 @@ const ExperienceMenu = [
   },
 ]
 
-export default function Header() {
+export default function Header({setMenuActive, menuActive}) {
+
+    const pathname = usePathname()
 
 
     const [mobile,setMobile] = useState(false);
@@ -41,14 +44,13 @@ export default function Header() {
 window.addEventListener("scroll", () => {
   const currentScrollY = window.scrollY;
 
-  // Check if user is scrolling up (current is less than last) and past 100px
+
   if (currentScrollY < lastScrollY && currentScrollY > 100) {
     headerRef.current.classList.add(`${style.active}`);
   } else {
     headerRef.current.classList.remove(`${style.active}`);
   }
 
-  // Update the last position for the next scroll event
   lastScrollY = currentScrollY;
 });
     
@@ -68,6 +70,10 @@ window.addEventListener("scroll", () => {
 
 <div className={`container ${style.container}`}>
 
+{
+  pathname === '/experience' && !mobile &&
+
+
   <ul className={style.menus}>
   {ExperienceMenu.slice(0,2).map((menu,index)=>(
     <React.Fragment key={index}>
@@ -76,12 +82,16 @@ window.addEventListener("scroll", () => {
   ))}
   </ul>
 
+  }
+
 <div className={style.logo}>
-<Link className={style.logoLink} href="#">
+<Link className={style.logoLink} href="/">
 <Image src="/assets/images/logo.svg" width={151} height={99} alt='Jollywood Logo'/>
 </Link>
 </div>
 
+{
+  pathname === '/experience' && !mobile &&
   <ul className={style.menus}>
   {ExperienceMenu.slice(2,4).map((menu,index)=>(
     <React.Fragment key={index}>
@@ -89,9 +99,16 @@ window.addEventListener("scroll", () => {
     </React.Fragment>
   ))}
   </ul>
+}
 
-{mobile && 
-  <button className={style.mobile_menu_btn}>
+{mobile &&
+  <button
+    className={style.mobile_menu_btn}
+    onClick={()=>setMenuActive(true)}
+    aria-label="Open navigation menu"
+    aria-expanded={!!menuActive}
+    aria-controls="mobile-navigation"
+  >
 <Image src="/assets/images/hamburger.svg" width={24} height={24} alt=''/>
     </button>
     }

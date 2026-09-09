@@ -19,7 +19,7 @@ export default function DesktopSidebar() {
    window.addEventListener("resize", checkDevice);
 
     return () => {
-      window.addEventListener("resize", checkDevice);
+      window.removeEventListener("resize", checkDevice);
       };
 
   },[])

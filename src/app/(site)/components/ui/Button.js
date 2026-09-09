@@ -2,11 +2,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-export default function Button({href,text,className}) {
+export default function Button({href,text,className,ariaLabel}) {
   return (
     <>
-    
-     <Link className={className?className:""} href={href?href:""}>
+
+     <Link className={className?className:""} href={href?href:""} aria-label={ariaLabel}>
 
       {className.includes("ticket")?
         <Image src="/assets/images/confirmation_number.svg" width={40} height={40} alt=''/>

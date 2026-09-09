@@ -1,0 +1,180 @@
+.hero_section{
+    background-image: url('/assets/images/adventure-banner.png');
+    background-size: cover;
+}
+
+.adventure_section .container{
+    max-width: 1470px;
+}
+
+.adventure_section .container .cards{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.adventure_section .container .cards .card{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+     border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+
+}
+
+.adventure_section .container .cards .image,
+.adventure_section .container .cards .content{
+    width: 50%;
+    overflow: hidden;
+}
+
+.adventure_section .container .cards .image img{
+    width: 100%;
+    height: auto;
+    float: left;
+    transition: 0.3s ease-in-out;
+}
+
+.adventure_section .container .cards .card:hover .image img{
+    transform: scale(1.05);
+}
+
+.adventure_section .container .cards .content{
+      padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.adventure_section .container .cards .content h2{
+    font-size: 32px;
+    line-height: 40px;
+}
+
+
+.adventure_section .container .cards .content .rules{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+}
+
+.adventure_section .container .cards .content .rules .rule{
+    width: calc(33.33% - 13.33px);
+     display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+
+.adventure_section .container .cards .content .rules .rule .icon img{
+    width: 32px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    float: left;
+}
+
+.adventure_section .container .cards .content .rules .rule .detail{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.adventure_section .container .cards .content .rules .rule .detail p{
+font-size: 20px;
+line-height: 28px;
+font-weight: 700;
+}
+
+
+/* responsive  */
+
+/* laptop  */
+
+@media screen and (max-width:1750px) {
+
+}
+
+@media screen and (max-width:1600px) { 
+   
+.adventure_section .container .cards .content .rules .rule .icon img{
+    width: 36px;
+}
+
+.adventure_section .container .cards .content .rules .rule{
+    gap:10px;
+}
+
+.adventure_section .container .cards .content .rules .rule .detail p{
+font-size: 20px;
+line-height: 28px;
+}
+
+
+}
+
+@media screen and (max-width:1550px) {
+ 
+}
+
+@media screen and (max-width:1400px) {
+
+}
+
+
+/* tablet  */
+@media screen and (max-width:1200px) {
+
+    .adventure_section .container .cards .image,
+.adventure_section .container .cards .content{
+    width: 100%;
+}
+  
+.adventure_section .container .cards .content h2{
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.adventure_section .container .cards  .card{
+    border-radius: 16px;
+ }
+
+.adventure_section .container .cards .card .content{
+    padding: 20px;
+ }
+
+
+}
+
+/* mobile  */
+@media screen and (max-width:767px) {
+
+  .adventure_section .container .cards .card .content,
+  .adventure_section .container .cards .car .image{
+    width: 100%;
+ }
+
+  .adventure_section .container .cards .card .content h2{
+    font-size: 20px;
+    line-height: 28px;
+}
+
+   .adventure_section .container .cards .card{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .adventure_section .container .cards .content .rules .rule{
+    width: calc(50% - 10px);
+}
+
+
+.adventure_section .container .cards .content h2{
+    font-size: 20px;
+    line-height: 28px;
+}
+
+}

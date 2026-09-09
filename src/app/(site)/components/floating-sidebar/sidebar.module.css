@@ -105,13 +105,14 @@ align-items: center;
     background-color: white;
     font-size: 10px;
     line-height: 10px;
-    padding: 3px 12px;
+    padding: 5px 12px;
     display: flex;
     border-radius: 50px;
     opacity: 0;
     transition: 0.3s all;
     color: black;
-
+    min-width: fit-content;
+white-space: nowrap;
 }
 
 #sidebar nav.fixedMenu ul li a:hover span{
@@ -161,6 +162,11 @@ transform: scale(0.9);
 
 /* max height 890  */
 @media screen and (max-height:890px) {
+
+    .menuLists ul li a{
+    font-size: 3vh;
+    line-height: 3.5vh;
+}
 
      #sidebar{
         padding-top: 7vh;

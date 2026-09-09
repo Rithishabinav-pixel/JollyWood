@@ -1,0 +1,102 @@
+.hero_section{
+    padding: 180px 0  120px 0;
+    text-align: center;
+}
+
+.parkMap{
+    width: 100%;
+    height: fit-content;
+    position: relative;
+}
+
+.parkMap .map_image{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1482 / 965;
+}
+
+.parkMap .pin{
+    position: absolute;
+    width: 1.2vw;
+height: auto;
+aspect-ratio: 1 / 1;
+
+}
+
+.parkMap .pin .count{
+width: 100%;
+height: 100%;
+display: grid;
+place-items: center;
+border-radius: 50px;
+background-color: var(--accent);
+color: white;
+font-weight: 700;
+font-size: 0.8vw;
+line-height: 0vw;
+cursor: pointer;
+}
+
+.parkMap .pin span{
+    position: absolute;
+    top: -5px;
+    background-color:var(--orange);
+    color: white;
+    font-size: 12px;
+    line-height: 12px;
+    min-width: fit-content;
+    padding: 4px 12px 6px 12px;
+    border-radius: 50px;
+    transform: translateY(-105%);
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    visibility: hidden;
+     white-space: nowrap;
+}
+
+.parkMap .pin:hover span{
+    opacity: 1;
+    transform: translateY(-100%);
+    visibility: visible;
+   
+}
+
+
+/* responsive  */
+
+/* laptop  */
+
+@media screen and (max-width:1750px) {
+
+}
+
+@media screen and (max-width:1600px) { 
+   
+}
+
+@media screen and (max-width:1550px) {
+ 
+}
+
+@media screen and (max-width:1400px) {
+
+}
+
+
+/* tablet  */
+@media screen and (max-width:1200px) {
+  
+       .hero_section {
+    padding: 180px 0  50px 0;
+}
+
+}
+
+/* mobile  */
+@media screen and (max-width:767px) {
+
+     .hero_section {
+    padding: 120px 0  50px 0;
+}
+
+}

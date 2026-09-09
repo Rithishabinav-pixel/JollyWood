@@ -13,11 +13,25 @@ form input,
 form textarea,
 .file_upload{
  padding: 16px;
-    border: solid black 1px;
     background: none !important;
-    color: black;
     font-size: 16px;
     line-height: 24px;
+}
+
+form.black_fields input,
+form.black_fields textarea,
+form.black_fields .file_upload{
+    border: solid black 1px;
+    color: black;
+}
+
+
+form.white_fields input,
+form.white_fields textarea,
+form.white_fields .file_upload{
+    border: solid white 1px;
+    color: white;
+
 }
 
 form input,
@@ -38,10 +52,18 @@ form textarea{
 }
 
 ::placeholder{
-    color: black;
-    opacity: 1;
+    opacity: 1 !important;
      font-size: 16px;
-    line-height: 24px
+    line-height: 24px;
+     font-family:"area-normal";
+}
+
+.black_fields ::placeholder{
+    color: black;
+}
+
+.white_fields ::placeholder{
+    color: #fff  !important;
 }
 
 form .full_cont{

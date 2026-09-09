@@ -81,3 +81,30 @@ model Announcement {
 
   @@index([isActive, order])
 }
+
+model ContactEnquiry {
+  id           String   @id @default(cuid())
+  firstName    String
+  lastName     String
+  mobileNumber String
+  email        String
+  message      String   @default("")
+  createdAt    DateTime @default(now())
+
+  @@index([createdAt])
+}
+
+model CareerEnquiry {
+  id                 String   @id @default(cuid())
+  firstName          String
+  lastName           String
+  mobileNumber       String
+  email              String
+  currentDesignation String?
+  relevantExperience String?
+  resume             String?
+  coverLetter        String?
+  createdAt          DateTime @default(now())
+
+  @@index([createdAt])
+}

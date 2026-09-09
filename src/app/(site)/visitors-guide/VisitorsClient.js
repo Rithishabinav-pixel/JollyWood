@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect, useState } from 'react'
-import style from './Visitors.module.css'
+import style from '@/app/(site)/components/ui/contentList.module.css'
 import '../innerpage.css'
 import Image from 'next/image'
 
@@ -106,7 +106,7 @@ export default function VisitorsClient() {
 
 
 {/* story section  */}
-<section className={`common_section no_padding_top ${style.visitors_section}`}>
+<section className={`common_section no_padding_top ${style.contentList_section}`}>
 
 <div className={`container section_container ${style.container}`}>
 

@@ -3,6 +3,10 @@
     background-size: cover;
 }
 
+.careers_section .container{
+    justify-content: space-between;
+}
+
 .careers_section .container,
 .form_section .container{
     display: flex;

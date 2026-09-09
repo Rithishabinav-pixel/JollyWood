@@ -18,7 +18,7 @@ export default function Footer() {
             <div className={style.linksContainer}>
 
 <div className={style.siteInfo}>
-    <Link className={style.logo} href="#">
+    <Link className={style.logo} href="/">
 <Image src="/assets/images/logo.svg" width={151} height={99} alt='Jollywood Logo'/>
 </Link>
 <ul className={style.socialIcons}>
@@ -32,14 +32,14 @@ export default function Footer() {
 <div className={style.menuColumn}>
     <h3>Quick Link</h3>
     <ul>
-        <li> <Link href="#">Home </Link>  </li>
+        <li> <Link href="/">Home </Link>  </li>
         <li> <Link href="#">Restaurant  </Link>  </li>
         <li> <Link href="#">Resort </Link>  </li>
-        <li> <Link href="#">Our Story </Link>  </li>
+        <li> <Link href="/our-story">Our Story </Link>  </li>
         <li> <Link href="#">Studios </Link>  </li>
-        <li> <Link href="#">Gallery </Link>  </li>
-        <li> <Link href="#">Blog </Link>  </li>
-        <li> <Link href="#">Reached Us </Link>  </li>
+        <li> <Link href="/gallery">Gallery </Link>  </li>
+        <li> <Link href="/blog">Blog </Link>  </li>
+        <li> <Link href="/contact-us">Reached Us </Link>  </li>
         <li> <Link href="#">Host For Events </Link>  </li>
     </ul>
 </div>
@@ -47,8 +47,8 @@ export default function Footer() {
 <div className={style.menuColumn}>
     <h3>Rides</h3>
     <ul>
-        <li> <Link href="#">Land Ride  </Link>  </li>
-        <li> <Link href="#">Water Ride  </Link>  </li>
+        <li> <Link href="/dry-rides">Land Ride  </Link>  </li>
+        <li> <Link href="/water-rides">Water Ride  </Link>  </li>
         <li> <Link href="#">Theme Zones </Link>  </li>
     </ul>
 </div>
@@ -58,9 +58,9 @@ export default function Footer() {
     <h3>Information for Guests</h3>
     <ul>
         <li> <Link href="#">FAQs</Link>  </li>
-        <li> <Link href="#">Visitor's Guide</Link>  </li>
-        <li> <Link href="#">Guest Safety</Link>  </li>
-        <li> <Link href="#">Rules and Regulations</Link>  </li>
+        <li> <Link href="/visitors-guide">Visitor's Guide</Link>  </li>
+        <li> <Link href="/guest-safety">Guest Safety</Link>  </li>
+        <li> <Link href="/rules-regulations">Rules and Regulations</Link>  </li>
         <li> <Link href="#">Terms of Use</Link>  </li>
         <li> <Link href="#">Privacy policy</Link>  </li>
     </ul>

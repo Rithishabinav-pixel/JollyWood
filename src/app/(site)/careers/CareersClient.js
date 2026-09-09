@@ -1,17 +1,19 @@
 "use client"
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useActionState } from 'react'
 import style from './Careers.module.css'
 import '../innerpage.css'
 import Image from 'next/image'
 import '@/app/(site)/components/ui/form.css'
+import { submitCareerEnquiry } from './actions'
 
 
 
 
 export default function CareersClient() {
 
-  
+  const [state, formAction, pending] = useActionState(submitCareerEnquiry, undefined)
+
    const [mobile,setMobile] = useState(false);
         
         
@@ -77,20 +79,37 @@ export default function CareersClient() {
 
   <div className={style.form_area}>
     <h2 className='purple'>Join with Us!</h2>
-    <form>
-      <input type='text' className='half_cont input_field' placeholder='First Name *' required></input>
-      <input type='text' className='half_cont input_field' placeholder='Last Name *' required></input>
-      <input type='tel' className='half_cont input_field' placeholder='Mobile Number *'></input>
-      <input type='email' className='half_cont input_field' placeholder='Email Address *'></input>
-      <input type='text' className='half_cont input_field' placeholder='Current Designation'></input>
-      <input type='text' className='half_cont input_field' placeholder='Relevant Experience'></input>
+
+    {state?.error && <p role="alert">{state.error}</p>}
+    {state?.success && <p role="status">Thank you! Your application has been received. Our team will get back to you soon.</p>}
+
+    <form className='black_fields' action={formAction} key={state?.success ? "submitted" : "career-form"}>
+      <label htmlFor='careerFirstName' className='sr_only'>First Name</label>
+      <input id='careerFirstName' name='firstName' type='text' className='half_cont input_field' placeholder='First Name *' required></input>
+
+      <label htmlFor='careerLastName' className='sr_only'>Last Name</label>
+      <input id='careerLastName' name='lastName' type='text' className='half_cont input_field' placeholder='Last Name *' required></input>
+
+      <label htmlFor='careerMobileNumber' className='sr_only'>Mobile Number</label>
+      <input id='careerMobileNumber' name='mobileNumber' type='tel' className='half_cont input_field' placeholder='Mobile Number *' required></input>
+
+      <label htmlFor='careerEmail' className='sr_only'>Email Address</label>
+      <input id='careerEmail' name='email' type='email' className='half_cont input_field' placeholder='Email Address *' required></input>
+
+      <label htmlFor='careerDesignation' className='sr_only'>Current Designation</label>
+      <input id='careerDesignation' name='currentDesignation' type='text' className='half_cont input_field' placeholder='Current Designation'></input>
+
+      <label htmlFor='careerExperience' className='sr_only'>Relevant Experience</label>
+      <input id='careerExperience' name='relevantExperience' type='text' className='half_cont input_field' placeholder='Relevant Experience'></input>
+
       <div className='file_upload full_cont'>
         <label htmlFor='resumeFile' className='input_field'> Upload Resume </label>
-<input type='file' id='resumeFile' hidden className='half_cont'></input>
+<input type='file' id='resumeFile' name='resume' accept='.pdf,.doc,.docx' hidden className='half_cont'></input>
       </div>
 
-      <textarea className='full_cont' placeholder='Cover Letter'></textarea>
-<button className='common_btn black_shadow black_text white_bg left_tilt' type='submit'>Apply now <Image src="/assets/images/yellow-arrow.svg" width={24} height={24} alt=''/></button>
+      <label htmlFor='careerCoverLetter' className='sr_only'>Cover Letter</label>
+      <textarea id='careerCoverLetter' name='coverLetter' className='full_cont' placeholder='Cover Letter'></textarea>
+<button className='common_btn black_shadow black_text white_bg left_tilt' type='submit' disabled={pending}>{pending ? "Submitting..." : "Apply now"} <Image src="/assets/images/yellow-arrow.svg" width={24} height={24} alt=''/></button>
 
 
 

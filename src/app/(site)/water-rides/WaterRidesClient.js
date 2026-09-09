@@ -130,7 +130,7 @@ export default function WaterRidesClient() {
 
 <section className={`hero_section ${style.hero_section}`}>
     <div className={`container`}>
-        <h1 className={`title common_heading white`}>Our Story</h1>
+        <h1 className={`title common_heading white`}>Water Rides</h1>
     </div>
 </section>
 
