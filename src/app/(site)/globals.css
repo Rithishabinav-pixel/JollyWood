@@ -32,10 +32,12 @@ html,body{
 body{
   background-color: var(--accent);
   min-height: 100vh;
+  
 }
 
 body,input,button{
   font-family:"area-normal";
+   font-display:swap;
 }
 
 button{

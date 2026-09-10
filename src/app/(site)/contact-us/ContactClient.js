@@ -60,7 +60,7 @@ export default function ContactClient() {
   <div className={style.contactDetail}>
     <ul>
       <li>
-        <a href='#'> 
+        <a href='https://maps.app.goo.gl/snRpHZoYgE9TW2X17' target='_blank' rel='noopener noreferrer'>
         <span className={style.icon}> <Image src="/assets/images/c-map.svg" width={24} height={24} alt=''/> </span>
         <span className={style.detail}>
 <h3>Vels Studios & Entertainment Pvt Ltd</h3>
@@ -124,7 +124,7 @@ export default function ContactClient() {
     {state?.error && <p role="alert" className='white'>{state.error}</p>}
     {state?.success && <p role="status" className='white'>Thank you! Your enquiry has been received. Our team will get back to you soon.</p>}
 
-    <form className='white_fields' action={formAction} key={state?.success ? "submitted" : "contact-form"}>
+    <form className='white_fields' action={formAction} key={state?.success ? "submitted" : "contact-form"} aria-busy={pending}>
       <label htmlFor='contactFirstName' className='sr_only'>First Name</label>
       <input id='contactFirstName' name='firstName' type='text' className='full_cont input_field' placeholder='First Name *' required></input>
 

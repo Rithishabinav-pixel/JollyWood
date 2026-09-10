@@ -1403,10 +1403,11 @@ margin-top: 50px;
 }
 }
 
-@media screen and (max-width:400px){
-   .offers_section :global(.swiper){
-              padding: 7.5vw 0 14vw
+@media screen and (max-width:440px){
+.comfort_section .container .stay_slider .singleSlide{
+flex-direction: column;
 }
+
 }
 
 

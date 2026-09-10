@@ -83,7 +83,7 @@ export default function CareersClient() {
     {state?.error && <p role="alert">{state.error}</p>}
     {state?.success && <p role="status">Thank you! Your application has been received. Our team will get back to you soon.</p>}
 
-    <form className='black_fields' action={formAction} key={state?.success ? "submitted" : "career-form"}>
+    <form className='black_fields' action={formAction} key={state?.success ? "submitted" : "career-form"} aria-busy={pending}>
       <label htmlFor='careerFirstName' className='sr_only'>First Name</label>
       <input id='careerFirstName' name='firstName' type='text' className='half_cont input_field' placeholder='First Name *' required></input>
 

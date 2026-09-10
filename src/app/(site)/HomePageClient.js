@@ -587,13 +587,13 @@ useEffect(() => {
 
 
     {/* floating ticket */}
-<Image className={lcpStyle.floating_tickets} src="/assets/images/floating_tickets.svg" width={75} height={790} alt=''/>
+<Image className={lcpStyle.floating_tickets} priority src="/assets/images/floating_tickets.svg" width={75} height={790} alt=''/>
 
      <div className={`container ${lcpStyle.container}`}>
 
          {/* Characters  */}
-<Image className={`${lcpStyle.character} ${lcpStyle.character_1}`} src="/assets/images/char_1.svg" width={480} height={506} alt=''/>
-<Image className={`${lcpStyle.character} ${lcpStyle.character_2}`} src="/assets/images/char_2.svg" width={306} height={503} alt=''/>
+<Image className={`${lcpStyle.character} ${lcpStyle.character_1}`} priority  src="/assets/images/char_1.svg" width={480} height={506} alt=''/>
+<Image className={`${lcpStyle.character} ${lcpStyle.character_2}`} priority  src="/assets/images/char_2.svg" width={306} height={503} alt=''/>
 
       <h1 className="common_heading white">Cinematic Family <br className='desktop_break'/>Universe</h1>
 

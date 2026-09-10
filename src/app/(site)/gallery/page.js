@@ -1,7 +1,7 @@
 import { prisma } from "@/lib/prisma";
 import GalleryClient from './GalleryClient';
 
-export const dynamic = "force-dynamic";
+export const revalidate = 10; 
 
 export const metadata = {
   title: "Gallery",

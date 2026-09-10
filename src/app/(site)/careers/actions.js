@@ -1,5 +1,6 @@
 "use server";
 
+import { redirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { readUploadedDocument, persistImageBuffer, deleteUploadedImage } from "@/lib/upload";
 import { sendAdminNotification, sendUserConfirmation } from "@/lib/mailer";
@@ -90,5 +91,5 @@ export async function submitCareerEnquiry(prevState, formData) {
     html: careerUserEmailHtml(data),
   });
 
-  return { success: true };
+  redirect("/career-thank-you");
 }

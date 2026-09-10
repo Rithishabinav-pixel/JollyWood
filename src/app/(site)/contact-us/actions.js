@@ -1,5 +1,6 @@
 "use server";
 
+import { redirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { sendAdminNotification, sendUserConfirmation } from "@/lib/mailer";
 import { contactAdminEmailHtml, contactUserEmailHtml } from "@/lib/emailTemplates";
@@ -43,5 +44,5 @@ export async function submitContactEnquiry(prevState, formData) {
     html: contactUserEmailHtml(data),
   });
 
-  return { success: true };
+  redirect("/contact-us-thank-you");
 }
