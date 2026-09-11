@@ -4,7 +4,7 @@
   padding: 7px;
   background-color: var(--yellow);
   position: relative;
-  z-index: 9;
+  z-index: 99;
 }
 
 .marquee {

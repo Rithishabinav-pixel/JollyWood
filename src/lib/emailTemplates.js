@@ -163,3 +163,43 @@ export function careerUserEmailHtml(data) {
 
   return shell({ heading: "Thank You for Your Application", bodyHtml });
 }
+
+function formatEventDate(date) {
+  return date
+    ? new Date(date).toLocaleDateString("en-IN", { dateStyle: "medium" })
+    : undefined;
+}
+
+export function corporateAdminEmailHtml(data) {
+  const bodyHtml = `
+                <p style="margin:0 0 16px;font-size:15px;line-height:22px;color:#374151;">A new corporate event enquiry has been submitted on the website.</p>
+                ${detailsTable([
+                  { label: "Name", value: data.name },
+                  { label: "Email", value: data.email },
+                  { label: "Phone", value: data.mobileNumber },
+                  { label: "Location", value: data.location },
+                  { label: "Type of Event", value: data.eventType },
+                  { label: "Date of Event", value: formatEventDate(data.eventDate) },
+                  { label: "Submitted", value: formatDate(data.createdAt) },
+                ])}`;
+
+  return shell({ heading: "New Corporate Enquiry", bodyHtml });
+}
+
+export function corporateUserEmailHtml(data) {
+  const bodyHtml = `
+                <p style="margin:0 0 16px;font-size:15px;line-height:22px;color:#374151;">Hello ${escapeHtml(data.name)},</p>
+                <p style="margin:0 0 16px;font-size:15px;line-height:22px;color:#374151;">Thank you for your interest in hosting your event with us. We have successfully received your enquiry. Our team will review your details and get back to you shortly.</p>
+                <p style="margin:0 0 4px;font-size:14px;font-weight:bold;color:${BRAND.accent};">Your enquiry details</p>
+                ${detailsTable([
+                  { label: "Name", value: data.name },
+                  { label: "Email", value: data.email },
+                  { label: "Phone", value: data.mobileNumber },
+                  { label: "Location", value: data.location },
+                  { label: "Type of Event", value: data.eventType },
+                  { label: "Date of Event", value: formatEventDate(data.eventDate) },
+                ])}
+                <p style="margin:20px 0 0;font-size:15px;line-height:22px;color:#374151;">Thank you,<br/>Vels Jollywood</p>`;
+
+  return shell({ heading: "Thank You for Your Enquiry", bodyHtml });
+}

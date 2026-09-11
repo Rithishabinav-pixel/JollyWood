@@ -2,8 +2,9 @@ import React from 'react'
 import MemoriesClient from './MemoriesClient';
 
 export const metadata = {
-  title: "Memories",
-  description: "Relive memories and highlights from Vels Jollywood.",
+  title: { absolute: "Experience Fun and Thrills at Our Exciting Amusement Park - Jollywood" },
+  description:
+    "Discover thrilling rides, delicious dining, and unforgettable memories at our amusement park. Fun for all ages awaits – come create lasting moments!",
 };
 
 export default function page() {

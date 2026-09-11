@@ -2,8 +2,9 @@ import React from 'react'
 import StoryClient from './VisitorsClient';
 
 export const metadata = {
-  title: "Visitor's Guide",
-  description: "Plan your visit to Vels Jollywood with our visitor's guide.",
+  title: { absolute: "Visitors Guide - Jollywood Studios and Adventures" },
+  description:
+    "Welcome to Jollywood! Explore our guide for a seamless and enjoyable visit. Get essential information to discover our attractions and maximize your experience.",
 };
 
 export default function page() {

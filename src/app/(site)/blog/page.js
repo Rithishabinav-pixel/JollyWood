@@ -1,14 +1,11 @@
 import React from 'react'
 import BlogClient from './BlogClient';
+import { publicFetchOptions } from '@/lib/cacheConfig';
 
 async function getBlogs() {
   const response = await fetch(
     "https://www.jollywood.co.in/blog/wp-json/wp/v2/posts?per_page=100&_embed",
-    {
-      next: {
-        revalidate: 3600,
-      },
-    }
+    publicFetchOptions()
   )
 
   if (!response.ok) {

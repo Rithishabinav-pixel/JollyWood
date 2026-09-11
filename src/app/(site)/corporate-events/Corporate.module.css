@@ -1,0 +1,295 @@
+.hero_section{
+    background-image: url('/assets/images/story-banner.png');
+    background-size: cover;
+}
+
+.corporate_section .top_heading{
+  max-width: 1000px;
+}
+
+.corporate_section .corporateCard .singleSlide{
+  display: flex;
+  flex-direction: column;
+}
+
+.corporate_section .corporateCard .singleSlide{
+  gap: 26px;
+}
+
+.corporate_section .singleSlide .image img{
+width: 100%;
+height: auto;
+float: left;
+}
+
+.corporate_section .singleSlide .image img{
+  border-radius: 24px;
+}
+
+.corporate_section .corporateCard .singleSlide .content{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+
+.corporate_section .corporateCard .singleSlide .content,
+.corporate_section .corporateCard{
+  display: flex;
+}
+
+.corporate_section .corporateCard{
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.corporate_section .corporateCard .singleSlide{
+  width: calc(33.33% - 20px);
+  transition: 0.3s all;
+}
+
+.corporate_section .corporateCard .singleSlide:hover{
+  transform: translateY(-10px);
+}
+
+.corporate_section .corporateCard .content .title{
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 600;
+}
+
+.corporate_section .container .top_heading .left{
+  width:100%;
+  max-width: 100%;
+}
+
+.corporate_section .splitSection{
+  display: flex;
+  align-items: flex-end;
+  gap: 50px;
+  justify-content: space-between;
+}
+
+
+.corporate_section .splitSection .singleTexts{
+ min-width: fit-content;
+ display: flex;
+ flex-direction: column;
+}
+
+.corporate_section .splitSection .singleTexts div{
+  margin-top: 30px;
+}
+
+.corporate_section .splitSection .singleTexts h3{
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 57px;
+  line-height: 73px;
+  text-transform: capitalize;
+}
+
+.corporate_section .splitSection .singleTexts h3::first-letter{
+  color: white;
+}
+
+.corporate_section .corporateCard{
+  width: 100%;
+}
+
+
+.form_section .container{
+    display: flex;
+}
+
+.form_section .container{
+    justify-content: space-around;
+}
+
+
+.form_section .container .content{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form_section .container .content{
+    width: 33%;
+}
+
+.form_section .container .form_area{
+    width: 42%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.form_section .container .form_area h2{
+    font-size: 40px;
+    line-height: 48px;
+}
+
+.form_area .eventTypeSelect{
+    padding: 16px;
+    background: none !important;
+    font-size: 16px;
+    line-height: 24px;
+    min-height: 56px;
+    border-radius: 50px;
+    border: solid black 1px;
+    color: black;
+}
+
+/* responsive  */
+
+/* laptop  */
+
+@media screen and (max-width:1750px) {
+
+}
+
+@media screen and (max-width:1600px) { 
+
+    .form_section .container .content{
+    width: 40%;
+}
+
+      .corporate_section .splitSection .singleTexts h3{
+  font-size: 48px;
+  line-height: 56px;
+}
+
+ .corporate_section .singleSlide .image img{
+  border-radius: 20px;
+}
+
+   .corporate_section .corporateCard .singleSlide .content .title{
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.corporate_section .corporateCard .singleSlide{
+  gap: 18px;
+}
+   
+}
+
+@media screen and (max-width:1550px) {
+ 
+}
+
+@media screen and (max-width:1400px) {
+
+}
+
+
+/* tablet  */
+@media screen and (max-width:1200px) {
+
+      .form_section .container{
+        flex-direction: column;
+        gap: 30px;
+     }
+
+    .form_section .container .content,
+    .form_section .container .form_area{
+    width: 100%;
+}
+
+.form_section .container .form_area{
+    gap: 20px;
+}
+
+ .form_section .container .form_area h2{
+    font-size: 20px;
+    line-height: 28px
+ }
+  
+      .corporate_section .splitSection .singleTexts{
+ flex-direction: row;
+ flex-wrap: wrap;
+ gap: 12px;
+ justify-content: center;
+}
+
+.corporate_section .splitSection .singleTexts div{
+  margin-top: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.corporate_section .splitSection .singleTexts h3{
+  font-size: 30px;
+  line-height: 38px;
+}
+
+
+.corporate_section .corporateCard,
+.corporate_section .splitSection .singleTexts{
+  width: 100%;
+  min-width: 100%;
+}
+
+.corporate_section .splitSection{
+  flex-direction: column;
+}
+
+
+    .corporate_section .singleSlide .image img{
+  border-radius: 16px;
+}
+
+  .corporate_section .corporateCard{
+  gap: 20px;
+}
+
+.corporate_section .corporateCard .singleSlide{
+  width: calc(33.33% - 13.333px);
+}
+
+.corporate_section .corporateCard .singleSlide .content .title{
+  font-size: 20px;
+  line-height: 28px;
+}
+
+}
+
+/* mobile  */
+@media screen and (max-width:767px) {
+
+      .corporate_section .splitSection .singleTexts{
+ flex-direction: column;
+ gap: 0px;
+ justify-content: flex-start;
+}
+
+.corporate_section .splitSection .singleTexts div{
+  margin-top: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.corporate_section .splitSection .singleTexts h3{
+  font-size: 12vw;
+  line-height: 14vw;
+}
+
+
+.corporate_section .corporateCard,
+.corporate_section .splitSection .singleTexts{
+  width: 100%;
+  min-width: 100%;
+}
+
+    .corporate_section .corporateCard{
+  gap: 30px;
+}
+
+
+.corporate_section .corporateCard .singleSlide{
+  width: 100%;
+}
+
+}

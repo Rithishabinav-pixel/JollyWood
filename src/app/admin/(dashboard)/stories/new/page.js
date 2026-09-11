@@ -1,6 +1,8 @@
 import NewStoryForm from "../NewStoryForm";
 import style from "../../../admin.module.css";
 
+export const dynamic = "force-dynamic";
+
 export default function NewStoryPage() {
   return (
     <>

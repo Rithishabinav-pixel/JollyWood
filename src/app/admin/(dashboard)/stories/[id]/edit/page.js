@@ -3,6 +3,8 @@ import { prisma } from "@/lib/prisma";
 import StoryForm from "../../StoryForm";
 import style from "../../../../admin.module.css";
 
+export const dynamic = "force-dynamic";
+
 export default async function EditStoryPage({ params }) {
   const { id } = await params;
   const content = await prisma.visitorStoryContent.findUnique({ where: { id } });

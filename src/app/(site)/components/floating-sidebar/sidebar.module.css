@@ -2,7 +2,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 999;
+    z-index: 9999;
     background-color: var(--accent);
     width: 75px;
     display: flex;
@@ -84,7 +84,11 @@ align-items: center;
     height: auto;
 }
 
-#sidebar nav.fixedMenu ul li.quickMenu a{
+#sidebar nav.fixedMenu ul li.quickMenu{
+    transition: 0.3s ease-in-out;
+}
+
+#sidebar nav.fixedMenu ul li.quickMenu button{
     width: 48px;
     height: auto;
     aspect-ratio: 1 / 1;
@@ -95,6 +99,12 @@ align-items: center;
     overflow: hidden;
     transition: 0.3s ease-in-out;
     color: black;
+    background: none;
+}
+
+#sidebar nav.fixedMenu ul li.quickMenu button:hover,
+#sidebar nav.fixedMenu ul li.quickMenu.active button{
+    background-color: var(--orange);
 }
 
 #sidebar nav.fixedMenu ul li a span{
@@ -134,7 +144,7 @@ opacity: 1;
 }
 
 
-#sidebar nav.fixedMenu ul li.quickMenu a img{
+#sidebar nav.fixedMenu ul li.quickMenu button img{
     width: 32px;
     height: auto;
     border-radius: 50px;
@@ -189,11 +199,11 @@ gap: 16px;
     width: 40px;
 }
 
-#sidebar nav.fixedMenu ul li.quickMenu a{
+#sidebar nav.fixedMenu ul li.quickMenu button{
     width: 40px;
 }
 
-#sidebar nav.fixedMenu ul li.quickMenu a img{
+#sidebar nav.fixedMenu ul li.quickMenu button img{
     width: 26px;
 }
 
@@ -218,12 +228,12 @@ gap: 1.6vh;
 }
 
 #sidebar nav.fixedMenu ul.fixedMenu_lists li a img,
-#sidebar nav.fixedMenu ul li.quickMenu a{
+#sidebar nav.fixedMenu ul li.quickMenu button{
     width: 5vh;
 }
 
 
-#sidebar nav.fixedMenu ul li.quickMenu a img{
+#sidebar nav.fixedMenu ul li.quickMenu button img{
     width: 3.7vh;
 }
 

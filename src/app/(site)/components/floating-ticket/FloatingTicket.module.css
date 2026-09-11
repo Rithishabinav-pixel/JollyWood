@@ -1,0 +1,27 @@
+.floating_ticket{
+    position: fixed;
+    width: 86px;
+    height: auto;
+    float: left;
+    top: 40px;
+    right: 10%;
+    z-index: 999;
+    transform-origin: top left;
+    animation:floating_ticket 0.3s ease-in-out forwards ;
+        transform: translateY(-150%);
+
+}
+
+@keyframes floating_ticket {
+    to{
+        transform: translateY(0);
+    }
+}
+
+.floating_ticket.active{
+    top: 0;
+}
+
+.floating_ticket:hover{
+    transform: rotate(-5deg) scale(0.98);
+}

@@ -3,6 +3,8 @@ import { prisma } from "@/lib/prisma";
 import CategoryForm from "../../CategoryForm";
 import style from "../../../../../admin.module.css";
 
+export const dynamic = "force-dynamic";
+
 export default async function EditGalleryCategoryPage({ params }) {
   const { id } = await params;
   const category = await prisma.galleryCategory.findUnique({ where: { id } });

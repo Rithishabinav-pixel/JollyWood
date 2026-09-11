@@ -2,6 +2,8 @@ import AnnouncementForm from "../AnnouncementForm";
 import { createAnnouncement } from "../actions";
 import style from "../../../admin.module.css";
 
+export const dynamic = "force-dynamic";
+
 export default function NewAnnouncementPage() {
   return (
     <>

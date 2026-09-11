@@ -45,7 +45,7 @@ export default function MemoriesClient() {
            window.addEventListener("resize", checkDevice);
         
             return () => {
-              window.addEventListener("resize", checkDevice);
+              window.removeEventListener("resize", checkDevice);
               };
         
           },[])
@@ -66,9 +66,10 @@ export default function MemoriesClient() {
 <section className={` ${style.gardern_section} no_padding_top common_section`}>
     <div className={`container ${style.container}`}>
    <div className={style.content}>
-        <h2 className='common_heading white'>Miniature Garden City</h2>
-        <p className='white'>Discover the enchanting world of Miniature city, a truly remarkable experience for all ages. Immerse yourself in the splendor of lush gardens adorned with a breathtaking array of vibrant flowers and majestic trees. Nestled within this haven of natural beauty, Miniature city provides a serene environment perfect for elders seeking tranquility and relaxation and for the young ones, this playground of wonder and excitement. Beyond its picturesque beauty, Miniature city is a sanctuary that fosters a deep connection with nature. Take a moment to listen to the melodies of chirping birds, feel the velvety petals of a blooming flower, or simply sit under the shade of a towering tree and savor the serenity.</p>
-<p className='white'>Embark on a magical journey as you wander along thoughtfully designed walking paths that meander through the gardens. Each step unveils a new enchantment, revealing secret nooks and charming vistas. The carefully curated route invites you to explore the diverse landscapes, from fragrant rose gardens to serene lily ponds, and from whimsical topiaries to grand arboretums.</p>
+        <h2 className='common_heading white'>Miniature Garden City </h2>
+        <h3 className='white'>A little world of endless wonders. Create beautiful memories amidst nature and wonder.</h3>
+        <p className='white'>Step into a charming world where nature, imagination and tranquillity come together. Miniature Garden City is a beautiful escape filled with vibrant flowers, lush greenery and enchanting landscapes designed for visitors of all ages. Wander through thoughtfully crafted pathways, discover hidden corners and admire the beauty of gardens, ponds and artistic creations along the way.</p>
+<p className='white'>A peaceful retreat for those seeking relaxation and a magical space for little explorers, this experience brings everyone closer to nature. Take a moment to enjoy the beauty around you, listen to the melodies of birds and create timeless memories amidst a world of wonder.</p>
    </div>
    <div className={style.image}>
 <Image className={style.mainImg} src="/assets/images/miniature-city.png" width={720} height={547} alt=''/>
@@ -85,9 +86,9 @@ export default function MemoriesClient() {
     <div className={`container ${style.container}`}>
    <div className={style.content}>
         <h2 className='common_heading purple'>Romancia</h2>
-        <p className=''>Nestled in the heart of a charming medieval town lies the picturesque Romancia street, complete with a stunning marble fountain at its center. But there's much more to this street than just its beautiful scenery. Romancia is a hub of activity, with live performances, circus acts, character parades, and a wealth of shopping and dining options.</p>
-<p className=''>As you wander down the street, you'll be entertained by the lively street performers, musicians, and dancers who bring Romancia to life. The fountain in the center serves as a stage for various acts, from juggling to acrobatics, and the crowds gather around to watch in awe.</p>
-<p className=''>But it's not just the entertainment that makes Romancia special. The street is also home to a variety of retail shops, selling everything from handmade crafts to local delicacies. Visitors can browse the stalls and pick up souvenirs to take home, or simply window shop and soak up the medieval atmosphere.</p>
+        <h3 className=''>Old-world charm. New-age memories. Experience the magic of Romancia come alive.</h3>
+        <p>Step into Romancia, a charming medieval-inspired street where every corner brings a new experience. With its beautiful architecture, grand marble fountain and lively atmosphere, Romancia transports you to a world filled with charm and wonder. Enjoy captivating live performances, street acts, character parades and musical moments that bring the streets to life.</p>
+<p>Beyond entertainment, explore delightful shopping and dining experiences featuring unique finds and local flavours. Whether you are enjoying a performance by the fountain, discovering hidden treasures or simply soaking in the old-world ambience, Romancia offers a magical escape where every visit becomes a memorable journey.</p>
    </div>
 
    {mobile && 
@@ -101,14 +102,16 @@ export default function MemoriesClient() {
 
 
 {/* playtopia section  */}
-<section className={`common_section ${style.playtopia_section}`}>
+<section className={`common_section ${style.playtopia_section}`} id='playtopia'>
   <div className={`container section_container ${style.container}`}>
 
     <div className={`top_heading left_align ${style.top_heading}`}>
 
       <div className={`left ${style.left}`}>
         <p className='white'>Playtopia</p>
-        <h2 className='common_heading white'>Make Your Birthday a Blockbuster</h2>
+        <h2 className='common_heading white'>Where childhood comes alive.</h2>
+        <h3 className='white'>A playful world filled with laughter, imagination and unforgettable moments.</h3>
+        <p className='white'>Playtopia is where little smiles turn into lifelong memories. Designed for endless fun, this vibrant space lets kids explore, play and celebrate through exciting experiences. From joyful playtime to special celebrations, every moment here is made to be remembered.</p>
       </div>
 
     </div>
@@ -150,7 +153,7 @@ export default function MemoriesClient() {
 
   <div className={style.content}>
     <h2 className='common_heading purple'>Graphica Shots</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
+    <h3 className=''>Step Into the Picture. Live the Moment. </h3>
     <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere.</p>
   </div>
 
@@ -175,6 +178,7 @@ export default function MemoriesClient() {
    <div className={`top_heading center_align ${style.top_heading}`}>
       <div className={`left ${style.left}`}>
         <h2 className='common_heading white'>Hut in Beach</h2>
+        <h3 className='white'>A little hut. A lot of beach vibes. Sit back, relax and enjoy the moment.</h3>
         <p className='white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
 

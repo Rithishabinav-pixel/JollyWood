@@ -28,10 +28,16 @@
     border-top: solid var(--yellow) 1px;
 }
 
-.contentList_section .container .content .card{
+.contentList_section .container .content .card,
+.contentList_section .container .content .card ul{
     display: flex;
     align-items: flex-start;
     gap: 16px;
+}
+
+.contentList_section .container .content .card ul{
+    flex-direction: column;
+    padding-left: 20px;
 }
 
 .contentList_section .container .top_heading p,

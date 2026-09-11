@@ -14,23 +14,6 @@ export default function CareersClient() {
 
   const [state, formAction, pending] = useActionState(submitCareerEnquiry, undefined)
 
-   const [mobile,setMobile] = useState(false);
-        
-        
-          useEffect(()=>{
-        
-            const checkDevice = () => { setMobile(window.innerWidth <= 1200); };
-        
-        
-            checkDevice();
-        
-           window.addEventListener("resize", checkDevice);
-        
-            return () => {
-              window.addEventListener("resize", checkDevice);
-              };
-        
-          },[])
 
 
   return (
@@ -51,9 +34,9 @@ export default function CareersClient() {
 <div className={`container ${style.container}`}>
 
 <div className={style.content}>
-  <h2 className='common_heading white'>Life @ <br className='desktop_break'/>Vels Jollywood</h2>
-  <p className='white'>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
-  <p className='white'>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
+  <h2 className='common_heading white'>Build Experiences. Build Your Future at VELS Jollywood.</h2>
+  <p className='white'>At VELS Jollywood, every experience begins with the people behind the magic. We believe in nurturing talent, encouraging continuous learning and creating opportunities for our team to grow. With a focus on skill development and hands-on training, we empower our employees to take on new challenges with confidence. </p>
+  <p className='white'>Our advanced training facilities and simulation-based learning help our operations and maintenance teams prepare for real-world scenarios. Join us to be part of a dynamic environment where creativity, teamwork and passion come together to create unforgettable experiences for every guest.</p>
 </div>
 
   <div className={style.image}>
@@ -73,8 +56,9 @@ export default function CareersClient() {
 <div className={`container ${style.container}`}>
 
 <div className={style.content}>
-  <h2 className='common_heading'>Explore your opportunities at VELS Jollywood</h2>
-  <p className=''>Our prime focus is also on training and development to equip our workforce to face challenges in a competitive environment. VELS Jollywood believes in continuous upgradation of skills of its employees. A state of the art simulator has been installed for providing training to our operations and maintenance professionals in simulating real time problems and finding solutions for them.</p>
+  <h2 className='common_heading'>Step Into A World Of Opportunities.</h2>
+  <p className=''>Discover exciting career opportunities at VELS Jollywood and become a part of a team that brings joy, entertainment and unforgettable memories to life. Share your details with us and take the first step towards building your future with us.
+</p>
 </div>
 
   <div className={style.form_area}>

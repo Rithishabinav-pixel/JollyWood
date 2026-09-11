@@ -9,23 +9,13 @@ import Button from "../components/ui/Button"
 export default function BlogClient({ blogs = [] }) {
   return (
     <>
-      {/* Hero section */}
-      <section className={`hero_section ${style.hero_section}`}>
-        <div className="container">
-          <h1 className="title common_heading white">
-            Blogs
-          </h1>
-        </div>
-      </section>
+
 
       {/* Blogs section */}
-      <section
-        className={`common_section ${style.blogs_section}`}
-      >
-        <div
-          className={`container section_container ${style.container}`}
-        >
-          <div className={style.cards}>
+      <section className={`common_section ${style.blogs_section}`}>
+        <div className={`container section_container ${style.container}`}>
+ <h1 className="title common_heading white"> Blogs </h1>    
+       <div className={style.cards}>
 
             {blogs.length === 0 ? (
               <p className="white">

@@ -14,6 +14,7 @@ const PUBLIC_ROUTES = [
   "/blog",
   "/careers",
   "/contact-us",
+  "/corporate-events",
   "/visitors-guide",
   "/guest-safety",
   "/rules-regulations",

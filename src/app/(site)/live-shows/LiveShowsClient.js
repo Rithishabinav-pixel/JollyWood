@@ -8,41 +8,24 @@ import Button from '../components/ui/Button'
 
 
 // Adventures data 
-const AdventuresData = [
+const LiveShowsData = [
+
   {
     image:"/assets/images/high-ropes-course.png",
-    title:"Live Show 1",
-    content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+    title:"Jubilee Theatre",
+    content:"Where cinema comes alive on stage. Experience the magic of Indian cinema through spectacular performances, music and storytelling. With dazzling visuals and captivating acts, Jubilee Theatre brings your favourite movie moments to life in an unforgettable celebration.",
     time:"06:00 PM"
   },
+
   {
     image:"/assets/images/high-ropes-course.png",
-    title:"Live Show 1",
-    content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+    title:"Twilight Dreams",
+    content:"Where lights, water and music create magic. Watch the night transform into a breathtaking spectacle of colours, lasers and dancing fountains. Twilight Dreams combines technology and imagination to create a mesmerising show perfect for families, friends and unforgettable evenings.",
     time:"06:00 PM"
   },
-  {
-    image:"/assets/images/high-ropes-course.png",
-    title:"Live Show 1",
-    content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-    time:"06:00 PM"
-  },
-  {
-    image:"/assets/images/high-ropes-course.png",
-    title:"Live Show 1",
-    content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-    time:"06:00 PM"
-  },
- 
+
 ]
 
-
-
-const ruleIcons = {
-  ageAllowed: "/assets/images/age-allowed.svg",
-  height: "/assets/images/height.svg",
-  weight: "/assets/images/weight.svg",
-};
 
 
 export default function LiveShowsClient() {
@@ -66,7 +49,7 @@ export default function LiveShowsClient() {
 <div className={`container section_container ${style.container}`}>
 
 <div className={style.cards}>
-{AdventuresData && AdventuresData.map((item,index)=>(
+{LiveShowsData && LiveShowsData.map((item,index)=>(
 
 
 <div className={style.card} key={index}>

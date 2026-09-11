@@ -1,11 +1,12 @@
 import { prisma } from "@/lib/prisma";
 import GalleryClient from './GalleryClient';
 
-export const revalidate = 10; 
+
+export const revalidate = 60;
 
 export const metadata = {
-  title: "Gallery",
-  description: "Browse photos from Vels Jollywood's rides, attractions and events.",
+  title: { absolute: "Gallery | Inside Jollywood" },
+  description: "Gallery: Get a sneak peek into the magic and excitement that awaits!",
 };
 
 export default async function Page() {

@@ -28,7 +28,7 @@ export async function createAnnouncement(prevState, formData) {
     return { error: "Could not save the announcement. Please try again." };
   }
 
-  revalidatePath("/");
+  revalidatePath("/", "layout");
   revalidatePath("/admin/announcements");
   redirect("/admin/announcements");
 }
@@ -46,7 +46,7 @@ export async function updateAnnouncement(id, prevState, formData) {
     return { error: "Could not update the announcement. Please try again." };
   }
 
-  revalidatePath("/");
+  revalidatePath("/", "layout");
   revalidatePath("/admin/announcements");
   redirect("/admin/announcements");
 }
@@ -54,13 +54,13 @@ export async function updateAnnouncement(id, prevState, formData) {
 export async function deleteAnnouncement(id) {
   await prisma.announcement.delete({ where: { id } }).catch(() => {});
 
-  revalidatePath("/");
+  revalidatePath("/", "layout");
   revalidatePath("/admin/announcements");
 }
 
 export async function toggleAnnouncement(id, isActive) {
   await prisma.announcement.update({ where: { id }, data: { isActive } }).catch(() => {});
 
-  revalidatePath("/");
+  revalidatePath("/", "layout");
   revalidatePath("/admin/announcements");
 }

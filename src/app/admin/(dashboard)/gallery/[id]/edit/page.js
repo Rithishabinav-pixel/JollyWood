@@ -3,6 +3,8 @@ import { prisma } from "@/lib/prisma";
 import GalleryImageForm from "../../GalleryImageForm";
 import style from "../../../../admin.module.css";
 
+export const dynamic = "force-dynamic";
+
 export default async function EditGalleryImagePage({ params }) {
   const { id } = await params;
 

@@ -108,3 +108,16 @@ model CareerEnquiry {
 
   @@index([createdAt])
 }
+
+model CorporateEnquiry {
+  id           String    @id @default(cuid())
+  name         String
+  mobileNumber String
+  email        String
+  location     String?
+  eventType    String?
+  eventDate    DateTime?
+  createdAt    DateTime  @default(now())
+
+  @@index([createdAt])
+}

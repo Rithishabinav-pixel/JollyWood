@@ -11,24 +11,6 @@ import Button from '../components/ui/Button'
 
 export default function StoryClient() {
 
-  
-   const [mobile,setMobile] = useState(false);
-        
-        
-          useEffect(()=>{
-        
-            const checkDevice = () => { setMobile(window.innerWidth <= 1200); };
-        
-        
-            checkDevice();
-        
-           window.addEventListener("resize", checkDevice);
-        
-            return () => {
-              window.addEventListener("resize", checkDevice);
-              };
-        
-          },[])
 
 
   return (
@@ -50,8 +32,8 @@ export default function StoryClient() {
 
    <div className={`top_heading center_align ${style.top_heading}`}>
       <div className={`left ${style.left}`}>
-        <h2 className='common_heading white'>Hut in Beach</h2>
-        <p className='white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h2 className='common_heading white'>Welcome to VELS Jollywood Studios & Adventures</h2>
+        <p className='white'>The ultimate movie-themed family destination that promises a world of magical experiences for visitors of all ages. From grandparents to grandchild, we offer immersive experiences, culinary delights, shopping, and entertainment, all in one place. Whether you're looking to spend quality time with family, host a corporate outing or team-building activity, or simply indulge in some fun-filled entertainment, VELS Jollywood has something for everyone.</p>
       </div>
 
     </div>

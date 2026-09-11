@@ -91,6 +91,18 @@ form .half_cont{
 
 }
 
+/* tablet  */
+
+@media screen and (max-width:1200px) {
+
+
+button[type=submit] img{
+    width: 24px;
+    height: auto;
+}
+
+}
+
 /* mobile  */
 
 @media screen and (max-width:767px) {

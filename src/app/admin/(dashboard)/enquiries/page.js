@@ -6,11 +6,12 @@ export const dynamic = "force-dynamic";
 
 export default async function AdminEnquiriesPage({ searchParams }) {
   const params = await searchParams;
-  const initialTab = params?.tab === "career" ? "career" : "contact";
+  const initialTab = params?.tab === "career" ? "career" : params?.tab === "corporate" ? "corporate" : "contact";
 
-  const [contactEnquiries, careerEnquiries] = await Promise.all([
+  const [contactEnquiries, careerEnquiries, corporateEnquiries] = await Promise.all([
     prisma.contactEnquiry.findMany({ orderBy: { createdAt: "desc" } }),
     prisma.careerEnquiry.findMany({ orderBy: { createdAt: "desc" } }),
+    prisma.corporateEnquiry.findMany({ orderBy: { createdAt: "desc" } }),
   ]);
 
   return (
@@ -19,7 +20,12 @@ export default async function AdminEnquiriesPage({ searchParams }) {
         <h1>Enquiries</h1>
       </div>
 
-      <EnquiriesTabs contactEnquiries={contactEnquiries} careerEnquiries={careerEnquiries} initialTab={initialTab} />
+      <EnquiriesTabs
+        contactEnquiries={contactEnquiries}
+        careerEnquiries={careerEnquiries}
+        corporateEnquiries={corporateEnquiries}
+        initialTab={initialTab}
+      />
     </>
   );
 }

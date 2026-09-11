@@ -1,0 +1,115 @@
+.errorSection{
+    padding: 20vh 0 120px 0;
+}
+
+.errorSection .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.errorDisplay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.errorDisplay h2{
+    font-size: 200px;
+    line-height: 200px;
+    color: white;
+}
+
+.filmRole{
+    width: 200px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    position: relative;
+}
+
+.filmRole img{
+    width: 100%;
+    height: auto;
+    float: left;
+    position: absolute;
+    left: 0;
+}
+
+.filmRole img.frameBg,
+.filmRole img.frameFg{
+    width: 102%;
+}
+
+.filmRole img.disk{
+    z-index: 2;
+    animation: disk 5s infinite linear;
+}
+
+@keyframes disk {
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.filmRole img.frameBg{
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.filmRole img.frameFg{
+    top: 55%;
+    transform: translateY(-50%);
+    z-index: 3;
+}
+
+.content{
+    max-width: 850px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.content h3,
+.content p{
+    color: white;
+}
+
+.content h3{
+    font-size: 32px;
+    line-height: 40px;
+}
+
+/* responsive  */
+
+/* mobile  */
+
+@media screen and (max-width:767px) {
+
+    .errorSection .container{
+    gap: 30px;
+}
+
+
+     .errorDisplay{
+        gap: 16px;
+     }
+    .errorDisplay h2{
+    font-size: 70px;
+    line-height: 70px;
+}
+
+ .content h3{
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+.filmRole{
+    width: 70px;
+}
+    
+}

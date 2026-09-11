@@ -18,3 +18,8 @@ export async function deleteCareerEnquiry(id) {
 
   revalidatePath("/admin/enquiries");
 }
+
+export async function deleteCorporateEnquiry(id) {
+  await prisma.corporateEnquiry.delete({ where: { id } }).catch(() => {});
+  revalidatePath("/admin/enquiries");
+}

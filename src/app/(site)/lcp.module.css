@@ -1,3 +1,36 @@
+.bannerHeading {
+  opacity: 1;
+  transition: 0.3s all;
+}
+
+.fadeOut {
+  animation: bannerFadeOut 1s forwards linear;
+}
+
+.fadeIn {
+  animation: bannerFadeIn 1s forwards linear;
+}
+
+@keyframes bannerFadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes bannerFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 .heroSection{
   width: 100%;
   height: fit-content;
@@ -37,12 +70,15 @@
 
 .floating_tickets{
   position: absolute;
-  height: 41.5vw;
-  aspect-ratio: 75 / 790;
-  width: auto;
   top: 0;
   right: 0;
   z-index: 5;
+}
+
+.floating_tickets img{
+  height: 41.5vw;
+  aspect-ratio: 75 / 790;
+  width: auto;
 }
 
 .heroSection .container{

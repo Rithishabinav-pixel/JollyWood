@@ -7,6 +7,10 @@
   flex-direction: column;
 }
 
+.experience_section .slider .singleSlide{
+  height: 100%;
+}
+
 .adrenaline_section .slider .singleSlide,
 .experience_section .slider .singleSlide{
   gap: 32px;
@@ -119,6 +123,11 @@ float: left;
 .experience_section .slider .singleSlide .content{
  flex-direction: column;
   gap: 16px;
+  flex-grow: 1;
+}
+
+.experience_section .slider .singleSlide .content a{
+  margin-top: auto;
 }
 
 .adrenaline_section .slider .singleSlide .content .title,
@@ -131,6 +140,18 @@ float: left;
   font-weight: 600;
 }
 
+.experience_section .slider .singleSlide .content p{
+      display: -webkit-box;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp:3;
+  overflow: hidden;
+}
+
+.experience_section .slider :global(.swiper-slide){
+  height: auto;
+}
 
 
 /* .adrenaline_section .slider :global(.swiper ),

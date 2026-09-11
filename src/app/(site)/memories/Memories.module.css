@@ -68,7 +68,7 @@ bottom: -5vh;
 }
 
 .gardern_section .container .image .dinozaur,
-.graphica_section  .dinozaur{
+.graphica_section .dinozaur{
     width: auto;
     position: absolute;
 }
@@ -82,7 +82,7 @@ bottom: -5vh;
 
 .graphica_section  .dinozaur{
  height: 95%;
-right: 37%;
+right: 30%;
 bottom: -16px;
 }
 
@@ -186,6 +186,10 @@ float: left;
 
 @media screen and (max-width:1600px) {
 
+    .graphica_section  .dinozaur{
+right: 32%;
+}
+
      .playtopia_section .container .top_heading .left{
   width:42%;
   max-width: 42%;
@@ -215,8 +219,8 @@ float: left;
 @media screen and (max-width:1550px) {
 
     .graphica_section  .dinozaur{
- height: 65%;
-right: 45%;
+ height: 95%;
+right: 33%;
 }
 
 .romancia_section{
@@ -238,8 +242,7 @@ right: 45%;
 
     
         .graphica_section  .dinozaur{
- height: 55%;
-right: 43%;
+right: 30%;
 }
 
     .graphica_section{

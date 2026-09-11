@@ -1,12 +1,70 @@
-.hero_section{
-    padding: 180px 0  120px 0;
-    text-align: center;
+.park_section{
+    padding: 20vh 0  220px 0;
 }
 
-.parkMap{
+.park_section .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.park_section .container .content{
+    width: 38%;
+   
+}
+
+.park_section .container .content p{
     width: 100%;
+max-width: 550px;
+}
+
+.park_section .container .content,
+.park_section .container .content ul{
+  display: flex;
+    flex-direction: column;
+     gap: 16px;
+}
+
+.park_section .container .content ul{
+    list-style: none;
+}
+
+.park_section .container .content ul li{
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.park_section .container .content ul li svg{
+    width: 40px;
+    aspect-ratio: 1/ 1;
+    height: auto;
+    float: left;
+}
+
+.park_section .container .content ul li:nth-child(1) svg path{
+    fill: rgb(0, 156, 218);
+}
+
+.park_section .container .content ul li:nth-child(2) svg path{
+    fill: rgb(248, 0, 0);
+}
+
+.park_section .container .content ul li:nth-child(3) svg path{
+    fill:var(--orange);
+}
+
+.park_section .container .content ul li:nth-child(4) svg path{
+    fill: rgb(255, 255, 255);
+}
+
+
+.parkMap{
+    width: 60%;
     height: fit-content;
     position: relative;
+    transform-origin: top right;
+    transform: scale(1.2);
 }
 
 .parkMap .map_image{
@@ -32,7 +90,7 @@ border-radius: 50px;
 background-color: var(--accent);
 color: white;
 font-weight: 700;
-font-size: 0.8vw;
+font-size: 0.6vw;
 line-height: 0vw;
 cursor: pointer;
 }
@@ -40,6 +98,7 @@ cursor: pointer;
 .parkMap .pin span{
     position: absolute;
     top: -5px;
+    left: 50%;
     background-color:var(--orange);
     color: white;
     font-size: 12px;
@@ -47,16 +106,17 @@ cursor: pointer;
     min-width: fit-content;
     padding: 4px 12px 6px 12px;
     border-radius: 50px;
-    transform: translateY(-105%);
+    transform: translate(-50%,-105%);
     opacity: 0;
     transition: 0.3s ease-in-out;
     visibility: hidden;
      white-space: nowrap;
+     border: solid var(--accent) 1px;
 }
 
 .parkMap .pin:hover span{
     opacity: 1;
-    transform: translateY(-100%);
+    transform: translate(-50%,-100%);
     visibility: visible;
    
 }
@@ -85,9 +145,26 @@ cursor: pointer;
 
 /* tablet  */
 @media screen and (max-width:1200px) {
+
+    .park_section .container .content ul li svg{
+    width: 24px;
+}
+
+    .park_section .container{
+   flex-direction: column;
+}
+
+.park_section .container .content,
+.parkMap{
+    width: 100%;
+}
+
+.parkMap{
+    transform: none;
+}
   
-       .hero_section {
-    padding: 180px 0  50px 0;
+       .park_section{
+    padding: 170px 0  50px 0;
 }
 
 }
@@ -95,8 +172,8 @@ cursor: pointer;
 /* mobile  */
 @media screen and (max-width:767px) {
 
-     .hero_section {
-    padding: 120px 0  50px 0;
+     .park_section{
+    padding: 100px 0  50px 0;
 }
 
 }

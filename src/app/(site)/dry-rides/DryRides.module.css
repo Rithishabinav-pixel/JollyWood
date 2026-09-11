@@ -64,6 +64,7 @@
     flex-wrap: wrap;
     gap: 30px;
     margin-top: auto;
+    width: 100%;
 }
 
 .ride_cards .card .content .rules .rule{

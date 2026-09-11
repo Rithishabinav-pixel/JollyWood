@@ -4,6 +4,8 @@ import OfferForm from "../../OfferForm";
 import { updateOffer } from "../../actions";
 import style from "../../../../admin.module.css";
 
+export const dynamic = "force-dynamic";
+
 export default async function EditOfferPage({ params }) {
   const { id } = await params;
   const offer = await prisma.offer.findUnique({ where: { id } });

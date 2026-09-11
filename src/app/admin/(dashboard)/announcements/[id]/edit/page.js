@@ -4,6 +4,8 @@ import AnnouncementForm from "../../AnnouncementForm";
 import { updateAnnouncement } from "../../actions";
 import style from "../../../../admin.module.css";
 
+export const dynamic = "force-dynamic";
+
 export default async function EditAnnouncementPage({ params }) {
   const { id } = await params;
   const announcement = await prisma.announcement.findUnique({ where: { id } });

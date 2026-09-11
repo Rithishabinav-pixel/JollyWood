@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import DeleteButton from "../../DeleteButton";
-import { deleteContactEnquiry, deleteCareerEnquiry } from "./actions";
+import { deleteContactEnquiry, deleteCareerEnquiry, deleteCorporateEnquiry } from "./actions";
 import style from "../../admin.module.css";
 
 function formatDate(date) {
@@ -12,7 +12,13 @@ function formatDate(date) {
   });
 }
 
-export default function EnquiriesTabs({ contactEnquiries, careerEnquiries, initialTab = "contact" }) {
+function formatEventDate(date) {
+  return date
+    ? new Date(date).toLocaleDateString("en-IN", { dateStyle: "medium" })
+    : "—";
+}
+
+export default function EnquiriesTabs({ contactEnquiries, careerEnquiries, corporateEnquiries, initialTab = "contact" }) {
   const [activeTab, setActiveTab] = useState(initialTab);
 
   return (
@@ -39,6 +45,17 @@ export default function EnquiriesTabs({ contactEnquiries, careerEnquiries, initi
           onClick={() => setActiveTab("career")}
         >
           Career Enquiries ({careerEnquiries.length})
+        </button>
+        <button
+          type="button"
+          role="tab"
+          id="tab-corporate"
+          aria-selected={activeTab === "corporate"}
+          aria-controls="tabpanel-corporate"
+          className={`${style.tabBtn} ${activeTab === "corporate" ? style.tabBtnActive : ""}`}
+          onClick={() => setActiveTab("corporate")}
+        >
+          Corporate Enquiries ({corporateEnquiries.length})
         </button>
       </div>
 
@@ -135,6 +152,51 @@ export default function EnquiriesTabs({ contactEnquiries, careerEnquiries, initi
                   <td>{formatDate(enquiry.createdAt)}</td>
                   <td>
                     <DeleteButton action={deleteCareerEnquiry.bind(null, enquiry.id)} confirmText="Delete this enquiry?">
+                      Delete
+                    </DeleteButton>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
+      </div>
+
+      <div
+        className={style.tabPanel}
+        role="tabpanel"
+        id="tabpanel-corporate"
+        aria-labelledby="tab-corporate"
+        hidden={activeTab !== "corporate"}
+      >
+        {corporateEnquiries.length === 0 ? (
+          <p className={style.empty}>No corporate enquiries yet.</p>
+        ) : (
+          <table className={style.table}>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Location</th>
+                <th>Type of Event</th>
+                <th>Date of Event</th>
+                <th>Submitted</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              {corporateEnquiries.map((enquiry) => (
+                <tr key={enquiry.id}>
+                  <td>{enquiry.name}</td>
+                  <td>{enquiry.email}</td>
+                  <td>{enquiry.mobileNumber}</td>
+                  <td>{enquiry.location || "—"}</td>
+                  <td>{enquiry.eventType || "—"}</td>
+                  <td>{formatEventDate(enquiry.eventDate)}</td>
+                  <td>{formatDate(enquiry.createdAt)}</td>
+                  <td>
+                    <DeleteButton action={deleteCorporateEnquiry.bind(null, enquiry.id)} confirmText="Delete this enquiry?">
                       Delete
                     </DeleteButton>
                   </td>

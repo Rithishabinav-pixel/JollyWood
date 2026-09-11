@@ -4,126 +4,98 @@ import React, { useEffect, useState } from 'react'
 import style from './Adventures.module.css'
 import '../innerpage.css'
 import Image from 'next/image'
-import Button from '../components/ui/Button'
 
 
-// Adventures data 
+// Adventures data
 const AdventuresData = [
   {
-    image:"/assets/images/high-ropes-course.png",
-    title:"High Ropes Course",
-    content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-   rules: [
-    {
-      label: "ageAllowed",
-      value: "12+"
-    },
-    {
-      label: "height",
-      value: "64+ cm"
-    },
-    {
-      label: "weight",
-      value: "60+ kg"
-    }
-  ],
+    image: "/assets/images/high-ropes-course.png",
+    title: "High Ropes Course",
+    content:
+      "Rise above the challenge. Take on a thrilling aerial adventure that tests your balance, strength and confidence. Navigate through exciting obstacles while pushing your limits and creating unforgettable moments.",
+    rules: [
+      {
+        label: "ageAllowed",
+        value: "12+"
+      },
+      {
+        label: "height",
+        value: "140+ cm"
+      }
+    ]
   },
   {
-    image:"/assets/images/zipline.png",
-    title:"Zipline",
-    content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+    image: "/assets/images/zipline.png",
+    title: "Zipline",
+    content:
+      "Take the leap. Feel the rush. Soar through the air and experience the thrill of speed as you glide across the zipline. A high-energy adventure that brings excitement, courage and unforgettable views.",
     rules: [
-    {
-      label: "ageAllowed",
-      value: "12+"
-    },
-    {
-      label: "height",
-      value: "137+ cm"
-    },
-    {
-      label: "weight",
-      value: "20+ kg"
-    }
-  ],
+      {
+        label: "ageAllowed",
+        value: "12+"
+      },
+      {
+        label: "height",
+        value: "140+ cm"
+      }
+    ]
   },
   {
-    image:"/assets/images/rock-climbing.png",
-    title:"Rock Climbing ",
-    content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+    image: "/assets/images/rock-climbing.png",
+    title: "Rock Climbing",
+    content:
+      "Climb higher. Push harder. Challenge yourself on a thrilling climbing wall that tests your strength, focus and determination. Reach the top, overcome obstacles and celebrate every achievement along the way.",
     rules: [
-    {
-      label: "ageAllowed",
-      value: "12+"
-    },
-    {
-      label: "height",
-      value: "137+ cm"
-    },
-    {
-      label: "weight",
-      value: "20+ kg"
-    }
-  ],
+      {
+        label: "ageAllowed",
+        value: "12+"
+      },
+      {
+        label: "height",
+        value: "140+ cm"
+      }
+    ]
   },
   {
-    image:"/assets/images/obstacle-course.png",
-    title:"Obstacle Course ",
-    content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+    image: "/assets/images/obstacle-course.png",
+    title: "Obstacle Course",
+    content:
+      "Challenge accepted. Teamwork activated. Work together, overcome obstacles and test your coordination through an exciting course filled with walls, ropes, and balance challenges. This is the perfect adventure to build confidence and teamwork.",
     rules: [
-    {
-      label: "ageAllowed",
-      value: "12+"
-    },
-    {
-      label: "height",
-      value: "137+ cm"
-    },
-    {
-      label: "weight",
-      value: "20+ kg"
-    }
-  ],
+      {
+        label: "ageAllowed",
+        value: "12+"
+      },
+      {
+        label: "height",
+        value: "140+ cm"
+      }
+    ]
   },
   {
-    image:"/assets/images/rock-climbing.png",
-    title:"Archery Tag",
-    content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+    image: "/assets/images/rock-climbing.png",
+    title: "Archery Tag",
+    content:
+      "Aim. Strategize. Conquer. Combine the thrill of archery with the excitement of a team battle. Test your accuracy, build strategies and compete with your team in this action-packed adventure.",
     rules: [
-    {
-      label: "ageAllowed",
-      value: "12+"
-    },
-    {
-      label: "height",
-      value: "137+ cm"
-    },
-    {
-      label: "weight",
-      value: "20+ kg"
-    }
-  ],
+      {
+        label: "ageAllowed",
+        value: "16+"
+      },
+      {
+        label: "height",
+        value: "160+ cm"
+      }
+    ]
   },
   {
-    image:"/assets/images/obstacle-course.png",
-    title:"Maze Runner",
-    content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-    rules: [
-    {
-      label: "ageAllowed",
-      value: "12+"
-    },
-    {
-      label: "height",
-      value: "137+ cm"
-    },
-    {
-      label: "weight",
-      value: "20+ kg"
-    }
-  ],
-  },
-]
+    image: "/assets/images/obstacle-course.png",
+    title: "Maze Runner",
+    content:
+      "Find your way. Beat the maze. Enter a world of twists, turns and challenges where every step tests your problem-solving skills. Navigate through the maze and race towards the ultimate escape.",
+    rules: []
+  }
+];
 
 
 

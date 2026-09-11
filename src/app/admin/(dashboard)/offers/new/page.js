@@ -2,6 +2,8 @@ import OfferForm from "../OfferForm";
 import { createOffer } from "../actions";
 import style from "../../../admin.module.css";
 
+export const dynamic = "force-dynamic";
+
 export default function NewOfferPage() {
   return (
     <>

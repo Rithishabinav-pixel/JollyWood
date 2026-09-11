@@ -22,10 +22,10 @@ export default function Footer() {
 <Image src="/assets/images/logo.svg" width={151} height={99} alt='Jollywood Logo'/>
 </Link>
 <ul className={style.socialIcons}>
-    <li> <a href='#'> <Image src="/assets/images/facebook_icon.svg" width={30} height={30} alt='Facebook'/> </a> </li>
-    <li> <a href='#'> <Image src="/assets/images/twitter_icon.svg" width={30} height={30} alt='Twitter'/> </a> </li>
-    <li> <a href='#'> <Image src="/assets/images/insta_icon.svg" width={30} height={30} alt='Instagram'/> </a> </li>
-    <li> <a href='#'> <Image src="/assets/images/youtube_icon.svg" width={30} height={30} alt='Youtube'/> </a> </li>
+    <li> <a href='https://www.facebook.com/velsjollywoodadventures/' target='_blank' rel='noopener noreferrer'> <Image src="/assets/images/facebook_icon.svg" width={30} height={30} alt='Facebook'/> </a> </li>
+    <li> <a href='https://twitter.com/Jollywoood' target='_blank' rel='noopener noreferrer'> <Image src="/assets/images/twitter_icon.svg" width={30} height={30} alt='Twitter'/> </a> </li>
+    <li> <a href='https://www.instagram.com/velsjollywoodadventures/' target='_blank' rel='noopener noreferrer'> <Image src="/assets/images/insta_icon.svg" width={30} height={30} alt='Instagram'/> </a> </li>
+    <li> <a href='https://www.youtube.com/@Jollywoodadventures' target='_blank' rel='noopener noreferrer'> <Image src="/assets/images/youtube_icon.svg" width={30} height={30} alt='Youtube'/> </a> </li>
 </ul>
 </div>
 
@@ -33,23 +33,21 @@ export default function Footer() {
     <h3>Quick Link</h3>
     <ul>
         <li> <Link href="/">Home </Link>  </li>
-        <li> <Link href="#">Restaurant  </Link>  </li>
-        <li> <Link href="#">Resort </Link>  </li>
+        <li> <Link href="/dining">Dining  </Link>  </li>
         <li> <Link href="/our-story">Our Story </Link>  </li>
-        <li> <Link href="#">Studios </Link>  </li>
+        <li> <Link href="/studios">Studios </Link>  </li>
         <li> <Link href="/gallery">Gallery </Link>  </li>
         <li> <Link href="/blog">Blog </Link>  </li>
         <li> <Link href="/contact-us">Reached Us </Link>  </li>
-        <li> <Link href="#">Host For Events </Link>  </li>
+        <li> <Link href="/corporate-events">Host For Events </Link>  </li>
     </ul>
 </div>
 
 <div className={style.menuColumn}>
     <h3>Rides</h3>
     <ul>
-        <li> <Link href="/dry-rides">Land Ride  </Link>  </li>
+        <li> <Link href="/dry-rides">Dry Ride  </Link>  </li>
         <li> <Link href="/water-rides">Water Ride  </Link>  </li>
-        <li> <Link href="#">Theme Zones </Link>  </li>
     </ul>
 </div>
 
@@ -57,12 +55,12 @@ export default function Footer() {
 <div className={style.menuColumn}>
     <h3>Information for Guests</h3>
     <ul>
-        <li> <Link href="#">FAQs</Link>  </li>
+        <li> <Link href="/faq">FAQs</Link>  </li>
         <li> <Link href="/visitors-guide">Visitor's Guide</Link>  </li>
         <li> <Link href="/guest-safety">Guest Safety</Link>  </li>
         <li> <Link href="/rules-regulations">Rules and Regulations</Link>  </li>
-        <li> <Link href="#">Terms of Use</Link>  </li>
-        <li> <Link href="#">Privacy policy</Link>  </li>
+        <li> <Link href="/terms-of-use">Terms of Use</Link>  </li>
+        <li> <Link href="/privacy-policy">Privacy policy</Link>  </li>
     </ul>
 </div>
 
@@ -92,10 +90,10 @@ Bidadi - 562 109.</p>
          </li>
 
          <li>
-            <a href='mailto:marketing@Vels Jollywood.co.in' target='_blank'>
+            <a href='mailto:marketing@velsjollywood.co.in' target='_blank'>
             <Image src="/assets/images/mail_icon.svg" width={32} height={32} alt=''/>
         <div>
-            <p>marketing@Vels Jollywood.co.in</p>
+            <p>marketing@velsjollywood.co.in</p>
         </div>
         </a>
          </li>

@@ -2,7 +2,7 @@
     position: absolute;
     top: 40px;
     width: 100%;
-    z-index: 3;
+    z-index: 99;
     padding: 12px 0;   
     background-size: calc(100% - 24px) auto;
     background-position: center 99%;
@@ -12,7 +12,8 @@
     position: absolute;
     content: '';
     width: 270px;
-    height: 24px;
+    aspect-ratio: 270 / 24;
+    height: auto;
     background-image: url("/assets/images/header_vector.svg");
     background-size: 100% auto;
     background-position: bottom center;
@@ -115,12 +116,29 @@ animation: show_header 1s forwards;
 
 /* responsive  */
 
+
+/* tablet  */
+@media screen and (max-width:1200px) {
+      #header::before{
+        width: 180px;
+    }
+}
+
+
 /* mobile  */
 
 @media screen and (max-width:767px) {
 
+    #header::before{
+        width: 130px;
+    }
+
     .logoLink img{
         width: 100px;
+    }
+
+    #header.active .logoLink img{
+        width: 80px;
     }
 
     #header{

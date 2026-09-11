@@ -31,6 +31,10 @@ const menuItems = [
         title: "Adventures",
         link: "/adventures",
       },
+      {
+    title: "Live Shows",
+    link: "/live-shows",
+  },
     ],
   },
   {
@@ -53,6 +57,7 @@ const menuItems = [
     title: "Blogs",
     link: "/blog",
   },
+   
 ];
 
 export default function Menu({ menuActive, setMenuActive }) {
@@ -60,7 +65,7 @@ export default function Menu({ menuActive, setMenuActive }) {
 
   return (
     <>
-      {menuActive && <div className={style.mobileMenuOverlay}></div>}
+      {menuActive && <div className={style.mobileMenuOverlay} onClick={() => setMenuActive(false)}></div>}
 
       <div
         id="mobile-navigation"

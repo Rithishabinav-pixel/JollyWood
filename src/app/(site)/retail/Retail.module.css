@@ -1,0 +1,133 @@
+.hero_section{
+    background-image: url('/assets/images/story-banner.png');
+    background-size: cover;
+}
+
+.retail_section .retailCard .singleSlide{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.retail_section .retailCard .singleSlide{
+  gap: 26px;
+}
+
+.retail_section .singleSlide .image img{
+width: 100%;
+height: auto;
+float: left;
+}
+
+.retail_section .singleSlide .image img{
+  border-radius: 24px;
+}
+
+.retail_section .retailCard .singleSlide .content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.retail_section .retailCard .singleSlide .content,
+.retail_section .retailCard{
+  display: flex;
+}
+
+.retail_section .retailCard{
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.retail_section .retailCard .singleSlide{
+  width: calc(33.33% - 20px);
+  transition: 0.3s all;
+}
+
+.retail_section .retailCard .singleSlide:hover{
+  transform: translateY(-10px);
+}
+
+
+.retail_section .retailCard .content .title{
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 600;
+}
+
+.retail_section .singleSlide .content a img{
+filter: invert(1) brightness(100);
+}
+
+/* responsive  */
+
+/* laptop  */
+
+@media screen and (max-width:1750px) {
+
+}
+
+@media screen and (max-width:1600px) { 
+
+     .retail_section .singleSlide .image img,
+  .corporate_section .singleSlide .image img{
+  border-radius: 20px;
+}
+
+    .retail_section .retailCard .singleSlide .content .title{
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.retail_section .retailCard .singleSlide{
+  gap: 18px;
+}
+   
+}
+
+@media screen and (max-width:1550px) {
+ 
+}
+
+@media screen and (max-width:1400px) {
+
+}
+
+
+/* tablet  */
+@media screen and (max-width:1200px) {
+  
+
+      .retail_section .singleSlide .image img{
+  border-radius: 16px;
+}
+
+ .retail_section .retailCard{
+  gap: 20px;
+}
+
+
+.retail_section .retailCard .singleSlide{
+  width: calc(33.33% - 13.333px);
+}
+
+.retail_section .retailCard .singleSlide .content .title{
+  font-size: 20px;
+  line-height: 28px;
+}
+
+
+}
+
+/* mobile  */
+@media screen and (max-width:767px) {
+
+    .retail_section .retailCard{
+  gap: 20px;
+}
+
+.retail_section .retailCard .singleSlide{
+  width: 100%;
+}
+
+}

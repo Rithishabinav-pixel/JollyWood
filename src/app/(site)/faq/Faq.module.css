@@ -1,0 +1,132 @@
+.hero_section{
+    background-image: url('/assets/images/story-banner.png');
+    background-size: cover;
+}
+
+.faq_section .container{
+    max-width: 1000px;
+    gap: 32px;
+}
+
+.faq_section .container .accordion{
+display: flex;
+flex-direction: column;
+border-radius: 8px;
+overflow: hidden;
+    border: solid rgb(255, 255, 255,0.2) 1px;
+    color: white;
+
+}
+
+.faq_section .container .accordion .header,
+.faq_section .container .accordion .body div{
+    padding: 24px;
+}
+
+.faq_section .container .accordion .body div{
+    padding: 0 24px 24px 24px;
+}
+
+.faq_section .container .accordion .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.faq_section .container .accordion .header h2{
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.faq_section .container .accordion .header button{
+    height: 24px;
+    width: auto;
+    aspect-ratio: 1 / 1;
+    background: none;
+    border: none;
+    position: relative;
+}
+
+.faq_section .container .accordion .header button::before,
+.faq_section .container .accordion .header button::after{
+    position: absolute;
+    content: '';
+    background: white;
+    width: 1px;
+    height:70%;
+    transition: 0.3s ease-in-out;
+   
+}
+
+.faq_section .container .accordion .header button::before{
+ top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.faq_section .container .accordion.active .header button::before,
+.faq_section .container .accordion .header button::after{
+    transform: translate(-50%,-50%) rotate(-90deg);
+}
+.faq_section .container .accordion .body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.faq_section .container .accordion.active .body {
+    max-height: 500px;
+}
+
+.faq_section .container .accordion.active {
+    background: var(--orange);
+    color: white;
+}
+
+
+
+/* responsive  */
+
+/* laptop  */
+
+@media screen and (max-width:1750px) {
+
+}
+
+@media screen and (max-width:1600px) { 
+   
+}
+
+@media screen and (max-width:1550px) {
+ 
+}
+
+@media screen and (max-width:1400px) {
+
+}
+
+
+/* tablet  */
+@media screen and (max-width:1200px) {
+
+    .faq_section .container .accordion .header,
+.faq_section .container .accordion .body div{
+    padding: 20px;
+}
+
+.faq_section .container .accordion .body div{
+    padding: 0 20px 20px 20px;
+}
+  
+}
+
+/* mobile  */
+@media screen and (max-width:767px) {
+
+    .faq_section .container .accordion .header h2{
+    font-size: 16px;
+    line-height: 24px;
+}
+
+}

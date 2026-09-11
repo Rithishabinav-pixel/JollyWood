@@ -1,5 +1,5 @@
 .contact_section {
-    padding: 180px 0  120px 0;
+    padding: 20vh 0  120px 0;
 }
 
 .contact_section .container{
@@ -165,7 +165,7 @@ gap: 24px;
 }
 
      .contact_section {
-    padding: 180px 0  50px 0;
+    padding: 170px 0  50px 0;
 }
     
 .form_area h2{
@@ -187,7 +187,7 @@ gap: 24px;
 @media screen and (max-width:767px) {
 
        .contact_section {
-    padding: 120px 0  50px 0;
+    padding: 100px 0  50px 0;
 }
 
     .contact_section .container .content,

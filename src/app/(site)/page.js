@@ -1,7 +1,13 @@
 import { prisma } from "@/lib/prisma";
 import HomePageClient from "./HomePageClient";
 
-export const revalidate = 10; 
+export const metadata = {
+  title: { absolute: "Best Amusement Park & Resorts in Bangalore - Jollywood" },
+  description:
+    "Experience the ultimate fun at Jollywood - the best amusement park. A top destination among places to visit in Bangalore. The best resort for family and friends",
+};
+
+export const revalidate = 60;
 
 
 export default async function Page() {

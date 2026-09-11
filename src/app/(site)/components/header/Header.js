@@ -7,6 +7,10 @@ import { usePathname } from 'next/navigation'
 
 const ExperienceMenu = [
   {
+    label:"",
+    slug:""
+  },
+  {
     label:"Attractions",
     slug:"attractions"
   },
@@ -21,6 +25,14 @@ const ExperienceMenu = [
    {
     label:"Adventures",
     slug:"adventures"
+  },
+  {
+    label:"Adventures",
+    slug:"adventures"
+  },
+  {
+    label:"Live Shows",
+    slug:"live-shows"
   },
 ]
 
@@ -41,7 +53,7 @@ export default function Header({setMenuActive, menuActive}) {
 
      let lastScrollY = window.scrollY;
 
-window.addEventListener("scroll", () => {
+const handleScroll = () => {
   const currentScrollY = window.scrollY;
 
 
@@ -52,14 +64,17 @@ window.addEventListener("scroll", () => {
   }
 
   lastScrollY = currentScrollY;
-});
-    
+};
+
+window.addEventListener("scroll", handleScroll);
+
       checkDevice();
-  
+
      window.addEventListener("resize", checkDevice);
-  
+
       return () => {
-        window.addEventListener("resize", checkDevice);
+        window.removeEventListener("scroll", handleScroll);
+        window.removeEventListener("resize", checkDevice);
         };
   
     },[])
@@ -75,7 +90,7 @@ window.addEventListener("scroll", () => {
 
 
   <ul className={style.menus}>
-  {ExperienceMenu.slice(0,2).map((menu,index)=>(
+  {ExperienceMenu.slice(0,3).map((menu,index)=>(
     <React.Fragment key={index}>
       <li> <Link href={`/${menu.slug}`}>{menu.label}</Link> </li>
     </React.Fragment>
@@ -93,7 +108,7 @@ window.addEventListener("scroll", () => {
 {
   pathname === '/experience' && !mobile &&
   <ul className={style.menus}>
-  {ExperienceMenu.slice(2,4).map((menu,index)=>(
+  {ExperienceMenu.slice(3,6).map((menu,index)=>(
     <React.Fragment key={index}>
       <li> <Link href={`/${menu.slug}`}>{menu.label}</Link> </li>
     </React.Fragment>

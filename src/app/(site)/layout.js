@@ -12,8 +12,12 @@ import Footer from "./components/footer/Footer";
 import SmoothScroll from "./components/lenis/SmoothScroll";
 import MobileMenu from "./components/mobile-menu/MobileMenu";
 import HeaderWrapper from "./components/header/HeaderWrapper";
+import AOSInit from "./components/aos/AOSInit";
+import FloatingTicket from "./components/floating-ticket/FloatingTicket";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.jollywood.co.in";
+
+export const revalidate = 60;
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
@@ -34,14 +38,11 @@ export default function RootLayout({ children }) {
 
 
   return (
-    <html lang="en">
-      <head>
-        <link rel="stylesheet" href="https://use.typekit.net/twz0jrm.css"></link>
-      </head>
-      <body>
+    <>
     <SmoothScroll/>
+    <AOSInit/>
 <HeaderWrapper />
-
+{/* <FloatingTicket/> */}
         <main>
     <FloatingAnnouncement/>
    <DesktopSidebar />
@@ -50,7 +51,6 @@ export default function RootLayout({ children }) {
         <ScrollTop/>
         </main>
         <Footer/>
-        </body>
-    </html>
+    </>
   );
 }

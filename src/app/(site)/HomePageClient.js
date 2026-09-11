@@ -18,38 +18,26 @@ import { useRouter } from "next/navigation";
 const HighAdrenalineData = [
   {
     image:"/assets/images/romancia-street.png",
-    video:"/assets/videos/hover_sample.mp4",
+    video:"/assets/videos/ride-reel-video.mp4",
     title:"Romancia Street",
     link:"#"
   },
    {
-    image:"/assets/images/romancia-street.png",
-    video:"/assets/videos/hover_sample.mp4",
-    title:"Romancia Street",
+    image:"/assets/images/graphic-shots.png",
+    video:"/assets/videos/ride-reel-video.mp4",
+    title:"Graphica shots",
     link:"#"
   },
    {
-    image:"/assets/images/romancia-street.png",
-    video:"/assets/videos/hover_sample.mp4",
-    title:"Romancia Street",
+    image:"/assets/images/mini-city.png",
+    video:"/assets/videos/ride-reel-video.mp4",
+    title:"Miniature city",
     link:"#"
   },
    {
-    image:"/assets/images/romancia-street.png",
-    video:"/assets/videos/hover_sample.mp4",
-    title:"Romancia Street",
-    link:"#"
-  },
-   {
-    image:"/assets/images/romancia-street.png",
-    video:"/assets/videos/hover_sample.mp4",
-    title:"Romancia Street",
-    link:"#"
-  },
-   {
-    image:"/assets/images/romancia-street.png",
-    video:"/assets/videos/hover_sample.mp4",
-    title:"Romancia Street",
+    image:"/assets/images/hut-beach.png",
+    video:"/assets/videos/ride-reel-video.mp4",
+    title:"Hut in beach",
     link:"#"
   },
 ]
@@ -57,218 +45,337 @@ const HighAdrenalineData = [
 
 // Experience Worlds data
 const ExperienceWorldsData = [
+
   {
-    tab:"attractions",
-    label:"Attractions",
-    content:[
+    tab: "attractions",
+    label: "Attractions",
+    content: [
       {
-       title:"Ride n Reel - a",
-       description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.",
-       link:"#",
-       image:"/assets/images/movie-wall.png",
-       video:"/assets/videos/hover_sample.mp4"
+        title: "Tribal Museum",
+        description: "A glimpse of rural India. Discover stories, traditions and timeless culture.",
+        link: "/attractions",
+        image: "/assets/images/tribal-museum.png",
+        video: "/assets/videos/ride-reel-video.mp4"
       },
       {
-       title:"Ride n Reel - a",
-       description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.",
-       link:"#",
-       image:"/assets/images/movie-wall.png",
-       video:"/assets/videos/hover_sample.mp4"
+        title: "Movie Wall",
+        description: "Where cinema comes alive. Walk through memories painted by movies.",
+        link: "/attractions",
+        image: "/assets/images/movie-wall.png",
+        video: "/assets/videos/ride-reel-video.mp4"
       },
       {
-       title:"Ride n Reel - a",
-       description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.",
-       link:"#",
-       image:"/assets/images/movie-wall.png",
-       video:"/assets/videos/hover_sample.mp4"
+        title: "Ride N Reel",
+        description: "A ride beyond imagination. Experience cinema in motion.",
+        link: "/attractions",
+        image: "/assets/images/ride-reel.png",
+        video: "/assets/videos/ride-reel-video.mp4"
       },
       {
-       title:"Ride n Reel - a",
-       description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.",
-       link:"#",
-       image:"/assets/images/movie-wall.png",
-       video:"/assets/videos/hover_sample.mp4"
+        title: "Vortex Tunnel",
+        description: "Get delulu. Find your solulu. A mind-bending journey you won't forget.",
+        link: "/attractions",
+        image: "/assets/images/glow-garden.png",
+        video: "/assets/videos/ride-reel-video.mp4"
       },
       {
-       title:"Ride n Reel - a",
-       description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.",
-       link:"#",
-       image:"/assets/images/movie-wall.png",
-       video:"/assets/videos/hover_sample.mp4"
+        title: "Virtual Cricket",
+        description: "Step up. Swing hard. Score big. Enjoy cricket like never before.",
+        link: "/attractions",
+        image: "/assets/images/virtual-cricket.png",
+        video: "/assets/videos/ride-reel-video.mp4"
       },
-
+      {
+        title: "Romancia Street",
+        description: "Walk into a world from another era. Experience medieval charm, music and magic.",
+        link: "/attractions",
+        image: "/assets/images/romania-street.png",
+        video: "/assets/videos/ride-reel-video.mp4"
+      },
+      {
+        title: "Playtopia - Children's Play Area",
+        description: "Where little explorers find big adventures. A wonderland of giggles and games.",
+        link: "/attractions",
+        image: "/assets/images/playtopia.png",
+        video: "/assets/videos/ride-reel-video.mp4"
+      },
+      {
+        title: "Titanic - Gallery & Simulation",
+        description: "A legendary story beneath the waves. Relive the timeless mystery of Titanic's world.",
+        link: "/attractions",
+        image: "/assets/images/titanic.png",
+        video: "/assets/videos/ride-reel-video.mp4"
+      },
+      {
+        title: "The Lost World",
+        description: "A world forgotten by time. Explore a world where dinosaurs rule again.",
+        link: "/attractions",
+        image: "/assets/images/lost-world.png",
+        video: "/assets/videos/ride-reel-video.mp4"
+      },
+      {
+        title: "Twilight Dreams",
+        description: "Night comes alive in colours. Watch a spectacular blend of lights, water and music unfold.",
+        link: "/attractions",
+        image: "/assets/images/glow-garden.png",
+        video: "/assets/videos/ride-reel-video.mp4"
+      },
+      {
+        title: "Miniature City",
+        description: "A tiny world made of big wonders. Wander through a magical city built in miniature.",
+        link: "/attractions",
+        image: "/assets/images/miniature-city-img.png",
+        video: "/assets/videos/ride-reel-video.mp4"
+      },
+      {
+        title: "Glow Garden",
+        description: "Where imagination lights up the night. Step into a magical world of glowing wonders.",
+        link: "/attractions",
+        image: "/assets/images/glow-garden.png",
+        video: "/assets/videos/ride-reel-video.mp4"
+      },
+      {
+        title: "Toy Train & Jolly Bus",
+        description: "From little wheels to big smiles. Let the Jolly journey begin!",
+        link: "/attractions",
+        image: "/assets/images/movie-wall.png",
+        video: "/assets/videos/ride-reel-video.mp4"
+      },
+      {
+        title: "Jubilee Theatre",
+        description: "A blockbuster beyond the screen. Watch Indian cinema come alive on stage.",
+        link: "/attractions",
+        image: "/assets/images/movie-wall.png",
+        video: "/assets/videos/ride-reel-video.mp4"
+      }
     ]
   },
+
   {
-    tab:"dry-rides",
-    label:"Dry Rides",
-    content:[
+    tab: "dry-rides",
+    label: "Dry Rides",
+    content: [
       {
-       title:"Ride n Reel - d",
-       description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.",
-       link:"#",
-       image:"/assets/images/movie-wall.png",
-       video:"/assets/videos/hover_sample.mp4"
+        title: "Bumper Car",
+        description: "Crash. Laugh. Repeat. Get behind the wheel and enjoy a fun-filled ride where friendly collisions create unforgettable moments. Challenge your friends, take control and enjoy a classic bumper car experience made for endless laughter. Age Allowed: 12+ Height: 106+ cm Weight: 20+ kg",
+        link: "/dry-rides",
+        image: "/assets/images/movie-wall.png",
+        video: "/assets/videos/ride-reel-video.mp4"
       },
       {
-       title:"Ride n Reel - d",
-       description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.",
-       link:"#",
-       image:"/assets/images/movie-wall.png",
-       video:"/assets/videos/hover_sample.mp4"
+        title: "Carousel",
+        description: "A classic ride full of charm. Take a nostalgic spin on our beautifully crafted carousel. With colourful designs and gentle movement, it is the perfect ride for families looking for a joyful experience together. Age Allowed: 12+ Height: 137–195 cm",
+        link: "/dry-rides",
+        image: "/assets/images/glow-garden.png",
+        video: "/assets/videos/ride-reel-video.mp4"
       },
       {
-       title:"Ride n Reel - d",
-       description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.",
-       link:"#",
-       image:"/assets/images/movie-wall.png",
-       video:"/assets/videos/hover_sample.mp4"
+        title: "Jolly Tornado",
+        description: "The gravity tester begins. Hold on tight as the Jolly Tornado takes you through a thrilling experience that tests your balance, courage and excitement. How long can you float through the twist? (Age / Height / Weight: Information Required)",
+        link: "/dry-rides",
+        image: "/assets/images/lost-world.png",
+        video: "/assets/videos/ride-reel-video.mp4"
       },
       {
-       title:"Ride n Reel - d",
-       description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.",
-       link:"#",
-       image:"/assets/images/movie-wall.png",
-       video:"/assets/videos/hover_sample.mp4"
+        title: "Midi Dance Party",
+        description: "Spin. Dance. Feel the beat. Lights, music and movement come together in this energetic ride. Get ready for a spinning experience filled with rhythm, excitement and nonstop fun with your friends. Age Allowed: 12+ Height: 137–195 cm",
+        link: "/dry-rides",
+        image: "/assets/images/movie-wall.png",
+        video: "/assets/videos/ride-reel-video.mp4"
       },
       {
-       title:"Ride n Reel - d",
-       description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.",
-       link:"#",
-       image:"/assets/images/movie-wall.png",
-       video:"/assets/videos/hover_sample.mp4"
-      },
-
-    ]
-  },
-   {
-    tab:"water-rides",
-    label:"Water Rides",
-    content:[
-      {
-       title:"Ride n Reel",
-       description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.",
-       link:"#",
-       image:"/assets/images/movie-wall.png",
-       video:"/assets/videos/hover_sample.mp4"
+        title: "Mini Tagada",
+        description: "Hold on. The fun is spinning. Get ready for a high-energy ride that twists, bounces and keeps the excitement going. With music and motion combined, Mini Tagada is a thrilling experience you won't forget. Age Allowed: 12+ Height: 143+ cm",
+        link: "/dry-rides",
+        image: "/assets/images/movie-wall.png",
+        video: "/assets/videos/ride-reel-video.mp4"
       },
       {
-       title:"Ride n Reel",
-       description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.",
-       link:"#",
-       image:"/assets/images/movie-wall.png",
-       video:"/assets/videos/hover_sample.mp4"
+        title: "Samba Balloon",
+        description: "Float high. Spin higher. Hop into a balloon-shaped gondola and enjoy a colourful ride filled with twists, turns and exciting movements. A perfect adventure for those who love a little spin in the sky. Age Allowed: 12+ Height: 64+ cm",
+        link: "/dry-rides",
+        image: "/assets/images/samba-ballon.png",
+        video: "/assets/videos/ride-reel-video.mp4"
       },
       {
-       title:"Ride n Reel",
-       description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.",
-       link:"#",
-       image:"/assets/images/movie-wall.png",
-       video:"/assets/videos/hover_sample.mp4"
+        title: "Sky Swinger",
+        description: "Swing high. See more. Rise above the park and enjoy breathtaking views with this classic swing ride. Feel the breeze, enjoy the gentle motion and experience a thrilling ride from a whole new height. Age Allowed: 12+ Height: 137+ cm",
+        link: "/dry-rides",
+        image: "/assets/images/sky-swinger.png",
+        video: "/assets/videos/ride-reel-video.mp4"
       },
       {
-       title:"Ride n Reel",
-       description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.",
-       link:"#",
-       image:"/assets/images/movie-wall.png",
-       video:"/assets/videos/hover_sample.mp4"
+        title: "360 Cycle",
+        description: "Turn your world upside down. Take on a unique cycling challenge that tests your balance and control. A fun-filled experience for adventure seekers ready to push their limits. Height: 3 ft - 6 ft Weight: 35 kg - 90 kg",
+        link: "/dry-rides",
+        image: "/assets/images/movie-wall.png",
+        video: "/assets/videos/ride-reel-video.mp4"
       },
       {
-       title:"Ride n Reel",
-       description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.",
-       link:"#",
-       image:"/assets/images/movie-wall.png",
-       video:"/assets/videos/hover_sample.mp4"
-      },
-
-    ]
-  },
-   {
-    tab:"adventures",
-    label:"Adventures",
-    content:[
-      {
-       title:"Ride n Reel",
-       description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.",
-       link:"#",
-       image:"/assets/images/movie-wall.png",
-       video:"/assets/videos/hover_sample.mp4"
+        title: "Wall Climbing",
+        description: "Climb. Challenge. Conquer. How high can you go? Push your limits and test your strength as you climb your way to the top. A thrilling challenge designed for adventure seekers who love reaching new heights. (Age / Height / Weight: Information Required)",
+        link: "/dry-rides",
+        image: "/assets/images/wall-climbing.png",
+        video: "/assets/videos/ride-reel-video.mp4"
       },
       {
-       title:"Ride n Reel",
-       description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.",
-       link:"#",
-       image:"/assets/images/movie-wall.png",
-       video:"/assets/videos/hover_sample.mp4"
+        title: "Adventure Games",
+        description: "Challenge yourself. Challenge your friends. Let the adventure begin! Bring out your competitive spirit with exciting games designed to test your skills, teamwork and determination. Every challenge brings a new reason to play. (Age / Height / Weight: Information Required)",
+        link: "/dry-rides",
+        image: "/assets/images/adventure-games.png",
+        video: "/assets/videos/ride-reel-video.mp4"
       },
       {
-       title:"Ride n Reel",
-       description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.",
-       link:"#",
-       image:"/assets/images/movie-wall.png",
-       video:"/assets/videos/hover_sample.mp4"
-      },
-      {
-       title:"Ride n Reel",
-       description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.",
-       link:"#",
-       image:"/assets/images/movie-wall.png",
-       video:"/assets/videos/hover_sample.mp4"
-      },
-      {
-       title:"Ride n Reel",
-       description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.",
-       link:"#",
-       image:"/assets/images/movie-wall.png",
-       video:"/assets/videos/hover_sample.mp4"
-      },
-
-    ]
-  },
-   {
-    tab:"live-shows",
-    label:"Live Shows",
-    content:[
-      {
-       title:"Ride n Reel",
-       description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.",
-       link:"#",
-       image:"/assets/images/movie-wall.png",
-       video:"/assets/videos/hover_sample.mp4"
-      },
-      {
-       title:"Ride n Reel",
-       description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.",
-       link:"#",
-       image:"/assets/images/movie-wall.png",
-       video:"/assets/videos/hover_sample.mp4"
-      },
-      {
-       title:"Ride n Reel",
-       description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.",
-       link:"#",
-       image:"/assets/images/movie-wall.png",
-       video:"/assets/videos/hover_sample.mp4"
-      },
-      {
-       title:"Ride n Reel",
-       description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.",
-       link:"#",
-       image:"/assets/images/movie-wall.png",
-       video:"/assets/videos/hover_sample.mp4"
-      },
-      {
-       title:"Ride n Reel",
-       description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.",
-       link:"#",
-       image:"/assets/images/movie-wall.png",
-       video:"/assets/videos/hover_sample.mp4"
-      },
-
+        title: "Toy Car Ride for Kids",
+        description: "Tiny drivers, big smiles! Let the little ones hit the road for a joyful ride. A fun-filled driving experience designed for little adventurers. Watch them take the wheel, explore freely and create their first driving memories. (Age / Height / Weight: Information Required)",
+        link: "/dry-rides",
+        image: "/assets/images/movie-wall.png",
+        video: "/assets/videos/ride-reel-video.mp4"
+      }
     ]
   },
 
-]
+  {
+    tab: "water-rides",
+    label: "Water Rides",
+    content: [
+      {
+        title: "Crazy Cruise",
+        description: "Twist, turn, laugh and scream! The crazier the ride, the bigger the thrill! Take on exciting twists, thrilling turns and endless splashes in a ride designed for adventure seekers.",
+        link: "/water-rides",
+        image: "/assets/images/movie-wall.png",
+        video: "/assets/videos/ride-reel-video.mp4"
+      },
+      {
+        title: "Family Pool",
+        description: "Every splash brings the family closer. Dive into a day of fun and laughter! Enjoy a safe and refreshing space where families can relax, play and create unforgettable moments together.",
+        link: "/water-rides",
+        image: "/assets/images/glow-garden.png",
+        video: "/assets/videos/ride-reel-video.mp4"
+      },
+      {
+        title: "Family Slide",
+        description: "Slide together, laugh together! A thrilling splash of fun for the whole family. Share the excitement of a fun-filled slide experience made for families to enjoy every splash.",
+        link: "/water-rides",
+        image: "/assets/images/lost-world.png",
+        video: "/assets/videos/ride-reel-video.mp4"
+      },
+      {
+        title: "Hide N Seek",
+        description: "Hide, seek, splash and repeat! A water-filled adventure for little explorers. A playful water zone where kids can splash around, explore and enjoy endless moments of fun.",
+        link: "/water-rides",
+        image: "/assets/images/movie-wall.png",
+        video: "/assets/videos/ride-reel-video.mp4"
+      },
+      {
+        title: "Mini Pendulum",
+        description: "Swing high, splash down and smile big! A mini ride with maximum water fun. Enjoy a fun-filled water adventure with exciting swings, splashes and plenty of smiles along the way.",
+        link: "/water-rides",
+        image: "/assets/images/movie-wall.png",
+        video: "/assets/videos/ride-reel-video.mp4"
+      },
+      {
+        title: "Rain Dance",
+        description: "Music up, water on, fun unlimited! Dance, splash, and make unforgettable memories. Turn up the energy with music, refreshing showers and a celebration of endless fun with friends and family.",
+        link: "/water-rides",
+        image: "/assets/images/movie-wall.png",
+        video: "/assets/videos/ride-reel-video.mp4"
+      },
+      {
+        title: "Speed Slide",
+        description: "Ready, set, slide! Feel the speed. Feel the thrill. Race through an exciting water slide experience filled with speed, twists and an adrenaline rush.",
+        link: "/water-rides",
+        image: "/assets/images/movie-wall.png",
+        video: "/assets/videos/ride-reel-video.mp4"
+      },
+      {
+        title: "Super Drop",
+        description: "One big drop. Endless excitement! Feel the rush from the very top! Take the ultimate plunge and experience a thrilling drop that will leave you wanting more.",
+        link: "/water-rides",
+        image: "/assets/images/movie-wall.png",
+        video: "/assets/videos/ride-reel-video.mp4"
+      },
+      {
+        title: "Wave Pool Beach Area",
+        description: "A beachside adventure made for the whole family! Feel the waves, relax by the beach and enjoy a tropical escape filled with fun and relaxation.",
+        link: "/water-rides",
+        image: "/assets/images/movie-wall.png",
+        video: "/assets/videos/ride-reel-video.mp4"
+      }
+    ]
+  },
+
+  {
+    tab: "adventures",
+    label: "Adventures",
+    content: [
+      {
+        title: "High Ropes Course",
+        description: "Rise above the challenge. Take on a thrilling aerial adventure that tests your balance, strength and confidence. Navigate through exciting obstacles while pushing your limits and creating unforgettable moments. Age Allowed: 12+ Height: 140+ cm",
+        link: "/adventures",
+        image: "/assets/images/movie-wall.png",
+        video: "/assets/videos/ride-reel-video.mp4"
+      },
+      {
+        title: "Zipline",
+        description: "Take the leap. Feel the rush. Soar through the air and experience the thrill of speed as you glide across the zipline. A high-energy adventure that brings excitement, courage and unforgettable views. Age Allowed: 12+ Height: 140+ cm",
+        link: "/adventures",
+        image: "/assets/images/glow-garden.png",
+        video: "/assets/videos/ride-reel-video.mp4"
+      },
+      {
+        title: "Rock Climbing",
+        description: "Climb higher. Push harder. Challenge yourself on a thrilling climbing wall that tests your strength, focus and determination. Reach the top, overcome obstacles and celebrate every achievement along the way. Age Allowed: 12+ Height: 140+ cm",
+        link: "/adventures",
+        image: "/assets/images/lost-world.png",
+        video: "/assets/videos/ride-reel-video.mp4"
+      },
+      {
+        title: "Obstacle Course",
+        description: "Challenge accepted. Teamwork activated. Work together, overcome obstacles and test your coordination through an exciting course filled with walls, ropes, and balance challenges. This is the perfect adventure to build confidence and teamwork. Age Allowed: 12+ Height: 140+ cm",
+        link: "/adventures",
+        image: "/assets/images/movie-wall.png",
+        video: "/assets/videos/ride-reel-video.mp4"
+      },
+      {
+        title: "Archery Tag",
+        description: "Aim. Strategize. Conquer. Combine the thrill of archery with the excitement of a team battle. Test your accuracy, build strategies and compete with your team in this action-packed adventure. Age Allowed: 16+ Height: 160+ cm",
+        link: "/adventures",
+        image: "/assets/images/movie-wall.png",
+        video: "/assets/videos/ride-reel-video.mp4"
+      },
+      {
+        title: "Maze Runner",
+        description: "Find your way. Beat the maze. Enter a world of twists, turns and challenges where every step tests your problem-solving skills. Navigate through the maze and race towards the ultimate escape.",
+        link: "/adventures",
+        image: "/assets/images/movie-wall.png",
+        video: "/assets/videos/ride-reel-video.mp4"
+      }
+    ]
+  },
+
+  {
+    tab: "live-shows",
+    label: "Live Shows",
+    content: [
+      {
+        title: "Jubilee Theatre",
+        description: "Where cinema comes alive on stage. Experience the magic of Indian cinema through spectacular performances, music and storytelling. With dazzling visuals and captivating acts, Jubilee Theatre brings your favourite movie moments to life in an unforgettable celebration.",
+        link: "/live-shows",
+        image: "/assets/images/movie-wall.png",
+        video: "/assets/videos/ride-reel-video.mp4"
+      },
+      {
+        title: "Twilight Dreams",
+        description: "Where lights, water and music create magic. Watch the night transform into a breathtaking spectacle of colours, lasers and dancing fountains. Twilight Dreams combines technology and imagination to create a mesmerising show perfect for families, friends and unforgettable evenings.",
+        link: "/live-shows",
+        image: "/assets/images/movie-wall.png",
+        video: "/assets/videos/ride-reel-video.mp4"
+      }
+    ]
+  }
+
+];
 
 
 // Food Souk tab data
@@ -299,37 +406,37 @@ const FoodSoukTabData = [
 const FoodSoukData = [
   {
     title:"Royal Kitchen",
-    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.",
+    description:"A royal feast of Indian flavours. Indulge in a grand dining experience crafted with tradition.",
     link:"#",
     image:"/assets/images/royal-kitchen.png"
   },
    {
     title:"Planet Jollywood",
-    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.",
+    description:"Lights. Camera. Delicious! A star-studded dining experience awaits.",
     link:"#",
     image:"/assets/images/planet-jollywood.png"
   },
    {
     title:"Beach Container",
-    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.",
+    description:"Quick bites. Cool vibes. Beachside fun. The perfect pit stop for every hungry adventurer!",
     link:"#",
     image:"/assets/images/beach-container.png"
   },
    {
     title:"Dry Ride Container",
-    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.",
+    description:"Ride. Refuel. Repeat. Tasty bites to keep your adventure rolling! ",
     link:"#",
     image:"/assets/images/dry-ride-container.png"
   },
    {
     title:"Maze Runner Kiosk",
-    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.",
+    description:"Complete the adventure and snack your way to happiness.",
     link:"#",
     image:"/assets/images/maze.png"
   },
   {
     title:"Romancia Street",
-    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.",
+    description:"Old-world charm. New-age flavours. A vibrant street experience where food and entertainment come alive.",
     link:"#",
     image:"/assets/images/romancia.png"
   },
@@ -399,41 +506,30 @@ const ComfortsData = [
     content:"Stay cool and comfortable with climate-controlled rooms designed for restful nights."
   },
    {
-    image:"/assets/images/ac-rooms.png",
-    title:"Air-conditioned Rooms",
-    content:"Stay cool and comfortable with climate-controlled rooms designed for restful nights."
+    image:"/assets/images/osp.png",
+    title:"Outdoor Swimming Pool",
+    content:"Take a refreshing dip or lounge by our resort-style open-air pool."
   },
    {
-    image:"/assets/images/ac-rooms.png",
-    title:"Air-conditioned Rooms",
-    content:"Stay cool and comfortable with climate-controlled rooms designed for restful nights."
+    image:"/assets/images/f-wifi.png",
+    title:"Free Wi-Fi",
+    content:"Stay connected with complimentary high-speed internet throughout your stay."
   },
    {
-    image:"/assets/images/ac-rooms.png",
-    title:"Air-conditioned Rooms",
-    content:"Stay cool and comfortable with climate-controlled rooms designed for restful nights."
+    image:"/assets/images/ird.png",
+    title:"In-room Dining",
+    content:"Enjoy delicious meals and snacks delivered straight to your room."
   },
    {
-    image:"/assets/images/ac-rooms.png",
-    title:"Air-conditioned Rooms",
-    content:"Stay cool and comfortable with climate-controlled rooms designed for restful nights."
+    image:"/assets/images/kp-area.png",
+    title:"Kids’ Play Area ",
+    content:"Let little ones have their own fun in a safe and colorful play zone."
   },
-   {
-    image:"/assets/images/ac-rooms.png",
-    title:"Air-conditioned Rooms",
-    content:"Stay cool and comfortable with climate-controlled rooms designed for restful nights."
-  },
-   {
-    image:"/assets/images/ac-rooms.png",
-    title:"Air-conditioned Rooms",
-    content:"Stay cool and comfortable with climate-controlled rooms designed for restful nights."
-  },
-   {
-    image:"/assets/images/ac-rooms.png",
-    title:"Air-conditioned Rooms",
-    content:"Stay cool and comfortable with climate-controlled rooms designed for restful nights."
-  },
-
+    {
+    image:"/assets/images/security-p.png",
+    title:"Secure Parking",
+    content:"Park your vehicle worry-free in our private, monitored parking area."
+  }
 ]
 
 
@@ -443,17 +539,17 @@ const PlaytopiaData = [
   {
     image:"/assets/images/jollylicious.png",
     title:"Jollylicious",
-    link:""
+    link:"/memories#playtopia"
   },
    {
-    image:"/assets/images/jollylicious.png",
-    title:"Jollylicious",
-    link:""
+    image:"/assets/images/play-kp.png",
+    title:"Kids Play Area",
+    link:"/memories#playtopia"
   },
    {
-    image:"/assets/images/jollylicious.png",
-    title:"Jollylicious",
-    link:""
+    image:"/assets/images/bday-zone.png",
+    title:"Birthday Zone",
+    link:"/memories#playtopia"
   }
 
 ]
@@ -464,18 +560,18 @@ const PlaytopiaData = [
 
 const RetailData = [
   {
-    image:"/assets/images/aqua.png",
+    image:"/assets/images/aqua-r.png",
     title:"Aqua",
     link:""
   },
     {
-    image:"/assets/images/aqua.png",
-    title:"Aqua",
+    image:"/assets/images/cirkus-k.png",
+    title:"Cirkus",
     link:""
   },
    {
     image:"/assets/images/aqua.png",
-    title:"Aqua",
+    title:"Jollylicious",
     link:""
   },
 
@@ -487,17 +583,17 @@ const CorporateData = [
   {
     image:"/assets/images/bm.png",
     title:"Business Meeting",
-    link:""
+    link:"/corporate-events"
   },
     {
-    image:"/assets/images/bm.png",
-    title:"Business Meeting",
-    link:""
+    image:"/assets/images/entertainment.png",
+    title:"Entertainment",
+    link:"/corporate-events"
   },
    {
-    image:"/assets/images/bm.png",
-    title:"Business Meeting",
-    link:""
+    image:"/assets/images/exp.png",
+    title:"Experience",
+    link:"/corporate-events"
   },
 
 ]
@@ -570,6 +666,33 @@ useEffect(() => {
 
 
 
+const [bannerText, setBannerText] = useState("Cinematic Family<br>Universe");
+const [fade, setFade] = useState(false);
+
+useEffect(() => {
+  let fadeTimeout;
+
+  const interval = setInterval(() => {
+    setFade(true);
+
+    fadeTimeout = setTimeout(() => {
+      setBannerText((prev) =>
+        prev === "Cinematic Family<br>Universe"
+          ? "Namma Jollywood,<br>Nimma Bengaluru"
+          : "Cinematic Family<br>Universe"
+      );
+
+      setFade(false);
+    }, 500);
+  }, 6000);
+
+  return () => {
+    clearInterval(interval);
+    clearTimeout(fadeTimeout);
+  };
+}, []);
+
+
   return (
     <>
 
@@ -585,9 +708,11 @@ useEffect(() => {
 
 
 
-
-    {/* floating ticket */}
+<a href='#'>
 <Image className={lcpStyle.floating_tickets} priority src="/assets/images/floating_tickets.svg" width={75} height={790} alt=''/>
+
+</a>
+
 
      <div className={`container ${lcpStyle.container}`}>
 
@@ -595,7 +720,14 @@ useEffect(() => {
 <Image className={`${lcpStyle.character} ${lcpStyle.character_1}`} priority  src="/assets/images/char_1.svg" width={480} height={506} alt=''/>
 <Image className={`${lcpStyle.character} ${lcpStyle.character_2}`} priority  src="/assets/images/char_2.svg" width={306} height={503} alt=''/>
 
-      <h1 className="common_heading white">Cinematic Family <br className='desktop_break'/>Universe</h1>
+      {bannerText && (
+  <h1
+    className={`common_heading white ${lcpStyle.bannerHeading} ${
+      fade ? lcpStyle.fadeOut : lcpStyle.fadeIn
+    }`}
+    dangerouslySetInnerHTML={{ __html: bannerText }}
+  ></h1>
+)}
 
 <div className={lcpStyle.actions}>
   <Button href="#" text="Book Tickets" className="common_btn orange_bg white_text right_tilt big"></Button>
@@ -613,19 +745,19 @@ useEffect(() => {
 
     <div className={`top_heading left_align ${style.top_heading}`}>
 
-      <div className={`left`}>
+      <div className={`left`} data-aos="fade-right">
         <p className='white'>High Adrenaline</p>
         <h2 className='common_heading white'>Frozen Moments </h2>
       </div>
 
-       <div className={`right`}>
+       <div className={`right`} data-aos="fade-left">
         <p className='white'>Eleven rides. Zero hesitation. Thrill Island is where Vels Jollywood turns the volume up — fast climbs, sharp drops, and the kind of screams that turn into laughter the second your feet hit the ground.</p>
        </div>
 
     </div>
 
 
-    <div className={style.slider}>
+    <div className={style.slider} data-aos="fade-up">
        <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={20}
@@ -678,15 +810,15 @@ useEffect(() => {
 
     <div className={`top_heading left_align ${style.top_heading}`}>
 
-      <div className={`left ${style.left}`}>
+      <div className={`left ${style.left}`} data-aos="fade-right">
         <p className='white'>Experience Worlds</p>
         <h2 className='common_heading white'>5 Universe In 1 Galaxy @ Bengaluru</h2>
         <p className='white'>Every zone is its own universe — from prehistoric jungles to sunken ships, candy realms to adrenaline peaks.</p>
       </div>
 
-       <div className={`right ${style.right}`}>
+       <div className={`right ${style.right}`} data-aos="fade-left">
 
-        <div className={style.exp_tabs}>
+        <div className={style.exp_tabs} >
           {ExperienceWorldsData.map((item,index)=>(
  <button className={`${style.tab_btn} ${index===experienceWorlds?style.active:""}`} key={index} onClick={()=>setExperienceWorlds(index)} >{item.label} </button>
           ))}
@@ -698,7 +830,7 @@ useEffect(() => {
     </div>
 </div>
 
-  <div className={`container section_container full_container ${style.container}`}>
+  <div className={`container section_container full_container ${style.container}`} data-aos="fade-up">
        <div className={style.slider}>
       <Swiper
   modules={[Navigation, Pagination, Autoplay]}
@@ -706,8 +838,9 @@ useEffect(() => {
   slidesPerView={4}
   pagination={{ clickable: true }}
   autoplay={{ delay: 3000, disableOnInteraction: false }}
+
   centeredSlides={false}
-  loop={true}
+  loop={false}
   breakpoints={{
     0: {
       slidesPerView: 1,
@@ -761,10 +894,10 @@ useEffect(() => {
 <section className={`common_section yellow_section ${style.offers_section}`}>
 
     <div className={`container ${style.container}`}>
- <div className={`top_heading center_align ${style.top_heading}`}>
+ <div className={`top_heading center_align ${style.top_heading}`} data-aos="fade-up">
       <div className={`left ${style.left}`}>
         <p className=''>Special Offers</p>
-        <h2 className='common_heading purple'>The Jollier the Deal</h2>
+        <h2 className='common_heading purple'>The Fun Just Got A Jolly Upgrade</h2>
       </div>
     </div>
     </div>
@@ -846,13 +979,13 @@ useEffect(() => {
 <div className={`container ${style.container}`}>
 
    <div className={`top_heading left_align ${style.top_heading}`}>
-      <div className={`left ${style.left}`}>
+      <div className={`left ${style.left}`} data-aos="fade-right">
         <p className='white'>The Stage</p>
         <h2 className='common_heading white'>Live Cinematic Spectacle</h2>
         <p className='white'>A multi-million rupee production featuring aerial acrobatics, gravity-defying stunts, and the most iconic tracks of Indian cinema.</p>
       </div>
 
-      <div className={`right ${style.right}`}>
+      <div className={`right ${style.right}`} data-aos="fade-left">
         <p className={`white ${style.mixed}`}>Today’s <span>Show Timing</span></p>
         <p className={`white ${style.timing}`}>06:00 PM</p>
   <Button href="#" text="Book Tickets" className="common_btn orange_bg black_text right_tilt ticket"></Button>
@@ -869,7 +1002,7 @@ useEffect(() => {
 <section className={`common_section ${style.memories_section}`}>
 <div className={`container section_container ${style.container}`}>
 
-   <div className={`top_heading left_align ${style.top_heading}`}>
+   <div className={`top_heading left_align ${style.top_heading}`} data-aos="fade-up">
       <div className={`left ${style.left}`}>
         <p className='white'>Flavours of the World</p>
         <h2 className='common_heading white'>Cooking Up Memories</h2>
@@ -879,12 +1012,12 @@ useEffect(() => {
 
     <div className={style.memories_grid}>
 
-      <div className={`${style.card} ${style.videoTabContainer}`}>
+      <div className={`${style.card} ${style.videoTabContainer}`} data-aos="fade-up">
 
        <div className={style.content}>
          <h3 className='white'>Food Souk</h3>
-  <p className='white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.</p>
- <Button href="#" text="Explore More" className="link white"></Button>
+  <p className='white'>Where every craving finds its flavour. A culinary journey filled with variety, taste and memorable moments.</p>
+ <Button href="/dining" text="Explore More" className="link white"></Button>
        </div>
 
          <video width="1920" height="1080" autoPlay loop muted preload="none">
@@ -892,7 +1025,7 @@ useEffect(() => {
       Your browser does not support the video tag.
     </video>
 
-    <div className={style.tabs}>
+    <div className={style.tabs} >
       {FoodSoukTabData.map((item,index)=>(
         <button key={index} onClick={()=>setFoodSouk(index)}> <Image src={item.image} width={111} height={60} alt='Food Souk'/></button>
       ))}
@@ -903,7 +1036,7 @@ useEffect(() => {
 
 
       {FoodSoukData.map((item,index)=>(
- <div className={`${style.card}`} key={index} style={{ backgroundImage: `url(${item.image})` }}>
+ <div className={`${style.card}`} data-aos="zoom-in" key={index} style={{ backgroundImage: `url(${item.image})` }}>
 <div className={style.content}>
   <h3 className='white'>{item.title}</h3>
   <p className='white'>{item.description}</p>
@@ -925,15 +1058,15 @@ useEffect(() => {
 <section className={`common_section yellow_section ${style.facilities_section}`}>
 
     <div className={`container ${style.container}`}>
- <div className={`top_heading center_align ${style.top_heading}`}>
+ <div className={`top_heading center_align ${style.top_heading}`} data-aos="fade-up">
       <div className={`left ${style.left}`}>
         <p className=''>Facilities & Services</p>
-        <h2 className='common_heading purple'>Lorem ipsum dolor</h2>
+        <h2 className='common_heading purple'>Everything You Need For A Jolly Day</h2>
       </div>
     </div>
     </div>
 
-<div className={`strict_full full_container ${style.container}`}>
+<div className={`strict_full full_container ${style.container}`} data-aos="fade-up">
     <div className={style.facilities_rows}>
       <div className={style.facilities_single_row}>
         {[...FacilitiesData,...FacilitiesData].map((item,index)=>(
@@ -964,21 +1097,20 @@ useEffect(() => {
 
   <div className={`container section_container ${style.container}`}>
 
-   <div className={`top_heading left_align ${style.top_heading}`}>
+   <div className={`top_heading left_align ${style.top_heading}`} data-aos="fade-right">
       <div className={`left ${style.left}`}>
         <p className='white'>Visitor Stories</p>
-        <h2 className='common_heading white'>They Came.
-They Loved It.</h2>
+        <h2 className='common_heading white'>Jollywood Through Their Eyes</h2>
       </div>
     </div>
 
-<div className={style.stories_container}>
+<div className={style.stories_container} >
 
   <div className={`${style.row} ${style.upperRow}`}>
 
 
     {randomStories.squareImages[0] && (
-      <div className={style.squareImg}>
+      <div className={style.squareImg} data-aos="zoom-in" data-aos-delay="100">
 
         <Image
           className={style.imageData}
@@ -1005,9 +1137,9 @@ They Loved It.</h2>
     ================================= */}
 
     {randomStories.content[0] && (
-      <Link
+      <a target='_blank'
         href={randomStories.content[0].link}
-        className={`${style.content} ${style.square} ${style.curved}`}
+        className={`${style.content} ${style.square} ${style.curved}`} data-aos="zoom-in" data-aos-delay="200"
       >
 
         <p>
@@ -1026,7 +1158,7 @@ They Loved It.</h2>
           alt=""
         />
 
-      </Link>
+      </a>
     )}
 
 
@@ -1035,9 +1167,9 @@ They Loved It.</h2>
     ================================= */}
 
     {randomStories.content[1] && (
-      <Link
+      <a target='_blank'
         href={randomStories.content[1].link}
-        className={`${style.content} ${style.potrait}`}
+        className={`${style.content} ${style.potrait}`} data-aos="zoom-in" data-aos-delay="300"
       >
 
         <p>
@@ -1056,7 +1188,7 @@ They Loved It.</h2>
           alt=""
         />
 
-      </Link>
+      </a>
     )}
 
 
@@ -1065,7 +1197,7 @@ They Loved It.</h2>
     ================================= */}
 
     {randomStories.squareImages[1] && (
-      <div className={style.squareImg}>
+      <div className={style.squareImg} data-aos="zoom-in" data-aos-delay="100">
 
         <Image
           className={style.imageData}
@@ -1092,7 +1224,7 @@ They Loved It.</h2>
   <div className={`${style.row} ${style.lowerRow}`}>
 
     {randomStories.content[2] && (
-      <Link
+      <a target='_blank' data-aos="zoom-in" data-aos-delay="200"
         href={randomStories.content[2].link}
         className={`${style.content} ${style.square} ${style.straight}`}
       >
@@ -1113,12 +1245,12 @@ They Loved It.</h2>
           alt=""
         />
 
-      </Link>
+      </a>
     )}
 
 
     {randomStories.landscapeImages[0] && (
-      <div className={style.landscapeImg}>
+      <div className={style.landscapeImg} data-aos="zoom-in" data-aos-delay="300">
 
         <Image
           className={style.imageData}
@@ -1141,7 +1273,7 @@ They Loved It.</h2>
 
 
     {randomStories.content[3] && (
-      <Link
+      <a target='_blank' data-aos="zoom-in" data-aos-delay="100"
         href={randomStories.content[3].link}
         className={`${style.content} ${style.square} ${style.straight}`}
       >
@@ -1162,13 +1294,13 @@ They Loved It.</h2>
           alt=""
         />
 
-      </Link>
+      </a>
     )}
 
 
 
     {randomStories.content[4] && (
-      <Link
+      <a target='_blank' data-aos="zoom-in" data-aos-delay="200"
         href={randomStories.content[4].link}
         className={`${style.content} ${style.square} ${style.curved}`}
       >
@@ -1189,7 +1321,7 @@ They Loved It.</h2>
           alt=""
         />
 
-      </Link>
+      </a>
     )}
 
   </div>
@@ -1209,20 +1341,20 @@ They Loved It.</h2>
 <div className={`container ${style.container}`}>
 
    <div className={`top_heading left_align ${style.top_heading}`}>
-      <div className={`left ${style.left}`}>
-        <h2 className='common_heading purple'>Stay Close to the Action in Comfort & Style</h2>
-        <p className=''>Make your Vels Jollywood experience even more memorable with a stay at our on-site resort. Whether you're winding down after a fun-filled day or planning a weekend getaway, our cozy rooms, family-friendly amenities, and scenic surroundings offer the perfect retreat.</p>
+      <div className={`left ${style.left}`} data-aos="fade-right" >
+        <h2 className='common_heading purple'>Stay Close To The Magic. </h2>
+        <p className=''>Extend your Vels Jollywood adventure with a comfortable stay designed for relaxation, family time and unforgettable moments. Wake up closer to the magic and make every day a complete experience.</p>
          <Button href="#" text="Book a Stay" className="common_btn white_bg black_text left_tilt stay"></Button>
       </div>
 
-      <div className={`right ${style.right}`}>
+      <div className={`right ${style.right}`} data-aos="fade-left">
 <Image src="/assets/images/comfort_stay.png" width={870} height={565} alt=''/>
       </div>
     </div>
 
 </div>
 
-<div className={`container full_container ${style.container} ${style.stay_slider_container}`}>
+<div className={`container full_container ${style.container} ${style.stay_slider_container}`} data-aos="fade-up">
 <div className={style.stay_slider}>
 
    <Swiper
@@ -1300,7 +1432,7 @@ They Loved It.</h2>
 <section className={`common_section ${style.playtopia_section}`}>
   <div className={`container section_container ${style.container}`}>
 
-    <div className={`top_heading left_align ${style.top_heading}`}>
+    <div className={`top_heading left_align ${style.top_heading}`} data-aos="fade-up">
 
       <div className={`left ${style.left}`}>
         <p className='white'>Playtopia</p>
@@ -1315,7 +1447,7 @@ They Loved It.</h2>
 
         {PlaytopiaData.map((slide,index) => (
 
-            <div className={`${style.singleSlide}`} key={index}>
+            <div className={`${style.singleSlide}`} key={index} data-aos="fade-up" data-aos-delay={`${index*250}`}>
               <div className={style.image}>
                 <Image src={slide.image} width={570} height={450} alt={slide.title}/>
 
@@ -1343,10 +1475,10 @@ They Loved It.</h2>
 
 <div className={`container section_container ${style.container}`}>
 
-   <div className={`top_heading center_align ${style.top_heading}`}>
+   <div className={`top_heading center_align ${style.top_heading}`} data-aos="fade-up">
       <div className={`left ${style.left}`}>
         <p className='purple'>Retail Outlet - Souvenirs & Gifts</p>
-        <h2 className='common_heading purple'>Take the magic of Jollywood home.</h2>
+        <h2 className='common_heading purple'>Take A Piece Of Jollywood Home</h2>
       </div>
 
     </div>
@@ -1355,7 +1487,7 @@ They Loved It.</h2>
 
         {RetailData.map((slide,index) => (
 
-            <div className={`${style.singleSlide}`} key={index}>
+            <div className={`${style.singleSlide}`} key={index} data-aos="fade-up" data-aos-delay={`${index*250}`}>
               <div className={style.image}>
                 <Image src={slide.image} width={570} height={639} alt={slide.title}/>
 
@@ -1383,9 +1515,9 @@ They Loved It.</h2>
 <section className={`common_section ${style.corporate_section}`}>
   <div className={`container section_container ${style.container}`}>
 
-    <div className={`top_heading left_align ${style.top_heading}`}>
+    <div className={`top_heading left_align ${style.top_heading}`} data-aos="fade-right">
 
-      <div className={`left ${style.left}`}>
+      <div className={`left ${style.left}`} data-aos="fade-right">
         <p className='white'>Corporate</p>
         <h2 className='common_heading white'>Studios for MICE</h2>
       </div>
@@ -1409,7 +1541,7 @@ They Loved It.</h2>
 
         {CorporateData.map((slide,index) => (
 
-            <div className={`${style.singleSlide}`} key={index}>
+            <div className={`${style.singleSlide}`} key={index} data-aos="fade-up" data-aos-delay={`${index*250}`}>
               <div className={style.image}>
                 <Image src={slide.image} width={420} height={500} alt={slide.title}/>
 
