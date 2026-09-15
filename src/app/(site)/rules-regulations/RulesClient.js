@@ -10,57 +10,57 @@ import Image from 'next/image'
 // rules & regulations data
 const RulesData = [
   {
-    icon: "/assets/images/alcohol.svg",
+    icon: "/assets/images/tic_policy.svg",
     title: "Ticket Policy",
     content: "Each ticket grants entry to one person and is valid only for the specified date and time. Tickets are non-transferable and non-refundable."
   },
   {
-    icon: "/assets/images/alcohol.svg",
+    icon: "/assets/images/sec-check.svg",
     title: "Security Checks",
     content: "For the safety of all guests, we conduct security checks at the park entrance and at other locations as deemed necessary."
   },
   {
-    icon: "/assets/images/alcohol.svg",
+    icon: "/assets/images/qt.svg",
     title: "Queue Etiquette",
     content: "Please maintain discipline and fairness while waiting in ride queues. Group members cannot join those already in the queue."
   },
   {
-    icon: "/assets/images/alcohol.svg",
+    icon: "/assets/images/dress-code.svg",
     title: "Dress Code",
     content: "To ensure Hygiene and Safety, we enforce a dress code within the park. When enjoying water rides, kindly wear nylon and lycra swimwear only such as t-shirts, shorts, bermudas, three-fourths, or swimsuits. We prohibit attires such as sarees, churidars/salwars, dupattas, formal pants, shirts, burkhas/pardas, school uniforms, denim (jeans and three-fourth jeans), cargos, and similar outfits in the water park and certain high thrill rides for people’s safety."
   },
   {
-    icon: "/assets/images/alcohol.svg",
+    icon: "/assets/images/sis.svg",
     title: "Safety Instructions",
     content: "As many rides are adventurous in nature, it is vital to follow the safety instructions provided by lifeguards, ride operators, and displayed signs near the rides. The management will not be held responsible for any injuries or accidents resulting from guest negligence."
   },
   {
-    icon: "/assets/images/alcohol.svg",
+    icon: "/assets/images/csn.svg",
     title: "Children's Supervision",
     content: "We advise the parents to pay special attention to their children and ensure they’re under surveillance."
   },
   {
-    icon: "/assets/images/alcohol.svg",
+    icon: "/assets/images/ecc.svg",
     title: "Early Closure",
     content: "In certain circumstances, guests may be required to leave the park before the scheduled closing time."
   },
   {
-    icon: "/assets/images/alcohol.svg",
+    icon: "/assets/images/rcs.svg",
     title: "Ride Closures",
     content: "The management reserves the right to close any ride at any time for safety or technical reasons without prior notice."
   },
   {
-    icon: "/assets/images/alcohol.svg",
+    icon: "/assets/images/no-smoke.svg",
     title: "No Smoking",
     content: "Strict Prohibition of Smoking in the common areas. Please use the designated smoking area."
   },
   {
-    icon: "/assets/images/alcohol.svg",
+    icon: "/assets/images/no-pets.svg",
     title: "No Pets",
     content: "Unfortunately, pet animals are not allowed inside the park."
   },
   {
-    icon: "/assets/images/alcohol.svg",
+    icon: "/assets/images/add-c.svg",
     title: "Additionally, the following activities require prior approval from the management",
     content: "Sale or display of goods or services.\nDistribution of printed materials.\nCommercial photography, videography, or recording.\nBrand promotion, display of banners, or any unauthorized events."
   }

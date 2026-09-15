@@ -10,67 +10,67 @@ import Image from 'next/image'
 // safety data
 const SafetyData = [
   {
-    icon: "/assets/images/alcohol.svg",
+    icon: "/assets/images/daily-ride.svg",
     title: "Daily Ride Safety Checks",
     content: "Our rides undergo comprehensive safety inspections on a daily basis to ensure they meet the highest standards of safety."
   },
   {
-    icon: "/assets/images/alcohol.svg",
+    icon: "/assets/images/ride-safe.svg",
     title: "Ride Safety Harnesses",
     content: "To enhance your safety during rides, we provide and require the use of safety harnesses or restraints. Please ensure they are properly fastened and adjusted."
   },
   {
-    icon: "/assets/images/alcohol.svg",
+    icon: "/assets/images/at-r.svg",
     title: "Attendants and Radios",
     content: "Trained attendants equipped with two-way radios are stationed throughout the park, ready to assist you and ensure rapid communication in case of any emergencies."
   },
   {
-    icon: "/assets/images/alcohol.svg",
+    icon: "/assets/images/lsp.svg",
     title: "Lifeguards/Security Personnel",
     content: "For your safety around water-based attractions, we have dedicated lifeguards and security personnel on duty to closely monitor and respond to any potential hazards."
   },
   {
-    icon: "/assets/images/alcohol.svg",
+    icon: "/assets/images/lp.svg",
     title: "Lightning Protection",
     content: "To mitigate lightning hazards, our park is equipped with lightning arresters strategically placed throughout the premises."
   },
   {
-    icon: "/assets/images/alcohol.svg",
+    icon: "/assets/images/cctvs.svg",
     title: "CCTV Surveillance",
     content: "We maintain a comprehensive CCTV surveillance system that covers all areas of the park, helping us monitor and address any potential safety concerns."
   },
   {
-    icon: "/assets/images/alcohol.svg",
+    icon: "/assets/images/pas.svg",
     title: "Public Address System",
     content: "In the event of an emergency or important announcement, our park is equipped with a public address system to quickly and effectively communicate important information."
   },
   {
-    icon: "/assets/images/alcohol.svg",
+    icon: "/assets/images/faf.svg",
     title: "First Aid Facility",
     content: "A fully equipped first aid facility staffed by certified medical professionals is available on-site to promptly address any medical concerns or emergencies."
   },
   {
-    icon: "/assets/images/alcohol.svg",
+    icon: "/assets/images/sec_check.svg",
     title: "Security Checks",
     content: "To ensure the safety and security of all guests, we conduct security checks on all individuals and belongings upon entry to the park and at other appropriate locations within the premises."
   },
   {
-    icon: "/assets/images/alcohol.svg",
+    icon: "/assets/images/sis.svg",
     title: "Safety Instructions",
     content: "As many of our rides are of an adventurous nature, we strongly advise guests to carefully follow the safety instructions provided by lifeguards, ride operators, and displayed signs near the attractions. Please note that the management cannot be held responsible for any injuries or accidents resulting from guest negligence."
   },
   {
-    icon: "/assets/images/alcohol.svg",
+    icon: "/assets/images/pss.svg",
     title: "Pool Safety",
     content: "It is important to note that our pools are shallow. Therefore, diving into the pools is strictly prohibited to prevent any potential injuries."
   },
   {
-    icon: "/assets/images/alcohol.svg",
+    icon: "/assets/images/ha.svg",
     title: "Health Advisory",
     content: "For your well-being, we advise pregnant women, heart patients, individuals with high blood pressure, and those prone to epilepsy to avoid fast-paced or adventurous rides."
   },
   {
-    icon: "/assets/images/alcohol.svg",
+    icon: "/assets/images/hr.svg",
     title: "Height Restrictions",
     content: "Please be aware that certain rides have specific height restrictions. Children below the stipulated height are not permitted to ride those attractions for their safety."
   }
