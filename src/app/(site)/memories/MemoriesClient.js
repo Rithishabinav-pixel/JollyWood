@@ -13,17 +13,17 @@ const PlaytopiaData = [
   {
     image:"/assets/images/jollylicious.png",
     title:"Jollylicious",
-    link:""
+    link:"/memories#playtopia"
   },
    {
-    image:"/assets/images/jollylicious.png",
-    title:"Jollylicious",
-    link:""
+    image:"/assets/images/play-kp.png",
+    title:"Kids Play Area",
+    link:"/memories#playtopia"
   },
    {
-    image:"/assets/images/jollylicious.png",
-    title:"Jollylicious",
-    link:""
+    image:"/assets/images/bday-zone.png",
+    title:"Birthday Zone",
+    link:"/memories#playtopia"
   }
 
 ]
@@ -129,7 +129,7 @@ export default function MemoriesClient() {
               </div>
               <div className={style.content}>
                 <h3 className={`${style.title} white`}>{slide.title}</h3>
-                <Button href={slide.link} text="" className="link white large"></Button>
+                {/* <Button href={slide.link} text="" className="link white large"></Button> */}
               </div>
             </div>
 

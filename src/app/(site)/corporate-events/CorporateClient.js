@@ -18,13 +18,13 @@ const CorporateData = [
    
   },
     {
-    image:"/assets/images/bm.png",
+    image:"/assets/images/entertainment.png",
     title:"Entertainment",
     content:"Bring Your Team. We’ll Bring The Magic. Entertainment that creates moments worth remembering.",
   
   },
    {
-    image:"/assets/images/bm.png",
+    image:"/assets/images/exp.png",
     title:"Experience",
     content:"Create Moments Beyond The Ordinary. Experiences that inspire connection and collaboration.",
 

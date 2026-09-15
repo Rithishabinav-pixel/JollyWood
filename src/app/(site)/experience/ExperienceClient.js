@@ -13,7 +13,7 @@ const ExperienceData = [
     title: "Attractions",
     content:
       "There’s always something exciting waiting around the corner at VELS Jollywood. Explore unique attractions, discover new experiences and create moments filled with wonder, laughter and a little bit of magic for everyone.",
-    link: "/attractions",
+    link: "/experience/attractions",
     image: "/assets/images/attractions-exp.png",
     sizeWidth: 591,
     sizeHeight: 550
@@ -22,7 +22,7 @@ const ExperienceData = [
     title: "Dry Rides",
     content:
       "Ready for some serious fun? Take on exciting spins, thrilling turns and joyful rides that bring out the kid in everyone. Whether you’re chasing a little adventure or a lot of laughter, the fun starts here.",
-    link: "/dry-rides",
+    link: "/experience/dry-rides",
     image: "/assets/images/dry-rides-exp.png",
     sizeWidth: 636,
     sizeHeight: 555
@@ -31,7 +31,7 @@ const ExperienceData = [
     title: "Water Rides",
     content:
       "Beat the heat and dive into a world of splashes, slides and endless smiles. From exciting drops to relaxing pools, our water rides are the perfect way to make every summer moment a little more fun.",
-    link: "/water-rides",
+    link: "/experience/water-rides",
     image: "/assets/images/water-rides-exp.png",
     sizeWidth: 524,
     sizeHeight: 550
@@ -40,7 +40,7 @@ const ExperienceData = [
     title: "Adventures",
     content:
       "Think you’re ready for a challenge? Take on exciting adventures that test your courage, skills and teamwork. Climb higher, aim better and push your limits while creating stories you’ll love sharing later.",
-    link: "/adventures",
+    link: "/experience/adventures",
     image: "/assets/images/adventures-exp.png",
     sizeWidth: 692,
     sizeHeight: 492
@@ -49,7 +49,7 @@ const ExperienceData = [
     title: "Live Shows",
     content:
       "Lights, music and a whole lot of entertainment come together at VELS Jollywood. Enjoy spectacular performances, captivating shows and magical moments that turn an ordinary day into a celebration.",
-    link: "/live-shows",
+    link: "/experience/live-shows",
     image: "/assets/images/adventures-exp.png",
     sizeWidth: 692,
     sizeHeight: 492

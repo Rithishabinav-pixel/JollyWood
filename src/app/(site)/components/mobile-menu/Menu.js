@@ -17,23 +17,23 @@ const menuItems = [
     children: [
       {
         title: "Dry Rides",
-        link: "/dry-rides",
+        link: "/experience/dry-rides",
       },
       {
         title: "Water Rides",
-        link: "/water-rides",
+        link: "/experience/water-rides",
       },
       {
         title: "Attractions",
-        link: "/attractions",
+        link: "/experience/attractions",
       },
       {
         title: "Adventures",
-        link: "/adventures",
+        link: "/experience/adventures",
       },
       {
     title: "Live Shows",
-    link: "/live-shows",
+    link: "/experience/live-shows",
   },
     ],
   },

@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react'
 import style from './WaterRides.module.css'
-import '../innerpage.css'
+import '../../innerpage.css'
 import Image from 'next/image'
 
 

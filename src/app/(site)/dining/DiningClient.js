@@ -112,10 +112,10 @@ export default function DiningClient() {
       <source src={FoodSoukTabData[foodContainerData].video} type="video/mp4" />
       Your browser does not support the video tag.
     </video>
-<div className={style.content}>
+{/* <div className={style.content}>
     <Image src={FoodSoukTabData[foodContainerData].image} width={540} height={292} alt=""/>
     <p dangerouslySetInnerHTML={{__html:FoodSoukTabData[foodContainerData].content}}/>
-</div>
+</div> */}
 </div>
 
 

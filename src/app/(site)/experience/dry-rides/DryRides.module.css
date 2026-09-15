@@ -32,11 +32,12 @@
     background-position: center center;
     transition: 0.3s ease-in-out;
     transform-origin: center left;
+    aspect-ratio: 3/3.5;
+
 }
 
 .ride_cards .card:hover .image{
     transform: scale(1.05);
-
 }
 
 .ride_cards .card .content{

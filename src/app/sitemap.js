@@ -4,10 +4,10 @@ const PUBLIC_ROUTES = [
   "",
   "/experience",
   "/dining",
-  "/dry-rides",
-  "/water-rides",
-  "/attractions",
-  "/adventures",
+  "/experience/dry-rides",
+  "/experience/water-rides",
+  "/experience/attractions",
+  "/experience/adventures",
   "/memories",
   "/gallery",
   "/our-story",
@@ -19,7 +19,7 @@ const PUBLIC_ROUTES = [
   "/guest-safety",
   "/rules-regulations",
   "/park-map",
-  "/live-shows",
+  "/experience/live-shows",
 ];
 
 export default function sitemap() {

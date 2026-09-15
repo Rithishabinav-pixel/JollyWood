@@ -25,11 +25,7 @@ const ExperienceMenu = [
    {
     label:"Adventures",
     slug:"adventures"
-  },
-  {
-    label:"Adventures",
-    slug:"adventures"
-  },
+  },  
   {
     label:"Live Shows",
     slug:"live-shows"
@@ -86,7 +82,7 @@ window.addEventListener("scroll", handleScroll);
 <div className={`container ${style.container}`}>
 
 {
-  pathname === '/experience' && !mobile &&
+  pathname.includes('/experience') && !mobile &&
 
 
   <ul className={style.menus}>
@@ -106,7 +102,7 @@ window.addEventListener("scroll", handleScroll);
 </div>
 
 {
-  pathname === '/experience' && !mobile &&
+   pathname.includes('/experience') && !mobile &&
   <ul className={style.menus}>
   {ExperienceMenu.slice(3,6).map((menu,index)=>(
     <React.Fragment key={index}>

@@ -46,8 +46,8 @@ export default function Footer() {
 <div className={style.menuColumn}>
     <h3>Rides</h3>
     <ul>
-        <li> <Link href="/dry-rides">Dry Ride  </Link>  </li>
-        <li> <Link href="/water-rides">Water Ride  </Link>  </li>
+        <li> <Link href="/experience/dry-rides">Dry Ride  </Link>  </li>
+        <li> <Link href="/experience/water-rides">Water Ride  </Link>  </li>
     </ul>
 </div>
 

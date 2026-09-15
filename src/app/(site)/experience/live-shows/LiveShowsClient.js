@@ -2,9 +2,8 @@
 
 import React, { useEffect, useState } from 'react'
 import style from './LiveShows.module.css'
-import '../innerpage.css'
+import '../../innerpage.css'
 import Image from 'next/image'
-import Button from '../components/ui/Button'
 
 
 // Adventures data 

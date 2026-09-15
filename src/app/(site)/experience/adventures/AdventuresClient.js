@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react'
 import style from './Adventures.module.css'
-import '../innerpage.css'
+import '../../innerpage.css'
 import Image from 'next/image'
 
 
@@ -19,7 +19,7 @@ const AdventuresData = [
         value: "12+"
       },
       {
-        label: "height",
+        label: "Height",
         value: "140+ cm"
       }
     ]
@@ -35,7 +35,7 @@ const AdventuresData = [
         value: "12+"
       },
       {
-        label: "height",
+        label: "Height",
         value: "140+ cm"
       }
     ]
@@ -51,7 +51,7 @@ const AdventuresData = [
         value: "12+"
       },
       {
-        label: "height",
+        label: "Height",
         value: "140+ cm"
       }
     ]
@@ -67,7 +67,7 @@ const AdventuresData = [
         value: "12+"
       },
       {
-        label: "height",
+        label: "Height",
         value: "140+ cm"
       }
     ]
@@ -83,7 +83,7 @@ const AdventuresData = [
         value: "16+"
       },
       {
-        label: "height",
+        label: "Height",
         value: "160+ cm"
       }
     ]
@@ -101,7 +101,7 @@ const AdventuresData = [
 
 const ruleIcons = {
   ageAllowed: "/assets/images/age-allowed.svg",
-  height: "/assets/images/height.svg",
+  Height: "/assets/images/height.svg",
   weight: "/assets/images/weight.svg",
 };
 
