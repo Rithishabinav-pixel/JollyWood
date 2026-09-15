@@ -35,19 +35,25 @@ export default function Footer() {
         <li> <Link href="/">Home </Link>  </li>
         <li> <Link href="/dining">Dining  </Link>  </li>
         <li> <Link href="/our-story">Our Story </Link>  </li>
-        <li> <Link href="/studios">Studios </Link>  </li>
+        <li> <Link href="/memories">Memories </Link>  </li>
         <li> <Link href="/gallery">Gallery </Link>  </li>
+        <li> <Link href="/retail">Retail </Link>  </li>
         <li> <Link href="/blog">Blog </Link>  </li>
+        <li> <Link href="/careers">Careers </Link>  </li>
         <li> <Link href="/contact-us">Reached Us </Link>  </li>
-        <li> <Link href="/corporate-events">Host For Events </Link>  </li>
+        <li> <Link href="/corporate-events">Corporate Events </Link>  </li>
     </ul>
 </div>
 
 <div className={style.menuColumn}>
-    <h3>Rides</h3>
+    <h3>Experience</h3>
     <ul>
-        <li> <Link href="/experience/dry-rides">Dry Ride  </Link>  </li>
-        <li> <Link href="/experience/water-rides">Water Ride  </Link>  </li>
+        <li> <Link href="/experience/attractions">Attractions</Link>  </li>
+        <li> <Link href="/experience/dry-rides">Dry Rides  </Link>  </li>
+        <li> <Link href="/experience/water-rides">Water Rides  </Link>  </li>
+        <li> <Link href="/experience/adventures">Adventures</Link>  </li>
+        <li> <Link href="/experience/live-shows">Live Shows</Link>  </li>
+
     </ul>
 </div>
 

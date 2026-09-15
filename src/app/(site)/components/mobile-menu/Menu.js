@@ -8,7 +8,7 @@ import Image from "next/image";
 const menuItems = [
   {
     title: "Home",
-    link: "#",
+    link: "/",
   },
   {
     title: "Experience",

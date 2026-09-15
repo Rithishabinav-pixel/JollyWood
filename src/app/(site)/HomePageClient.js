@@ -20,7 +20,7 @@ const HighAdrenalineData = [
     image:"/assets/images/romancia-street.png",
     video:"/assets/videos/ride-reel-video.mp4",
     title:"Romancia Street",
-    link:"#"
+    link:"/dining#romancia"
   },
    {
     image:"/assets/images/graphic-shots.png",
@@ -407,37 +407,37 @@ const FoodSoukData = [
   {
     title:"Royal Kitchen",
     description:"A royal feast of Indian flavours. Indulge in a grand dining experience crafted with tradition.",
-    link:"#",
+    link:"/dining#food-souk",
     image:"/assets/images/royal-kitchen.png"
   },
    {
     title:"Planet Jollywood",
     description:"Lights. Camera. Delicious! A star-studded dining experience awaits.",
-    link:"#",
+    link:"/dining#food-souk",
     image:"/assets/images/planet-jollywood.png"
   },
    {
     title:"Beach Container",
     description:"Quick bites. Cool vibes. Beachside fun. The perfect pit stop for every hungry adventurer!",
-    link:"#",
+    link:"/dining#food-souk",
     image:"/assets/images/beach-container.png"
   },
    {
     title:"Dry Ride Container",
     description:"Ride. Refuel. Repeat. Tasty bites to keep your adventure rolling! ",
-    link:"#",
+    link:"/dining#food-souk",
     image:"/assets/images/dry-ride-container.png"
   },
    {
     title:"Maze Runner Kiosk",
     description:"Complete the adventure and snack your way to happiness.",
-    link:"#",
+    link:"/dining#food-souk",
     image:"/assets/images/maze.png"
   },
   {
     title:"Romancia Street",
     description:"Old-world charm. New-age flavours. A vibrant street experience where food and entertainment come alive.",
-    link:"#",
+    link:"/dining#food-souk",
     image:"/assets/images/romancia.png"
   },
 ]
@@ -562,17 +562,17 @@ const RetailData = [
   {
     image:"/assets/images/aqua-r.png",
     title:"Aqua",
-    link:""
+    link:"/retail"
   },
     {
     image:"/assets/images/cirkus-k.png",
     title:"Cirkus",
-    link:""
+    link:"/retail"
   },
    {
     image:"/assets/images/jollylicious-r.png",
     title:"Jollylicious",
-    link:""
+    link:"/retail"
   },
 
 ]
@@ -986,7 +986,7 @@ useEffect(() => {
       <div className={`right ${style.right}`} data-aos="fade-left">
         <p className={`white ${style.mixed}`}>Today’s <span>Show Timing</span></p>
         <p className={`white ${style.timing}`}>06:00 PM</p>
-  <Button href="#" text="Book Tickets" className="common_btn orange_bg black_text right_tilt ticket"></Button>
+  <a href="https://booknow.jollywood.co.in/package/main" target='_blank' className="common_btn orange_bg black_text right_tilt ticket">Book Tickets</a>
 
       </div>
     </div>
@@ -1342,7 +1342,7 @@ useEffect(() => {
       <div className={`left ${style.left}`} data-aos="fade-right" >
         <h2 className='common_heading purple'>Stay Close To The Magic. </h2>
         <p className=''>Extend your Vels Jollywood adventure with a comfortable stay designed for relaxation, family time and unforgettable moments. Wake up closer to the magic and make every day a complete experience.</p>
-         <Button href="#" text="Book a Stay" className="common_btn white_bg black_text left_tilt stay"></Button>
+         <a href="tel:917009677009" target='_blank' className="common_btn white_bg black_text left_tilt stay">Book a Stay</a>
       </div>
 
       <div className={`right ${style.right}`} data-aos="fade-left">
@@ -1530,7 +1530,7 @@ useEffect(() => {
 <h3>Conference</h3>
 <h3>Events</h3>
 <div>
-  <Button href="#" text="KNow More" className="common_btn orange_bg black_text black_shadow left_tilt arrow"></Button>
+  <Button href="/corporate-events" text="Know More" className="common_btn orange_bg black_text black_shadow left_tilt arrow"></Button>
   </div>
 
   </div>

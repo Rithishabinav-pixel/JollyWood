@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 import style from './Dining.module.css'
 import '../innerpage.css'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 
 
 
@@ -48,6 +49,16 @@ export default function DiningClient() {
     
 
         const [mobile,setMobile] = useState(false);
+
+        const pathname = usePathname();
+
+        useEffect(()=>{
+  const hashId = window.location.hash; 
+if(hashId){
+  const IdSection = document.querySelector(hashId);
+  IdSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+        },[])
       
       
       
@@ -85,7 +96,7 @@ export default function DiningClient() {
 </section>
 
 {/* food souk section */}
-<section className={`common_section ${style.food_section}`}>
+<section className={`common_section ${style.food_section}`} id='food-souk'>
   <div className={`container section_container ${style.container}`}>
 
     <div className={`top_heading left_align ${style.top_heading}`}>
@@ -265,7 +276,7 @@ export default function DiningClient() {
 
 
 {/* romancia section */}
-<section className={`common_section ${style.romancia_section}`}>
+<section className={`common_section ${style.romancia_section}`} id='romancia'>
 
   <div className={`container section_container ${style.container}`}>
 

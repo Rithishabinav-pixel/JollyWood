@@ -12,23 +12,23 @@ const ExperienceMenu = [
   },
   {
     label:"Attractions",
-    slug:"attractions"
+    slug:"experience/attractions"
   },
   {
     label:"Dry Rides",
-    slug:"dry-rides"
+    slug:"experience/dry-rides"
   },
    {
     label:"Water Rides",
-    slug:"water-rides"
+    slug:"experience/water-rides"
   },
    {
     label:"Adventures",
-    slug:"adventures"
+    slug:"experience/adventures"
   },  
   {
     label:"Live Shows",
-    slug:"live-shows"
+    slug:"experience/live-shows"
   },
 ]
 

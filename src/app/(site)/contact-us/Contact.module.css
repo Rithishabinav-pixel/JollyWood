@@ -75,7 +75,7 @@ list-style: none;
         padding: 24px;
         border-radius: 24px;
         border: solid var(--yellow) 1px;
-        gap: 24px;
+        gap: 40px;
         position: relative;
       }
 
@@ -185,6 +185,10 @@ gap: 24px;
 
 /* mobile  */
 @media screen and (max-width:767px) {
+
+  .timings_section{
+    gap: 30px;
+  }
 
        .contact_section {
     padding: 100px 0  50px 0;

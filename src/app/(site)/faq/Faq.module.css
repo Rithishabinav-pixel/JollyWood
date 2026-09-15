@@ -32,6 +32,9 @@ overflow: hidden;
     justify-content: space-between;
     align-items: center;
     gap: 24px;
+    background: transparent;
+    border: none;
+    color: white;
 }
 
 .faq_section .container .accordion .header h2{
@@ -39,34 +42,33 @@ overflow: hidden;
     line-height: 28px;
 }
 
-.faq_section .container .accordion .header button{
+.faq_section .container .accordion .header span{
     height: 24px;
     width: auto;
     aspect-ratio: 1 / 1;
     background: none;
     border: none;
     position: relative;
+    transform-origin: center center;
 }
 
-.faq_section .container .accordion .header button::before,
-.faq_section .container .accordion .header button::after{
+.faq_section .container .accordion .header span::before,
+.faq_section .container .accordion .header span::after{
     position: absolute;
     content: '';
     background: white;
     width: 1px;
     height:70%;
     transition: 0.3s ease-in-out;
-   
-}
-
-.faq_section .container .accordion .header button::before{
- top: 50%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+
 }
 
-.faq_section .container .accordion.active .header button::before,
-.faq_section .container .accordion .header button::after{
+
+.faq_section .container .accordion.active .header span::before,
+.faq_section .container .accordion .header span::after{
     transform: translate(-50%,-50%) rotate(-90deg);
 }
 .faq_section .container .accordion .body {

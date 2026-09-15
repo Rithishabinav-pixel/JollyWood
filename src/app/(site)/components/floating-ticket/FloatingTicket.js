@@ -43,7 +43,7 @@ export default function FloatingTicket() {
     <>
       {visible && (
         <a
-          href="#"
+          href="https://booknow.jollywood.co.in/package/main"
           target="_blank"
           className={`${style.floating_ticket} ${
             active ? style.active : ""

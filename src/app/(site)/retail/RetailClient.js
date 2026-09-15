@@ -11,17 +11,17 @@ const RetailData = [
   {
     image:"/assets/images/aqua-r.png",
     title:"Aqua",
-    link:""
+    link:"/retail"
   },
     {
     image:"/assets/images/cirkus-k.png",
     title:"Cirkus",
-    link:""
+    link:"/retail"
   },
    {
-    image:"/assets/images/aqua.png",
+    image:"/assets/images/jollylicious-r.png",
     title:"Jollylicious",
-    link:""
+    link:"/retail"
   },
 
 ]

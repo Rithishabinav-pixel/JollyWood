@@ -13,7 +13,12 @@ import { submitCareerEnquiry } from './actions'
 export default function CareersClient() {
 
   const [state, formAction, pending] = useActionState(submitCareerEnquiry, undefined)
+  const [fileName, setFileName] = useState("");
 
+   const handleFileChange = (e) => {
+    const file = e.target.files?.[0];
+    setFileName(file ? file.name : "");
+  };
 
 
   return (
@@ -87,8 +92,8 @@ export default function CareersClient() {
       <input id='careerExperience' name='relevantExperience' type='text' className='half_cont input_field' placeholder='Relevant Experience'></input>
 
       <div className='file_upload full_cont'>
-        <label htmlFor='resumeFile' className='input_field'> Upload Resume </label>
-<input type='file' id='resumeFile' name='resume' accept='.pdf,.doc,.docx' hidden className='half_cont'></input>
+        <label htmlFor='resumeFile' className='input_field'>  {fileName || "Upload Resume"} </label>
+<input type='file' id='resumeFile' name='resume' accept='.pdf,.doc,.docx' hidden className='half_cont' onChange={handleFileChange}></input>
       </div>
 
       <label htmlFor='careerCoverLetter' className='sr_only'>Cover Letter</label>

@@ -4,7 +4,6 @@ import React, { useEffect, useState } from 'react'
 import style from './Faq.module.css'
 import '../innerpage.css'
 import Image from 'next/image'
-import Button from '../components/ui/Button'
  
 
 // faq data 
@@ -76,9 +75,10 @@ const [activeFaq,setActiveFaq] = useState(null);
 
 {FaqData && FaqData.map((item,index)=>(
   <div className={`${style.accordion} ${activeFaq===index?style.active:""}`} key={index}>
-    <div className={style.header}>
+    <button className={style.header} onClick={()=>setActiveFaq(activeFaq==index?null:index)}>
       <h2>{item.question}</h2>
-       <button className={style.action} onClick={()=>setActiveFaq(activeFaq==index?null:index)} ></button> </div>
+       <span className={style.action}  ></span>
+       </button>
     <div className={style.body}>
       <div>
       {item.answer}

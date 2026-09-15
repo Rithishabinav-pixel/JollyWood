@@ -7,8 +7,8 @@ import Image from "next/image";
 
 const menuItems = [
   { title: "Our Story", link: "/our-story" },
-  { title: "Corporate Event", link: "#" },
-  { title: "Gallery", link: "/gallery" },
+  { title: "Corporate Event", link: "/corporate-events" },
+  { title: "Retail", link: "/retail" },
   { title: "Careers", link: "/careers" },
   { title: "Reach Us", link: "/contact-us" },
   { title: "Park Map", link: "/park-map" },
