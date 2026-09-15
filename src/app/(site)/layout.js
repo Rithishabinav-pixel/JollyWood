@@ -42,7 +42,7 @@ export default function RootLayout({ children }) {
     <SmoothScroll/>
     {/* <AOSInit/> */}
 <HeaderWrapper />
-{/* <FloatingTicket/> */}
+<FloatingTicket/>
         <main>
     <FloatingAnnouncement/>
    <DesktopSidebar />

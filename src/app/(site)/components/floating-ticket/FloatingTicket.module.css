@@ -9,7 +9,12 @@
     transform-origin: top left;
     animation:floating_ticket 0.3s ease-in-out forwards ;
         transform: translateY(-150%);
+}
 
+.floating_ticket img{
+    width: 100%;
+    height: auto;
+    float: left;
 }
 
 @keyframes floating_ticket {
@@ -24,4 +29,16 @@
 
 .floating_ticket:hover{
     transform: rotate(-5deg) scale(0.98);
+}
+
+/* resposive  */
+
+/* tablet  */
+
+@media screen and (max-width:1200px) {
+    .floating_ticket{
+        top: 32px;
+        width: 60px;
+        right: 20vw;
+    }
 }
