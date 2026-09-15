@@ -16,7 +16,7 @@ export default function AOSInit() {
 
     const timer = setTimeout(() => {
       AOS.refresh();
-    }, 100);
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, []);
