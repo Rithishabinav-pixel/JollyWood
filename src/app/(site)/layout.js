@@ -40,7 +40,7 @@ export default function RootLayout({ children }) {
   return (
     <>
     <SmoothScroll/>
-    <AOSInit/>
+    {/* <AOSInit/> */}
 <HeaderWrapper />
 {/* <FloatingTicket/> */}
         <main>
