@@ -50,104 +50,105 @@ const ExperienceWorldsData = [
     tab: "attractions",
     label: "Attractions",
     content: [
-      {
-        title: "Tribal Museum",
-        description: "A glimpse of rural India. Discover stories, traditions and timeless culture.",
-        link: "/experience/attractions",
-        image: "/assets/images/tribal-museum.png",
-        video: "/assets/videos/ride-reel-video.mp4"
-      },
-      {
-        title: "Movie Wall",
-        description: "Where cinema comes alive. Walk through memories painted by movies.",
-        link: "/experience/attractions",
-        image: "/assets/images/movie-wall.png",
-        video: "/assets/videos/ride-reel-video.mp4"
-      },
-      {
-        title: "Ride N Reel",
-        description: "A ride beyond imagination. Experience cinema in motion.",
-        link: "/experience/attractions",
-        image: "/assets/images/ride-reel.png",
-        video: "/assets/videos/ride-reel-video.mp4"
-      },
-      {
-        title: "Vortex Tunnel",
-        description: "Get delulu. Find your solulu. A mind-bending journey you won't forget.",
-        link: "/experience/attractions",
-        image: "/assets/images/glow-garden.png",
-        video: "/assets/videos/ride-reel-video.mp4"
-      },
-      {
-        title: "Virtual Cricket",
-        description: "Step up. Swing hard. Score big. Enjoy cricket like never before.",
-        link: "/experience/attractions",
-        image: "/assets/images/virtual-cricket.png",
-        video: "/assets/videos/ride-reel-video.mp4"
-      },
-      {
-        title: "Romancia Street",
-        description: "Walk into a world from another era. Experience medieval charm, music and magic.",
-        link: "/experience/attractions",
-        image: "/assets/images/romania-street.png",
-        video: "/assets/videos/ride-reel-video.mp4"
-      },
-      {
-        title: "Playtopia - Children's Play Area",
-        description: "Where little explorers find big adventures. A wonderland of giggles and games.",
-        link: "/experience/attractions",
-        image: "/assets/images/playtopia.png",
-        video: "/assets/videos/ride-reel-video.mp4"
-      },
-      {
-        title: "Titanic - Gallery & Simulation",
-        description: "A legendary story beneath the waves. Relive the timeless mystery of Titanic's world.",
-        link: "/experience/attractions",
-        image: "/assets/images/titanic.png",
-        video: "/assets/videos/ride-reel-video.mp4"
-      },
-      {
-        title: "The Lost World",
-        description: "A world forgotten by time. Explore a world where dinosaurs rule again.",
-        link: "/experience/attractions",
-        image: "/assets/images/lost-world.png",
-        video: "/assets/videos/ride-reel-video.mp4"
-      },
-      {
-        title: "Twilight Dreams",
-        description: "Night comes alive in colours. Watch a spectacular blend of lights, water and music unfold.",
-        link: "/experience/attractions",
-        image: "/assets/images/glow-garden.png",
-        video: "/assets/videos/ride-reel-video.mp4"
-      },
-      {
-        title: "Miniature City",
-        description: "A tiny world made of big wonders. Wander through a magical city built in miniature.",
-        link: "/experience/attractions",
-        image: "/assets/images/miniature-city-img.png",
-        video: "/assets/videos/ride-reel-video.mp4"
-      },
-      {
-        title: "Glow Garden",
-        description: "Where imagination lights up the night. Step into a magical world of glowing wonders.",
-        link: "/experience/attractions",
-        image: "/assets/images/glow-garden.png",
-        video: "/assets/videos/ride-reel-video.mp4"
-      },
-      {
-        title: "Toy Train & Jolly Bus",
-        description: "From little wheels to big smiles. Let the Jolly journey begin!",
-        link: "/experience/attractions",
-        image: "/assets/images/movie-wall.png",
-        video: "/assets/videos/ride-reel-video.mp4"
-      },
-      {
-        title: "Jubilee Theatre",
-        description: "A blockbuster beyond the screen. Watch Indian cinema come alive on stage.",
-        link: "/experience/attractions",
-        image: "/assets/images/movie-wall.png",
-        video: "/assets/videos/ride-reel-video.mp4"
-      }
+     {
+    title: "The Lost World",
+    description: "A world forgotten by time. Explore a world where dinosaurs rule again.",
+    link: "/experience/attractions",
+    image: "/assets/images/lost-world.png",
+    video: "/assets/videos/ride-reel-video.mp4"
+  },
+  {
+    title: "Titanic - Gallery & Simulation",
+    description: "A legendary story beneath the waves. Relive the timeless mystery of Titanic's world.",
+    link: "/experience/attractions",
+    image: "/assets/images/titanic.png",
+    video: "/assets/videos/ride-reel-video.mp4"
+  },
+  {
+    title: "Tribal Museum",
+    description: "A glimpse of rural India. Discover stories, traditions and timeless culture.",
+    link: "/experience/attractions",
+    image: "/assets/images/tribal-museum.png",
+    video: "/assets/videos/ride-reel-video.mp4"
+  },
+  {
+    title: "Movie Wall",
+    description: "Where cinema comes alive. Walk through memories painted by movies.",
+    link: "/experience/attractions",
+    image: "/assets/images/movie-wall.png",
+    video: "/assets/videos/ride-reel-video.mp4"
+  },
+  {
+    title: "Ride N Reel",
+    description: "A ride beyond imagination. Experience cinema in motion.",
+    link: "/experience/attractions",
+    image: "/assets/images/ride-reel.png",
+    video: "/assets/videos/ride-reel-video.mp4"
+  },
+  {
+    title: "Vortex Tunnel",
+    description: "Get delulu. Find your solulu. A mind-bending journey you won't forget.",
+    link: "/experience/attractions",
+    image: "/assets/images/glow-garden.png",
+    video: "/assets/videos/ride-reel-video.mp4"
+  },
+  {
+    title: "Virtual Cricket",
+    description: "Step up. Swing hard. Score big. Enjoy cricket like never before.",
+    link: "/experience/attractions",
+    image: "/assets/images/virtual-cricket.png",
+    video: "/assets/videos/ride-reel-video.mp4"
+  },
+  {
+    title: "Romancia Street",
+    description: "Walk into a world from another era. Experience medieval charm, music and magic.",
+    link: "/experience/attractions",
+    image: "/assets/images/romania-street.png",
+    video: "/assets/videos/ride-reel-video.mp4"
+  },
+  {
+    title: "Playtopia - Children's Play Area",
+    description: "Where little explorers find big adventures. A wonderland of giggles and games.",
+    link: "/experience/attractions",
+    image: "/assets/images/playtopia.png",
+    video: "/assets/videos/ride-reel-video.mp4"
+  },
+  
+  {
+    title: "Twilight Dreams",
+    description: "Night comes alive in colours. Watch a spectacular blend of lights, water and music unfold.",
+    link: "/experience/attractions",
+    image: "/assets/images/glow-garden.png",
+    video: "/assets/videos/ride-reel-video.mp4"
+  },
+  {
+    title: "Miniature City",
+    description: "A tiny world made of big wonders. Wander through a magical city built in miniature.",
+    link: "/experience/attractions",
+    image: "/assets/images/miniature-city-img.png",
+    video: "/assets/videos/ride-reel-video.mp4"
+  },
+  {
+    title: "Glow Garden",
+    description: "Where imagination lights up the night. Step into a magical world of glowing wonders.",
+    link: "/experience/attractions",
+    image: "/assets/images/glow-garden.png",
+    video: "/assets/videos/ride-reel-video.mp4"
+  },
+  {
+    title: "Toy Train & Jolly Bus",
+    description: "From little wheels to big smiles. Let the Jolly journey begin!",
+    link: "/experience/attractions",
+    image: "/assets/images/toy-train.png",
+    video: "/assets/videos/ride-reel-video.mp4"
+  },
+  {
+    title: "Jubilee Theatre",
+    description: "A blockbuster beyond the screen. Watch Indian cinema come alive on stage.",
+    link: "/experience/attractions",
+    image: "/assets/images/movie-wall.png",
+    video: "/assets/videos/ride-reel-video.mp4"
+  },
     ]
   },
 
@@ -371,7 +372,15 @@ const ExperienceWorldsData = [
         link: "/experience/live-shows",
         image: "/assets/images/movie-wall.png",
         video: "/assets/videos/ride-reel-video.mp4"
-      }
+      },
+      {
+        title: "Parade Show",
+        description: "Where the streets come alive with rhythm. Romancia Street turns into a lively stage with European-style dance and vibrant performances. Follow the music, soak up the energy and enjoy a little taste of Europe right here at Jollywood.",
+        link: "/experience/live-shows",
+        image: "/assets/images/movie-wall.png",
+        video: "/assets/videos/ride-reel-video.mp4"
+      },
+
     ]
   }
 

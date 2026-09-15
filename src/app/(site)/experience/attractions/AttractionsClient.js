@@ -10,7 +10,20 @@ import Image from 'next/image'
 const ExperienceWorldsData = [
 
   // Attractions
-
+  {
+    title: "The Lost World",
+    description: "A world forgotten by time. Explore a world where dinosaurs rule again.",
+    link: "/experience/attractions",
+    image: "/assets/images/lost-world.png",
+    video: "/assets/videos/ride-reel-video.mp4"
+  },
+  {
+    title: "Titanic - Gallery & Simulation",
+    description: "A legendary story beneath the waves. Relive the timeless mystery of Titanic's world.",
+    link: "/experience/attractions",
+    image: "/assets/images/titanic.png",
+    video: "/assets/videos/ride-reel-video.mp4"
+  },
   {
     title: "Tribal Museum",
     description: "A glimpse of rural India. Discover stories, traditions and timeless culture.",
@@ -60,20 +73,7 @@ const ExperienceWorldsData = [
     image: "/assets/images/playtopia.png",
     video: "/assets/videos/ride-reel-video.mp4"
   },
-  {
-    title: "Titanic - Gallery & Simulation",
-    description: "A legendary story beneath the waves. Relive the timeless mystery of Titanic's world.",
-    link: "/experience/attractions",
-    image: "/assets/images/titanic.png",
-    video: "/assets/videos/ride-reel-video.mp4"
-  },
-  {
-    title: "The Lost World",
-    description: "A world forgotten by time. Explore a world where dinosaurs rule again.",
-    link: "/experience/attractions",
-    image: "/assets/images/lost-world.png",
-    video: "/assets/videos/ride-reel-video.mp4"
-  },
+  
   {
     title: "Twilight Dreams",
     description: "Night comes alive in colours. Watch a spectacular blend of lights, water and music unfold.",
@@ -99,7 +99,7 @@ const ExperienceWorldsData = [
     title: "Toy Train & Jolly Bus",
     description: "From little wheels to big smiles. Let the Jolly journey begin!",
     link: "/experience/attractions",
-    image: "/assets/images/movie-wall.png",
+    image: "/assets/images/toy-train.png",
     video: "/assets/videos/ride-reel-video.mp4"
   },
   {

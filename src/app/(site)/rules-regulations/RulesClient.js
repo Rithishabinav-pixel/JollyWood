@@ -7,6 +7,7 @@ import Image from 'next/image'
 
 
 
+
 // rules & regulations data
 const RulesData = [
   {
@@ -77,7 +78,7 @@ export default function RulesClient() {
     
 {/* hero section  */}
 
-<section className={`hero_section ${style.hero_section}`}>
+<section className={`hero_section ${style.hero_section}`} style={{ backgroundImage: `url("/assets/images/rules-banner.png")` }}>
     <div className={`container`}>
         <h1 className={`title common_heading white`}>Rules & Regulation
 </h1>

@@ -23,6 +23,13 @@ const LiveShowsData = [
     time:"06:00 PM"
   },
 
+   {
+    image:"/assets/images/high-ropes-course.png",
+    title:"Parade Show",
+    content:"Where the streets come alive with rhythm. Romancia Street turns into a lively stage with European-style dance and vibrant performances. Follow the music, soak up the energy and enjoy a little taste of Europe right here at Jollywood.",
+    time:"06:00 PM"
+  },
+
 ]
 
 

@@ -50,7 +50,7 @@ const ExperienceData = [
     content:
       "Lights, music and a whole lot of entertainment come together at VELS Jollywood. Enjoy spectacular performances, captivating shows and magical moments that turn an ordinary day into a celebration.",
     link: "/experience/live-shows",
-    image: "/assets/images/adventures-exp.png",
+    image: "/assets/images/ls-f.png",
     sizeWidth: 692,
     sizeHeight: 492
   }

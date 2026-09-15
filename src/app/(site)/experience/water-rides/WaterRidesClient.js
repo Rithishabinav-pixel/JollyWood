@@ -18,7 +18,7 @@ const WaterRidesData = [
     rules: []
   },
   {
-    image: "/assets/images/crazy-cruise.png",
+    image: "/assets/images/family-pool.png",
     title: "Family Pool",
     content:
       "Every splash brings the family closer. Dive into a day of fun and laughter! Enjoy a safe and refreshing space where families can relax, play and create unforgettable moments together.",
@@ -39,21 +39,21 @@ const WaterRidesData = [
     rules: []
   },
   {
-    image: "/assets/images/crazy-cruise.png",
+    image: "/assets/images/mini-pendlum.png",
     title: "Mini Pendulum",
     content:
       "Swing high, splash down and smile big! A mini ride with maximum water fun. Enjoy a fun-filled water adventure with exciting swings, splashes and plenty of smiles along the way.",
     rules: []
   },
   {
-    image: "/assets/images/crazy-cruise.png",
+    image: "/assets/images/rain-dance.png",
     title: "Rain Dance",
     content:
       "Music up, water on, fun unlimited! Dance, splash, and make unforgettable memories. Turn up the energy with music, refreshing showers and a celebration of endless fun with friends and family.",
     rules: []
   },
   {
-    image: "/assets/images/crazy-cruise.png",
+    image: "/assets/images/speed-slide.png",
     title: "Speed Slide",
     content:
       "Ready, set, slide! Feel the speed. Feel the thrill. Race through an exciting water slide experience filled with speed, twists and an adrenaline rush.",
@@ -67,7 +67,7 @@ const WaterRidesData = [
     rules: []
   },
   {
-    image: "/assets/images/crazy-cruise.png",
+    image: "/assets/images/wave-pool.png",
     title: "Wave Pool Beach Area",
     content:
       "A beachside adventure made for the whole family! Feel the waves, relax by the beach and enjoy a tropical escape filled with fun and relaxation.",
@@ -111,8 +111,8 @@ export default function WaterRidesClient() {
     {WaterRidesData && WaterRidesData.map((item,index)=>(
       <div className={style.card} key={index}>
          <div className={style.image} >
-         <Image src={item.image} width={420} height={547} alt={item.title}/>
-         <Image src="/assets/images/water-vector.svg" className={style.water} width={420} height={547} alt={item.title}/>
+         <Image src={item.image} width={570} height={464} alt={item.title}/>
+         <Image src="/assets/images/water-vector.svg" className={style.water} width={570} height={294} alt={item.title}/>
         </div>
         <div className={style.content}>
 <h2>{item.title}</h2>
