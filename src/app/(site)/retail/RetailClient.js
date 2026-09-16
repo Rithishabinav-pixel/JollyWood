@@ -51,7 +51,7 @@ export default function RetailClient() {
 
    <div className={`top_heading center_align ${style.top_heading}`}>
       <div className={`left ${style.left}`}>
-        <p className='white'>Step right up and explore a world of wonder and whimsy as you browse through our delightful collection of themed gifts and souvenirs. Located within the heart of the park, the Circus Shop is the perfect place to find that special memento or unique treasure to commemorate your visit. Immerse yourself in the enchantment of the circus as you enter our vibrant and colorful store. From the moment you walk through the doors, you'll be captivated by the lively atmosphere and the dazzling array of merchandise that awaits you. </p>
+        <p className='white'>Step right up and explore a world of wonder and whimsy as you browse through our delightful collection of themed gifts and souvenirs. Located within the heart of the park, the Circus Shop is the perfect place to find that special memento or unique treasure to commemorate your visit. Immerse yourself in the enchantment of the circus as you enter our vibrant and colorful store. From the moment you walk through the doors, you&apos;ll be captivated by the lively atmosphere and the dazzling array of merchandise that awaits you. </p>
       </div>
 
     </div>

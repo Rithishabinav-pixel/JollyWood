@@ -33,7 +33,7 @@ export default function StoryClient() {
    <div className={`top_heading center_align ${style.top_heading}`}>
       <div className={`left ${style.left}`}>
         <h2 className='common_heading white'>Welcome to VELS Jollywood Studios & Adventures</h2>
-        <p className='white'>The ultimate movie-themed family destination that promises a world of magical experiences for visitors of all ages. From grandparents to grandchild, we offer immersive experiences, culinary delights, shopping, and entertainment, all in one place. Whether you're looking to spend quality time with family, host a corporate outing or team-building activity, or simply indulge in some fun-filled entertainment, VELS Jollywood has something for everyone.</p>
+        <p className='white'>The ultimate movie-themed family destination that promises a world of magical experiences for visitors of all ages. From grandparents to grandchild, we offer immersive experiences, culinary delights, shopping, and entertainment, all in one place. Whether you&apos;re looking to spend quality time with family, host a corporate outing or team-building activity, or simply indulge in some fun-filled entertainment, VELS Jollywood has something for everyone.</p>
       </div>
 
     </div>

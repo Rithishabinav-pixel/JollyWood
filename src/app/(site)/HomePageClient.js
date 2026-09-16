@@ -7,7 +7,7 @@ import Button from './components/ui/Button'
 import Image from 'next/image'
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Navigation, Pagination, Autoplay, A11y } from "swiper/modules";
 import Link from 'next/link'
 
 import { useRouter } from "next/navigation";
@@ -709,7 +709,7 @@ useEffect(() => {
 
     <section className={lcpStyle.heroSection}>
 
-       <video width="1920" height="1080" autoPlay loop muted preload="none">
+       <video width="1920" height="1080" autoPlay loop muted preload="none" poster='/assets/images/banner-poster.webp'>
       <source src="/assets/videos/home_hero.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
@@ -717,8 +717,8 @@ useEffect(() => {
 
 
 
-<a href='https://booknow.jollywood.co.in/package/main' target='_blank'>
-<Image className={lcpStyle.floating_tickets} priority src="/assets/images/floating_tickets.svg" width={75} height={790} alt=''/>
+<a href='https://booknow.jollywood.co.in/package/main' target='_blank' aria-label="Book Tickets">
+<Image className={lcpStyle.floating_tickets} priority src="/assets/images/floating_tickets.webp" width={75} height={790} alt=''/>
 </a>
 
 
@@ -766,7 +766,7 @@ useEffect(() => {
 
     <div className={style.slider} data-aos="fade-up">
        <Swiper
-        modules={[Navigation, Pagination, Autoplay]}
+        modules={[Navigation, Pagination, Autoplay, A11y]}
         spaceBetween={20}
         slidesPerView={4}
         pagination={{ clickable: true }}
@@ -840,7 +840,7 @@ useEffect(() => {
   <div className={`container section_container full_container ${style.container}`} data-aos="fade-up">
        <div className={style.slider}>
       <Swiper
-  modules={[Navigation, Pagination, Autoplay]}
+  modules={[Navigation, Pagination, Autoplay, A11y]}
   spaceBetween={20}
   slidesPerView={4}
   pagination={{ clickable: true }}
@@ -913,7 +913,7 @@ useEffect(() => {
     <div className={`container full_container strict_full  ${style.container}`}>
        <div className={style.slider}>
       <Swiper
-  modules={[Navigation, Pagination, Autoplay]}
+  modules={[Navigation, Pagination, Autoplay, A11y]}
   spaceBetween={20}
   slidesPerView={4}
   navigation={{
@@ -974,8 +974,8 @@ useEffect(() => {
   <Image  onClick={()=>{ if (activeOffer !== null) { router.push(offers[activeOffer].link);}}} className={style.sliderMock} src="/assets/images/slider-mockup.svg" width={430} height={687} alt=''/>
 
   <div className='center_nav slider_arrow'>
-  <button className='offer_prev'> <Image src="/assets/images/slider-arrow-left.svg" width={60} height={60} alt='' /> </button>
-  <button className='offer_next'><Image src="/assets/images/slider-arrow-right.svg" width={60} height={60} alt='' /></button>
+  <button className='offer_prev' aria-label="prev"> <Image src="/assets/images/slider-arrow-left.svg" width={60} height={60} alt='' /> </button>
+  <button className='offer_next' aria-label="next"><Image src="/assets/images/slider-arrow-right.svg" width={60} height={60} alt='' /></button>
 </div>
 
 </section>
@@ -1365,7 +1365,7 @@ useEffect(() => {
 <div className={style.stay_slider}>
 
    <Swiper
-  modules={[Navigation, Pagination, Autoplay]}
+  modules={[Navigation, Pagination, Autoplay, A11y]}
   spaceBetween={20}
   slidesPerView={4}
   pagination={{ clickable: true }}

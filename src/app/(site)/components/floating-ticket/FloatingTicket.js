@@ -45,6 +45,7 @@ export default function FloatingTicket() {
         <a
           href="https://booknow.jollywood.co.in/package/main"
           target="_blank"
+          aria-label="Book Tickets"
           className={`${style.floating_ticket} ${
             active ? style.active : ""
           }`}

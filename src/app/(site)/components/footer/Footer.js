@@ -62,7 +62,7 @@ export default function Footer() {
     <h3>Information for Guests</h3>
     <ul>
         <li> <Link href="/faq">FAQs</Link>  </li>
-        <li> <Link href="/visitors-guide">Visitor's Guide</Link>  </li>
+        <li> <Link href="/visitors-guide">Visitor&apos;s Guide</Link>  </li>
         <li> <Link href="/guest-safety">Guest Safety</Link>  </li>
         <li> <Link href="/rules-regulations">Rules and Regulations</Link>  </li>
         <li> <Link href="/terms-of-use">Terms of Use</Link>  </li>

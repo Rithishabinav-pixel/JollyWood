@@ -88,7 +88,7 @@ window.addEventListener("scroll", handleScroll);
   <ul className={style.menus}>
   {ExperienceMenu.slice(0,3).map((menu,index)=>(
     <React.Fragment key={index}>
-      <li> <Link href={`/${menu.slug}`}>{menu.label}</Link> </li>
+      {menu.label && <li> <Link href={`/${menu.slug}`}>{menu.label}</Link> </li>}
     </React.Fragment>
   ))}
   </ul>
@@ -97,7 +97,7 @@ window.addEventListener("scroll", handleScroll);
 
 <div className={style.logo}>
 <Link className={style.logoLink} href="/">
-<Image src="/assets/images/logo.svg" width={151} height={99} alt='Jollywood Logo'/>
+<Image src="/assets/images/logo.svg" priority width={151} height={99} alt='Jollywood Logo'/>
 </Link>
 </div>
 

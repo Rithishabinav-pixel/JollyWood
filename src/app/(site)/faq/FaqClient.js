@@ -63,7 +63,7 @@ const [activeFaq,setActiveFaq] = useState(null);
 
 <section className={`hero_section ${style.hero_section}`}>
     <div className={`container`}>
-        <h1 className={`title common_heading white`}>FAQ's</h1>
+        <h1 className={`title common_heading white`}>FAQ&apos;s</h1>
     </div>
 </section>
 

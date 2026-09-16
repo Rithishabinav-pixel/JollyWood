@@ -111,7 +111,7 @@ export default function PrivacyClient() {
 
    <div className={`top_heading center_align ${style.top_heading}`}>
       <div className={`left ${style.left}`}>
-        <p className='white'>This Privacy Policy explains how Jollywood Studios & Adventure ("we," "us," or "our") collects, uses, and discloses your personal information when you visit our website, use our services, or interact with us.</p>
+        <p className='white'>This Privacy Policy explains how Jollywood Studios & Adventure (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) collects, uses, and discloses your personal information when you visit our website, use our services, or interact with us.</p>
       </div>
     </div>
 
