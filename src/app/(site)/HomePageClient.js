@@ -771,7 +771,7 @@ useEffect(() => {
         slidesPerView={4}
         pagination={{ clickable: true }}
         autoplay={{ delay: 3000, disableOnInteraction: false }}
-        loop={true}
+        loop={false}
         breakpoints={{
           0:{slidesPerView:1},
           767:{slidesPerView:3},
@@ -922,7 +922,7 @@ useEffect(() => {
     }}
   autoplay={{ delay: 3000, disableOnInteraction: false }}
   centeredSlides={true}
-  loop={true}
+  loop={false}
   className='center_slider'
   breakpoints={{
     0:{
@@ -1371,7 +1371,7 @@ useEffect(() => {
   pagination={{ clickable: true }}
   autoplay={{ delay: 3000, disableOnInteraction: false }}
   centeredSlides={false}
-  loop={true}
+  loop={false}
   className='purple_dots'
   breakpoints={{
     0: {

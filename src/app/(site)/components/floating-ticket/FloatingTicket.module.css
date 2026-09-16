@@ -8,7 +8,7 @@
     z-index: 999;
     transform-origin: top left;
     animation:floating_ticket 0.3s ease-in-out forwards ;
-        transform: translateY(-150%);
+    transform: translateY(-150%);
 }
 
 .floating_ticket img{
@@ -27,9 +27,6 @@
     top: 0;
 }
 
-.floating_ticket:hover{
-    transform: rotate(-5deg) scale(0.98);
-}
 
 /* resposive  */
 

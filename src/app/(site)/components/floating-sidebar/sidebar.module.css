@@ -166,6 +166,7 @@ transform: scale(0.9);
 #sidebar .socialIcons img{
     width: 48px;
     height: auto;
+    float: left;
 }
 
 /* responsive  */
