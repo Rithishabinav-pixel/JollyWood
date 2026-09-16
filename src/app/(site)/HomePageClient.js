@@ -709,7 +709,7 @@ useEffect(() => {
 
     <section className={lcpStyle.heroSection}>
 
-       <video width="1920" height="1080" autoPlay loop muted preload="none" poster='/assets/images/banner-poster.webp'>
+       <video width="1920" height="1080" autoPlay loop muted playsInline preload="metadata" poster='/assets/images/banner-poster.webp'>
       <source src="/assets/videos/home_hero.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
@@ -796,7 +796,7 @@ useEffect(() => {
                 <h3 className={`${style.title} white`}>
                   {slide.title}
                 </h3>
-                <Button href={slide.link} text="" className="link large"></Button>
+                <Button href={slide.link} text="" ariaLabel={slide.title} className="link large"></Button>
               </div>
             </div>
           </SwiperSlide>
@@ -1461,7 +1461,7 @@ useEffect(() => {
               </div>
               <div className={style.content}>
                 <h3 className={`${style.title} white`}>{slide.title}</h3>
-                <Button href={slide.link} text="" className="link white large"></Button>
+                <Button href={slide.link} ariaLabel={slide.title} text="" className="link white large"></Button>
               </div>
             </div>
 
@@ -1501,7 +1501,7 @@ useEffect(() => {
               </div>
               <div className={style.content}>
                 <h3 className={`${style.title}`}>{slide.title}</h3>
-                <Button href={slide.link} text="" className="link white large"></Button>
+                <Button href={slide.link} ariaLabel={slide.title} text="" className="link white large"></Button>
               </div>
             </div>
 
@@ -1555,7 +1555,7 @@ useEffect(() => {
               </div>
               <div className={style.content}>
                 <h3 className={`${style.title} white`}>{slide.title}</h3>
-                <Button href={slide.link} text="" className="link white  large"></Button>
+                <Button href={slide.link} ariaLabel={slide.title} text="" className="link white  large"></Button>
               </div>
             </div>
 
