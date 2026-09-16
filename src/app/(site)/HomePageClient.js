@@ -717,8 +717,8 @@ useEffect(() => {
 
 
 
-<a href='https://booknow.jollywood.co.in/package/main' target='_blank' aria-label="Book Tickets">
-<Image className={lcpStyle.floating_tickets} priority src="/assets/images/floating_tickets.webp" width={75} height={790} alt=''/>
+<a href='https://booknow.jollywood.co.in/package/main' target='_blank' aria-label="Book Tickets" className={lcpStyle.floating_tickets}>
+<Image  priority src="/assets/images/floating_tickets.webp" width={75} height={790} alt=''/>
 </a>
 
 
