@@ -26,19 +26,19 @@ const HighAdrenalineData = [
     image:"/assets/images/graphic-shots.png",
     video:"/assets/videos/ride-reel-video.mp4",
     title:"Graphica shots",
-    link:"#"
+    link:"/memories#graphica"
   },
    {
     image:"/assets/images/mini-city.png",
     video:"/assets/videos/ride-reel-video.mp4",
     title:"Miniature city",
-    link:"#"
+    link:"/memories#mini-city"
   },
    {
     image:"/assets/images/hut-beach.png",
     video:"/assets/videos/ride-reel-video.mp4",
     title:"Hut in beach",
-    link:"#"
+    link:"/memories#hut"
   },
 ]
 

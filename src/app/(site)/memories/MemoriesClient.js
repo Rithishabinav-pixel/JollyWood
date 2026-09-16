@@ -4,7 +4,6 @@ import React, { useEffect, useState } from 'react'
 import style from './Memories.module.css'
 import '../innerpage.css'
 import Image from 'next/image'
-import Button from '../components/ui/Button'
 
 
 // playtopia data
@@ -32,23 +31,39 @@ const PlaytopiaData = [
 export default function MemoriesClient() {
 
   
-   const [mobile,setMobile] = useState(false);
-        
-        
-          useEffect(()=>{
-        
-            const checkDevice = () => { setMobile(window.innerWidth <= 1200); };
-        
-        
-            checkDevice();
-        
-           window.addEventListener("resize", checkDevice);
-        
-            return () => {
-              window.removeEventListener("resize", checkDevice);
-              };
-        
-          },[])
+   const [mobile, setMobile] = useState(false);
+
+useEffect(() => {
+  const hashId = window.location.hash;
+
+
+  if (hashId) {
+    const idSection = document.querySelector(hashId);
+    console.log(hashId)
+
+    if (idSection) {
+      idSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }
+
+  const checkDevice = () => {
+    setMobile(window.innerWidth <= 1200);
+  };
+
+  checkDevice();
+
+  window.addEventListener("resize", checkDevice);
+
+  return () => {
+    window.removeEventListener("resize", checkDevice);
+  };
+}, []);
+
+
+                
 
 
   return (
@@ -63,7 +78,7 @@ export default function MemoriesClient() {
 </section>
 
 {/* gardern section  */}
-<section className={` ${style.gardern_section} no_padding_top common_section`}>
+<section className={` ${style.gardern_section} no_padding_top common_section`} id='mini-city'>
     <div className={`container ${style.container}`}>
    <div className={style.content}>
         <h2 className='common_heading white'>Miniature Garden City </h2>
@@ -146,7 +161,7 @@ export default function MemoriesClient() {
 
 
 {/* Graphica section  */}
-<section className={`common_section ${style.graphica_section}`}>
+<section className={`common_section ${style.graphica_section}`} id='graphica'>
   <Image className={style.dinozaur} src="/assets/images/dinozaur.png" width={345} height={555} alt=''/>
   <div className={`container section_container ${style.container}`}>
 
@@ -171,7 +186,7 @@ export default function MemoriesClient() {
 
 
 {/* hut section  */}
-<section className={`common_section ${style.hut_section}`}>
+<section className={`common_section ${style.hut_section}`} id='hut'>
 
 <div className={`container section_container ${style.container}`}>
 

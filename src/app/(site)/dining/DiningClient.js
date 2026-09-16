@@ -4,7 +4,6 @@ import React, { useEffect, useState } from 'react'
 import style from './Dining.module.css'
 import '../innerpage.css'
 import Image from 'next/image'
-import { usePathname } from 'next/navigation'
 
 
 
@@ -50,7 +49,6 @@ export default function DiningClient() {
 
         const [mobile,setMobile] = useState(false);
 
-        const pathname = usePathname();
 
         useEffect(()=>{
   const hashId = window.location.hash; 

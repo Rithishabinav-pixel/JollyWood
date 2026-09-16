@@ -20,6 +20,10 @@ const PUBLIC_ROUTES = [
   "/rules-regulations",
   "/park-map",
   "/experience/live-shows",
+  "/faq",
+  "/privacy-policy",
+  "/retail",
+  "/terms-of-use",
 ];
 
 export default function sitemap() {

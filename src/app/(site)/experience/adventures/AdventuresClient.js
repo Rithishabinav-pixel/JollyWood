@@ -24,6 +24,7 @@ const AdventuresData = [
       }
     ]
   },
+
   {
     image: "/assets/images/zipline.png",
     title: "Zipline",
@@ -40,6 +41,7 @@ const AdventuresData = [
       }
     ]
   },
+
   {
     image: "/assets/images/rock-climbing.png",
     title: "Rock Climbing",
@@ -56,6 +58,7 @@ const AdventuresData = [
       }
     ]
   },
+
   {
     image: "/assets/images/obstacle-course.png",
     title: "Obstacle Course",
@@ -72,6 +75,7 @@ const AdventuresData = [
       }
     ]
   },
+
   {
     image: "/assets/images/rock-climbing.png",
     title: "Archery Tag",
@@ -88,21 +92,238 @@ const AdventuresData = [
       }
     ]
   },
+
   {
     image: "/assets/images/obstacle-course.png",
     title: "Maze Runner",
     content:
       "Find your way. Beat the maze. Enter a world of twists, turns and challenges where every step tests your problem-solving skills. Navigate through the maze and race towards the ultimate escape.",
     rules: []
+  },
+
+  {
+    image: "/assets/images/zipline.png",
+    title: "Speed - Go Kart",
+    content:
+      "Satisfy your need for speed and race against your friends and family at our specially designed track with sharp turns and challenging terrain, making for an exciting and competitive race experience.",
+    rules: [
+      {
+        label: "Height",
+        value: "140 cm & above"
+      },
+      {
+        label: "ageAllowed",
+        value: "12 years & above"
+      }
+    ]
+  },
+
+  {
+    image: "/assets/images/zipline.png",
+    title: "Rocket Ejection",
+    content: "",
+    rules: [
+      {
+        label: "Height",
+        value: "4ft - 7ft"
+      },
+      {
+        label: "Weight",
+        value: "45kg - 90kg"
+      }
+    ]
+  },
+
+  {
+    image: "/assets/images/zipline.png",
+    title: "Human Gyro",
+    content: "",
+    rules: [
+      {
+        label: "Height",
+        value: "3ft - 5.5ft"
+      },
+      {
+        label: "Weight",
+        value: "40kg - 80kg"
+      }
+    ]
+  },
+
+  {
+    image: "/assets/images/zipline.png",
+    title: "Melt Down",
+    content: "",
+    rules: [
+      {
+        label: "Height",
+        value: "3ft - 6ft"
+      },
+      {
+        label: "Weight",
+        value: "15kg - 70kg"
+      }
+    ]
+  },
+
+  {
+    image: "/assets/images/zipline.png",
+    title: "Sky Cycle",
+    content: "",
+    rules: [
+      {
+        label: "Height",
+        value: "4ft & Above"
+      },
+      {
+        label: "Weight",
+        value: "85kg"
+      }
+    ]
+  },
+
+  {
+    image: "/assets/images/zipline.png",
+    title: "Single Zip Bike",
+    content: "",
+    rules: [
+      {
+        label: "Height",
+        value: "4.8ft - 6ft"
+      },
+      {
+        label: "Weight",
+        value: "30kg - 90kg"
+      }
+    ]
+  },
+
+  {
+    image: "/assets/images/zipline.png",
+    title: "Tyre Climbing",
+    content: "",
+    rules: [
+      {
+        label: "Height",
+        value: "4ft - 7ft"
+      },
+      {
+        label: "Weight",
+        value: "20kg - 90kg"
+      }
+    ]
+  },
+
+  {
+    image: "/assets/images/zipline.png",
+    title: "Bull Ride",
+    content: "",
+    rules: [
+      {
+        label: "Height",
+        value: "3ft - 6ft"
+      },
+      {
+        label: "Weight",
+        value: "15kg - 80kg"
+      }
+    ]
+  },
+
+  {
+    image: "/assets/images/zipline.png",
+    title: "Bungee Trampoline",
+    content: "",
+    rules: [
+      {
+        label: "Height",
+        value: "3ft - 5ft"
+      },
+      {
+        label: "Weight",
+        value: "15kg - 50kg"
+      }
+    ]
+  },
+
+  {
+    image: "/assets/images/zipline.png",
+    title: "Double Zip Bike",
+    content: "",
+    rules: [
+      {
+        label: "Weight",
+        value: "35kg - 160kg"
+      }
+    ]
+  },
+
+  {
+    image: "/assets/images/zipline.png",
+    title: "Trampoline Park",
+    content: "",
+    rules: [
+      {
+        label: "Height",
+        value: "3ft - 7ft"
+      },
+      {
+        label: "Weight",
+        value: "10kg - 75kg"
+      }
+    ]
+  },
+
+  {
+    image: "/assets/images/zipline.png",
+    title: "Trampoline",
+    content: "",
+    rules: [
+      {
+        label: "Weight",
+        value: "15kg - 40kg"
+      },
+      {
+        label: "ageAllowed",
+        value: "3 - 8"
+      }
+    ]
+  },
+
+  {
+    image: "/assets/images/zipline.png",
+    title: "Archery",
+    content: "",
+    rules: [
+      {
+        label: "ageAllowed",
+        value: "15 & Above"
+      }
+    ]
+  },
+
+  {
+    image: "/assets/images/zipline.png",
+    title: "Gun Shoot",
+    content: "",
+    rules: [
+      {
+        label: "ageAllowed",
+        value: "15 & Above"
+      }
+    ]
   }
 ];
+
+
+
 
 
 
 const ruleIcons = {
   ageAllowed: "/assets/images/age-allowed.svg",
   Height: "/assets/images/height.svg",
-  weight: "/assets/images/weight.svg",
+  Weight: "/assets/images/weight.svg",
 };
 
 
