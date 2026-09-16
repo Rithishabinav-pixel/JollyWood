@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import lcpStyle from "./lcp.module.css"
 import style from './page.module.css'
 import Button from './components/ui/Button'
@@ -701,6 +701,33 @@ useEffect(() => {
   };
 }, []);
 
+const foodSoukVideoRef = useRef(null);
+const [foodSoukInView, setFoodSoukInView] = useState(false);
+
+useEffect(() => {
+  const el = foodSoukVideoRef.current;
+  if (!el || foodSoukInView) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      if (entries[0].isIntersecting) {
+        setFoodSoukInView(true);
+      }
+    },
+    { rootMargin: "200px" }
+  );
+
+  observer.observe(el);
+
+  return () => observer.disconnect();
+}, [foodSoukInView]);
+
+useEffect(() => {
+  if (foodSoukInView && foodSoukVideoRef.current) {
+    foodSoukVideoRef.current.load();
+  }
+}, [foodSoukInView]);
+
 
   return (
     <>
@@ -1027,8 +1054,8 @@ useEffect(() => {
  <Button href="/dining" text="Explore More" className="link white"></Button>
        </div>
 
-         <video width="1920" height="1080" autoPlay loop muted preload="none">
-      <source src={FoodSoukTabData[foodSouk].video} type="video/mp4" />
+         <video ref={foodSoukVideoRef} width="1920" height="1080" autoPlay loop muted preload="none">
+      {foodSoukInView && <source src={FoodSoukTabData[foodSouk].video} type="video/mp4" />}
       Your browser does not support the video tag.
     </video>
 

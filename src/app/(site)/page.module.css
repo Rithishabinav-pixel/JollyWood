@@ -191,6 +191,10 @@ opacity: 1;
   gap: 40px;
 }
 
+.facilities_section .top_heading{
+  max-width: 850px;
+}
+
 .experience_section .exp_tabs .tab_btn{
   padding: 12px 16px;
   border: solid white 1px;

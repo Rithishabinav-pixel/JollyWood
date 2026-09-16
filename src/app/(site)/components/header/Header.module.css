@@ -106,6 +106,7 @@ animation: show_header 1s forwards;
     aspect-ratio: 151 / 99;
     height: auto;
     transition: 0.3s all;
+    float: left;
 }
 
 #header.active .logoLink img{
