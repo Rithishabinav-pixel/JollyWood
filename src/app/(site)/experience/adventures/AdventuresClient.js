@@ -16,7 +16,7 @@ const AdventuresData = [
     rules: [
       {
         label: "ageAllowed",
-        value: "12+"
+        value: "12+ Years"
       },
       {
         label: "Height",
@@ -33,7 +33,7 @@ const AdventuresData = [
     rules: [
       {
         label: "ageAllowed",
-        value: "12+"
+        value: "12+ years"
       },
       {
         label: "Height",
@@ -50,7 +50,7 @@ const AdventuresData = [
     rules: [
       {
         label: "ageAllowed",
-        value: "12+"
+        value: "12+ years"
       },
       {
         label: "Height",
@@ -67,7 +67,7 @@ const AdventuresData = [
     rules: [
       {
         label: "ageAllowed",
-        value: "12+"
+        value: "12+ years"
       },
       {
         label: "Height",
@@ -84,7 +84,7 @@ const AdventuresData = [
     rules: [
       {
         label: "ageAllowed",
-        value: "16+"
+        value: "16+ years"
       },
       {
         label: "Height",
@@ -109,207 +109,191 @@ const AdventuresData = [
     rules: [
       {
         label: "Height",
-        value: "140 cm & above"
+        value: "140+ cm"
       },
       {
         label: "ageAllowed",
-        value: "12 years & above"
+        value: "11+ years"
       }
     ]
   },
 
   {
-    image: "/assets/images/zipline.png",
-    title: "Rocket Ejection",
-    content: "",
-    rules: [
+    "image": "/assets/images/zipline.png",
+    "title": "Rocket Ejection",
+    "content": "**Ready for liftoff?** Feel the rush as you’re propelled upward in an adrenaline-filled experience that takes you from the ground to the sky in seconds. Hold on tight and enjoy the thrill of a rapid rise.",
+    "rules": [
       {
-        label: "Height",
-        value: "4ft - 7ft"
+        "label": "Height",
+        "value": "4–7 ft"
       },
       {
-        label: "Weight",
-        value: "45kg - 90kg"
+        "label": "Weight",
+        "value": "45–90 kg"
       }
     ]
   },
-
   {
-    image: "/assets/images/zipline.png",
-    title: "Human Gyro",
-    content: "",
-    rules: [
+    "image": "/assets/images/zipline.png",
+    "title": "Human Gyro",
+    "content": "**Spin. Twist. Find your balance.** Step into a spinning challenge that puts your balance and body control to the test. Keep yourself steady as the motion takes over and see how well you can handle the Human Gyro.",
+    "rules": [
       {
-        label: "Height",
-        value: "3ft - 5.5ft"
+        "label": "Height",
+        "value": "3–5.5 ft"
       },
       {
-        label: "Weight",
-        value: "40kg - 80kg"
+        "label": "Weight",
+        "value": "40–80 kg"
       }
     ]
   },
-
   {
-    image: "/assets/images/zipline.png",
-    title: "Melt Down",
-    content: "",
-    rules: [
+    "image": "/assets/images/zipline.png",
+    "title": "Melt Down",
+    "content": "**Hold on. Things are about to get wobbly!** Take on a playful balance challenge where staying upright is half the fun. Keep your footing, find your balance and see how long you can keep from having your very own Melt Down.",
+    "rules": [
       {
-        label: "Height",
-        value: "3ft - 6ft"
+        "label": "Height",
+        "value": "3–6 ft"
       },
       {
-        label: "Weight",
-        value: "15kg - 70kg"
+        "label": "Weight",
+        "value": "15–70 kg"
       }
     ]
   },
-
   {
-    image: "/assets/images/zipline.png",
-    title: "Sky Cycle",
-    content: "",
-    rules: [
+    "image": "/assets/images/zipline.png",
+    "title": "Sky Cycle",
+    "content": "**Pedal above the ground.** Take your cycling skills sky-high as you pedal your way through an elevated adventure. Balance, focus and keep moving as you enjoy a whole new perspective from above.",
+    "rules": [
       {
-        label: "Height",
-        value: "4ft & Above"
+        "label": "Height",
+        "value": "3+ ft"
       },
       {
-        label: "Weight",
-        value: "85kg"
+        "label": "Weight",
+        "value": "85 kg"
       }
     ]
   },
-
   {
-    image: "/assets/images/zipline.png",
-    title: "Single Zip Bike",
-    content: "",
-    rules: [
+    "image": "/assets/images/zipline.png",
+    "title": "Single Zip Bike",
+    "content": "**Pedal. Zip. Feel the rush.** Hop onto a bike and take your ride beyond the usual. Combine cycling with the thrill of a zip experience as you move through an elevated adventure that puts your balance to the test.",
+    "rules": [
       {
-        label: "Height",
-        value: "4.8ft - 6ft"
+        "label": "Height",
+        "value": "4.8–6 ft"
       },
       {
-        label: "Weight",
-        value: "30kg - 90kg"
+        "label": "Weight",
+        "value": "30–90 kg"
       }
     ]
   },
-
   {
-    image: "/assets/images/zipline.png",
-    title: "Tyre Climbing",
-    content: "",
-    rules: [
+    "image": "/assets/images/zipline.png",
+    "title": "Tyre Climbing",
+    "content": "**Climb on. Challenge yourself.** Put your strength and balance to work as you take on a climbing challenge using tyres. Find your footing, keep your grip and make your way higher with every move.",
+    "rules": [
       {
-        label: "Height",
-        value: "4ft - 7ft"
+        "label": "Weight",
+        "value": "20–90 kg"
+      }
+    ]
+  },
+  {
+    "image": "/assets/images/zipline.png",
+    "title": "Bull Ride",
+    "content": "**Think you can stay on?** Take your seat and test your balance as the bull puts your riding skills to the test. Hold on through every movement and see how long you can stay in control.",
+    "rules": [
+      {
+        "label": "Height",
+        "value": "3–6 ft"
       },
       {
-        label: "Weight",
-        value: "20kg - 90kg"
+        "label": "Weight",
+        "value": "15–80 kg"
       }
     ]
   },
-
   {
-    image: "/assets/images/zipline.png",
-    title: "Bull Ride",
-    content: "",
-    rules: [
+    "image": "/assets/images/zipline.png",
+    "title": "Bungee Trampoline",
+    "content": "**Bounce higher. Dream bigger.** Take your trampoline experience up a notch with the help of bungee support. Jump, bounce and enjoy the freedom to go higher while turning every leap into a little adventure.",
+    "rules": [
       {
-        label: "Height",
-        value: "3ft - 6ft"
+        "label": "Height",
+        "value": "3–5 ft"
       },
       {
-        label: "Weight",
-        value: "15kg - 80kg"
+        "label": "Weight",
+        "value": "15–50 kg"
       }
     ]
   },
-
   {
-    image: "/assets/images/zipline.png",
-    title: "Bungee Trampoline",
-    content: "",
-    rules: [
+    "image": "/assets/images/zipline.png",
+    "title": "Double Zip Bike",
+    "content": "**Two riders. Twice the fun.** Grab a partner and take on an elevated cycling experience together. Pedal, balance, and enjoy the thrill side by side as you make your way through the adventure.",
+    "rules": [
       {
-        label: "Height",
-        value: "3ft - 5ft"
+        "label": "Weight",
+        "value": "35–160 kg"
+      }
+    ]
+  },
+  {
+    "image": "/assets/images/zipline.png",
+    "title": "Trampoline Park",
+    "content": "**Bounce. Jump. Show off your moves.** A whole space dedicated to jumping, bouncing and having fun. Move from one bounce to the next, challenge your friends and let loose in a park built for energetic fun.",
+    "rules": [
+      {
+        "label": "Height",
+        "value": "3–7 ft"
       },
       {
-        label: "Weight",
-        value: "15kg - 50kg"
+        "label": "Weight",
+        "value": "10–75 kg"
       }
     ]
   },
-
   {
-    image: "/assets/images/zipline.png",
-    title: "Double Zip Bike",
-    content: "",
-    rules: [
+    "image": "/assets/images/zipline.png",
+    "title": "Trampoline",
+    "content": "**Let little feet take flight.** Give the little ones a space to jump, bounce and burn off some energy. Designed for younger adventurers, it’s a simple, playful experience filled with movement and big smiles.",
+    "rules": [
       {
-        label: "Weight",
-        value: "35kg - 160kg"
-      }
-    ]
-  },
-
-  {
-    image: "/assets/images/zipline.png",
-    title: "Trampoline Park",
-    content: "",
-    rules: [
-      {
-        label: "Height",
-        value: "3ft - 7ft"
+        "label": "ageAllowed",
+        "value": "3–8 years"
       },
       {
-        label: "Weight",
-        value: "10kg - 75kg"
+        "label": "Weight",
+        "value": "15–40 kg"
       }
     ]
   },
-
   {
-    image: "/assets/images/zipline.png",
-    title: "Trampoline",
-    content: "",
-    rules: [
+    "image": "/assets/images/zipline.png",
+    "title": "Archery",
+    "content": "**Aim. Focus. Hit the bullseye.** Pick up your bow, take aim and put your accuracy to the test. Stay focused, steady your shot and see how close you can get to the centre.",
+    "rules": [
       {
-        label: "Weight",
-        value: "15kg - 40kg"
-      },
-      {
-        label: "ageAllowed",
-        value: "3 - 8"
+        "label": "ageAllowed",
+        "value": "15+ years"
       }
     ]
   },
-
   {
-    image: "/assets/images/zipline.png",
-    title: "Archery",
-    content: "",
-    rules: [
+    "image": "/assets/images/zipline.png",
+    "title": "Gun Shoot",
+    "content": "**Ready. Aim. Hit the mark.** Step up, steady your aim and put your accuracy to the test. Focus on your target and see how precisely you can hit the mark.",
+    "rules": [
       {
-        label: "ageAllowed",
-        value: "15 & Above"
-      }
-    ]
-  },
-
-  {
-    image: "/assets/images/zipline.png",
-    title: "Gun Shoot",
-    content: "",
-    rules: [
-      {
-        label: "ageAllowed",
-        value: "15 & Above"
+        "label": "ageAllowed",
+        "value": "15+ years"
       }
     ]
   }

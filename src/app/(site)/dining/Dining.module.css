@@ -37,6 +37,7 @@
 .food_section .tabs button{
     border: none;
     background: none;
+    width: fit-content;
 }
 
 .food_section .tabs button:hover{

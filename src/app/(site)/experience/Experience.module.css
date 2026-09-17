@@ -143,7 +143,7 @@
  .experience_section .exp_cards .card{
     width: 100%;
     border-radius: 16px;
-    padding: 20px;
+    padding: 20px 20px 0 20px;
  }
 
      .experience_section .exp_cards .card:nth-child(4){

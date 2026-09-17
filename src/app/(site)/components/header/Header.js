@@ -7,8 +7,8 @@ import { usePathname } from 'next/navigation'
 
 const ExperienceMenu = [
   {
-    label:"",
-    slug:""
+    label:" ",
+    slug:" "
   },
   {
     label:"Attractions",
