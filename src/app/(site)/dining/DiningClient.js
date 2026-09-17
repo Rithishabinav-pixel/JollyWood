@@ -100,7 +100,7 @@ if(hashId){
     <div className={`top_heading left_align ${style.top_heading}`}>
 
       <div className={`left ${style.left}`}>
-        <h2 className='common_heading white'>The Food Souk</h2>
+        <h2 className='common_heading white'>Food Souk</h2>
         <h3 className='white'>Where every craving finds its flavour. A culinary journey filled with variety, taste and memorable moments.</h3>
         <p className='white'>From local favourites to global flavours, Food Souk brings together diverse dining experiences in one lively space. With five restaurants serving delicious creations, it’s the perfect stop to relax, recharge and enjoy great food with your loved ones.</p>
       </div>

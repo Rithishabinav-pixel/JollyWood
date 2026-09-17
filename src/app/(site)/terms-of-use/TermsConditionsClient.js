@@ -155,7 +155,7 @@ export default function TermsConditions() {
     
 {/* hero section  */}
 
-<section className={`hero_section ${style.hero_section}`}>
+<section className={`hero_section ${style.hero_section}`} style={{ backgroundImage: `url("/assets/images/terms-banner.png")` }}>
     <div className={`container`}>
         <h1 className={`title common_heading white`}>Terms of Use</h1>
     </div>

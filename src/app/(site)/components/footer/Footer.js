@@ -40,8 +40,8 @@ export default function Footer() {
         <li> <Link href="/retail">Retail </Link>  </li>
         <li> <Link href="/blog">Blog </Link>  </li>
         <li> <Link href="/careers">Careers </Link>  </li>
-        <li> <Link href="/contact-us">Reached Us </Link>  </li>
         <li> <Link href="/corporate-events">Corporate Events </Link>  </li>
+        <li> <Link href="/contact-us">Contact Us </Link>  </li>
     </ul>
 </div>
 

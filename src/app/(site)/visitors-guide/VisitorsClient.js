@@ -98,7 +98,7 @@ export default function VisitorsClient() {
     
 {/* hero section  */}
 
-<section className={`hero_section ${style.hero_section}`}>
+<section className={`hero_section ${style.hero_section}`} style={{ backgroundImage: `url("/assets/images/visitors-banner.png")` }}>
     <div className={`container`}>
         <h1 className={`title common_heading white`}>Visitors Guide</h1>
     </div>

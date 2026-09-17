@@ -97,7 +97,7 @@ export default function PrivacyClient() {
     
 {/* hero section  */}
 
-<section className={`hero_section ${style.hero_section}`}>
+<section className={`hero_section ${style.hero_section}`} style={{ backgroundImage: `url("/assets/images/privacy-banner.png")` }}>
     <div className={`container`}>
         <h1 className={`title common_heading white`}>Privacy Policy</h1>
     </div>

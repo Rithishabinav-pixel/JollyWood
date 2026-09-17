@@ -87,7 +87,7 @@ export default function GuestSafetyClient() {
     
 {/* hero section  */}
 
-<section className={`hero_section ${style.hero_section}`}>
+<section className={`hero_section ${style.hero_section}`} style={{ backgroundImage: `url("/assets/images/guest-banner.png")` }}>
     <div className={`container`}>
         <h1 className={`title common_heading white`}>Guest Safety</h1>
     </div>
