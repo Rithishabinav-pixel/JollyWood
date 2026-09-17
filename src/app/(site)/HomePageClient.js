@@ -104,35 +104,35 @@ const ExperienceWorldsData = [
         title: "Bumper Car",
         description: "Crash. Laugh. Repeat. Get behind the wheel and enjoy a fun-filled ride where friendly collisions create unforgettable moments. Challenge your friends, take control and enjoy a classic bumper car experience made for endless laughter. Age Allowed: 12+ Height: 106+ cm Weight: 20+ kg",
         link: "/experience/dry-rides",
-        image: "/assets/images/movie-wall.png",
+        image: "/assets/images/bumper_car.png",
         video: "/assets/videos/ride-reel-video.mp4"
       },
       {
         title: "Carousel",
         description: "A classic ride full of charm. Take a nostalgic spin on our beautifully crafted carousel. With colourful designs and gentle movement, it is the perfect ride for families looking for a joyful experience together. Age Allowed: 12+ Height: 137–195 cm",
         link: "/experience/dry-rides",
-        image: "/assets/images/glow-garden.png",
+        image: "/assets/images/carousel.png",
         video: "/assets/videos/ride-reel-video.mp4"
       },
       {
         title: "Jolly Tornado",
         description: "The gravity tester begins. Hold on tight as the Jolly Tornado takes you through a thrilling experience that tests your balance, courage and excitement. How long can you float through the twist? (Age / Height / Weight: Information Required)",
         link: "/experience/dry-rides",
-        image: "/assets/images/lost-world.png",
+        image: "/assets/images/placeholder.png",
         video: "/assets/videos/ride-reel-video.mp4"
       },
       {
         title: "Midi Dance Party",
         description: "Spin. Dance. Feel the beat. Lights, music and movement come together in this energetic ride. Get ready for a spinning experience filled with rhythm, excitement and nonstop fun with your friends. Age Allowed: 12+ Height: 137–195 cm",
         link: "/experience/dry-rides",
-        image: "/assets/images/movie-wall.png",
+        image: "/assets/images/placeholder.png",
         video: "/assets/videos/ride-reel-video.mp4"
       },
       {
         title: "Mini Tagada",
         description: "Hold on. The fun is spinning. Get ready for a high-energy ride that twists, bounces and keeps the excitement going. With music and motion combined, Mini Tagada is a thrilling experience you won't forget. Age Allowed: 12+ Height: 143+ cm",
         link: "/experience/dry-rides",
-        image: "/assets/images/movie-wall.png",
+        image: "/assets/images/placeholder.png",
         video: "/assets/videos/ride-reel-video.mp4"
       },
       {
@@ -154,42 +154,42 @@ const ExperienceWorldsData = [
         title: "Crazy Cruise",
         description: "Twist, turn, laugh and scream! The crazier the ride, the bigger the thrill! Take on exciting twists, thrilling turns and endless splashes in a ride designed for adventure seekers.",
         link: "/experience/water-rides",
-        image: "/assets/images/movie-wall.png",
+        image: "/assets/images/crazy-cruise.png",
         video: "/assets/videos/ride-reel-video.mp4"
       },
       {
         title: "Family Pool",
         description: "Every splash brings the family closer. Dive into a day of fun and laughter! Enjoy a safe and refreshing space where families can relax, play and create unforgettable moments together.",
         link: "/experience/water-rides",
-        image: "/assets/images/glow-garden.png",
+        image: "/assets/images/family-pool.png",
         video: "/assets/videos/ride-reel-video.mp4"
       },
       {
         title: "Family Slide",
         description: "Slide together, laugh together! A thrilling splash of fun for the whole family. Share the excitement of a fun-filled slide experience made for families to enjoy every splash.",
         link: "/experience/water-rides",
-        image: "/assets/images/lost-world.png",
+        image: "/assets/images/family-slide.png",
         video: "/assets/videos/ride-reel-video.mp4"
       },
       {
         title: "Hide N Seek",
         description: "Hide, seek, splash and repeat! A water-filled adventure for little explorers. A playful water zone where kids can splash around, explore and enjoy endless moments of fun.",
         link: "/experience/water-rides",
-        image: "/assets/images/movie-wall.png",
+        image: "/assets/images/hide-seek.png",
         video: "/assets/videos/ride-reel-video.mp4"
       },
       {
         title: "Mini Pendulum",
         description: "Swing high, splash down and smile big! A mini ride with maximum water fun. Enjoy a fun-filled water adventure with exciting swings, splashes and plenty of smiles along the way.",
         link: "/experience/water-rides",
-        image: "/assets/images/movie-wall.png",
+        image: "/assets/images/mini-pendulum.png",
         video: "/assets/videos/ride-reel-video.mp4"
       },
       {
         title: "Rain Dance",
         description: "Music up, water on, fun unlimited! Dance, splash, and make unforgettable memories. Turn up the energy with music, refreshing showers and a celebration of endless fun with friends and family.",
         link: "/experience/water-rides",
-        image: "/assets/images/movie-wall.png",
+        image: "/assets/images/rain-dance.png",
         video: "/assets/videos/ride-reel-video.mp4"
       },
       
@@ -204,42 +204,42 @@ const ExperienceWorldsData = [
         title: "High Ropes Course",
         description: "Rise above the challenge. Take on a thrilling aerial adventure that tests your balance, strength and confidence. Navigate through exciting obstacles while pushing your limits and creating unforgettable moments. Age Allowed: 12+ Height: 140+ cm",
         link: "/experience/adventures",
-        image: "/assets/images/movie-wall.png",
+        image: "/assets/images/hrc.png",
         video: "/assets/videos/ride-reel-video.mp4"
       },
       {
         title: "Zipline",
         description: "Take the leap. Feel the rush. Soar through the air and experience the thrill of speed as you glide across the zipline. A high-energy adventure that brings excitement, courage and unforgettable views. Age Allowed: 12+ Height: 140+ cm",
         link: "/experience/adventures",
-        image: "/assets/images/glow-garden.png",
+        image: "/assets/images/zipline.png",
         video: "/assets/videos/ride-reel-video.mp4"
       },
       {
         title: "Rock Climbing",
         description: "Climb higher. Push harder. Challenge yourself on a thrilling climbing wall that tests your strength, focus and determination. Reach the top, overcome obstacles and celebrate every achievement along the way. Age Allowed: 12+ Height: 140+ cm",
         link: "/experience/adventures",
-        image: "/assets/images/lost-world.png",
+        image: "/assets/images/rock-climbing.png",
         video: "/assets/videos/ride-reel-video.mp4"
       },
       {
         title: "Obstacle Course",
         description: "Challenge accepted. Teamwork activated. Work together, overcome obstacles and test your coordination through an exciting course filled with walls, ropes, and balance challenges. This is the perfect adventure to build confidence and teamwork. Age Allowed: 12+ Height: 140+ cm",
         link: "/experience/adventures",
-        image: "/assets/images/movie-wall.png",
+        image: "/assets/images/obs-course.png",
         video: "/assets/videos/ride-reel-video.mp4"
       },
       {
         title: "Archery Tag",
         description: "Aim. Strategize. Conquer. Combine the thrill of archery with the excitement of a team battle. Test your accuracy, build strategies and compete with your team in this action-packed adventure. Age Allowed: 16+ Height: 160+ cm",
         link: "/experience/adventures",
-        image: "/assets/images/movie-wall.png",
+        image: "/assets/images/placeholder.png",
         video: "/assets/videos/ride-reel-video.mp4"
       },
       {
         title: "Maze Runner",
         description: "Find your way. Beat the maze. Enter a world of twists, turns and challenges where every step tests your problem-solving skills. Navigate through the maze and race towards the ultimate escape.",
         link: "/experience/adventures",
-        image: "/assets/images/movie-wall.png",
+        image: "/assets/images/maze-runner.png",
         video: "/assets/videos/ride-reel-video.mp4"
       }
     ]
@@ -253,21 +253,21 @@ const ExperienceWorldsData = [
         title: "Jubilee Theatre",
         description: "Where cinema comes alive on stage. Experience the magic of Indian cinema through spectacular performances, music and storytelling. With dazzling visuals and captivating acts, Jubilee Theatre brings your favourite movie moments to life in an unforgettable celebration.",
         link: "/experience/live-shows",
-        image: "/assets/images/movie-wall.png",
+        image: "/assets/images/j-theatre.png",
         video: "/assets/videos/ride-reel-video.mp4"
       },
       {
         title: "Twilight Dreams",
         description: "Where lights, water and music create magic. Watch the night transform into a breathtaking spectacle of colours, lasers and dancing fountains. Twilight Dreams combines technology and imagination to create a mesmerising show perfect for families, friends and unforgettable evenings.",
         link: "/experience/live-shows",
-        image: "/assets/images/movie-wall.png",
+        image: "/assets/images/placeholder.png",
         video: "/assets/videos/ride-reel-video.mp4"
       },
       {
         title: "Parade Show",
         description: "Where the streets come alive with rhythm. Romancia Street turns into a lively stage with European-style dance and vibrant performances. Follow the music, soak up the energy and enjoy a little taste of Europe right here at Jollywood.",
         link: "/experience/live-shows",
-        image: "/assets/images/movie-wall.png",
+        image: "/assets/images/placeholder.png",
         video: "/assets/videos/ride-reel-video.mp4"
       },
 
