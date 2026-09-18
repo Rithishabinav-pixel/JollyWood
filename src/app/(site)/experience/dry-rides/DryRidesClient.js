@@ -19,7 +19,7 @@ const RidesData = [
       { label: "Height", value: "106+ cm" },
       { label: "Weight", value: "20+ kg" }
     ],
-    image: "/assets/images/bc-img.png"
+    image: "/assets/images/bc-img-d.png"
   },
   {
     logo: "/assets/images/carousel-logo.png",
@@ -31,7 +31,7 @@ const RidesData = [
       { label: "ageAllowed", value: "12+" },
       { label: "Height", value: "137–195 cm" }
     ],
-    image: "/assets/images/carousel-img.png"
+    image: "/assets/images/carousel-img-d.png"
   },
   {
     logo: "/assets/images/sky-swinger-logo.png",
@@ -43,7 +43,7 @@ const RidesData = [
       { label: "ageAllowed", value: "12+" },
       { label: "Height", value: "137+ cm" }
     ],
-    image: "/assets/images/sky-swinger.png"
+    image: "/assets/images/sky-swinger-d.png"
   },
   {
     logo: "/assets/images/sb-logo.png",
@@ -55,9 +55,34 @@ const RidesData = [
       { label: "ageAllowed", value: "12+" },
       { label: "Height", value: "64+ cm" }
     ],
-    image: "/assets/images/sb-img.png"
+    image: "/assets/images/sb-img-d.png"
   },
   
+  
+  {
+    logo: "/assets/images/midi-logo.png",
+    logoSize: [100, 49],
+    title: "Midi Dance Party",
+    content:
+      "Spin. Dance. Feel the beat. Lights, music and movement come together in this energetic ride. Get ready for a spinning experience filled with rhythm, excitement and nonstop fun with your friends.",
+    rules: [
+      { label: "ageAllowed", value: "12+" },
+      { label: "Height", value: "137–195 cm" }
+    ],
+    image: "/assets/images/midi-d.png"
+  },
+  {
+    logo: "/assets/images/mini-tagada-logo.png",
+    logoSize: [100, 53],
+    title: "Mini Tagada",
+    content:
+      "Hold on. The fun is spinning. Get ready for a high-energy ride that twists, bounces and keeps the excitement going. With music and motion combined, Mini Tagada is a thrilling experience you won't forget.",
+    rules: [
+      { label: "ageAllowed", value: "12+" },
+      { label: "Height", value: "143+ cm" }
+    ],
+    image: "/assets/images/tagada-d.png"
+  },
   {
     logo: "",
     logoSize: [193, 85],
@@ -69,31 +94,7 @@ const RidesData = [
       { label: "Height", value: "" },
       { label: "Weight", value: "" }
     ],
-    image: "/assets/images/sb-img.png"
-  },
-  {
-    logo: "",
-    logoSize: [150, 85],
-    title: "Midi Dance Party",
-    content:
-      "Spin. Dance. Feel the beat. Lights, music and movement come together in this energetic ride. Get ready for a spinning experience filled with rhythm, excitement and nonstop fun with your friends.",
-    rules: [
-      { label: "ageAllowed", value: "12+" },
-      { label: "Height", value: "137–195 cm" }
-    ],
-    image: "/assets/images/sky-swinger.png"
-  },
-  {
-    logo: "",
-    logoSize: [193, 85],
-    title: "Mini Tagada",
-    content:
-      "Hold on. The fun is spinning. Get ready for a high-energy ride that twists, bounces and keeps the excitement going. With music and motion combined, Mini Tagada is a thrilling experience you won't forget.",
-    rules: [
-      { label: "ageAllowed", value: "12+" },
-      { label: "Height", value: "143+ cm" }
-    ],
-    image: "/assets/images/bc-img.png"
+    image: "/assets/images/placeholder-d.png"
   },
   
   {
@@ -106,7 +107,7 @@ const RidesData = [
       { label: "Height", value: "3 ft - 6 ft" },
       { label: "Weight", value: "35 kg - 90 kg" }
     ],
-    image: "/assets/images/carousel-img.png"
+    image: "/assets/images/placeholder-d.png"
   },
   {
     logo: "",
@@ -119,7 +120,7 @@ const RidesData = [
       { label: "Height", value: "" },
       { label: "Weight", value: "" }
     ],
-    image: "/assets/images/sky-swinger.png"
+    image: "/assets/images/placeholder-d.png"
   },
   {
     logo: "",
@@ -132,7 +133,7 @@ const RidesData = [
       { label: "Height", value: "" },
       { label: "Weight", value: "" }
     ],
-    image: "/assets/images/bc-img.png"
+    image: "/assets/images/placeholder-d.png"
   },
   {
     logo: "",
@@ -145,7 +146,7 @@ const RidesData = [
       { label: "Height", value: "" },
       { label: "Weight", value: "" }
     ],
-    image: "/assets/images/sb-img.png"
+    image: "/assets/images/placeholder-d.png"
   }
 ];
 

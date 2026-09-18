@@ -56,21 +56,21 @@ const ExperienceWorldsData = [
     title: "Virtual Cricket",
     description: "Step up. Swing hard. Score big. Enjoy cricket like never before.",
     link: "/experience/attractions",
-    image: "/assets/images/virtual-cricket.png",
+    image: "/assets/images/vc.png",
     video: "/assets/videos/ride-reel-video.mp4"
   },
   {
     title: "Romancia Street",
     description: "Walk into a world from another era. Experience medieval charm, music and magic.",
     link: "/experience/attractions",
-    image: "/assets/images/romania-street.png",
+    image: "/assets/images/roman.png",
     video: "/assets/videos/ride-reel-video.mp4"
   },
   {
     title: "Playtopia - Children's Play Area",
     description: "Where little explorers find big adventures. A wonderland of giggles and games.",
     link: "/experience/attractions",
-    image: "/assets/images/playtopia.png",
+    image: "/assets/images/play.png",
     video: "/assets/videos/ride-reel-video.mp4"
   },
   
@@ -78,14 +78,14 @@ const ExperienceWorldsData = [
     title: "Twilight Dreams",
     description: "Night comes alive in colours. Watch a spectacular blend of lights, water and music unfold.",
     link: "/experience/attractions",
-    image: "/assets/images/glow-garden.png",
+    image: "/assets/images/t-dreams.png",
     video: "/assets/videos/ride-reel-video.mp4"
   },
   {
     title: "Miniature City",
     description: "A tiny world made of big wonders. Wander through a magical city built in miniature.",
     link: "/experience/attractions",
-    image: "/assets/images/miniature-city-img.png",
+    image: "/assets/images/mini-city.png",
     video: "/assets/videos/ride-reel-video.mp4"
   },
   {
@@ -106,7 +106,7 @@ const ExperienceWorldsData = [
     title: "Jubilee Theatre",
     description: "A blockbuster beyond the screen. Watch Indian cinema come alive on stage.",
     link: "/experience/attractions",
-    image: "/assets/images/movie-wall.png",
+    image: "/assets/images/j-theatre-a.png",
     video: "/assets/videos/ride-reel-video.mp4"
   },
 ];

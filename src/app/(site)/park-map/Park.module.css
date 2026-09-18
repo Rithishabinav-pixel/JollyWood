@@ -46,16 +46,33 @@ max-width: 550px;
     fill: rgb(0, 156, 218);
 }
 
+.parkMap .pin .count[data-category="attraction"]{
+  background-color: rgb(0, 156, 218);
+}
+
 .park_section .container .content ul li:nth-child(2) svg path{
     fill: rgb(248, 0, 0);
+}
+
+.parkMap .pin .count[data-category="Restaurants and Kiosk"]{
+  background-color: rgb(248, 0, 0);
 }
 
 .park_section .container .content ul li:nth-child(3) svg path{
     fill:var(--orange);
 }
 
+.parkMap .pin .count[data-category="Souvenir and Gifts"]{
+  background-color: var(--orange);
+}
+
 .park_section .container .content ul li:nth-child(4) svg path{
     fill: rgb(255, 255, 255);
+}
+
+.parkMap .pin .count[data-category="utilities"]{
+  background-color: white;
+  border-color: black;
 }
 
 
@@ -75,7 +92,7 @@ max-width: 550px;
 
 .parkMap .pin{
     position: absolute;
-    width: 1.2vw;
+    width: 1.1vw;
 height: auto;
 aspect-ratio: 1 / 1;
 
@@ -87,13 +104,14 @@ height: 100%;
 display: grid;
 place-items: center;
 border-radius: 50px;
-background-color: var(--accent);
-color: white;
 font-weight: 700;
-font-size: 0.6vw;
+font-size: 0.5vw;
 line-height: 0vw;
 cursor: pointer;
+  border: solid white 1px;
+
 }
+
 
 .parkMap .pin span{
     position: absolute;

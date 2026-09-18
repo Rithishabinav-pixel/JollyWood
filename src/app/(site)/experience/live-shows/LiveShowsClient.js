@@ -10,21 +10,21 @@ import Image from 'next/image'
 const LiveShowsData = [
 
   {
-    image:"/assets/images/high-ropes-course.png",
+    image:"/assets/images/jtl-l.png",
     title:"Jubilee Theatre",
     content:"Where cinema comes alive on stage. Experience the magic of Indian cinema through spectacular performances, music and storytelling. With dazzling visuals and captivating acts, Jubilee Theatre brings your favourite movie moments to life in an unforgettable celebration.",
     time:"05:00 PM"
   },
 
   {
-    image:"/assets/images/high-ropes-course.png",
+    image:"/assets/images/td-l.png",
     title:"Twilight Dreams",
     content:"Where lights, water and music create magic. Watch the night transform into a breathtaking spectacle of colours, lasers and dancing fountains. Twilight Dreams combines technology and imagination to create a mesmerising show perfect for families, friends and unforgettable evenings.",
     time:"07:00 PM"
   },
 
    {
-    image:"/assets/images/high-ropes-course.png",
+    image:"/assets/images/placeholder-l.png",
     title:"Parade Show",
     content:"Where the streets come alive with rhythm. Romancia Street turns into a lively stage with European-style dance and vibrant performances. Follow the music, soak up the energy and enjoy a little taste of Europe right here at Jollywood.",
     time:"06:30 PM"

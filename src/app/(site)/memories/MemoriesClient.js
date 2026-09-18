@@ -10,17 +10,17 @@ import Image from 'next/image'
 
 const PlaytopiaData = [
   {
-    image:"/assets/images/jollylicious.png",
+    image:"/assets/images/jollylicious-m.png",
     title:"Jollylicious",
     link:"/memories#playtopia"
   },
    {
-    image:"/assets/images/play-kp.png",
+    image:"/assets/images/play-kp-m.png",
     title:"Kids Play Area",
     link:"/memories#playtopia"
   },
    {
-    image:"/assets/images/bday-zone.png",
+    image:"/assets/images/bday-zone-m.png",
     title:"Birthday Zone",
     link:"/memories#playtopia"
   }

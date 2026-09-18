@@ -8,8 +8,8 @@ import { readUploadedImage, persistImageBuffer, deleteUploadedImage } from "@/li
 const GALLERY_SUBDIR = "gallery";
 const MAX_IMAGE_SIZE = 8 * 1024 * 1024;
 
-async function saveGalleryFile(file) {
-  if (file.size > MAX_IMAGE_SIZE) {
+async function saveGalleryFile(file, { skipSizeCheck = false } = {}) {
+  if (!skipSizeCheck && file.size > MAX_IMAGE_SIZE) {
     return { error: "Image is too large. Maximum size is 8MB." };
   }
 
@@ -165,7 +165,7 @@ export async function bulkCreateGalleryImages(formData) {
       continue;
     }
 
-    const saved = await saveGalleryFile(file);
+    const saved = await saveGalleryFile(file, { skipSizeCheck: true });
     if (saved.error) {
       results.push({ name: file.name, success: false, error: saved.error });
       continue;

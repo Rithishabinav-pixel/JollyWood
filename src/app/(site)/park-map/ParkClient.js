@@ -19,6 +19,7 @@ const MapData = [
   {
     count: 1,
     label: "Emergency Assembly Area (Parking Lot)",
+    category:"utilities",
     style: {
       top: "50%",
       right: "22%",
@@ -27,6 +28,7 @@ const MapData = [
   {
     count: 2,
     label: "Wave Pool",
+    category:"attraction",
     style: {
       top: "52%",
       left: "36%",
@@ -35,6 +37,7 @@ const MapData = [
   {
     count: 3,
     label: "Planet Jollywood - Fine Dine",
+    category:"Restaurants and Kiosk",
     style: {
       top: "40%",
       left: "55%",
@@ -43,9 +46,19 @@ const MapData = [
   {
     count: 4,
     label: "Family Pool",
+    category:"attraction",
     style: {
       top: "55%",
       left: "50%",
+    },
+  },
+  {
+    count: 5,
+    label: "Aqua Store",
+    category:"Souvenir and Gifts",
+    style: {
+      top: "38%",
+      left: "36.5%",
     },
   },
 ];
@@ -84,16 +97,16 @@ export default function ParkClient() {
 
   </div>
 
-  <div className={style.parkMap}>
+  <div className={style.parkMap} >
     <Image className={style.map_image} src="/assets/images/park-map.webp" width={1482} height={965} alt=''/>
     {
   MapData?.map((item, index) => (
     <div
-      className={style.pin}
+      className={`${style.pin} `}
       key={index}
       style={item.style}
     >
-      <p className={style.count}>{item.count}</p>
+      <p className={`${style.count}`} data-category={item.category} >{item.count}</p>
       <span>{item.label}</span>
     </div>
   ))

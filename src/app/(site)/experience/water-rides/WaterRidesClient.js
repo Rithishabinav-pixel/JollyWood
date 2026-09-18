@@ -11,63 +11,63 @@ import Image from 'next/image'
 
 const WaterRidesData = [
   {
-    image: "/assets/images/crazy-cruise.png",
+    image: "/assets/images/crazy-cruise-w.png",
     title: "Crazy Cruise",
     content:
       "Twist, turn, laugh and scream! The crazier the ride, the bigger the thrill! Take on exciting twists, thrilling turns and endless splashes in a ride designed for adventure seekers.",
     rules: []
   },
   {
-    image: "/assets/images/family-pool.png",
+    image: "/assets/images/family-pool-w.png",
     title: "Family Pool",
     content:
       "Every splash brings the family closer. Dive into a day of fun and laughter! Enjoy a safe and refreshing space where families can relax, play and create unforgettable moments together.",
     rules: []
   },
   {
-    image: "/assets/images/crazy-cruise.png",
+    image: "/assets/images/family-slide-w.png",
     title: "Family Slide",
     content:
       "Slide together, laugh together! A thrilling splash of fun for the whole family. Share the excitement of a fun-filled slide experience made for families to enjoy every splash.",
     rules: []
   },
   {
-    image: "/assets/images/crazy-cruise.png",
+    image: "/assets/images/hide-seek-w.png",
     title: "Hide N Seek",
     content:
       "Hide, seek, splash and repeat! A water-filled adventure for little explorers. A playful water zone where kids can splash around, explore and enjoy endless moments of fun.",
     rules: []
   },
   {
-    image: "/assets/images/mini-pendlum.png",
+    image: "/assets/images/mini-pendlum-w.png",
     title: "Mini Pendulum",
     content:
       "Swing high, splash down and smile big! A mini ride with maximum water fun. Enjoy a fun-filled water adventure with exciting swings, splashes and plenty of smiles along the way.",
     rules: []
   },
   {
-    image: "/assets/images/rain-dance.png",
+    image: "/assets/images/rain-dance-w.png",
     title: "Rain Dance",
     content:
       "Music up, water on, fun unlimited! Dance, splash, and make unforgettable memories. Turn up the energy with music, refreshing showers and a celebration of endless fun with friends and family.",
     rules: []
   },
   {
-    image: "/assets/images/speed-slide.png",
+    image: "/assets/images/speed-slide-w.png",
     title: "Speed Slide",
     content:
       "Ready, set, slide! Feel the speed. Feel the thrill. Race through an exciting water slide experience filled with speed, twists and an adrenaline rush.",
     rules: []
   },
   {
-    image: "/assets/images/crazy-cruise.png",
+    image: "/assets/images/super-drop-w.png",
     title: "Super Drop",
     content:
       "One big drop. Endless excitement! Feel the rush from the very top! Take the ultimate plunge and experience a thrilling drop that will leave you wanting more.",
     rules: []
   },
   {
-    image: "/assets/images/wave-pool.png",
+    image: "/assets/images/wave-pool-w.png",
     title: "Wave Pool Beach Area",
     content:
       "A beachside adventure made for the whole family! Feel the waves, relax by the beach and enjoy a tropical escape filled with fun and relaxation.",

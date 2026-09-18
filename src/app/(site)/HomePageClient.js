@@ -789,7 +789,8 @@ useEffect(() => {
   spaceBetween={20}
   slidesPerView={4}
   pagination={{ clickable: true }}
-  autoplay={{ delay: 3000, disableOnInteraction: false }}
+  // autoplay={{ delay: 3000, disableOnInteraction: false }}
+  autoPlay={false}
 
   centeredSlides={false}
   loop={false}

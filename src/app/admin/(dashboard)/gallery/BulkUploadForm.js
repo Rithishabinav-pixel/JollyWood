@@ -8,6 +8,7 @@ export default function BulkUploadForm({ categories }) {
   const [staged, setStaged] = useState([]);
   const [isPending, startTransition] = useTransition();
   const [result, setResult] = useState(null);
+  const [uploadError, setUploadError] = useState(null);
 
   function handleFilesSelected(event) {
     const selected = Array.from(event.target.files || []);
@@ -47,13 +48,19 @@ export default function BulkUploadForm({ categories }) {
       });
     });
 
+    setUploadError(null);
+
     startTransition(async () => {
-      const response = await bulkCreateGalleryImages(formData);
-      setResult(response);
-      const failedIds = new Set(
-        staged.filter((_, index) => response?.results?.[index] && !response.results[index].success).map((entry) => entry.id)
-      );
-      setStaged((prev) => prev.filter((entry) => failedIds.has(entry.id)));
+      try {
+        const response = await bulkCreateGalleryImages(formData);
+        setResult(response);
+        const failedIds = new Set(
+          staged.filter((_, index) => response?.results?.[index] && !response.results[index].success).map((entry) => entry.id)
+        );
+        setStaged((prev) => prev.filter((entry) => failedIds.has(entry.id)));
+      } catch {
+        setUploadError("Upload failed. Please check your connection and try again.");
+      }
     });
   }
 
@@ -75,7 +82,7 @@ export default function BulkUploadForm({ categories }) {
           onChange={handleFilesSelected}
           disabled={categories.length === 0}
         />
-        <span className={style.hint}>Maximum file size 8MB per image.</span>
+        <span className={style.hint}>No file size limit for bulk uploads.</span>
       </div>
 
       {staged.length > 0 && (
@@ -120,6 +127,15 @@ export default function BulkUploadForm({ categories }) {
       )}
 
       {result?.createdCount > 0 && <p className={style.hint}>{result.createdCount} image(s) uploaded successfully.</p>}
+
+      {uploadError && <p className={style.error} role="alert">{uploadError}</p>}
+
+      {isPending && (
+        <div className={style.uploadingIndicator} role="status">
+          <span className={style.spinner} aria-hidden="true"></span>
+          Uploading, please wait. This may take a while for large files...
+        </div>
+      )}
 
       <div className={style.formActions}>
         <button
