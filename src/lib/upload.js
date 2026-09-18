@@ -1,8 +1,10 @@
 import { writeFile, unlink } from "fs/promises";
 import path from "path";
 import crypto from "crypto";
+import { fileURLToPath } from "url";
 
-const UPLOAD_DIR = path.join(process.cwd(), "public", "uploads");
+const PROJECT_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
+const UPLOAD_DIR = path.join(PROJECT_ROOT, "public", "uploads");
 
 const EXTENSION_BY_MIME = {
   "image/png": "png",
