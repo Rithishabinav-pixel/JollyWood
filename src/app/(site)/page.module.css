@@ -742,7 +742,7 @@ border-radius: 8px;
 }
 
 .retail_section .singleSlide .content a img{
-filter: invert(1) brightness(100);
+filter: invert(0) brightness(100);
 }
 
 .corporate_section .container .top_heading .left{
