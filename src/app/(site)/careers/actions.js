@@ -33,6 +33,7 @@ export async function submitCareerEnquiry(prevState, formData) {
   const lastName = formData.get("lastName")?.toString().trim();
   const mobileNumber = formData.get("mobileNumber")?.toString().trim();
   const email = formData.get("email")?.toString().trim();
+  const jobRole = formData.get("jobRole")?.toString().trim() || null;
   const currentDesignation = formData.get("currentDesignation")?.toString().trim() || null;
   const relevantExperience = formData.get("relevantExperience")?.toString().trim() || null;
   const coverLetter = formData.get("coverLetter")?.toString().trim() || null;
@@ -55,6 +56,7 @@ export async function submitCareerEnquiry(prevState, formData) {
         lastName,
         mobileNumber,
         email,
+        jobRole,
         currentDesignation,
         relevantExperience,
         coverLetter,
@@ -73,6 +75,7 @@ export async function submitCareerEnquiry(prevState, formData) {
     lastName,
     mobileNumber,
     email,
+    jobRole,
     currentDesignation,
     relevantExperience,
     coverLetter,

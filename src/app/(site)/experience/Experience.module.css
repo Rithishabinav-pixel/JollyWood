@@ -121,7 +121,28 @@
 
 @media screen and (max-width:1400px) {
 
- 
+   .experience_section .exp_cards .card:nth-child(1) .image,
+.experience_section .exp_cards .card:nth-child(3) .image{
+   height: 65%;
+
+}
+
+.experience_section .exp_cards .card:nth-child(2) .image{
+    height: 65%;
+}
+
+.experience_section .exp_cards .card:nth-child(4) .image{
+    height: 100%;
+    
+}
+.experience_section .exp_cards .card:nth-child(2) .image,
+.experience_section .exp_cards .card:nth-child(4) .image{
+    transform: translateX(30px);
+}
+
+.experience_section .exp_cards .card:nth-child(5) .image{
+    height: 90%;
+}
 
 }
 

@@ -125,6 +125,7 @@ export default function EnquiriesTabs({ contactEnquiries, careerEnquiries, corpo
                 <th>Name</th>
                 <th>Email</th>
                 <th>Phone</th>
+                <th>Job Role</th>
                 <th>Designation</th>
                 <th>Experience</th>
                 <th>Resume</th>
@@ -138,6 +139,7 @@ export default function EnquiriesTabs({ contactEnquiries, careerEnquiries, corpo
                   <td>{enquiry.firstName} {enquiry.lastName}</td>
                   <td>{enquiry.email}</td>
                   <td>{enquiry.mobileNumber}</td>
+                  <td>{enquiry.jobRole || "—"}</td>
                   <td>{enquiry.currentDesignation || "—"}</td>
                   <td>{enquiry.relevantExperience || "—"}</td>
                   <td>

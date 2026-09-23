@@ -324,6 +324,42 @@ background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 10%, transparent 70%);
 
 @media screen and (max-width:1400px) {
 
+      .kitchenContainer .image div{
+    left: 0px;
+    bottom: 0px;
+    position: static;
+    width: 100%;
+}
+
+ .kitchenContainer,
+ .kitchenContainer .image{
+    display: flex;
+ }
+
+  .kitchenContainer .image{
+    flex-direction: column;
+  }
+
+  .kitchenContainer .image{
+    border-radius: 0px;
+}
+
+ .kitchenContainer .image img{
+    border-radius: 24px;
+ }
+
+  .kitchenContainer{
+    gap: 30px;
+  }
+
+  .kitchenContainer .image{
+    gap: 16px;
+  }
+
+ .kitchenContainer .image::before{
+    display: none;
+ }
+
     .royal_section::before{
     width: 53%;
 }
@@ -363,8 +399,12 @@ background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 10%, transparent 70%);
 
 
     .kitchenContainer .image::before{
-background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(255, 0, 0, 0) 70% );
+display: none;
 }
+
+ .kitchenContainer .image img{
+    border-radius: 16px;
+ }
 
  .romancia_section .container{
     flex-direction: column-reverse;
@@ -412,8 +452,14 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(255, 0, 0, 0) 70% 
     .waveContainer,
     .kitchenContainer {
         flex-direction: column;
+    }
+
+    .waveContainer{
         gap: 20px;
     }
+     .kitchenContainer{
+        gap: 30px;
+     }
 
     .waveContainer .image,
     .kitchenContainer .image{
@@ -478,7 +524,7 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(255, 0, 0, 0) 70% 
 /* mobile  */
 @media screen and (max-width:767px) {
 
-        .kitchenContainer .image div{
+        /* .kitchenContainer .image div{
     left: 0px;
     bottom: 0px;
     position: static;
@@ -501,7 +547,7 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(255, 0, 0, 0) 70% 
 
  .kitchenContainer .image::before{
     display: none;
- }
+ } */
 
     .planetContainer{
         flex-direction: column;
@@ -524,7 +570,8 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(255, 0, 0, 0) 70% 
 }
 
 .food_section  .tabContainer video,
-.food_section  .tabContainer .content{
+.food_section  .tabContainer .content,
+ .kitchenContainer .image img{
     border-radius: 8px;
 }
 

@@ -85,6 +85,16 @@ export default function CareersClient() {
       <label htmlFor='careerEmail' className='sr_only'>Email Address</label>
       <input id='careerEmail' name='email' type='email' className='half_cont input_field' placeholder='Email Address *' required></input>
 
+      <label htmlFor='careerJobRole' className='sr_only'>Job Role</label>
+      <select id='careerJobRole' name='jobRole' className='full_cont input_field' defaultValue=''>
+<option value='' disabled>Job role</option>
+<option>Front Office Supervisor</option>
+<option>Executive - Guest Relation</option>
+<option>Engineer – Electrical</option>
+
+
+      </select>
+
       <label htmlFor='careerDesignation' className='sr_only'>Current Designation</label>
       <input id='careerDesignation' name='currentDesignation' type='text' className='half_cont input_field' placeholder='Current Designation'></input>
 

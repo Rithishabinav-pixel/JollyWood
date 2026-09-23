@@ -11,6 +11,7 @@ form{
 
 form input,
 form textarea,
+form select,
 .file_upload{
  padding: 16px;
     background: none !important;
@@ -20,7 +21,8 @@ form textarea,
 
 form.black_fields input,
 form.black_fields textarea,
-form.black_fields .file_upload{
+form.black_fields .file_upload,
+form select{
     border: solid black 1px;
     color: black;
 }
@@ -35,7 +37,8 @@ form.white_fields .file_upload{
 }
 
 form input,
-.file_upload{
+.file_upload,
+form select{
     min-height: 56px;
     border-radius: 50px;
 }

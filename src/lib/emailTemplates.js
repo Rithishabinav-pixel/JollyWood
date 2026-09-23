@@ -134,6 +134,7 @@ export function careerAdminEmailHtml(data) {
                   { label: "Name", value: `${data.firstName} ${data.lastName}` },
                   { label: "Email", value: data.email },
                   { label: "Phone", value: data.mobileNumber },
+                  { label: "Job Role", value: data.jobRole },
                   { label: "Current Designation", value: data.currentDesignation },
                   { label: "Relevant Experience", value: data.relevantExperience },
                   { label: "Cover Letter", rawHtml: data.coverLetter ? nl2br(data.coverLetter) : undefined },
@@ -156,6 +157,7 @@ export function careerUserEmailHtml(data) {
                   { label: "Name", value: `${data.firstName} ${data.lastName}` },
                   { label: "Email", value: data.email },
                   { label: "Phone", value: data.mobileNumber },
+                  { label: "Job Role", value: data.jobRole },
                   { label: "Current Designation", value: data.currentDesignation },
                   { label: "Relevant Experience", value: data.relevantExperience },
                 ])}

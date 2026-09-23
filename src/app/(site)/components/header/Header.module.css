@@ -117,6 +117,13 @@ animation: show_header 1s forwards;
 
 /* responsive  */
 
+/* laptop  */
+@media screen and (max-width:1600px) {
+   
+#header .container .menus{
+    gap: 0px;
+}
+}
 
 /* tablet  */
 @media screen and (max-width:1200px) {

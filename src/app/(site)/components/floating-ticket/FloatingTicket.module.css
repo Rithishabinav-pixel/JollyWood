@@ -30,12 +30,28 @@
 
 /* resposive  */
 
+/* laptop  */
+@media screen and (max-width:1530px) {
+      .floating_ticket{
+ right: 3%;
+      }
+}
+
 /* tablet  */
 
 @media screen and (max-width:1200px) {
     .floating_ticket{
+        top: 40px;
+        width: 70px;
+        right: 10vw;
+    }
+}
+
+/* mobile  */
+@media screen and (max-width:767px) {
+    .floating_ticket{
         top: 32px;
-        width: 60px;
-        right: 20vw;
+        width: 45px;
+        right: 18vw;
     }
 }

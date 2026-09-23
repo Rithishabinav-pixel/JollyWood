@@ -7,7 +7,6 @@ import Image from 'next/image'
 
 
 
-
 // Food Souk tab data
 const FoodSoukTabData = [
   {
@@ -223,7 +222,7 @@ if(hashId){
 </div>
 
 <div className={style.image}>
-    <Image src="/assets/images/planet.png" width={720} height={513} alt=''/>
+    <Image src="/assets/images/planet_r.png" width={720} height={513} alt=''/>
 </div>
 
 </div>

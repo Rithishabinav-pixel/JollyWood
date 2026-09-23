@@ -883,7 +883,7 @@ useEffect(() => {
     1200:{
       slidesPerView: 3,
     },
-    1366: {
+    1300: {
       slidesPerView: 5.5,
       spaceBetween: 30,
     },
@@ -936,14 +936,16 @@ useEffect(() => {
         <p className='white'>The Stage</p>
         <h2 className='common_heading white'>Live Cinematic Spectacle</h2>
         <p className='white'>A multi-million rupee production featuring aerial acrobatics, gravity-defying stunts, and the most iconic tracks of Indian cinema.</p>
+       <Button href="/live-shows" text="View Shows" className="common_btn orange_bg black_text right_tilt ticket"></Button>
+
       </div>
 
-      <div className={`right ${style.right}`} data-aos="fade-left">
+      {/* <div className={`right ${style.right}`} data-aos="fade-left">
         <p className={`white ${style.mixed}`}>Today’s <span>Show Timing</span></p>
         <p className={`white ${style.timing}`}>06:00 PM</p>
   <a href="https://booknow.jollywood.co.in/package/main" target='_blank' className="common_btn orange_bg black_text right_tilt ticket">Book Tickets</a>
 
-      </div>
+      </div> */}
     </div>
 
 
