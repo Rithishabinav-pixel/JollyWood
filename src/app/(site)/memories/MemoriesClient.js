@@ -169,7 +169,8 @@ useEffect(() => {
   <div className={style.content}>
     <h2 className='common_heading purple'>Graphica Shots</h2>
     <h3 className=''>Step Into the Picture. Live the Moment. </h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere.</p>
+    <p>Turn up the fun with colourful graffiti walls, quirky 3D setups and picture-perfect spots made for posing. Get creative with your shots, strike your best pose and capture moments that are as playful as your Jollywood adventure. Whether you're here with friends or family, every corner gives you another reason to stop, pose and click.
+</p>
   </div>
 
    {mobile && 
@@ -194,7 +195,7 @@ useEffect(() => {
       <div className={`left ${style.left}`}>
         <h2 className='common_heading white'>Hut in Beach</h2>
         <h3 className='white'>A little hut. A lot of beach vibes. Sit back, relax and enjoy the moment.</h3>
-        <p className='white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p className='white'>Take a break from the splashes and excitement at this laid-back beachside spot. Settle in with your family or friends, enjoy the relaxed surroundings and soak up the holiday vibes. Whether you’re taking a breather, enjoying a quick chat or simply watching the fun unfold, the Hut in Beach gives you the perfect pause between adventures. Take your time, recharge and get ready for the next splash.</p>
       </div>
 
     </div>
