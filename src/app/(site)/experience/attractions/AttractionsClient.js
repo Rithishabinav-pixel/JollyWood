@@ -49,7 +49,7 @@ const ExperienceWorldsData = [
     title: "Vortex Tunnel",
     description: "Get delulu. Find your solulu. A mind-bending journey you won't forget.",
     link: "/experience/attractions",
-    image: "/assets/images/glow-garden.png",
+    image: "/assets/images/vortex-tunnel.png",
     video: "/assets/videos/ride-reel-video.mp4"
   },
   {

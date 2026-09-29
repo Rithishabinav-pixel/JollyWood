@@ -94,7 +94,7 @@ const RidesData = [
       { label: "Height", value: "" },
       { label: "Weight", value: "" }
     ],
-    image: "/assets/images/placeholder-d.png"
+    image: "/assets/images/jtor-d.png"
   },
   
   {
@@ -107,7 +107,7 @@ const RidesData = [
       { label: "Height", value: "3 ft - 6 ft" },
       { label: "Weight", value: "35 kg - 90 kg" }
     ],
-    image: "/assets/images/placeholder-d.png"
+    image: "/assets/images/tscycle-d.png"
   },
   {
     logo: "",
@@ -120,7 +120,7 @@ const RidesData = [
       { label: "Height", value: "" },
       { label: "Weight", value: "" }
     ],
-    image: "/assets/images/placeholder-d.png"
+    image: "/assets/images/wallc-d.png"
   },
   {
     logo: "",
@@ -133,7 +133,7 @@ const RidesData = [
       { label: "Height", value: "" },
       { label: "Weight", value: "" }
     ],
-    image: "/assets/images/placeholder-d.png"
+    image: "/assets/images/ag-d.png"
   },
   {
     logo: "",
@@ -146,7 +146,7 @@ const RidesData = [
       { label: "Height", value: "" },
       { label: "Weight", value: "" }
     ],
-    image: "/assets/images/placeholder-d.png"
+    image: "/assets/images/toycar-d.png"
   }
 ];
 

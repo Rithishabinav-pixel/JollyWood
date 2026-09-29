@@ -195,7 +195,7 @@ const AdventuresData = [
     ]
   },
    {
-    "image": "/assets/images/placeholder-ad.png",
+    "image": "/assets/images/tc-ad.png",
     "title": "Tyre Climbing",
     "content": "Climb on. Challenge yourself. Put your strength and balance to work as you take on a climbing challenge using tyres. Find your footing, keep your grip and make your way higher with every move.",
     "rules": [
@@ -206,7 +206,7 @@ const AdventuresData = [
     ]
   },
    {
-    image: "/assets/images/placeholder-ad.png",
+    image: "/assets/images/archery-tag-ad.png",
     title: "Archery Tag",
     content:
       "Aim. Strategize. Conquer. Combine the thrill of archery with the excitement of a team battle. Test your accuracy, build strategies and compete with your team in this action-packed adventure.",
@@ -223,7 +223,7 @@ const AdventuresData = [
   },
 
   {
-    "image": "/assets/images/placeholder-ad.png",
+    "image": "/assets/images/re-ad.png",
     "title": "Rocket Ejection",
     "content": "Ready for liftoff? Feel the rush as you’re propelled upward in an adrenaline-filled experience that takes you from the ground to the sky in seconds. Hold on tight and enjoy the thrill of a rapid rise.",
     "rules": [
@@ -238,7 +238,7 @@ const AdventuresData = [
     ]
   },
   {
-    "image": "/assets/images/placeholder-ad.png",
+    "image": "/assets/images/human-gyro-ad.png",
     "title": "Human Gyro",
     "content": "Spin. Twist. Find your balance. Step into a spinning challenge that puts your balance and body control to the test. Keep yourself steady as the motion takes over and see how well you can handle the Human Gyro.",
     "rules": [
@@ -283,7 +283,7 @@ const AdventuresData = [
     ]
   },
   {
-    "image": "/assets/images/placeholder-ad.png",
+    "image": "/assets/images/szb-ad.png",
     "title": "Single Zip Bike",
     "content": "Pedal. Zip. Feel the rush. Hop onto a bike and take your ride beyond the usual. Combine cycling with the thrill of a zip experience as you move through an elevated adventure that puts your balance to the test.",
     "rules": [
