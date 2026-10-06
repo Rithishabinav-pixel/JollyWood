@@ -12,11 +12,18 @@ html,body{
 }
 
 
-:root{
+/* :root{
   --yellow:#FBC616;
   --orange:#FFA100;
   --darkOrange:#FF7E0D;
   --accent:#351338;
+} */
+
+:root{
+  --yellow:#ffffff;
+  --orange:#FFA100;
+  --darkOrange:#FF7E0D;
+  --accent:#1f2c55;
 }
 
 .sr_only{
@@ -121,7 +128,7 @@ color: black
 }
 
 .purple{
-  color: #351338;
+  color:var(--accent);
 }
 
 .common_btn{
@@ -323,13 +330,13 @@ justify-content: center;
 main .swiper  .swiper-pagination .swiper-pagination-bullet{
   margin: 0;
   border-radius: 6px;
-background: linear-gradient(104deg, #FBC615 1.2%, #FFE590 72.57%);
+background: linear-gradient(104deg, white 1.2%,rgb(201, 201, 201) 72.57%);
 transition: 0.3s all;
 opacity: 1;
 }
 
 main .swiper.purple_dots  .swiper-pagination .swiper-pagination-bullet{
-background: linear-gradient(104deg, #351338 1.2%, #664968 72.57%);
+background: linear-gradient(104deg, var(--accent) 1.2%, #1f2c55c5 72.57%);
 }
 
 main .swiper  .swiper-pagination .swiper-pagination-bullet-active{

@@ -480,7 +480,7 @@ max-height: 500px;
   align-items: center;
   gap: 16px;
   padding: 8px 16px;
-  background-color: white;
+  background-color: #ebebeb;
   border-radius: 50px;
   transition: 0.3s all;
 }

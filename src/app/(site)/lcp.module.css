@@ -54,7 +54,7 @@
   height: auto;
   bottom: 0;
   right: 0;
-  background-image: url('/assets/images/banner_layer.svg');
+  background-image: url('/assets/images/banner_layer_blue.svg');
   background-size: cover;
   aspect-ratio: 1920 / 1028;
   z-index: 2;
