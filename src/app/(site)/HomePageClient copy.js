@@ -40,12 +40,6 @@ const HighAdrenalineData = [
     title:"Hut in beach",
     link:"/memories#hut"
   },
-   {
-    image:"/assets/images/play-m.png",
-    video:"/assets/videos/ride-reel-video.mp4",
-    title:"Playtopia",
-    link:"/memories#playtopia"
-  },
 ]
 
 
@@ -583,7 +577,7 @@ useEffect(() => {
     fadeTimeout = setTimeout(() => {
       setBannerText((prev) =>
         prev === "Cinematic Family<br>Universe"
-          ? "ನಮ್ಮ Bengaluru<br/>ನಿಮ್ಮು Jollywood"
+          ? "Namma Jollywood,<br>Nimma Bengaluru"
           : "Cinematic Family<br>Universe"
       );
 
@@ -625,8 +619,33 @@ useEffect(() => {
 }, [foodSoukInView]);
 
 
+const liveShowBg = useRef(null)
+
+useEffect(() => {
+  const liveSection = liveShowBg.current;
+
+  if (!liveSection) return;
+
+  const handleScroll = () => {
+    const rect = liveSection.getBoundingClientRect();
+    const viewportHeight = window.innerHeight;
+
+    const progress = Math.min(Math.max(1 - rect.top / viewportHeight, 0),1);
 
 
+    const bgY = 100 + progress * 20;
+
+    liveSection.style.backgroundSize = `auto ${bgY}%`;
+  };
+
+  window.addEventListener("scroll", handleScroll, { passive: true });
+
+  handleScroll();
+
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+  };
+}, []);
 
   return (
     <>
@@ -701,8 +720,8 @@ useEffect(() => {
         breakpoints={{
           0:{slidesPerView:1},
           767:{slidesPerView:3},
-          1200:{slidesPerView:4,spaceBetween:30},
-          1600:{slidesPerView:5}
+          1600:{slidesPerView:4,spaceBetween:30}
+
         }}
       >
         {HighAdrenalineData.map((slide,index) => (
@@ -783,10 +802,10 @@ useEffect(() => {
       slidesPerView: 2,
     },
     1200:{
-      slidesPerView: 4,
+      slidesPerView: 3,
     },
     1600: {
-      slidesPerView: 5,
+      slidesPerView: 4.2,
       spaceBetween: 30,
     },
   }}
@@ -909,7 +928,7 @@ useEffect(() => {
 
 
 {/* cinematic section  */}
-<section className={`common_section ${style.cinematic_section}`}>
+<section className={`common_section ${style.cinematic_section}`} ref={liveShowBg}  style={{backgroundSize: "100% 100%",}}>
 <div className={`container ${style.container}`}>
 
    <div className={`top_heading left_align ${style.top_heading}`}>
