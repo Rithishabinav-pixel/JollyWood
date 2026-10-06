@@ -34,10 +34,15 @@
 .heroSection{
   width: 100%;
   height: fit-content;
+  /* min-height: 90vh; */
   position: relative;
   display: flex;
-  align-items: flex-end;
+  /* align-items: flex-start; */
   position: relative;
+}
+
+.heroSection .container{
+  margin-top: auto;
 }
 
 .heroSection::after{
@@ -63,7 +68,8 @@
 .heroSection video{
   width: 100%;
   height: auto;
-  aspect-ratio: 1920 / 960;
+  /* aspect-ratio: 1920 / 960; */
+  aspect-ratio: 1920 / 700;
   object-fit: cover;
   object-position: center center;
 }
@@ -76,8 +82,7 @@
 }
 
 .floating_tickets img{
-  height: 41.45vw;
-  aspect-ratio: 75 / 790;
+  height: calc(100vh - 40px);
   width: auto;
 }
 
@@ -86,6 +91,7 @@
   z-index: 3;
   left: 0;
   right: 0;
+  bottom: -260px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,7 +107,7 @@ gap: 32px;
 
 .character{
   position: absolute;
-  bottom: 0;
+  bottom:50px;
   transform: translateY(0%);
 }
 
@@ -126,6 +132,7 @@ gap: 32px;
   
 .heroSection .container{
   gap: 32px;
+  bottom: -220px;
 }
 
 .character_1{
@@ -147,6 +154,8 @@ gap: 32px;
 
   .heroSection .container{
   gap: 20px;
+  bottom: -160px;
+
 }
 
   .heroSection .container .actions{
@@ -180,6 +189,7 @@ gap: 20px;
 
    .heroSection .container{
   gap: 50px;
+  bottom: -200px;
 }
 
 

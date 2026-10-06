@@ -26,8 +26,7 @@
   gap: 26px;
 }
 
-.experience_section .slider .singleSlide .image,
-.adrenaline_section .slider .singleSlide .image{
+.experience_section .slider .singleSlide .image{
    -webkit-mask-image: url('/assets/images/bg-brush.svg');
   mask-image: url('/assets/images/bg-brush.svg');
   mask-size: 100%;
@@ -144,20 +143,9 @@ float: left;
 .playtopia_section .playtopiaCard .content .title,
 .retail_section .retailCard .content .title,
 .corporate_section .corporateCard .content .title{
-  font-weight: 600;
-}
-
-.playtopia_section .playtopiaCard .content .title,
-.retail_section .retailCard .content .title,
-.corporate_section .corporateCard .content .title{
   font-size: 32px;
   line-height: 40px;
-}
-
-.adrenaline_section .slider .singleSlide .content .title,
-.experience_section .slider .singleSlide .content .title{
-  font-size: 26px;
-  line-height: 32px;
+  font-weight: 600;
 }
 
 .experience_section .slider .singleSlide .content p{
@@ -295,27 +283,12 @@ float: left;
 }
 
 .cinematic_section{
-  background-image: url('/assets/images/cinematic.webp');
+  background: url('/assets/images/cinematic.webp');
   background-position: center center;
   position: relative;
   min-height: 100vh;
   transition: background 0.3s all;
-animation: cinematic 15s infinite linear;
-background-size: cover;
 }
-
-@keyframes cinematic {
-  0%,30%{
-  background-image: url('/assets/images/cinematic.webp');
-  }
-  33.33%,60%{
-  background-image: url('/assets/images/cinematic2.webp');
-  }
-    66.66%,95%{
-  background-image: url('/assets/images/cinematic3.webp');
-  }
-}
-
 
 .cinematic_section::before,
 .cinematic_section::after{
@@ -863,10 +836,6 @@ filter: invert(0) brightness(100);
 
 @media screen and (max-width:1600px) {
 
-  .adrenaline_section{
-  padding-top: 260px;
-}
-
   .corporate_section .splitSection .singleTexts h3{
   font-size: 48px;
   line-height: 56px;
@@ -946,19 +915,16 @@ filter: invert(0) brightness(100);
   .offers_section .sliderMock{
   width: 21.6vw;
 }
- 
+
+
+  .adrenaline_section .slider .singleSlide .content .title,
+    .experience_section .slider .singleSlide .content .title,
      .playtopia_section .playtopiaCard .singleSlide .content .title,
      .retail_section .retailCard .singleSlide .content .title,
      .corporate_section .corporateCard .singleSlide .content .title{
   font-size: 24px;
   line-height: 32px;
 }
-
- .adrenaline_section .slider .singleSlide .content .title,
-    .experience_section .slider .singleSlide .content .title{
-      font-size: 20px;
-      line-height: 28px;
-    }
 
 .adrenaline_section .slider .singleSlide,
 .experience_section .slider .singleSlide{
@@ -974,10 +940,6 @@ filter: invert(0) brightness(100);
 }
 
 @media screen and (max-width:1400px){
-
-    .adrenaline_section{
-  padding-top: 260px;
-}
 
   .memories_section .memories_grid .videoTabContainer .tabs button{
   width: 90px;

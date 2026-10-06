@@ -14,51 +14,708 @@ const ListData = [
   "Utilities"
 ]
 
-// map data 
+// map data
 const MapData = [
   {
     count: 1,
     label: "Emergency Assembly Area (Parking Lot)",
-    category:"utilities",
+    category: "utilities",
     style: {
-      top: "50%",
-      right: "22%",
+      top: "65.00%",
+      left: "50.10%",
+    },
+  },
+  {
+    count: 1,
+    label: "Emergency Assembly Area (Parking Lot)",
+    category: "utilities",
+    style: {
+      top: "49.25%",
+      left: "77.62%",
     },
   },
   {
     count: 2,
-    label: "Wave Pool",
-    category:"attraction",
+    label: "Waiting Area",
+    category: "utilities",
     style: {
-      top: "52%",
-      left: "36%",
+      top: "55.34%",
+      left: "78.19%",
     },
   },
   {
     count: 3,
-    label: "Planet Jollywood - Fine Dine",
-    category:"Restaurants and Kiosk",
+    label: "Driver Waiting Area",
+    category: "utilities",
     style: {
-      top: "40%",
-      left: "55%",
+      top: "44.83%",
+      left: "77.88%",
     },
   },
   {
     count: 4,
-    label: "Family Pool",
-    category:"attraction",
+    label: "VIP Lounge Area",
+    category: "utilities",
     style: {
-      top: "55%",
-      left: "50%",
+      top: "67.07%",
+      left: "74.86%",
     },
   },
   {
     count: 5,
-    label: "Aqua Store",
-    category:"Souvenir and Gifts",
+    label: "Box Office – Ticket Counter (Wheelchair Available)",
+    category: "utilities",
     style: {
-      top: "38%",
-      left: "36.5%",
+      top: "66.78%",
+      left: "76.47%",
+    },
+  },
+  {
+    count: 6,
+    label: "Baggage Room",
+    category: "utilities",
+    style: {
+      top: "65.98%",
+      left: "77.88%",
+    },
+  },
+  {
+    count: 7,
+    label: "Food Kiosk",
+    category: "Restaurants and Kiosk",
+    style: {
+      top: "72.87%",
+      left: "64.51%",
+    },
+  },
+  {
+    count: 8,
+    label: "Twilight Dream Show (Multimedia Show @ 7:00 PM)",
+    category: "attraction",
+    style: {
+      top: "70.29%",
+      left: "68.61%",
+    },
+  },
+  {
+    count: 9,
+    label: "Movie Wall",
+    category: "attraction",
+    style: {
+      top: "61.32%",
+      left: "66.62%",
+    },
+  },
+  {
+    count: 10,
+    label: "Playtopia (Exclusive Kid Zone / Birthday Party Hall)",
+    category: "attraction",
+    style: {
+      top: "55.92%",
+      left: "66.58%",
+    },
+  },
+  {
+    count: 11,
+    label: "Tribal Museum",
+    category: "attraction",
+    style: {
+      top: "47.01%",
+      left: "53.78%",
+    },
+  },
+  {
+    count: 12,
+    label: "Basketball Game & Board Busters (Chargeable)",
+    category: "attraction",
+    style: {
+      top: "56.78%",
+      left: "60.67%",
+    },
+  },
+  {
+    count: 14,
+    label: "Romancia Parade @ 06:30 PM / Cirkus Store (Stroller Available)",
+    category: "attraction",
+    style: {
+      top: "48.39%",
+      left: "58.34%",
+    },
+  },
+  {
+    count: 15,
+    label: "Circus Store (Shopping Zone) / Strollers Available",
+    category: "Souvenir and Gifts",
+    style: {
+      top: "44.54%",
+      left: "57.76%",
+    },
+  },
+  {
+    count: 16,
+    label: "I-Pics Photo Corner (Chargeable)",
+    category: "Souvenir and Gifts",
+    style: {
+      top: "46.38%",
+      left: "57.07%",
+    },
+  },
+  {
+    count: 17,
+    label: "Planet Jollywood – Fine Dine",
+    category: "Restaurants and Kiosk",
+    style: {
+      top: "39.66%",
+      left: "55.77%",
+    },
+  },
+  {
+    count: 18,
+    label: "Games Area",
+    category: "attraction",
+    style: {
+      top: "44.48%",
+      left: "52.32%",
+    },
+  },
+  {
+    count: 19,
+    label: "Trampoline Park",
+    category: "attraction",
+    style: {
+      top: "32.93%",
+      left: "52.13%",
+    },
+  },
+  {
+    count: 20,
+    label: "Baby Trampoline",
+    category: "attraction",
+    style: {
+      top: "32.18%",
+      left: "50.10%",
+    },
+  },
+  {
+    count: 21,
+    label: "Jolly Tornado",
+    category: "attraction",
+    style: {
+      top: "34.08%",
+      left: "50.40%",
+    },
+  },
+  {
+    count: 22,
+    label: "Bucket Toss (Chargeable)",
+    category: "attraction",
+    style: {
+      top: "36.21%",
+      left: "49.14%",
+    },
+  },
+  {
+    count: 23,
+    label: "Dino Bites",
+    category: "Restaurants and Kiosk",
+    style: {
+      top: "35.06%",
+      left: "41.89%",
+    },
+  },
+  {
+    count: 24,
+    label: "Maze Runner",
+    category: "attraction",
+    style: {
+      top: "35.86%",
+      left: "44.15%",
+    },
+  },
+  {
+    count: 25,
+    label: "First Aid Centre",
+    category: "utilities",
+    style: {
+      top: "39.25%",
+      left: "49.94%",
+    },
+  },
+  {
+    count: 26,
+    label: "Aqua Store (Swimwear)",
+    category: "Souvenir and Gifts",
+    style: {
+      top: "40.11%",
+      left: "36.34%",
+    },
+  },
+  {
+    count: 27,
+    label: "The Titanic Experience",
+    category: "attraction",
+    style: {
+      top: "36.55%",
+      left: "33.65%",
+    },
+  },
+  {
+    count: 28,
+    label: "The Lost World – Dino Park",
+    category: "attraction",
+    style: {
+      top: "40.52%",
+      left: "39.17%",
+    },
+  },
+  {
+    count: 29,
+    label: "Glow Garden",
+    category: "attraction",
+    style: {
+      top: "41.95%",
+      left: "52.70%",
+    },
+  },
+  {
+    count: 30,
+    label: "Hang Man (Chargeable)",
+    category: "attraction",
+    style: {
+      top: "42.30%",
+      left: "34.76%",
+    },
+  },
+  {
+    count: 31,
+    label: "Adventures Bites",
+    category: "Restaurants and Kiosk",
+    style: {
+      top: "46.55%",
+      left: "33.08%",
+    },
+  },
+  {
+    count: 32,
+    label: "Fish the Duck (Chargeable)",
+    category: "attraction",
+    style: {
+      top: "44.54%",
+      left: "31.70%",
+    },
+  },
+  {
+    count: 33,
+    label: "Mini Tagada",
+    category: "attraction",
+    style: {
+      top: "48.97%",
+      left: "33.08%",
+    },
+  },
+  {
+    count: 34,
+    label: "Sky Swinger",
+    category: "attraction",
+    style: {
+      top: "52.18%",
+      left: "30.55%",
+    },
+  },
+  {
+    count: 35,
+    label: "Rocket Ejector",
+    category: "attraction",
+    style: {
+      top: "46.09%",
+      left: "28.63%",
+    },
+  },
+  {
+    count: 36,
+    label: "Bungee Trampoline",
+    category: "attraction",
+    style: {
+      top: "47.87%",
+      left: "26.14%",
+    },
+  },
+  {
+    count: 37,
+    label: "Carousel",
+    category: "attraction",
+    style: {
+      top: "49.43%",
+      left: "27.48%",
+    },
+  },
+  {
+    count: 38,
+    label: "Bumper Car",
+    category: "attraction",
+    style: {
+      top: "51.95%",
+      left: "22.54%",
+    },
+  },
+  {
+    count: 39,
+    label: "Rope Course",
+    category: "attraction",
+    style: {
+      top: "53.28%",
+      left: "18.44%",
+    },
+  },
+  {
+    count: 40,
+    label: "Zip Line",
+    category: "attraction",
+    style: {
+      top: "53.85%",
+      left: "19.93%",
+    },
+  },
+  {
+    count: 41,
+    label: "Sky Cycle",
+    category: "attraction",
+    style: {
+      top: "55.17%",
+      left: "18.70%",
+    },
+  },
+  {
+    count: 42,
+    label: "Double Sky Cycle",
+    category: "attraction",
+    style: {
+      top: "55.29%",
+      left: "17.55%",
+    },
+  },
+  {
+    count: 43,
+    label: "Rock Wall Climbing",
+    category: "attraction",
+    style: {
+      top: "51.15%",
+      left: "18.63%",
+    },
+  },
+  {
+    count: 44,
+    label: "Tyre Wall Climbing",
+    category: "attraction",
+    style: {
+      top: "52.70%",
+      left: "20.62%",
+    },
+  },
+  {
+    count: 45,
+    label: "Sky Roller",
+    category: "attraction",
+    style: {
+      top: "56.15%",
+      left: "19.62%",
+    },
+  },
+  {
+    count: 46,
+    label: "Midi Dance Party",
+    category: "attraction",
+    style: {
+      top: "53.74%",
+      left: "24.65%",
+    },
+  },
+  {
+    count: 47,
+    label: "Samba Balloon",
+    category: "attraction",
+    style: {
+      top: "54.14%",
+      left: "28.25%",
+    },
+  },
+  {
+    count: 48,
+    label: "Changing Room",
+    category: "utilities",
+    style: {
+      top: "42.30%",
+      left: "29.13%",
+    },
+  },
+  {
+    count: 49,
+    label: "Beach Container",
+    category: "Restaurants and Kiosk",
+    style: {
+      top: "44.94%",
+      left: "37.37%",
+    },
+  },
+  {
+    count: 50,
+    label: "Watch Tower",
+    category: "attraction",
+    style: {
+      top: "56.67%",
+      left: "27.60%",
+    },
+  },
+  {
+    count: 51,
+    label: "Wave Pool",
+    category: "attraction",
+    style: {
+      top: "54.43%",
+      left: "35.72%",
+    },
+  },
+  {
+    count: 52,
+    label: "Beach Area",
+    category: "attraction",
+    style: {
+      top: "53.33%",
+      left: "39.06%",
+    },
+  },
+  {
+    count: 53,
+    label: "Rain Dance",
+    category: "attraction",
+    style: {
+      top: "47.76%",
+      left: "41.20%",
+    },
+  },
+  {
+    count: 54,
+    label: "Wave Bistro (AC Restaurant / Event Space)",
+    category: "Restaurants and Kiosk",
+    style: {
+      top: "56.95%",
+      left: "40.32%",
+    },
+  },
+  {
+    count: 55,
+    label: "Family Pool",
+    category: "attraction",
+    style: {
+      top: "41.09%",
+      left: "58.26%",
+    },
+  },
+  {
+    count: 55,
+    label: "Family Pool",
+    category: "attraction",
+    style: {
+      top: "55.34%",
+      left: "44.54%",
+    },
+  },
+  {
+    count: 56,
+    label: "Mini Pendulum Water Slide",
+    category: "attraction",
+    style: {
+      top: "51.26%",
+      left: "54.16%",
+    },
+  },
+  {
+    count: 57,
+    label: "Super Drop Water Slide",
+    category: "attraction",
+    style: {
+      top: "51.90%",
+      left: "56.73%",
+    },
+  },
+  {
+    count: 58,
+    label: "Hide N Seek Water Slide",
+    category: "attraction",
+    style: {
+      top: "53.74%",
+      left: "55.88%",
+    },
+  },
+  {
+    count: 59,
+    label: "Family Water Slide",
+    category: "attraction",
+    style: {
+      top: "53.74%",
+      left: "57.26%",
+    },
+  },
+  {
+    count: 60,
+    label: "Speed Water Slide",
+    category: "attraction",
+    style: {
+      top: "52.59%",
+      left: "55.12%",
+    },
+  },
+  {
+    count: 61,
+    label: "Crazy Cruise Water Slide",
+    category: "attraction",
+    style: {
+      top: "50.98%",
+      left: "55.46%",
+    },
+  },
+  {
+    count: 62,
+    label: "Ice Berg – Refreshment Corner",
+    category: "Restaurants and Kiosk",
+    style: {
+      top: "32.01%",
+      left: "36.30%",
+    },
+  },
+  {
+    count: 63,
+    label: "Royal Kitchen of India (Buffet)",
+    category: "Restaurants and Kiosk",
+    style: {
+      top: "29.02%",
+      left: "36.80%",
+    },
+  },
+  {
+    count: 64,
+    label: "The Food Souk",
+    category: "Restaurants and Kiosk",
+    style: {
+      top: "27.07%",
+      left: "36.22%",
+    },
+  },
+  {
+    count: 65,
+    label: "Nursing Room (Feeding Room)",
+    category: "utilities",
+    style: {
+      top: "29.31%",
+      left: "46.76%",
+    },
+  },
+  {
+    count: 66,
+    label: "Jubilee Theatre (Cinematic Dance Show)",
+    category: "attraction",
+    style: {
+      top: "24.02%",
+      left: "55.92%",
+    },
+  },
+  {
+    count: 67,
+    label: "Miniature City",
+    category: "attraction",
+    style: {
+      top: "16.49%",
+      left: "55.50%",
+    },
+  },
+  {
+    count: 68,
+    label: "Restroom",
+    category: "utilities",
+    style: {
+      top: "41.44%",
+      left: "30.66%",
+    },
+  },
+  {
+    count: 69,
+    label: "Special Guest Restroom",
+    category: "utilities",
+    style: {
+      top: "43.39%",
+      left: "58.91%",
+    },
+  },
+  {
+    count: 69,
+    label: "Special Guest Restroom",
+    category: "utilities",
+    style: {
+      top: "53.85%",
+      left: "75.81%",
+    },
+  },
+  {
+    count: 70,
+    label: "Ride Area School Students Baggage Lockers",
+    category: "utilities",
+    style: {
+      top: "44.14%",
+      left: "25.30%",
+    },
+  },
+  {
+    count: 71,
+    label: "Water Park School Students Baggage Lockers",
+    category: "utilities",
+    style: {
+      top: "59.20%",
+      left: "52.55%",
+    },
+  },
+  {
+    count: 72,
+    label: "Water Park – Guest Lockers",
+    category: "utilities",
+    style: {
+      top: "47.99%",
+      left: "34.61%",
+    },
+  },
+  {
+    count: 73,
+    label: "Ride Area – Guest Lockers",
+    category: "utilities",
+    style: {
+      top: "58.16%",
+      left: "20.20%",
+    },
+  },
+  {
+    count: 74,
+    label: "Assembly Points",
+    category: "utilities",
+    style: {
+      top: "28.16%",
+      left: "46.30%",
+    },
+  },
+  {
+    count: 74,
+    label: "Assembly Points",
+    category: "utilities",
+    style: {
+      top: "49.60%",
+      left: "70.64%",
+    },
+  },
+  {
+    count: 74,
+    label: "Assembly Points",
+    category: "utilities",
+    style: {
+      top: "74.71%",
+      left: "70.30%",
     },
   },
 ];
