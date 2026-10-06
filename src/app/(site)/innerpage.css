@@ -21,7 +21,7 @@
 .hero_section::before{
   bottom: 0;
   height: auto;
-  background-image: url('/assets/images/inner_banner_layer.svg');
+  background-image: url('/assets/images/inner_banner_layer_blue.svg');
   background-position: bottom right;
   background-repeat: no-repeat;
   background-size: cover;
