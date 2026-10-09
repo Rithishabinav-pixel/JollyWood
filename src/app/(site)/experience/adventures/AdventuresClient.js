@@ -253,7 +253,7 @@ const AdventuresData = [
     ]
   },
   {
-    "image": "/assets/images/placeholder-ad.png",
+    "image": "/assets/images/melt-down.png",
     "title": "Melt Down",
     "content": "Hold on. Things are about to get wobbly! Take on a playful balance challenge where staying upright is half the fun. Keep your footing, find your balance and see how long you can keep from having your very own Melt Down.",
     "rules": [

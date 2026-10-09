@@ -95,7 +95,7 @@ const ExperienceWorldsData = [
     title: "Vortex Tunnel",
     description: "Get delulu. Find your solulu. A mind-bending journey you won't forget.",
     link: "/experience/attractions",
-    image: "/assets/images/glow-garden.png",
+    image: "/assets/images/vortex-tunnel.png",
     video: "/assets/videos/ride-reel-video.mp4"
   },
   
@@ -259,21 +259,21 @@ const ExperienceWorldsData = [
         title: "Jubilee Theatre",
         description: "Where cinema comes alive on stage. Experience the magic of Indian cinema through spectacular performances, music and storytelling. With dazzling visuals and captivating acts, Jubilee Theatre brings your favourite movie moments to life in an unforgettable celebration.",
         link: "/experience/live-shows",
-        image: "/assets/images/j-theatre.png",
+        image: "/assets/images/jt-f.png",
         video: "/assets/videos/ride-reel-video.mp4"
       },
       {
         title: "Twilight Dreams",
         description: "Where lights, water and music create magic. Watch the night transform into a breathtaking spectacle of colours, lasers and dancing fountains. Twilight Dreams combines technology and imagination to create a mesmerising show perfect for families, friends and unforgettable evenings.",
         link: "/experience/live-shows",
-        image: "/assets/images/placeholder.png",
+        image: "/assets/images/td-f.png",
         video: "/assets/videos/ride-reel-video.mp4"
       },
       {
         title: "Parade Show",
         description: "Where the streets come alive with rhythm. Romancia Street turns into a lively stage with European-style dance and vibrant performances. Follow the music, soak up the energy and enjoy a little taste of Europe right here at Jollywood.",
         link: "/experience/live-shows",
-        image: "/assets/images/placeholder.png",
+        image: "/assets/images/ps-f.png",
         video: "/assets/videos/ride-reel-video.mp4"
       },
 
