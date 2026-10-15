@@ -240,13 +240,13 @@ opacity: 1;
 }
 
 .experience_section .top_heading .left{
-  width: 50%;
-  max-width: 50%;
+  width: 55%;
+  max-width: 55%;
 }
 
 .experience_section .top_heading .right{
-  width: 50%;
-  max-width: 50%;
+  width: 45%;
+  max-width: 45%;
   display: flex;
   justify-content: flex-end;
 }
@@ -300,7 +300,7 @@ float: left;
   position: relative;
   min-height: 100vh;
   transition: background 0.3s all;
-animation: cinematic 15s infinite linear;
+animation: cinematic 7s infinite linear;
 background-size: cover;
 }
 

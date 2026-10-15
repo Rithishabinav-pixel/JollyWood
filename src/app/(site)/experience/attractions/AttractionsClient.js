@@ -10,6 +10,28 @@ import Image from 'next/image'
 const ExperienceWorldsData = [
 
   // Attractions
+
+   {
+    title: "Glow Garden",
+    description: "Where imagination lights up the night. Step into a magical world of glowing wonders.",
+    link: "/experience/attractions",
+    image: "/assets/images/glow-garden.png",
+    video: "/assets/videos/ride-reel-video.mp4"
+  },
+  {
+    title: "Vortex Tunnel",
+    description: "Get delulu. Find your solulu. A mind-bending journey you won't forget.",
+    link: "/experience/attractions",
+    image: "/assets/images/vortex-tunnel.png",
+    video: "/assets/videos/vt-video.mp4"
+  },
+  {
+    title: "Virtual Cricket",
+    description: "Step up. Swing hard. Score big. Enjoy cricket like never before.",
+    link: "/experience/attractions",
+    image: "/assets/images/vc.png",
+    video: "/assets/videos/vc-video.mp4"
+  },
   {
     title: "The Lost World",
     description: "A world forgotten by time. Explore a world where dinosaurs rule again.",
@@ -45,20 +67,7 @@ const ExperienceWorldsData = [
     image: "/assets/images/ride-reel.png",
     video: "/assets/videos/ride-reel-video.mp4"
   },
-  {
-    title: "Vortex Tunnel",
-    description: "Get delulu. Find your solulu. A mind-bending journey you won't forget.",
-    link: "/experience/attractions",
-    image: "/assets/images/vortex-tunnel.png",
-    video: "/assets/videos/vt-video.mp4"
-  },
-  {
-    title: "Virtual Cricket",
-    description: "Step up. Swing hard. Score big. Enjoy cricket like never before.",
-    link: "/experience/attractions",
-    image: "/assets/images/vc.png",
-    video: "/assets/videos/vc-video.mp4"
-  },
+  
   {
     title: "Romancia Street",
     description: "Walk into a world from another era. Experience medieval charm, music and magic.",
@@ -88,13 +97,7 @@ const ExperienceWorldsData = [
     image: "/assets/images/mini-city.png",
     video: "/assets/videos/ride-reel-video.mp4"
   },
-  {
-    title: "Glow Garden",
-    description: "Where imagination lights up the night. Step into a magical world of glowing wonders.",
-    link: "/experience/attractions",
-    image: "/assets/images/glow-garden.png",
-    video: "/assets/videos/ride-reel-video.mp4"
-  },
+ 
   {
     title: "Toy Train & Jolly Bus",
     description: "From little wheels to big smiles. Let the Jolly journey begin!",

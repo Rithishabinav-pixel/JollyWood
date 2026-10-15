@@ -56,12 +56,26 @@ const ExperienceWorldsData = [
     tab: "attractions",
     label: "Attractions",
     content: [
-     {
-    title: "The Lost World",
-    description: "A world forgotten by time. Explore a world where dinosaurs rule again.",
+      {
+    title: "Vortex Tunnel",
+    description: "Get delulu. Find your solulu. A mind-bending journey you won't forget.",
     link: "/experience/attractions",
-    image: "/assets/images/lost-world.png",
+    image: "/assets/images/vortex-tunnel.png",
+    video: "/assets/videos/vt-video.mp4"
+  },
+     {
+    title: "Glow Garden",
+    description: "Where imagination lights up the night. Step into a magical world of glowing wonders.",
+    link: "/experience/attractions",
+    image: "/assets/images/glow-garden.png",
     video: "/assets/videos/ride-reel-video.mp4"
+  },
+  {
+    title: "Virtual Cricket",
+    description: "Step up. Swing hard. Score big. Enjoy cricket like never before.",
+    link: "/experience/attractions",
+    image: "/assets/images/vc.png",
+    video: "/assets/videos/vc-video.mp4"
   },
   {
     title: "Titanic - Gallery & Simulation",
@@ -91,13 +105,7 @@ const ExperienceWorldsData = [
     image: "/assets/images/ride-reel.png",
     video: "/assets/videos/ride-reel-video.mp4"
   },
-  {
-    title: "Vortex Tunnel",
-    description: "Get delulu. Find your solulu. A mind-bending journey you won't forget.",
-    link: "/experience/attractions",
-    image: "/assets/images/vortex-tunnel.png",
-    video: "/assets/videos/vt-video.mp4"
-  },
+  
   
     ]
   },

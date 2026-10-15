@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useEffect, useState } from "react";
@@ -10,22 +11,40 @@ export default function FloatingTicket() {
 
   const [active, setActive] = useState(false);
   const [visible, setVisible] = useState(false);
+  const [mobile, setMobile] = useState(false);
+
+  useEffect(() => {
+    const checkDevice = () => {
+      setMobile(window.innerWidth < 1200);
+    };
+
+    checkDevice();
+
+    window.addEventListener("resize", checkDevice);
+
+    return () => {
+      window.removeEventListener("resize", checkDevice);
+    };
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
       const isHomePage = pathname === "/";
-
-      const scrollThreshold = isHomePage
+      const isMobile = window.innerWidth < 1200;
+      const scrollY = window.scrollY;
+      const scrollThreshold = isHomePage && !isMobile
         ? window.innerHeight
         : 39;
 
-      setActive(window.scrollY > scrollThreshold);
+      setActive(scrollY > scrollThreshold);
 
-      setVisible(
-        isHomePage
-          ? window.scrollY > window.innerHeight
-          : true
-      );
+      if (isHomePage && isMobile) {
+        setVisible(true);
+      } else if (isHomePage) {
+        setVisible(scrollY > window.innerHeight);
+      } else {
+        setVisible(true);
+      }
     };
 
     handleScroll();
@@ -45,6 +64,7 @@ export default function FloatingTicket() {
         <a
           href="https://booknow.jollywood.co.in/package/main"
           target="_blank"
+          rel="noopener noreferrer"
           aria-label="Book Tickets"
           className={`${style.floating_ticket} ${
             active ? style.active : ""
