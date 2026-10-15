@@ -750,7 +750,7 @@ export default function ParkClient() {
   ))}
 </ul>
 
-<Image src="/assets/images/map-text.png" width={105} height={92} alt=''/>
+<Image src="/assets/images/map-text.svg" width={105} height={90} alt=''/>
 
   </div>
 

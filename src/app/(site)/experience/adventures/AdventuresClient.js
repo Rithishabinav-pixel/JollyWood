@@ -268,7 +268,7 @@ const AdventuresData = [
     ]
   },
   {
-    "image": "/assets/images/placeholder-ad.png",
+    "image": "/assets/images/szb-ad.png",
     "title": "Sky Cycle",
     "content": "Pedal above the ground. Take your cycling skills sky-high as you pedal your way through an elevated adventure. Balance, focus and keep moving as you enjoy a whole new perspective from above.",
     "rules": [

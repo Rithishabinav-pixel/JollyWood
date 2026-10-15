@@ -96,7 +96,7 @@ const ExperienceWorldsData = [
     description: "Get delulu. Find your solulu. A mind-bending journey you won't forget.",
     link: "/experience/attractions",
     image: "/assets/images/vortex-tunnel.png",
-    video: "/assets/videos/ride-reel-video.mp4"
+    video: "/assets/videos/vt-video.mp4"
   },
   
     ]
@@ -107,38 +107,38 @@ const ExperienceWorldsData = [
     label: "Dry Rides",
     content: [
       {
-        title: "Bumper Car",
-        description: "Crash. Laugh. Repeat. Get behind the wheel and enjoy a fun-filled ride where friendly collisions create unforgettable moments. Challenge your friends, take control and enjoy a classic bumper car experience made for endless laughter. Age Allowed: 12+ Height: 106+ cm Weight: 20+ kg",
+        title: "360 Cycle",
+        description: "Turn your world upside down. Take on a unique cycling challenge that tests your balance and control. A fun-filled experience for adventure seekers ready to push their limits.",
         link: "/experience/dry-rides",
-        image: "/assets/images/bumper_car.png",
-        video: "/assets/videos/ride-reel-video.mp4"
+        image: "/assets/images/360-i.png",
+        video: "/assets/videos/360-v.mp4"
       },
       {
-        title: "Carousel",
-        description: "A classic ride full of charm. Take a nostalgic spin on our beautifully crafted carousel. With colourful designs and gentle movement, it is the perfect ride for families looking for a joyful experience together. Age Allowed: 12+ Height: 137–195 cm",
+        title: "Bumper Car",
+        description: "Crash. Laugh. Repeat. Get behind the wheel and enjoy a fun-filled ride where friendly collisions create unforgettable moments. Challenge your friends, take control and enjoy a classic bumper car experience made for endless laughter.",
         link: "/experience/dry-rides",
-        image: "/assets/images/carousel.png",
-        video: "/assets/videos/ride-reel-video.mp4"
+        image: "/assets/images/bc-i.png",
+        video: "/assets/videos/bc-v.mp4"
       },
       {
         title: "Jolly Tornado",
         description: "The gravity tester begins. Hold on tight as the Jolly Tornado takes you through a thrilling experience that tests your balance, courage and excitement. How long can you float through the twist? (Age / Height / Weight: Information Required)",
         link: "/experience/dry-rides",
-        image: "/assets/images/placeholder.png",
-        video: "/assets/videos/ride-reel-video.mp4"
+        image: "/assets/images/jt-i.png",
+        video: "/assets/videos/jt-v.mp4"
       },
       {
         title: "Midi Dance Party",
         description: "Spin. Dance. Feel the beat. Lights, music and movement come together in this energetic ride. Get ready for a spinning experience filled with rhythm, excitement and nonstop fun with your friends. Age Allowed: 12+ Height: 137–195 cm",
         link: "/experience/dry-rides",
-        image: "/assets/images/placeholder.png",
+        image: "/assets/images/md-i.png",
         video: "/assets/videos/ride-reel-video.mp4"
       },
       {
         title: "Mini Tagada",
         description: "Hold on. The fun is spinning. Get ready for a high-energy ride that twists, bounces and keeps the excitement going. With music and motion combined, Mini Tagada is a thrilling experience you won't forget. Age Allowed: 12+ Height: 143+ cm",
         link: "/experience/dry-rides",
-        image: "/assets/images/placeholder.png",
+        image: "/assets/images/mt-i.png",
         video: "/assets/videos/ride-reel-video.mp4"
       },
       {
@@ -207,46 +207,53 @@ const ExperienceWorldsData = [
     label: "Adventures",
     content: [
       {
-        title: "High Ropes Course",
-        description: "Rise above the challenge. Take on a thrilling aerial adventure that tests your balance, strength and confidence. Navigate through exciting obstacles while pushing your limits and creating unforgettable moments. Age Allowed: 12+ Height: 140+ cm",
+        title: "Trampoline Park",
+        description: "Bounce. Jump. Show off your moves. A whole space dedicated to jumping, bouncing and having fun. Move from one bounce to the next, challenge your friends and let loose in a park built for energetic fun.",
         link: "/experience/adventures",
-        image: "/assets/images/hrc.png",
-        video: "/assets/videos/ride-reel-video.mp4"
+        image: "/assets/images/tp-i.png",
+        video: "/assets/videos/tp-v.mp4"
       },
       {
-        title: "Zipline",
-        description: "Take the leap. Feel the rush. Soar through the air and experience the thrill of speed as you glide across the zipline. A high-energy adventure that brings excitement, courage and unforgettable views. Age Allowed: 12+ Height: 140+ cm",
+        title: "Single Zip Bike",
+        description: "Pedal. Zip. Feel the rush. Hop onto a bike and take your ride beyond the usual. Combine cycling with the thrill of a zip experience as you move through an elevated adventure that puts your balance to the test.",
         link: "/experience/adventures",
-        image: "/assets/images/zipline.png",
-        video: "/assets/videos/ride-reel-video.mp4"
+        image: "/assets/images/szb-i.png",
+        video: "/assets/videos/szb-v.mp4"
       },
       {
-        title: "Rock Climbing",
-        description: "Climb higher. Push harder. Challenge yourself on a thrilling climbing wall that tests your strength, focus and determination. Reach the top, overcome obstacles and celebrate every achievement along the way. Age Allowed: 12+ Height: 140+ cm",
+        title: "Rocket Ejection",
+        description: "Ready for liftoff? Feel the rush as you’re propelled upward in an adrenaline-filled experience that takes you from the ground to the sky in seconds. Hold on tight and enjoy the thrill of a rapid rise.",
         link: "/experience/adventures",
-        image: "/assets/images/rock-climbing.png",
-        video: "/assets/videos/ride-reel-video.mp4"
+        image: "/assets/images/re-i.png",
+        video: "/assets/videos/re-v.mp4"
       },
       {
-        title: "Obstacle Course",
-        description: "Challenge accepted. Teamwork activated. Work together, overcome obstacles and test your coordination through an exciting course filled with walls, ropes, and balance challenges. This is the perfect adventure to build confidence and teamwork. Age Allowed: 12+ Height: 140+ cm",
+        title: "Sky Cycle",
+        description: "Pedal above the ground. Take your cycling skills sky-high as you pedal your way through an elevated adventure. Balance, focus and keep moving as you enjoy a whole new perspective from above.",
         link: "/experience/adventures",
-        image: "/assets/images/obs-course.png",
-        video: "/assets/videos/ride-reel-video.mp4"
+        image: "/assets/images/szb-i.png",
+        video: "/assets/videos/scv.mp4"
       },
       {
         title: "Archery Tag",
-        description: "Aim. Strategize. Conquer. Combine the thrill of archery with the excitement of a team battle. Test your accuracy, build strategies and compete with your team in this action-packed adventure. Age Allowed: 16+ Height: 160+ cm",
+        description: "Aim. Strategize. Conquer. Combine the thrill of archery with the excitement of a team battle. Test your accuracy, build strategies and compete with your team in this action-packed adventure.",
         link: "/experience/adventures",
-        image: "/assets/images/placeholder.png",
-        video: "/assets/videos/ride-reel-video.mp4"
+        image: "/assets/images/at-i.png",
+        video: "/assets/videos/arc-v.mp4"
       },
       {
-        title: "Maze Runner",
-        description: "Find your way. Beat the maze. Enter a world of twists, turns and challenges where every step tests your problem-solving skills. Navigate through the maze and race towards the ultimate escape.",
+        title: "Human Gyro",
+        description: "Spin. Twist. Find your balance. Step into a spinning challenge that puts your balance and body control to the test. Keep yourself steady as the motion takes over and see how well you can handle the Human Gyro.",
         link: "/experience/adventures",
-        image: "/assets/images/maze-runner.png",
-        video: "/assets/videos/ride-reel-video.mp4"
+        image: "/assets/images/hyg-i.png",
+        video: "/assets/videos/hyg-v.mp4"
+      },
+      {
+        title: "Bull Ride",
+        description: "Think you can stay on? Take your seat and test your balance as the bull puts your riding skills to the test. Hold on through every movement and see how long you can stay in control.",
+        link: "/experience/adventures",
+        image: "/assets/images/ba-i.png",
+        video: "/assets/videos/br-v.mp4"
       }
     ]
   },
@@ -267,14 +274,14 @@ const ExperienceWorldsData = [
         description: "Where lights, water and music create magic. Watch the night transform into a breathtaking spectacle of colours, lasers and dancing fountains. Twilight Dreams combines technology and imagination to create a mesmerising show perfect for families, friends and unforgettable evenings.",
         link: "/experience/live-shows",
         image: "/assets/images/td-f.png",
-        video: "/assets/videos/ride-reel-video.mp4"
+        video: "/assets/videos/td-video.mp4"
       },
       {
         title: "Parade Show",
         description: "Where the streets come alive with rhythm. Romancia Street turns into a lively stage with European-style dance and vibrant performances. Follow the music, soak up the energy and enjoy a little taste of Europe right here at Jollywood.",
         link: "/experience/live-shows",
         image: "/assets/images/ps-f.png",
-        video: "/assets/videos/ride-reel-video.mp4"
+        video: "/assets/videos/ps-video.mp4"
       },
 
     ]

@@ -15,6 +15,9 @@
 
 public/assets/
 
+/public/assets.zip
+/public/uploads.zip
+
 # admin-uploaded media
 public/uploads/*
 !public/uploads/.gitkeep
@@ -53,3 +56,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+/public/assets.zip
+/public/uploads.zip

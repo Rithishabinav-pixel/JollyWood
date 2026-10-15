@@ -50,14 +50,14 @@ const ExperienceWorldsData = [
     description: "Get delulu. Find your solulu. A mind-bending journey you won't forget.",
     link: "/experience/attractions",
     image: "/assets/images/vortex-tunnel.png",
-    video: "/assets/videos/ride-reel-video.mp4"
+    video: "/assets/videos/vt-video.mp4"
   },
   {
     title: "Virtual Cricket",
     description: "Step up. Swing hard. Score big. Enjoy cricket like never before.",
     link: "/experience/attractions",
     image: "/assets/images/vc.png",
-    video: "/assets/videos/ride-reel-video.mp4"
+    video: "/assets/videos/vc-video.mp4"
   },
   {
     title: "Romancia Street",
