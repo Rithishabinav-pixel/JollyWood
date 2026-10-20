@@ -14,6 +14,7 @@ import MobileMenu from "./components/mobile-menu/MobileMenu";
 import HeaderWrapper from "./components/header/HeaderWrapper";
 import AOSInit from "./components/aos/AOSInit";
 import FloatingTicket from "./components/floating-ticket/FloatingTicket";
+import HomeComponent from "./HomeComponent";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.jollywood.co.in";
 
@@ -39,18 +40,9 @@ export default function RootLayout({ children }) {
 
   return (
     <>
-    <SmoothScroll/>
-    {/* <AOSInit/> */}
-<HeaderWrapper />
-<FloatingTicket/>
-        <main>
-    <FloatingAnnouncement/>
-   <DesktopSidebar />
 
-        {children}
-        <ScrollTop/>
-        </main>
-        <Footer/>
+<HomeComponent children={children} announcement={<FloatingAnnouncement />}/>
+
     </>
   );
 }
