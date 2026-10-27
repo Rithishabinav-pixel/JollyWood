@@ -64,6 +64,11 @@ const RulesData = [
     icon: "/assets/images/add-c.svg",
     title: "Additionally, the following activities require prior approval from the management",
     content: "Sale or display of goods or services.\nDistribution of printed materials.\nCommercial photography, videography, or recording.\nBrand promotion, display of banners, or any unauthorized events."
+  },
+  {
+    icon: "/assets/images/alcohol.svg",
+    title: "Foods",
+    content: "Outside food and Liquor is not allowed in the park."
   }
 ];
 

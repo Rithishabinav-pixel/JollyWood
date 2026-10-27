@@ -67,7 +67,7 @@ const VisitorsData = [
     {
     icon:"/assets/images/photography.svg",
     title:"Photography & Delightful Memories",
-    content:"DSLR camera not allowed inside the park."
+    content:"DSLR and GoPro cameras are not permitted inside the park."
   },
     {
     icon:"/assets/images/restroom.svg",
