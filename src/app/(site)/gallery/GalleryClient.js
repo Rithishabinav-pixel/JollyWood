@@ -36,7 +36,7 @@ const equalGallery = useMemo(() => {
   return shuffledGallery.slice(0, totalImages);
 }, [images, selectedCategory]);
 
-const galleryCount = equalGallery.length / 4;
+const galleryCount = equalGallery.length / 2;
 
 const galleryFirstColumn = equalGallery.slice(
   0,
@@ -48,15 +48,6 @@ const gallerySecondColumn = equalGallery.slice(
   galleryCount * 2
 );
 
-const galleryThirdColumn = equalGallery.slice(
-  galleryCount * 2,
-  galleryCount * 3
-);
-
-const galleryFourColumn = equalGallery.slice(
-  galleryCount * 3,
-  galleryCount * 4
-);
 
 const openLightbox = (index) => setLightboxIndex(index);
 const closeLightbox = () => setLightboxIndex(null);
@@ -94,9 +85,9 @@ useEffect(() => {
 
 <section className={`common_section no_padding_top ${style.gallery_section}`}>
 
-<div className={`container section_container ${style.container}`}>
+<div className={` section_container ${style.container}`}>
 
-   <div className={`top_heading  ${style.top_heading}`}>
+   {/* <div className={`top_heading  ${style.top_heading}`}>
       <div className={`${style.right}`}>
         <button className={`${style.tab_btn} ${selectedCategory==="All"?style.active:""}`} onClick={()=>setSelectedCategory("All")}>All</button>
         {categories && categories.map((item)=>(
@@ -104,44 +95,32 @@ useEffect(() => {
         ))}
       </div>
 
-    </div>
+    </div> */}
 
     <div className={style.galleryGrid}>
       <div className={style.cards}>
-      { galleryFirstColumn && galleryFirstColumn.map((item,index)=>(
-        <React.Fragment key={item.id}>
+        <div className={style.card_inner}>
+      { galleryFirstColumn && [...galleryFirstColumn,...galleryFirstColumn].map((item,index)=>(
+        <React.Fragment key={`${item.id}-${index}`}>
 <img src={item.image} loading="lazy" alt="" onClick={()=>openLightbox(index)}/>
 </React.Fragment>
         ))
       }
       </div>
+      </div>
 
        <div className={style.cards}>
-      { gallerySecondColumn && gallerySecondColumn.map((item,index)=>(
-        <React.Fragment key={item.id}>
+        <div className={style.card_inner}>
+      { gallerySecondColumn && [...gallerySecondColumn,...gallerySecondColumn].map((item,index)=>(
+        <React.Fragment key={`${item.id}-${index}`}>
 <img src={item.image} loading="lazy" alt="" onClick={()=>openLightbox(galleryCount + index)}/>
 </React.Fragment>
         ))
       }
       </div>
-
-       <div className={style.cards}>
-      { galleryThirdColumn && galleryThirdColumn.map((item,index)=>(
-        <React.Fragment key={item.id}>
-<img src={item.image} loading="lazy" alt="" onClick={()=>openLightbox(galleryCount * 2 + index)}/>
-</React.Fragment>
-        ))
-      }
       </div>
 
-       <div className={style.cards}>
-      { galleryFourColumn && galleryFourColumn.map((item,index)=>(
-        <React.Fragment key={item.id}>
-<img src={item.image} loading="lazy" alt="" onClick={()=>openLightbox(galleryCount * 3 + index)}/>
-</React.Fragment>
-        ))
-      }
-      </div>
+  
     </div>
 
 

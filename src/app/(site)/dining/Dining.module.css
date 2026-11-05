@@ -135,6 +135,9 @@ overflow: hidden;
 
 .kitchenContainer .image img{
     transition: 0.3s all;
+    color: transparent;
+    aspect-ratio: 555 / 700;
+    object-fit: cover;
 }
 
 .kitchenContainer .image:hover img{

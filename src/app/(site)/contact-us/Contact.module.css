@@ -102,6 +102,24 @@ list-style: none;
     color: var(--yellow);
 }
 
+.timings_section .week .timing p span,
+.disclaimer span{
+  color: rgb(255, 102, 0);
+}
+
+.timings_section .week .timing p span{
+  margin-left: 4px;
+}
+
+.disclaimer{
+  font-size: 14px;
+  font-style: italic;
+}
+
+.disclaimer span{
+  margin-right: 4px;
+}
+
 .timings_section .character_1{
     position: absolute;
   right: 0;

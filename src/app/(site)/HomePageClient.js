@@ -78,7 +78,7 @@ const ExperienceWorldsData = [
     video: "/assets/videos/vc-video.mp4"
   },
   {
-    title: "Titanic - Gallery & Simulation",
+    title: "Titanic",
     description: "A legendary story beneath the waves. Relive the timeless mystery of Titanic's world.",
     link: "/experience/attractions",
     image: "/assets/images/titanic.png",
@@ -337,13 +337,13 @@ const FoodSoukData = [
     image:"/assets/images/planet-jollywood.png"
   },
    {
-    title:"Beach Container",
+    title:"Beach Kiosk",
     description:"Quick bites. Cool vibes. Beachside fun. The perfect pit stop for every hungry adventurer!",
     link:"/dining#food-souk",
     image:"/assets/images/beach-container.png"
   },
    {
-    title:"Dry Ride Container",
+    title:"Dry Ride Kiosk",
     description:"Ride. Refuel. Repeat. Tasty bites to keep your adventure rolling! ",
     link:"/dining#food-souk",
     image:"/assets/images/dry-ride-container.png"
@@ -393,28 +393,7 @@ const FacilitiesData = [
 ]
 
 
-const getRandomItem = (array) => {
-  if (!array.length) {
-    return null;
-  }
 
-  return array[Math.floor(Math.random() * array.length)];
-};
-
-const getRandomItems = (array, count) => {
-  const shuffled = [...array];
-
-  for (let i = shuffled.length - 1; i > 0; i--) {
-    const randomIndex = Math.floor(Math.random() * (i + 1));
-
-    [shuffled[i], shuffled[randomIndex]] = [
-      shuffled[randomIndex],
-      shuffled[i],
-    ];
-  }
-
-  return shuffled.slice(0, count);
-};
 
 
 // comforts data
@@ -526,6 +505,8 @@ export default function HomePageClient({ offers, storyContents, storyImages }) {
   const router = useRouter();
 
 
+  const [mobile,setMobile] = useState(null)
+
   const [adrenalineVideo,setAdrenalineVideo] = useState(null);
   const [experienceVideo,setExperienceVideo] = useState(null);
 
@@ -543,6 +524,43 @@ export default function HomePageClient({ offers, storyContents, storyImages }) {
   content: [],
 });
 
+useEffect(()=>{
+
+const checkDevice = () =>{
+  setMobile(window.innerWidth<767)
+}
+
+checkDevice();
+
+window.addEventListener("resize",checkDevice);
+
+return(()=>window.removeEventListener("resize",checkDevice))
+
+},[])
+
+
+const getRandomItem = (array) => {
+  if (!array.length) {
+    return null;
+  }
+
+  return array[Math.floor(Math.random() * array.length)];
+};
+
+const getRandomItems = (array, count) => {
+  const shuffled = [...array];
+
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const randomIndex = Math.floor(Math.random() * (i + 1));
+
+    [shuffled[i], shuffled[randomIndex]] = [
+      shuffled[randomIndex],
+      shuffled[i],
+    ];
+  }
+
+  return shuffled.slice(0, mobile?2:count);
+};
 
 
 useEffect(() => {
@@ -685,6 +703,33 @@ useEffect(() => {
 
       </div>
     </section>
+
+
+    {/* cinematic section  */}
+<section className={`common_section ${style.cinematic_section}`}>
+<div className={`container ${style.container}`}>
+
+   <div className={`top_heading left_align ${style.top_heading}`}>
+      <div className={`left ${style.left}`} data-aos="fade-right">
+        <p className='white'>The Stage</p>
+        <h2 className='common_heading white'>Live Cinematic Spectacle</h2>
+        <p className='white'>A multi-million rupee production featuring aerial acrobatics, gravity-defying stunts, and the most iconic tracks of Indian cinema.</p>
+       <Button href="/live-shows" text="View Shows" className="common_btn orange_bg black_text right_tilt ticket"></Button>
+
+      </div>
+
+      {/* <div className={`right ${style.right}`} data-aos="fade-left">
+        <p className={`white ${style.mixed}`}>Today’s <span>Show Timing</span></p>
+        <p className={`white ${style.timing}`}>06:00 PM</p>
+  <a href="https://booknow.jollywood.co.in/package/main" target='_blank' className="common_btn orange_bg black_text right_tilt ticket">Book Tickets</a>
+
+      </div> */}
+    </div>
+
+
+</div>
+</section>
+
 
 {/* High Adrenaline section  */}
 
@@ -923,30 +968,6 @@ useEffect(() => {
 </section>
 
 
-{/* cinematic section  */}
-<section className={`common_section ${style.cinematic_section}`}>
-<div className={`container ${style.container}`}>
-
-   <div className={`top_heading left_align ${style.top_heading}`}>
-      <div className={`left ${style.left}`} data-aos="fade-right">
-        <p className='white'>The Stage</p>
-        <h2 className='common_heading white'>Live Cinematic Spectacle</h2>
-        <p className='white'>A multi-million rupee production featuring aerial acrobatics, gravity-defying stunts, and the most iconic tracks of Indian cinema.</p>
-       <Button href="/live-shows" text="View Shows" className="common_btn orange_bg black_text right_tilt ticket"></Button>
-
-      </div>
-
-      {/* <div className={`right ${style.right}`} data-aos="fade-left">
-        <p className={`white ${style.mixed}`}>Today’s <span>Show Timing</span></p>
-        <p className={`white ${style.timing}`}>06:00 PM</p>
-  <a href="https://booknow.jollywood.co.in/package/main" target='_blank' className="common_btn orange_bg black_text right_tilt ticket">Book Tickets</a>
-
-      </div> */}
-    </div>
-
-
-</div>
-</section>
 
 
 {/* Flavours of the World section  */}
@@ -1060,8 +1081,9 @@ useEffect(() => {
   <div className={`${style.row} ${style.upperRow}`}>
 
 
-    {randomStories.squareImages[0] && (
+    {randomStories.squareImages[0] &&  (
       <div className={style.squareImg} data-aos="zoom-in" data-aos-delay="100">
+
 
         <Image
           className={style.imageData}
@@ -1070,6 +1092,7 @@ useEffect(() => {
           height={262}
           alt="story"
         />
+      
 
         <Image
           className={style.frame}

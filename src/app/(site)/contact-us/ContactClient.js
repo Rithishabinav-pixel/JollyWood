@@ -16,11 +16,11 @@ const TimingDatas = {
     },
     {
       time:"11:00 AM - 06:30 PM",
-      label:"Rides Timings"
+      label:`Rides Timings<span>*</span>`
     },
     {
       time:"12:00 PM - 05:30 PM",
-      label:"Water Park Timings"
+      label:`Water Park Timings<span>*</span>`
     },
   ],
    weekends:[
@@ -30,11 +30,11 @@ const TimingDatas = {
     },
     {
       time:"11:00 AM - 06:30 PM",
-      label:"Rides Timings"
+      label:`Rides Timings<span>*</span>`
     },
     {
       time:"11:30 AM - 06:00 PM",
-      label:"Water Park Timings"
+      label:`Water Park Timings<span>*</span>`
     },
   ],
 }
@@ -97,7 +97,7 @@ export default function ContactClient() {
   {TimingDatas["weekdays"].map((item,index)=>(
   <div className={style.timing} key={index}>
     <h4 className={style.time}>{item.time}</h4>
-    <p className='white'>{item.label}</p>
+        <p className='white' dangerouslySetInnerHTML={{__html:item.label}}/>
   </div>
   ))}
 </div>
@@ -107,10 +107,12 @@ export default function ContactClient() {
   {TimingDatas["weekends"].map((item,index)=>(
   <div className={style.timing} key={index}>
     <h4 className={style.time}>{item.time}</h4>
-    <p className='white'>{item.label}</p>
+    <p className='white' dangerouslySetInnerHTML={{__html:item.label}}/>
   </div>
   ))}
 </div>
+
+<p className={`${style.disclaimer} white`}><span>*</span>Subject to light and weather</p>
 
   </div>
 

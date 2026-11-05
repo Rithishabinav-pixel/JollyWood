@@ -7,10 +7,6 @@
   flex-direction: column;
 }
 
-.adrenaline_section{
-  padding-top: 310px;
-}
-
 .experience_section .slider .singleSlide{
   height: 100%;
 }
@@ -864,9 +860,6 @@ filter: invert(0) brightness(100);
 
 @media screen and (max-width:1600px) {
 
-  .adrenaline_section{
-  padding-top: 260px;
-}
 
   .corporate_section .splitSection .singleTexts h3{
   font-size: 48px;
@@ -976,9 +969,6 @@ filter: invert(0) brightness(100);
 
 @media screen and (max-width:1400px){
 
-    .adrenaline_section{
-  padding-top: 260px;
-}
 
   .memories_section .memories_grid .videoTabContainer .tabs button{
   width: 90px;

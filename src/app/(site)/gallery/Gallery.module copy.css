@@ -1,0 +1,181 @@
+.hero_section{
+    background-image: url('/assets/images/gallery-banner.png');
+    background-size: cover;
+}
+
+.gallery_section .top_heading .right{
+width: 100%;
+display: flex;
+justify-content: flex-end;
+gap: 16px;
+}
+
+
+.gallery_section .top_heading .right .tab_btn{
+  padding: 12px 16px;
+  border: solid white 1px;
+  border-radius: 40px;
+  background: none;
+  min-width: fit-content;
+  color: white;
+}
+
+.gallery_section .top_heading .right .tab_btn.active{
+  background-color: var(--darkOrange);
+  border-color: var(--darkOrange);
+}
+
+.gallery_section .top_heading .right .tab_btn:not(.active):hover{
+  background: rgba(255, 255, 255, 0.377);
+}
+
+.galleryGrid{
+    display: flex;
+    gap: 30px;
+}
+
+.galleryGrid .cards{
+    width: calc(25% - 22.5px);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.galleryGrid .cards img{
+    width: 100%;
+    height: auto;
+    float: left;
+    cursor: pointer;
+}
+
+
+
+/* responsive  */
+
+/* laptop  */
+
+
+@media screen and (max-width:1600px) {
+
+   
+}
+
+@media screen and (max-width:1550px) {
+
+   
+}
+
+@media screen and (max-width:1400px) {
+
+ 
+
+}
+
+
+/* tablet  */
+@media screen and (max-width:1200px) {
+
+  .galleryGrid{
+    flex-wrap: wrap;
+  }
+
+  .galleryGrid .cards{
+    width: calc(50% - 15px);
+  }
+
+}
+
+/* mobile  */
+@media screen and (max-width:767px) {
+
+  .galleryGrid{
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .galleryGrid .cards{
+    width: 100%;
+    gap: 20px;
+  }
+
+  .gallery_section .top_heading .right{
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+}
+
+/* lightbox  */
+
+.lightbox{
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  padding: 40px;
+}
+
+.lightboxImage{
+  max-width: 90vw;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.lightboxClose{
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 40px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lightboxNav{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: white;
+  font-size: 36px;
+  line-height: 1;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightboxPrev{
+  left: 24px;
+}
+
+.lightboxNext{
+  right: 24px;
+}
+
+@media screen and (max-width:767px) {
+  .lightboxNav{
+    width: 44px;
+    height: 44px;
+    font-size: 28px;
+  }
+
+  .lightboxClose{
+    top: 12px;
+    right: 16px;
+    font-size: 32px;
+  }
+}

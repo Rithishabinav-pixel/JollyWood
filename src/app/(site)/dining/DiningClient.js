@@ -86,7 +86,7 @@ if(hashId){
         <h1 className={`title common_heading white`}>Dining</h1>
 
 {/* Characters  */}
-<Image className={`${style.character} ${style.character_1}`} src="/assets/images/duck.png" width={480} height={497} alt=''/>
+{/* <Image className={`${style.character} ${style.character_1}`} src="/assets/images/duck.png" width={480} height={497} alt=''/> */}
 <Image className={`${style.character} ${style.character_2}`} src="/assets/images/panda.png" width={529} height={507} alt=''/>
 
     </div>
@@ -241,7 +241,7 @@ if(hashId){
 
     <div className={`top_heading center_align ${style.top_heading}`}>
       <div className={`left`}>
-        <h2 className='common_heading white'>Container Kitchen</h2>
+        <h2 className='common_heading white'>Kiosk Kitchen</h2>
         <p className='white'>Take a break from the excitement and treat yourself to quick, satisfying bites at Container Kitchen. Designed for explorers on the move, it’s the perfect place to recharge before your next unforgettable experience. </p>
       </div>
     </div>
@@ -260,6 +260,14 @@ if(hashId){
       <div>
         <h3 className='white'>Dry Ride Container</h3>
         <p className='white'><strong>Ride. Refuel. Repeat. Tasty bites to keep your adventure rolling!</strong><br/>Take a quick break from the thrills and recharge with satisfying snacks and refreshments. The perfect stop to fuel your next adventure at Jollywood.</p>
+    </div>
+</div>
+
+<div className={style.image}>
+    <Image src="/assets/images/dr.png" width={870} height={600} alt=''/>
+      <div>
+        <h3 className='white'>Maze Runner Kiosk</h3>
+        <p className='white'><strong>Complete the adventure and snack your way to happiness.</strong><br/>After finding your way through the maze, recharge with delicious bites and refreshing treats. The perfect stop to celebrate your victory and keep the fun going.After finding your way through the maze, recharge with delicious bites and refreshing treats. The perfect stop to celebrate your victory and keep the fun going.</p>
     </div>
 </div>
 
