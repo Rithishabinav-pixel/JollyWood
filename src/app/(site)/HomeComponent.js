@@ -19,7 +19,7 @@ export default function HomeComponent({ children, announcement }) {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setLoader(false);
-    }, 10);
+    }, 10000);
 
 
     return () => clearTimeout(timeout);
