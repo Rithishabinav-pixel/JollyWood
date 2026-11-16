@@ -684,8 +684,8 @@ useEffect(() => {
      <div className={`container ${lcpStyle.container}`}>
 
          {/* Characters  */}
-<Image className={`${lcpStyle.character} ${lcpStyle.character_1}`} priority  src="/assets/images/char_1.svg" width={480} height={506} alt=''/>
-<Image className={`${lcpStyle.character} ${lcpStyle.character_2}`} priority  src="/assets/images/char_2.svg" width={306} height={503} alt=''/>
+<Image className={`${lcpStyle.character} ${lcpStyle.character_1}`} priority  src="/assets/images/char_1.png" width={480} height={480} alt=''/>
+<Image className={`${lcpStyle.character} ${lcpStyle.character_2}`} priority  src="/assets/images/char_2.png" width={480} height={480} alt=''/>
 
       {bannerText && (
   <h1
@@ -943,8 +943,8 @@ useEffect(() => {
         <div className={style.image}>
           <Image
             src={slide.image}
-            width={310}
-            height={388}
+            width={500}
+            height={627}
             alt="Offer"
           />
         </div>

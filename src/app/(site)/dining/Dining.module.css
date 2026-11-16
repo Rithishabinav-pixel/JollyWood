@@ -178,7 +178,7 @@ overflow: hidden;
     position: absolute;
     content: '';
     inset: 0;
-background: linear-gradient(0deg, black 0%, rgba(255, 0, 0, 0) 50% );
+background: linear-gradient(0deg, black 0%, rgba(255, 0, 0, 0) 60% );
 z-index: 1;
 }
 

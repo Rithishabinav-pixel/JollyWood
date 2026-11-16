@@ -1,7 +1,7 @@
 import { imageSize } from "image-size";
 
 export const IMAGE_REQUIREMENTS = {
-  OFFER: { width: 310, height: 388, label: "310 × 388 px" },
+  OFFER: { width: 500, height: 627, label: "500 × 627 px" },
   SQUARE: { width: 262, height: 262, label: "262 × 262 px" },
   LANDSCAPE: { width: 413, height: 235, label: "413 × 235 px" },
 };

@@ -1,13 +1,14 @@
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
   reactCompiler: true,
   experimental: {
     serverActions: {
       bodySizeLimit: "500mb",
     },
+    proxyClientMaxBodySize: "50mb",
   },
-   images: {
+  images: {
     remotePatterns: [
       {
         protocol: "https",

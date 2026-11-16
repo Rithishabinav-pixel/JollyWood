@@ -264,7 +264,7 @@ if(hashId){
 </div>
 
 <div className={style.image}>
-    <Image src="/assets/images/dr.png" width={870} height={600} alt=''/>
+    <Image src="/assets/images/mz.png" width={870} height={600} alt=''/>
       <div>
         <h3 className='white'>Maze Runner Kiosk</h3>
         <p className='white'><strong>Complete the adventure and snack your way to happiness.</strong><br/>After finding your way through the maze, recharge with delicious bites and refreshing treats. The perfect stop to celebrate your victory and keep the fun going.After finding your way through the maze, recharge with delicious bites and refreshing treats. The perfect stop to celebrate your victory and keep the fun going.</p>
@@ -307,7 +307,7 @@ if(hashId){
 
 
 {/* maze section  */}
-<section className={`common_section ${style.maze_section}`}>
+{/* <section className={`common_section ${style.maze_section}`}>
   <div className={`container section_container ${style.container}`}>
 
     <div className={`top_heading center_align ${style.top_heading}`}>
@@ -330,7 +330,7 @@ if(hashId){
 
 
   </div>
-</section>
+</section> */}
 
 
 

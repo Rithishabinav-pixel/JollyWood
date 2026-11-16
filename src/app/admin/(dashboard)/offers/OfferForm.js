@@ -43,7 +43,7 @@ export default function OfferForm({ action, offer }) {
           </div>
         )}
         <input id="image" name="image" type="file" accept="image/png,image/jpeg,image/webp,image/gif" />
-        <span className={style.hint}>Recommended size: 310 × 388 px{offer ? " (leave empty to keep current image)" : ""}</span>
+        <span className={style.hint}>Recommended size: 500 × 627 px{offer ? " (leave empty to keep current image)" : ""}</span>
       </div>
 
       <div className={style.formActions}>
