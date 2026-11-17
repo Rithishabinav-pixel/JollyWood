@@ -7,6 +7,7 @@
   max-width: 1000px;
 }
 
+.logos_container,
 .corporate_section .corporateCard .singleSlide{
   display: flex;
   flex-direction: column;
@@ -138,6 +139,39 @@ float: left;
     border-radius: 50px;
     border: solid black 1px;
     color: black;
+}
+
+.logos_container .logos,
+.logos_container{
+  gap:50px 20px;
+}
+
+.logos_container .logos{
+  display: flex;
+  min-width: fit-content;
+   animation: logos 100s infinite linear;
+}
+
+
+.logos_container .logos:nth-child(2){
+  animation-direction: reverse;
+}
+
+.logos_container .logos:hover{
+  animation-play-state: paused;
+}
+
+@keyframes logos {
+  to{
+    transform: translateX(-50%);
+  }
+}
+
+.logos_container .logos img{
+  height: 25px;
+  width: auto;
+  filter: invert(0) brightness(100);
+  
 }
 
 /* responsive  */

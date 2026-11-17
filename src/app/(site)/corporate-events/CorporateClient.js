@@ -9,6 +9,25 @@ import Button from '../components/ui/Button'
 import { submitCorporateEnquiry } from './actions'
 
 
+const logos =[
+  "/assets/images/logo-sample.svg",
+  "/assets/images/logo-sample.svg",
+  "/assets/images/logo-sample.svg",
+  "/assets/images/logo-sample.svg",
+  "/assets/images/logo-sample.svg",
+  "/assets/images/logo-sample.svg",
+  "/assets/images/logo-sample.svg",
+  "/assets/images/logo-sample.svg",
+  "/assets/images/logo-sample.svg",
+  "/assets/images/logo-sample.svg",
+  "/assets/images/logo-sample.svg",
+  "/assets/images/logo-sample.svg",
+  "/assets/images/logo-sample.svg",
+  "/assets/images/logo-sample.svg",
+  "/assets/images/logo-sample.svg",
+
+]
+
 // corporate data
 const CorporateData = [
   {
@@ -151,6 +170,40 @@ export default function CorporateClient() {
 
 </div>
 
+</section>
+
+{/* logos section  */}
+<section className={`common_section`}>
+  <div className='section_container'>
+  <div className={`container  ${style.container}`}>
+     <div className={`top_heading center_align ${style.top_heading}`}>
+
+      <div className={`left ${style.left}`}>
+        <p className='white'>Trusted by Leading Brands</p>
+        <h2 className='common_heading white'>Creating Memorable <br className='desktop_break'/> Experiences for Leading Brands</h2>
+        <p className='white'>Every successful event creates opportunities to connect, celebrate and build stronger teams. We're proud to have hosted organisations from across industries and helped them turn their corporate gatherings into memorable experiences.</p>
+      </div>
+
+    </div>
+    </div>
+
+{/* logos  */}
+
+<div className={style.logos_container}>
+  <div className={style.logos}>
+ {[...logos,...logos].map((item,i)=>(
+  <Image key={i} src={item} width={180} height={32} alt=''/>
+ ))}
+</div>
+  <div className={style.logos}>
+ {[...logos,...logos].map((item,i)=>(
+  <Image key={i} src={item} width={180} height={32} alt=''/>
+ ))}
+</div>
+</div>
+
+
+  </div>
 </section>
 
 
