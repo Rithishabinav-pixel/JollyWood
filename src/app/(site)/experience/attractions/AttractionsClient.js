@@ -12,6 +12,22 @@ const ExperienceWorldsData = [
   // Attractions
 
    {
+    title: "Titanic",
+    description: "A legendary story beneath the waves. Relive the timeless mystery of Titanic's world.",
+    link: "/experience/attractions",
+    image: "/assets/images/titanic.png",
+    video: "/assets/videos/ride-reel-video.mp4"
+  },
+    {
+    title: "The Lost World",
+    description: "A world forgotten by time. Explore a world where dinosaurs rule again.",
+    link: "/experience/attractions",
+    image: "/assets/images/lost-world.png",
+    video: "/assets/videos/ride-reel-video.mp4"
+  },
+ 
+
+   {
     title: "Glow Garden",
     description: "Where imagination lights up the night. Step into a magical world of glowing wonders.",
     link: "/experience/attractions",
@@ -32,20 +48,7 @@ const ExperienceWorldsData = [
     image: "/assets/images/vc.png",
     video: "/assets/videos/vc-video.mp4"
   },
-  {
-    title: "The Lost World",
-    description: "A world forgotten by time. Explore a world where dinosaurs rule again.",
-    link: "/experience/attractions",
-    image: "/assets/images/lost-world.png",
-    video: "/assets/videos/ride-reel-video.mp4"
-  },
-  {
-    title: "Titanic - Gallery & Simulation",
-    description: "A legendary story beneath the waves. Relive the timeless mystery of Titanic's world.",
-    link: "/experience/attractions",
-    image: "/assets/images/titanic.png",
-    video: "/assets/videos/ride-reel-video.mp4"
-  },
+
   {
     title: "Tribal Museum",
     description: "A glimpse of rural India. Discover stories, traditions and timeless culture.",

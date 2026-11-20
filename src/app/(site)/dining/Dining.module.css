@@ -245,7 +245,7 @@ background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 10%, transparent 70%);
     position: absolute;
     width: 23%;
     height: auto;
-    bottom: -50px;
+    bottom: 0px;
     z-index: 3;
     left: 35.5%;
 }
@@ -281,7 +281,7 @@ background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 10%, transparent 70%);
 @media screen and (max-width:1750px) {
 
     .royal_section .panda{
-    width: 15%;
+    width: 20%;
     left: 38%;
 }
 

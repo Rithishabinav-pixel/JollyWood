@@ -43,10 +43,8 @@ export default function DiningClient() {
 
 
 
-      const [foodContainerData,setFoodContainerData] = useState(0)
-    
-
-        const [mobile,setMobile] = useState(false);
+      const [foodContainerData,setFoodContainerData] = useState(0);
+      const [mobile,setMobile] = useState(false);
 
 
         useEffect(()=>{
@@ -171,7 +169,7 @@ if(hashId){
 {/* royal section */}
 <section className={`common_section yellow_section ${style.royal_section}`}>
 
-        <Image className={style.panda} src="/assets/images/royal_panda.png" width={507} height={561} alt=''/>
+        <Image className={style.panda} src="/assets/images/royal_panda.png" width={507} height={441} alt=''/>
 
 
   <div className={`container section_container ${style.container}`}>
